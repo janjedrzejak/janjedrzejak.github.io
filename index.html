@@ -1,1 +1,628 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Jędrzejak - Digital Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #000;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .logo-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #00a8e8;
+            border-radius: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            color: #00a8e8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #000;
+            color: #fff;
+            padding-top: 80px;
+            padding-bottom: 60px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 0 40px;
+            gap: 60px;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: 88px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            line-height: 1.1;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: #00a8e8;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0087b8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-description {
+            color: #ccc;
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 400px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 600px;
+            padding:100px;
+        }
+
+        .spiral {
+            width: 300px;
+            height: 300px;
+            /* background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%%" style="stop-color:%2300a8e8;stop-opacity:1" /><stop offset="50%%" style="stop-color:%234dd0e1;stop-opacity:1" /><stop offset="100%%" style="stop-color:%23fff;stop-opacity:0.3" /></linearGradient></defs><g transform="translate(150,150)"><circle cx="0" cy="0" r="80" fill="none" stroke="url(%23grad)" stroke-width="8" opacity="0.8"/><circle cx="0" cy="0" r="60" fill="none" stroke="url(%23grad)" stroke-width="6" opacity="0.6"/><circle cx="0" cy="0" r="40" fill="none" stroke="url(%23grad)" stroke-width="4" opacity="0.4"/><path d="M 0,-100 Q 70,-70 100,0 T 0,100 T -100,0 T 0,-100" fill="none" stroke="url(%23grad)" stroke-width="5" opacity="0.7"/></g></svg>') center/contain no-repeat;
+            animation: spin 20s linear infinite; */
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* About Section */
+        .about {
+            background-color: #f5f5f5;
+            padding: 80px 40px;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .about-subtitle {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #000;
+        }
+
+        .about-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #000;
+            border: 2px solid #ddd;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .social-link:hover {
+            background-color: #00a8e8;
+            color: #fff;
+            border-color: #00a8e8;
+        }
+
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-image {
+            width: 350pxx;
+            height: 350px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00a8e8 0%, #0087b8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .reach-out-btn {
+            margin-top: 10px;
+        }
+
+        /* Get to Know Me Section */
+        .get-to-know {
+            background-color: #fff;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .get-to-know-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .get-to-know h2 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .divider {
+            width: 40px;
+            height: 4px;
+            background-color: #00a8e8;
+            margin: 0 auto 30px;
+        }
+
+        .get-to-know-text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 50px;
+        }
+
+        .tiles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .tile {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+        }
+
+        .tile:hover {
+            border-top-color: #00a8e8;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .tile h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .tile p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .footer-section p {
+            font-size: 13px;
+            color: #aaa;
+            line-height: 1.8;
+        }
+
+        .footer-section a {
+            display: block;
+            font-size: 13px;
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #00a8e8;
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00a8e8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+                font-size: 11px;
+            }
+
+            .hero-container {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .about-container {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+
+            .about h2 {
+                font-size: 32px;
+            }
+
+            .get-to-know h2 {
+                font-size: 32px;
+            }
+
+            .tiles-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 10px 15px;
+            }
+
+            .logo {
+                font-size: 12px;
+            }
+
+            .nav-links {
+                gap: 10px;
+                font-size: 10px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <span>Jan Jędrzejak /<strong>DIGITAL EXPERT</strong></span>
+        </div>
+        <ul class="nav-links">
+            <li><a onclick="scrollToSection('about')">ABOUT ME</a></li>
+            <li><a onclick="scrollToSection('resume')">RESUME</a></li>
+            <li><a onclick="scrollToSection('projects')">PROJECTS</a></li>
+            <li><a onclick="scrollToSection('contact')">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Hello</h1>
+                <div class="hero-buttons">
+                    <a href="#resume" class="btn btn-primary" onclick="scrollToSection('resume')">RESUME</a>
+                    <a href="#projects" class="btn btn-secondary" onclick="scrollToSection('projects')">PROJECTS</a>
+                </div>
+                <p class="hero-description">
+                    I craft innovative digital solutions that boost profits and cut costs by transforming businesses through technology. My expertise accelerates digital transformation, delivering measurable value and competitive advantage.
+                </p>
+            </div>
+            <div class="hero-image">
+    
+
+                    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.99/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/9Yvi5m8rEov3qbj6/scene.splinecode"></spline-viewer>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About me</h2>
+                <p class="about-subtitle">My name is Jan Jędrzejak</p>
+                <p class="about-text">
+                    I am a results-oriented expert in digital solutions and product ownership, with strong expertise in Salesforce Digital Experience, HCL WebSpheres, Sitecore, and Microsoft Power Platform. I excel in managing and optimizing complex B2B eCommerce ecosystems, driving product strategy, enhancing user experience, and leading process automation initiatives. I am highly adaptable to diverse technologies and platforms, delivering effective solutions aligned with evolving business goals. I collaborate closely with stakeholders to ensure alignment of product vision, usability, and performance, consistently achieving impactful results in dynamic, global environments.
+                </p>
+                <a href="https://www.linkedin.com/in/janjedrzejak/" class="social-link" title="LinkedIn">in</a>
+                <div>
+                    <a href="#contact" class="btn btn-primary reach-out-btn" onclick="scrollToSection('contact')">Reach out</a>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="profile-image">
+                    <img src="img/me.jpg" alt="Jan Jędrzejak">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get to Know Me Section -->
+    <section class="get-to-know" id="projects">
+        <div class="get-to-know-container">
+            <h2>Get to know me</h2>
+            <div class="divider"></div>
+            <p class="get-to-know-text">
+                Explore my career highlights, key projects, and connect with me directly.
+            </p>
+            <div class="tiles-container">
+                <div class="tile">
+                    <h3>Professional Summary</h3>
+                    <p>Senior Product Owner with expertise in digital transformation, eCommerce platforms, and B2B solutions across European markets.</p>
+                </div>
+                <div class="tile">
+                    <h3>Projects</h3>
+                    <p>Led optimization of eCommerce platforms, CRM expansion, and digital content workflow management across multiple countries.</p>
+                </div>
+                <div class="tile">
+                    <h3>Contact</h3>
+                    <p>Let's collaborate on digital solutions and innovation. Reach out to discuss how I can support your business transformation goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section Placeholder -->
+    <section id="resume" style="padding: 80px 40px; background-color: #f5f5f5;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-size: 44px; font-weight: 700; margin-bottom: 30px;">Resume</h2>
+            <p style="font-size: 14px; color: #666; line-height: 1.8;">Resume content goes here. You can add your CV details, experience, skills, and certifications.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Call</h4>
+                <a href="tel:+48663011363">+48 663 011 363</a>
+            </div>
+            <div class="footer-section">
+                <h4>Write</h4>
+                <a href="mailto:jan.jedrzejak@mailbox.org">jan.jedrzejak@mailbox.org</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 by JJ. Powerd and secured by Wix.</span>
+            <div class="footer-links">
+                <a href="#privacy">Privacy</a>
+                <a href="#terms">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling navigation
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.3)';
+            } else {
+                nav.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Smooth scroll behavior for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
