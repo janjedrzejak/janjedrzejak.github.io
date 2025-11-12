@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /img/
+Disallow: /res/
+
+Allow: /$
+Sitemap: https://janjedrzejak.github.io/sitemap.xml
