@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jan Jędrzejak - Digital Expert</title>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W56F3Z22');</script>
+<!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -11,12 +19,19 @@
             box-sizing: border-box;
         }
 
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
         }
+
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
 
         /* Navigation */
         nav {
@@ -32,6 +47,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
+
         .logo {
             display: flex;
             align-items: center;
@@ -41,6 +57,7 @@
             font-weight: 600;
         }
 
+
         .logo-icon {
             width: 20px;
             height: 20px;
@@ -48,11 +65,13 @@
             border-radius: 3px;
         }
 
+
         .nav-links {
             display: flex;
             gap: 30px;
             list-style: none;
         }
+
 
         .nav-links a {
             color: #fff;
@@ -64,9 +83,149 @@
             cursor: pointer;
         }
 
+
         .nav-links a:hover {
             color: #00a8e8;
         }
+
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+            background: none;
+            border: none;
+            padding: 0;
+            z-index: 1001;
+        }
+
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+
+        /* Mobile Menu - Fullscreen */
+        .mobile-menu {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            z-index: 999;
+        }
+
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+
+        .mobile-menu li {
+            margin: 0;
+            border-bottom: none;
+        }
+
+
+        .mobile-menu a {
+            display: block;
+            padding: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+
+        .mobile-menu a:hover {
+            color: #00a8e8;
+            transform: scale(1.1);
+        }
+
+
+        /* Bottom Toolbar - Mobile Only */
+        .bottom-toolbar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000;
+            border-top: 1px solid #222;
+            z-index: 998;
+            padding: 12px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .toolbar-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            max-width: 100%;
+            margin: 0 auto;
+            
+        }
+
+
+        .toolbar-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: #00a8e8;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+
+        .toolbar-icon:hover {
+            background-color: #0087b8;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 168, 232, 0.3);
+        }
+
+
+        .toolbar-icon:active {
+            transform: translateY(-2px);
+        }
+
 
         /* Hero Section */
         .hero {
@@ -78,8 +237,20 @@
             display: flex;
             align-items: center;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
+
+
+        #webglCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
 
         .hero-container {
             display: flex;
@@ -90,11 +261,15 @@
             width: 100%;
             padding: 0 40px;
             gap: 60px;
+            position: relative;
+            z-index: 1;
         }
+
 
         .hero-content {
             flex: 1;
         }
+
 
         .hero h1 {
             font-size: 88px;
@@ -103,11 +278,13 @@
             line-height: 1.1;
         }
 
+
         .hero-buttons {
             display: flex;
             gap: 15px;
             margin-bottom: 30px;
         }
+
 
         .btn {
             padding: 12px 25px;
@@ -122,15 +299,18 @@
             display: inline-block;
         }
 
+
         .btn-primary {
             background-color: #00a8e8;
             color: #fff;
         }
 
+
         .btn-primary:hover {
             background-color: #0087b8;
             transform: translateY(-2px);
         }
+
 
         .btn-secondary {
             background-color: transparent;
@@ -138,9 +318,11 @@
             border: 2px solid #fff;
         }
 
+
         .btn-secondary:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
+
 
         .hero-description {
             color: #ccc;
@@ -149,6 +331,7 @@
             max-width: 400px;
         }
 
+
         .hero-image {
             flex: 1;
             display: flex;
@@ -156,26 +339,25 @@
             align-items: center;
             position: relative;
             height: 600px;
-            padding:100px;
+            padding: 100px;
+        }
+        .hero {
+            position: sticky;
+            top: 0;
+            z-index: 10; 
+            margin-bottom: 200%;
         }
 
-        .spiral {
-            width: 300px;
-            height: 300px;
-            /* background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%%" style="stop-color:%2300a8e8;stop-opacity:1" /><stop offset="50%%" style="stop-color:%234dd0e1;stop-opacity:1" /><stop offset="100%%" style="stop-color:%23fff;stop-opacity:0.3" /></linearGradient></defs><g transform="translate(150,150)"><circle cx="0" cy="0" r="80" fill="none" stroke="url(%23grad)" stroke-width="8" opacity="0.8"/><circle cx="0" cy="0" r="60" fill="none" stroke="url(%23grad)" stroke-width="6" opacity="0.6"/><circle cx="0" cy="0" r="40" fill="none" stroke="url(%23grad)" stroke-width="4" opacity="0.4"/><path d="M 0,-100 Q 70,-70 100,0 T 0,100 T -100,0 T 0,-100" fill="none" stroke="url(%23grad)" stroke-width="5" opacity="0.7"/></g></svg>') center/contain no-repeat;
-            animation: spin 20s linear infinite; */
-        }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* About Section */
+        /* About Section - STICKY PARALLAX */
         .about {
             background-color: #f5f5f5;
             padding: 80px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            margin-bottom: 0;
         }
+
 
         .about-container {
             max-width: 1200px;
@@ -185,9 +367,11 @@
             gap: 60px;
         }
 
+
         .about-content {
             flex: 1;
         }
+
 
         .about h2 {
             font-size: 48px;
@@ -196,12 +380,14 @@
             color: #000;
         }
 
+
         .about-subtitle {
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 25px;
             color: #000;
         }
+
 
         .about-text {
             font-size: 16px;
@@ -210,6 +396,7 @@
             margin-bottom: 30px;
             text-align: left;
         }
+
 
         .social-link {
             display: inline-flex;
@@ -227,11 +414,13 @@
             font-size: 18px;
         }
 
+
         .social-link:hover {
             background-color: #00a8e8;
             color: #fff;
             border-color: #00a8e8;
         }
+
 
         .about-image {
             flex: 1;
@@ -239,8 +428,9 @@
             justify-content: center;
         }
 
+
         .profile-image {
-            width: 350pxx;
+            width: 350px;
             height: 350px;
             border-radius: 50%;
             background: linear-gradient(135deg, #00a8e8 0%, #0087b8 100%);
@@ -251,27 +441,35 @@
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
 
+
         .profile-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
+
         .reach-out-btn {
             margin-top: 10px;
         }
+
 
         /* Get to Know Me Section */
         .get-to-know {
             background-color: #fff;
             padding: 80px 40px;
             text-align: center;
+            will-change: transform;
+            position: relative;
+            z-index: 30;
         }
+
 
         .get-to-know-container {
             max-width: 800px;
             margin: 0 auto;
         }
+
 
         .get-to-know h2 {
             font-size: 44px;
@@ -280,12 +478,14 @@
             color: #000;
         }
 
+
         .divider {
             width: 40px;
             height: 4px;
             background-color: #00a8e8;
             margin: 0 auto 30px;
         }
+
 
         .get-to-know-text {
             font-size: 14px;
@@ -294,6 +494,7 @@
             margin-bottom: 50px;
         }
 
+
         .tiles-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -301,20 +502,23 @@
             margin-bottom: 40px;
         }
 
+
         .tile {
             background-color: #f9f9f9;
             padding: 30px;
             border-radius: 8px;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: border-top-color 0.3s ease, box-shadow 0.3s ease;
             border-top: 3px solid transparent;
         }
+
 
         .tile:hover {
             border-top-color: #00a8e8;
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
+
 
         .tile h3 {
             font-size: 18px;
@@ -323,19 +527,73 @@
             color: #000;
         }
 
+
         .tile p {
             font-size: 14px;
             color: #666;
             line-height: 1.6;
         }
 
+        /* Resume Header with Button */
+        .resume-header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 20px;
+            
+        }
+
+        .resume-header-wrapper h2 {
+            font-size: 44px;
+            font-weight: 700;
+            color: #000;
+            margin: 0;
+        }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background-color: #00a8e8;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            white-space: nowrap;
+        }
+
+        .download-button:hover {
+            background-color: #0087b8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 168, 232, 0.3);
+        }
+
+        .download-button:active {
+            transform: translateY(-1px);
+        }
+
+        .download-button i {
+            font-size: 14px;
+        }
+
+
         /* Footer */
         footer {
             background-color: #000;
             color: #fff;
             padding: 40px;
-            margin-top: 60px;
+            margin-top: 0px;
+            position: relative;
+            z-index: 99;
         }
+
 
         .footer-container {
             max-width: 1200px;
@@ -345,6 +603,7 @@
             gap: 40px;
         }
 
+
         .footer-section h4 {
             font-size: 12px;
             font-weight: 600;
@@ -353,11 +612,13 @@
             text-transform: uppercase;
         }
 
+
         .footer-section p {
             font-size: 13px;
             color: #aaa;
             line-height: 1.8;
         }
+
 
         .footer-section a {
             display: block;
@@ -368,9 +629,11 @@
             transition: color 0.3s ease;
         }
 
+
         .footer-section a:hover {
             color: #00a8e8;
         }
+
 
         .footer-bottom {
             margin-top: 30px;
@@ -383,10 +646,12 @@
             color: #aaa;
         }
 
+
         .footer-links {
             display: flex;
             gap: 20px;
         }
+
 
         .footer-links a {
             color: #aaa;
@@ -394,83 +659,313 @@
             transition: color 0.3s ease;
         }
 
+
         .footer-links a:hover {
             color: #00a8e8;
         }
 
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
-                gap: 15px;
-                font-size: 11px;
+                display: none;
             }
+
+
+            .hamburger {
+                display: flex;
+            }
+
+
+            .bottom-toolbar {
+                display: flex;
+            }
+
+
+            body {
+                padding-bottom: 80px;
+            }
+
 
             .hero-container {
                 flex-direction: column;
                 padding: 0 20px;
             }
 
+
             .hero h1 {
                 font-size: 48px;
             }
+
 
             .about-container {
                 flex-direction: column;
                 padding: 0 20px;
             }
 
+
             .about h2 {
                 font-size: 32px;
             }
+
 
             .get-to-know h2 {
                 font-size: 32px;
             }
 
+
             .tiles-container {
                 grid-template-columns: 1fr;
             }
+
 
             .footer-container {
                 grid-template-columns: 1fr;
             }
 
+
             .footer-bottom {
                 flex-direction: column;
                 gap: 15px;
             }
+
+
+            .hero-image {
+                display: none;
+            }
+
+            .resume-header-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .resume-header-wrapper h2 {
+                font-size: 32px;
+            }
         }
+
 
         @media (max-width: 480px) {
             nav {
                 padding: 10px 15px;
             }
 
+
             .logo {
                 font-size: 12px;
             }
 
-            .nav-links {
-                gap: 10px;
-                font-size: 10px;
-            }
 
             .hero h1 {
                 font-size: 36px;
             }
 
+
             .hero-buttons {
                 flex-direction: column;
             }
+
 
             .btn {
                 width: 100%;
                 text-align: center;
             }
+
+
+            .hero-image {
+                display: none;
+            }
+
+
+            .mobile-menu a {
+                font-size: 20px;
+                padding: 15px;
+            }
+
+
+            .toolbar-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+
+
+            .toolbar-container {
+                gap: 20px;
+            }
+
+
+            body {
+                padding-bottom: 70px;
+            }
+
+
+            .bottom-toolbar {
+                padding: 10px 0;
+            }
+
+            .download-button {
+                padding: 11px 18px;
+                font-size: 11px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .resume-header-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+            }
         }
+         /* CTA Section */
+    .cta-section {
+        background: linear-gradient(135deg, #00a8e8 0%, #0087b8 100%);
+        color: #fff;
+        padding: 80px 40px;
+        text-align: center;
+        position: relative;
+        z-index: 25;
+    }
+
+    .cta-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .cta-section h2 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .cta-section p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        line-height: 1.8;
+        opacity: 0.95;
+    }
+
+    .cta-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .cta-feature {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+    }
+
+    .cta-feature i {
+        font-size: 32px;
+        margin-bottom: 12px;
+        display: block;
+    }
+
+    .cta-feature h4 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .cta-feature p {
+        font-size: 14px;
+        margin: 0;
+        opacity: 0.9;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-cta-primary {
+        padding: 14px 32px;
+        background-color: #fff;
+        color: #00a8e8;
+        border: none;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .btn-cta-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-cta-secondary {
+        padding: 14px 32px;
+        background-color: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .btn-cta-secondary:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-3px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .cta-section h2 {
+            font-size: 32px;
+        }
+
+        .cta-features {
+            grid-template-columns: 1fr;
+        }
+
+        .cta-buttons {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .btn-cta-primary,
+        .btn-cta-secondary {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .cta-section {
+            padding: 50px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 28px;
+        }
+
+        .cta-section p {
+            font-size: 14px;
+        }
+    }
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W56F3Z22"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <!-- Navigation -->
     <nav>
         <div class="logo">
@@ -478,15 +973,46 @@
             <span>Jan Jędrzejak /<strong>DIGITAL EXPERT</strong></span>
         </div>
         <ul class="nav-links">
-            <li><a onclick="scrollToSection('about')">ABOUT ME</a></li>
+            <li><a onclick="scrollToSection('about-me')">ABOUT ME</a></li>
             <li><a onclick="scrollToSection('resume')">RESUME</a></li>
             <li><a onclick="scrollToSection('projects')">PROJECTS</a></li>
             <li><a onclick="scrollToSection('contact')">CONTACT</a></li>
         </ul>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+
+    <!-- Mobile Menu - Fullscreen -->
+    <ul class="mobile-menu" id="mobileMenu">
+        <li><a onclick="scrollToSection('about-me')">ABOUT ME</a></li>
+        <li><a onclick="scrollToSection('resume')">RESUME</a></li>
+        <li><a onclick="scrollToSection('projects')">PROJECTS</a></li>
+        <li><a onclick="scrollToSection('contact')">CONTACT</a></li>
+    </ul>
+
+
+    <!-- Bottom Toolbar - Mobile Only -->
+    <div class="bottom-toolbar">
+        <div class="toolbar-container">
+             <a href="tel:+48690661143" class="toolbar-icon" title="Zadzwoń">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="mailto:jan.jedrzejak@gmail.com" class="toolbar-icon" title="Wyślij email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank" class="toolbar-icon" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <canvas id="webglCanvas"></canvas>
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Hello</h1>
@@ -499,16 +1025,14 @@
                 </p>
             </div>
             <div class="hero-image">
-    
-
-                    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.99/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/9Yvi5m8rEov3qbj6/scene.splinecode"></spline-viewer>
-            
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <section id="about-me">
+
+    </section>
+    <!-- About Section - STICKY PARALLAX -->
     <section class="about" id="about">
         <div class="about-container">
             <div class="about-content">
@@ -529,6 +1053,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Get to Know Me Section -->
     <section class="get-to-know" id="projects">
@@ -551,28 +1076,335 @@
                     <h3>Contact</h3>
                     <p>Let's collaborate on digital solutions and innovation. Reach out to discuss how I can support your business transformation goals.</p>
                 </div>
+                <div class="tile">
+                    <h3>Blog</h3>
+                    <p>My posts where I share my subjective observations on various topics. This is a space for personal insights and reflections, inviting you to explore thoughts from my perspective.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Resume Section Placeholder -->
-    <section id="resume" style="padding: 80px 40px; background-color: #f5f5f5;">
+    <!-- Resume Section -->
+    <section id="resume" style="padding: 80px 40px; background-color: #f5f5f5; position: sticky; z-index: 50;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="font-size: 44px; font-weight: 700; margin-bottom: 30px;">Resume</h2>
-            <p style="font-size: 14px; color: #666; line-height: 1.8;">Resume content goes here. You can add your CV details, experience, skills, and certifications.</p>
+            <div class="resume-header-wrapper">
+                <h2>Resume</h2>
+                <a href="Jan Jedrzejak CV ENG.pdf" download class="download-button">
+                    <i class="fas fa-download"></i>
+                    Download CV (PDF)
+                </a>
+            </div>
+
+            <div style="margin-bottom: 50px;">
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Work experience</h3>
+
+                <!-- Job Entry 1 -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2022 - Present</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Digital Marketing Specialist & Product Owner</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">Linde Gas Poland</p>
+                    </div>
+
+                    <div style="flex: 1;">
+                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
+                            <li style="margin-bottom: 16px;">Managed digital content workflows on 2 platforms for 4,000+ users, boosting engagement by 15%</li>
+                            <li style="margin-bottom: 16px;">Oversaw B2B e-commerce and corporate sites with 50M+ PLN revenue, increasing organic traffic by 90% and conversions by 15% YoY. Delivered a CMS platform adopted by 11 countries, enabling streamlined content management and localization</li>
+                            <li style="margin-bottom: 16px;">Led Microsoft Power Platform adoption, automating 15+ processes, improving productivity by +20% and reducing costs by +20%</li>
+                            <li style="margin-bottom: 16px;">Delivered 10+ trainings and documentation, enhancing digital tool use among 100+ employees and customers</li>
+                            <li style="margin-bottom: 16px;">Handled 100+ content update tickets annually, meeting 95% SLA and brand standards</li>
+                            <li style="margin-bottom: 16px;">Coordinated global stakeholder communication for projects in 11 countries, accelerating deployment by 25%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job Entry 2 -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2018 - 2022</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">IS Field Support Specialist</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">Linde Gas Poland</p>
+                    </div>
+
+                    <div style="flex: 1;">
+                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
+                            <li style="margin-bottom: 16px;">Delivered and supported IT projects for 500+ computers, ensuring smooth deployment and adoption</li>
+                            <li style="margin-bottom: 16px;">Managed incidents and service requests via ITILv4 ticketing systems, maintaining over 95% SLA compliance</li>
+                            <li style="margin-bottom: 16px;">Provided support for Microsoft 365, SAP R/3, and other corporate applications</li>
+                            <li style="margin-bottom: 16px;">Assisted in network troubleshooting for Cisco and AT&T infrastructure with regional teams</li>
+                            <li style="margin-bottom: 16px;">Led migration of 50+ network switches, edge routers, access points, and telephone exchanges</li>
+                            <li style="margin-bottom: 16px;">Coordinated office network and cabling upgrades for 50+ users. Managed ERP integration with government reporting systems, ensuring timely delivery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job Entry 3 -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2018 - 2018</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Assistant Video Editor</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">TVN Group Discovery</p>
+                    </div>
+                    <div style="flex: 1;"></div>
+                </div>
+
+                <!-- Job Entry 4 -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2016 - 2018</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Camera Operator</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">TVP S.A. (National Polish Television)</p>
+                    </div>
+                    <div style="flex: 1;"></div>
+                </div>
+            </div>
+
+            <!-- Awards Section -->
+            <div style="margin-top: 80px;">
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Awards</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <div style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
+                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership Award</p>
+                        <p style="font-size: 12px; color: #999;">2024</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
+                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership Award</p>
+                        <p style="font-size: 12px; color: #999;">2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div style="margin-top: 80px;">
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Education</h3>
+
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2016 - 2018</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">M.Sc. Eng.</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">Społeczna Akademia Nauk</p>
+                        <p style="font-size: 12px; color: #999; margin-top: 5px;">Łódź, Poland</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good</p>
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Computer graphics and internet technologies specialization.</p>
+                        <p style="font-size: 14px; color: #555;"><strong>Diploma with honours.</strong></p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2012 - 2016</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">BEng</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">Społeczna Akademia Nauk</p>
+                        <p style="font-size: 12px; color: #999; margin-top: 5px;">Ostrów Wielkopolski, Poland</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good</p>
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Visualization and information management systems specialization.</p>
+                        <p style="font-size: 14px; color: #555;"><strong>Award for Master's Dissertation and diploma with honours.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Licenses & Certifications Section -->
+            <div style="margin-top: 80px; ">
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Licenses & certifications</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">SQL (Basic) Certificate</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">HackerRank</p>
+                        <p style="font-size: 11px; color: #999;">Issued Oct 2025</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Creator</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued Dec 2023</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Enthusiast - Lead in Digital I</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued Aug 2023</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Enthusiast ChatGPT</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued Jul 2023</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Explorer Product Development</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued May 2023</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Enthusiast Product Development</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued Feb 2023</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Enthusiast Digital Foundations</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued Nov 2022</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Enthusiast Scrum</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued Sep 2022</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Enthusiast Data</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued Jun 2022</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">SC-900T00: Microsoft Security, Compliance and Identity Fundamentals</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
+                        <p style="font-size: 11px; color: #999;">Issued Apr 2022</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">MS-900T01: Microsoft 365 Fundamentals</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
+                        <p style="font-size: 11px; color: #999;">Issued Mar 2022</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">AZ-900T01: Microsoft Azure Fundamentals</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
+                        <p style="font-size: 11px; color: #999;">Issued Feb 2022</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Microsoft PowerApps i Flow</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Infowave sp. z o.o.</p>
+                        <p style="font-size: 11px; color: #999;">Issued Jun 2019</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Teams App and Solutions Workshop</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Supremo</p>
+                        <p style="font-size: 11px; color: #999;">Training</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Skillset Section -->
+            <div style="margin-top: 80px;">
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Professional skillset</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Product Owner Expertise</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Digital Marketing Specialist</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">eCommerce Platform Management</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Business and Sales Process Automation</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">CRM Automation</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Content Creation and SEO Optimization</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Technical and Business Communication</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Project Coordination and Team Leadership</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Digital Transformation and CAPEX Planning</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Data Analysis and Performance Improvement</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Marketing Campaign Management</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Online Marketing Strategies</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Conversion Rate Optimization</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Products Knowledge</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">IT and Business Needs Translation into Technology Solutions</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Power Platform (Power Automate, Power Apps)</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Salesforce Digital Experience Platform</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">HCL WebSphere and Sitecore CMS</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">JIRA and Azure DevOps Tools</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages Section -->
+            <div style="margin-top: 80px;">
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Languages</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Polish</p>
+                        <p style="font-size: 12px; color: #666;">native</p>
+                    </div>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">English</p>
+                        <p style="font-size: 12px; color: #666;">proficient</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    <!-- CTA Section -->
+<section class="cta-section" id="contact">
+    <div class="cta-container">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Let's collaborate on your digital transformation, automation, and eCommerce projects. I specialize in building innovative solutions that drive growth and efficiency.</p>
+        
+        <div class="cta-features">
+            <div class="cta-feature">
+                <i class="fas fa-rocket"></i>
+                <h4>Digital Transformation</h4>
+                <p>End-to-end digital solutions to modernize your operations</p>
+            </div>
+            <div class="cta-feature">
+                <i class="fas fa-cogs"></i>
+                <h4>Process Automation</h4>
+                <p>Streamline workflows and reduce costs through intelligent automation</p>
+            </div>
+            <div class="cta-feature">
+                <i class="fas fa-shopping-cart"></i>
+                <h4>eCommerce Excellence</h4>
+                <p>Optimize platforms for maximum conversions and user experience</p>
+            </div>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="mailto:jan.jedrzejak@gmail.com" class="btn-cta-primary">Get in Touch</a>
+            <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank" class="btn-cta-secondary">Connect on LinkedIn</a>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h4>Call</h4>
-                <a href="tel:+48663011363">+48 663 011 363</a>
+                <a href="tel:+48690661143">+48 690 661 143</a>
             </div>
             <div class="footer-section">
                 <h4>Write</h4>
-                <a href="mailto:jan.jedrzejak@mailbox.org">jan.jedrzejak@mailbox.org</a>
+                <a href="mailto:jan.jedrzejak@mailbox.org">jan.jedrzejak@gmail.com</a>
             </div>
             <div class="footer-section">
                 <h4>Connect</h4>
@@ -580,11 +1412,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© 2025 by JJ. Powerd and secured by Wix.</span>
-            <div class="footer-links">
-                <a href="#privacy">Privacy</a>
-                <a href="#terms">Terms</a>
-            </div>
+            <span>© 2025 by JJ</span>
+            
         </div>
     </footer>
 
@@ -594,8 +1423,54 @@
             const element = document.getElementById(sectionId);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                closeMenu();
             }
         }
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Close menu when pressing Escape
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeMenu();
+            }
+        });
+
+        // Close menu function
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+
+        // Parallax scroll animation for entire "Get to Know Me" section
+        const getToKnowSection = document.querySelector('.get-to-know');
+
+        function updateSectionPosition() {
+            if (!getToKnowSection) return;
+
+            const sectionRect = getToKnowSection.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            
+            const sectionCenter = sectionRect.top + sectionRect.height / 2;
+            const distanceFromViewport = (sectionCenter - viewportHeight / 2) / viewportHeight;
+            
+            const maxOffset = 150;
+            const offset = distanceFromViewport * maxOffset;
+            
+            /* getToKnowSection.style.transform = `translateX(${offset}px)`; */
+        }
+
+        window.addEventListener('scroll', updateSectionPosition, { passive: true });
+        updateSectionPosition();
 
         // Add scroll effect to navbar
         window.addEventListener('scroll', function() {
@@ -623,6 +1498,188 @@
                 }
             });
         });
+
+        // WebGL Particle Sphere Animation
+        const canvas = document.getElementById('webglCanvas');
+        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+
+        if (!gl) {
+            console.error('WebGL not supported');
+        } else {
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                gl.viewport(0, 0, canvas.width, canvas.height);
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            const vertexShaderSource = `
+                attribute vec3 position;
+                attribute vec3 color;
+                uniform mat4 projectionMatrix;
+                uniform mat4 modelViewMatrix;
+                varying vec3 vColor;
+                void main() {
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                    gl_PointSize = 2.0;
+                    vColor = color;
+                }
+            `;
+
+            const fragmentShaderSource = `
+                precision mediump float;
+                varying vec3 vColor;
+                void main() {
+                    gl_FragColor = vec4(vColor, 0.8);
+                }
+            `;
+
+            function compileShader(source, type) {
+                const shader = gl.createShader(type);
+                gl.shaderSource(shader, source);
+                gl.compileShader(shader);
+                if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                    console.error('Shader compile error:', gl.getShaderInfoLog(shader));
+                    gl.deleteShader(shader);
+                    return null;
+                }
+                return shader;
+            }
+
+            const vertexShader = compileShader(vertexShaderSource, gl.VERTEX_SHADER);
+            const fragmentShader = compileShader(fragmentShaderSource, gl.FRAGMENT_SHADER);
+
+            const program = gl.createProgram();
+            gl.attachShader(program, vertexShader);
+            gl.attachShader(program, fragmentShader);
+            gl.linkProgram(program);
+
+            if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+                console.error('Program link error:', gl.getProgramInfoLog(program));
+            }
+
+            gl.useProgram(program);
+
+            const particleCount = 3000;
+            const positions = [];
+            const colors = [];
+
+            for (let i = 0; i < particleCount; i++) {
+                const phi = Math.acos(-1 + (2 * i) / particleCount);
+                const theta = Math.sqrt(particleCount * Math.PI) * phi;
+                const x = Math.cos(theta) * Math.sin(phi);
+                const y = Math.sin(theta) * Math.sin(phi);
+                const z = Math.cos(phi);
+                positions.push(x * 2, y * 2, z * 2);
+                const t = i / particleCount;
+                colors.push(
+                    0 + t * 0.35,
+                    0.8 - t * 0.5,
+                    1.0 - t * 0.3
+                );
+            }
+
+            const positionBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+
+            const colorBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
+
+            const positionLocation = gl.getAttribLocation(program, 'position');
+            const colorLocation = gl.getAttribLocation(program, 'color');
+            const projectionMatrixLocation = gl.getUniformLocation(program, 'projectionMatrix');
+            const modelViewMatrixLocation = gl.getUniformLocation(program, 'modelViewMatrix');
+
+            gl.enableVertexAttribArray(positionLocation);
+            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+            gl.vertexAttribPointer(positionLocation, 3, gl.FLOAT, false, 0, 0);
+
+            gl.enableVertexAttribArray(colorLocation);
+            gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+            gl.vertexAttribPointer(colorLocation, 3, gl.FLOAT, false, 0, 0);
+
+            function multiplyMatrices(a, b) {
+                const result = new Float32Array(16);
+                for (let i = 0; i < 4; i++) {
+                    for (let j = 0; j < 4; j++) {
+                        let sum = 0;
+                        for (let k = 0; k < 4; k++) {
+                            sum += a[i * 4 + k] * b[k * 4 + j];
+                        }
+                        result[i * 4 + j] = sum;
+                    }
+                }
+                return result;
+            }
+
+            function perspectiveMatrix(fov, aspect, near, far) {
+                const f = 1.0 / Math.tan(fov / 2);
+                const nf = 1 / (near - far);
+                return new Float32Array([
+                    f / aspect, 0, 0, 0,
+                    0, f, 0, 0,
+                    0, 0, (far + near) * nf, -1,
+                    0, 0, (2 * far * near) * nf, 0
+                ]);
+            }
+
+            function rotationMatrix(x, y, z) {
+                const cos = Math.cos;
+                const sin = Math.sin;
+                const rx = new Float32Array([
+                    1, 0, 0, 0,
+                    0, cos(x), -sin(x), 0,
+                    0, sin(x), cos(x), 0,
+                    0, 0, 0, 1
+                ]);
+                const ry = new Float32Array([
+                    cos(y), 0, sin(y), 0,
+                    0, 1, 0, 0,
+                    -sin(y), 0, cos(y), 0,
+                    0, 0, 0, 1
+                ]);
+                const rz = new Float32Array([
+                    cos(z), -sin(z), 0, 0,
+                    sin(z), cos(z), 0, 0,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1
+                ]);
+                const rxy = multiplyMatrices(ry, rx);
+                return multiplyMatrices(rz, rxy);
+            }
+
+            let time = 0;
+            let scrollZoom = -5;
+            
+            gl.enable(gl.BLEND);
+            gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+            gl.clearColor(0, 0, 0, 1);
+
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY;
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = scrolled / maxScroll;
+                scrollZoom = -5 + scrollPercent * 5.5;
+            }, { passive: true });
+
+            function animate() {
+                gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+                time += 0.003;
+                const projMatrix = perspectiveMatrix(Math.PI / 3, canvas.width / canvas.height, 0.1, 100);
+                const modelViewMatrix = rotationMatrix(0, 0.3, time * 0.2);
+                const identity = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, scrollZoom, 1]);
+                const modelView = multiplyMatrices(identity, modelViewMatrix);
+                gl.uniformMatrix4fv(projectionMatrixLocation, false, projMatrix);
+                gl.uniformMatrix4fv(modelViewMatrixLocation, false, modelView);
+                gl.drawArrays(gl.POINTS, 0, particleCount);
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        }
     </script>
 </body>
 </html>
