@@ -986,6 +986,10 @@
                 width: 100%;
                 text-align: center;
             }
+              .down-arrow {
+                position:unset;
+                bottom: 50px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1000,7 +1004,46 @@
             .cta-section p {
                 font-size: 14px;
             }
+            .down-arrow {
+                position:unset;
+                bottom: 50px;
+            }
         }
+
+        .hero-container {
+    position: relative;
+    height: 100%;
+}
+
+.down-arrow {
+    position:fixed;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
+    font-size: 48px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.5s;
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+
+.down-arrow:hover {
+    color: #0078d4;
+}
     </style>
 </head>
 
@@ -1052,24 +1095,28 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <canvas id="webglCanvas"></canvas>
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Hello</h1>
-                <div class="hero-buttons">
-                    <a href="#resume" class="btn btn-primary" onclick="scrollToSection('resume')">RESUME</a>
-                    <a href="#projects" class="btn btn-secondary" onclick="scrollToSection('projects')">PROJECTS</a>
-                </div>
-                <p class="hero-description">
-                    I craft innovative digital solutions that boost profits and cut costs by transforming businesses
-                    through technology. My expertise accelerates digital transformation, delivering measurable value and
-                    competitive advantage.
-                </p>
+    <canvas id="webglCanvas"></canvas>
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>Hello</h1>
+            <div class="hero-buttons">
+                <a href="#resume" class="btn btn-primary" onclick="scrollToSection('resume')">RESUME</a>
+                <a href="#projects" class="btn btn-secondary" onclick="scrollToSection('projects')">PROJECTS</a>
             </div>
-            <div class="hero-image">
-            </div>
+            <p class="hero-description">
+                I craft innovative digital solutions that boost profits and cut costs by transforming businesses
+                through technology. My expertise accelerates digital transformation, delivering measurable value and
+                competitive advantage.
+            </p>
         </div>
-    </section>
+        <div class="hero-image">
+        </div>
+        <!-- Strzałka w dół -->
+        <a class="down-arrow" onclick="scrollToSection('about-me')">
+           &#128899;
+        </a>
+    </div>
+</section>
 
     <section id="about-me">
 
