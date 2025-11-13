@@ -33,14 +33,12 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
 
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-9XTCEZ21TV');
     </script>
     <script type="text/javascript">
@@ -59,7 +57,6 @@
             box-sizing: border-box;
         }
 
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -67,11 +64,9 @@
             overflow-x: hidden;
         }
 
-
         body.menu-open {
             overflow: hidden;
         }
-
 
         /* Navigation */
         nav {
@@ -87,7 +82,6 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-
         .logo {
             display: flex;
             align-items: center;
@@ -97,7 +91,6 @@
             font-weight: 600;
         }
 
-
         .logo-icon {
             width: 20px;
             height: 20px;
@@ -105,13 +98,11 @@
             border-radius: 3px;
         }
 
-
         .nav-links {
             display: flex;
             gap: 30px;
             list-style: none;
         }
-
 
         .nav-links a {
             color: #fff;
@@ -123,11 +114,9 @@
             cursor: pointer;
         }
 
-
         .nav-links a:hover {
             color: #00a8e8;
         }
-
 
         /* Hamburger Menu */
         .hamburger {
@@ -141,7 +130,6 @@
             z-index: 1001;
         }
 
-
         .hamburger span {
             width: 25px;
             height: 3px;
@@ -150,23 +138,19 @@
             border-radius: 2px;
         }
 
-
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(10px, 10px);
         }
-
 
         .hamburger.active span:nth-child(2) {
             opacity: 0;
         }
 
-
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(7px, -7px);
         }
 
-
-        /* Mobile Menu - Fullscreen */
+        /* Mobile Menu */
         .mobile-menu {
             position: fixed;
             left: 0;
@@ -182,17 +166,14 @@
             z-index: 999;
         }
 
-
         .mobile-menu.active {
             display: flex;
         }
-
 
         .mobile-menu li {
             margin: 0;
             border-bottom: none;
         }
-
 
         .mobile-menu a {
             display: block;
@@ -206,12 +187,10 @@
             text-align: center;
         }
 
-
         .mobile-menu a:hover {
             color: #00a8e8;
             transform: scale(1.1);
         }
-
 
         /* Bottom Toolbar - Mobile Only */
         .bottom-toolbar {
@@ -227,7 +206,6 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-
         .toolbar-container {
             display: flex;
             justify-content: center;
@@ -235,9 +213,7 @@
             gap: 30px;
             max-width: 100%;
             margin: 0 auto;
-
         }
-
 
         .toolbar-icon {
             display: flex;
@@ -254,18 +230,11 @@
             cursor: pointer;
         }
 
-
         .toolbar-icon:hover {
             background-color: #0087b8;
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 168, 232, 0.3);
         }
-
-
-        .toolbar-icon:active {
-            transform: translateY(-2px);
-        }
-
 
         /* Hero Section */
         .hero {
@@ -280,7 +249,6 @@
             overflow: visible;
         }
 
-
         #webglCanvas {
             position: absolute;
             top: 0;
@@ -290,7 +258,6 @@
             z-index: 0;
             pointer-events: none;
         }
-
 
         .hero-container {
             display: flex;
@@ -305,11 +272,9 @@
             z-index: 1;
         }
 
-
         .hero-content {
             flex: 1;
         }
-
 
         .hero h1 {
             font-size: 88px;
@@ -318,13 +283,11 @@
             line-height: 1.1;
         }
 
-
         .hero-buttons {
             display: flex;
             gap: 15px;
             margin-bottom: 30px;
         }
-
 
         .btn {
             padding: 12px 25px;
@@ -339,18 +302,15 @@
             display: inline-block;
         }
 
-
         .btn-primary {
             background-color: #00a8e8;
             color: #fff;
         }
 
-
         .btn-primary:hover {
             background-color: #0087b8;
             transform: translateY(-2px);
         }
-
 
         .btn-secondary {
             background-color: transparent;
@@ -358,11 +318,9 @@
             border: 2px solid #fff;
         }
 
-
         .btn-secondary:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
-
 
         .hero-description {
             color: #ccc;
@@ -370,7 +328,6 @@
             line-height: 1.8;
             max-width: 400px;
         }
-
 
         .hero-image {
             flex: 1;
@@ -382,14 +339,7 @@
             padding: 100px;
         }
 
-        .hero {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            margin-bottom: 200%;
-        }
-
-        /* About Section - STICKY PARALLAX */
+        /* About Section */
         .about {
             background-color: #f5f5f5;
             padding: 80px 40px;
@@ -399,7 +349,6 @@
             margin-bottom: 0;
         }
 
-
         .about-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -408,11 +357,9 @@
             gap: 60px;
         }
 
-
         .about-content {
             flex: 1;
         }
-
 
         .about h2 {
             font-size: 48px;
@@ -421,14 +368,12 @@
             color: #000;
         }
 
-
         .about-subtitle {
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 25px;
             color: #000;
         }
-
 
         .about-text {
             font-size: 16px;
@@ -437,7 +382,6 @@
             margin-bottom: 30px;
             text-align: left;
         }
-
 
         .social-link {
             display: inline-flex;
@@ -455,20 +399,17 @@
             font-size: 18px;
         }
 
-
         .social-link:hover {
             background-color: #00a8e8;
             color: #fff;
             border-color: #00a8e8;
         }
 
-
         .about-image {
             flex: 1;
             display: flex;
             justify-content: center;
         }
-
 
         .profile-image {
             width: 350px;
@@ -482,18 +423,15 @@
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
         }
 
-
         .profile-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-
         .reach-out-btn {
             margin-top: 10px;
         }
-
 
         /* Get to Know Me Section */
         .get-to-know {
@@ -505,12 +443,10 @@
             z-index: 30;
         }
 
-
         .get-to-know-container {
             max-width: 800px;
             margin: 0 auto;
         }
-
 
         .get-to-know h2 {
             font-size: 44px;
@@ -519,14 +455,12 @@
             color: #000;
         }
 
-
         .divider {
             width: 40px;
             height: 4px;
             background-color: #00a8e8;
             margin: 0 auto 30px;
         }
-
 
         .get-to-know-text {
             font-size: 14px;
@@ -535,14 +469,12 @@
             margin-bottom: 50px;
         }
 
-
         .tiles-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
         }
-
 
         .tile {
             background-color: #f9f9f9;
@@ -553,13 +485,11 @@
             border-top: 3px solid transparent;
         }
 
-
         .tile:hover {
             border-top-color: #00a8e8;
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-
 
         .tile h3 {
             font-size: 18px;
@@ -567,7 +497,6 @@
             margin-bottom: 15px;
             color: #000;
         }
-
 
         .tile p {
             font-size: 14px;
@@ -582,7 +511,6 @@
             align-items: center;
             margin-bottom: 40px;
             gap: 20px;
-
         }
 
         .resume-header-wrapper h2 {
@@ -624,7 +552,6 @@
             font-size: 14px;
         }
 
-
         /* Footer */
         footer {
             background-color: #000;
@@ -635,7 +562,6 @@
             z-index: 99;
         }
 
-
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -643,7 +569,6 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
         }
-
 
         .footer-section h4 {
             font-size: 12px;
@@ -653,13 +578,11 @@
             text-transform: uppercase;
         }
 
-
         .footer-section p {
             font-size: 13px;
             color: #aaa;
             line-height: 1.8;
         }
-
 
         .footer-section a {
             display: block;
@@ -670,11 +593,9 @@
             transition: color 0.3s ease;
         }
 
-
         .footer-section a:hover {
             color: #00a8e8;
         }
-
 
         .footer-bottom {
             margin-top: 30px;
@@ -687,12 +608,10 @@
             color: #aaa;
         }
 
-
         .footer-links {
             display: flex;
             gap: 20px;
         }
-
 
         .footer-links a {
             color: #aaa;
@@ -700,162 +619,8 @@
             transition: color 0.3s ease;
         }
 
-
         .footer-links a:hover {
             color: #00a8e8;
-        }
-
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-
-            .hamburger {
-                display: flex;
-            }
-
-
-            .bottom-toolbar {
-                display: flex;
-            }
-
-
-            body {
-                padding-bottom: 80px;
-            }
-
-
-            .hero-container {
-                flex-direction: column;
-                padding: 0 20px;
-            }
-
-
-            .hero h1 {
-                font-size: 48px;
-            }
-
-
-            .about-container {
-                flex-direction: column;
-                padding: 0 20px;
-            }
-
-
-            .about h2 {
-                font-size: 32px;
-            }
-
-
-            .get-to-know h2 {
-                font-size: 32px;
-            }
-
-
-            .tiles-container {
-                grid-template-columns: 1fr;
-            }
-
-
-            .footer-container {
-                grid-template-columns: 1fr;
-            }
-
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-
-            .hero-image {
-                display: none;
-            }
-
-            .resume-header-wrapper {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .resume-header-wrapper h2 {
-                font-size: 32px;
-            }
-        }
-
-
-        @media (max-width: 480px) {
-            nav {
-                padding: 10px 15px;
-            }
-
-
-            .logo {
-                font-size: 12px;
-            }
-
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
-
-
-            .hero-image {
-                display: none;
-            }
-
-
-            .mobile-menu a {
-                font-size: 20px;
-                padding: 15px;
-            }
-
-
-            .toolbar-icon {
-                width: 45px;
-                height: 45px;
-                font-size: 20px;
-            }
-
-
-            .toolbar-container {
-                gap: 20px;
-            }
-
-
-            body {
-                padding-bottom: 70px;
-            }
-
-
-            .bottom-toolbar {
-                padding: 10px 0;
-            }
-
-            .download-button {
-                padding: 11px 18px;
-                font-size: 11px;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .resume-header-wrapper {
-                flex-direction: column;
-                align-items: stretch;
-            }
         }
 
         /* CTA Section */
@@ -966,8 +731,110 @@
             transform: translateY(-3px);
         }
 
+        .down-arrow {
+            position: fixed;
+            left: 50%;
+            bottom: 60px;
+            transform: translateX(-50%);
+            font-size: 48px;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.5s;
+            animation: bounce 3s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        .down-arrow:hover {
+            color: #0078d4;
+        }
+
+        .hero-content {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .hero-content.scrolled {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .bottom-toolbar {
+                display: flex;
+            }
+
+            body {
+                padding-bottom: 80px;
+            }
+
+            .hero-container {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .about-container {
+                flex-direction: column;
+                padding: 0 20px;
+            }
+
+            .about h2 {
+                font-size: 32px;
+            }
+
+            .get-to-know h2 {
+                font-size: 32px;
+            }
+
+            .tiles-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero-image {
+                display: none;
+            }
+
+            .resume-header-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .resume-header-wrapper h2 {
+                font-size: 32px;
+            }
+
             .cta-section h2 {
                 font-size: 32px;
             }
@@ -986,13 +853,74 @@
                 width: 100%;
                 text-align: center;
             }
-              .down-arrow {
-                position:unset;
+
+            .down-arrow {
+                position: unset;
                 bottom: 50px;
             }
         }
 
         @media (max-width: 480px) {
+            nav {
+                padding: 10px 15px;
+            }
+
+            .logo {
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-image {
+                display: none;
+            }
+
+            .mobile-menu a {
+                font-size: 20px;
+                padding: 15px;
+            }
+
+            .toolbar-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+
+            .toolbar-container {
+                gap: 20px;
+            }
+
+            body {
+                padding-bottom: 70px;
+            }
+
+            .bottom-toolbar {
+                padding: 10px 0;
+            }
+
+            .download-button {
+                padding: 11px 18px;
+                font-size: 11px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .resume-header-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
             .cta-section {
                 padding: 50px 20px;
             }
@@ -1004,56 +932,12 @@
             .cta-section p {
                 font-size: 14px;
             }
+
             .down-arrow {
-                position:unset;
+                position: unset;
                 bottom: 50px;
             }
         }
-
-        .hero-container {
-    position: relative;
-    height: 100%;
-}
-
-.down-arrow {
-    position:fixed;
-    left: 50%;
-    bottom: 60px;
-    transform: translateX(-50%);
-    font-size: 48px;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.5s;
-    animation: bounce 3s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateX(-50%) translateY(0);
-    }
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
-}
-
-
-.down-arrow:hover {
-    color: #0078d4;
-}
-
-.hero-content {
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.hero-content.scrolled {
-    opacity: 0;
-    transform: translateY(-50px);
-}
-
     </style>
 </head>
 
@@ -1079,8 +963,7 @@
         </button>
     </nav>
 
-
-    <!-- Mobile Menu - Fullscreen -->
+    <!-- Mobile Menu -->
     <ul class="mobile-menu" id="mobileMenu">
         <li><a onclick="scrollToSection('about-me')">ABOUT ME</a></li>
         <li><a onclick="scrollToSection('resume')">RESUME</a></li>
@@ -1089,14 +972,13 @@
         <li><a href="blog.html">BLOG</a></li>
     </ul>
 
-
     <!-- Bottom Toolbar - Mobile Only -->
     <div class="bottom-toolbar">
         <div class="toolbar-container">
-            <a href="tel:+48690661143" class="toolbar-icon" title="Zadzwoń">
+            <a href="tel:+48690661143" class="toolbar-icon" title="Call">
                 <i class="fas fa-phone"></i>
             </a>
-            <a href="mailto:jan.jedrzejak@gmail.com" class="toolbar-icon" title="Wyślij email">
+            <a href="mailto:jan.jedrzejak@gmail.com" class="toolbar-icon" title="Email">
                 <i class="fas fa-envelope"></i>
             </a>
             <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank" class="toolbar-icon" title="LinkedIn">
@@ -1107,112 +989,56 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-    <canvas id="webglCanvas"></canvas>
-    <div class="hero-container">
-        <div class="hero-content">
-            <h1>Hello</h1>
-            <div class="hero-buttons">
-                <a href="#resume" class="btn btn-primary" onclick="scrollToSection('resume')">RESUME</a>
-                <a href="projects.html" class="btn btn-secondary" onclick="scrollToSection('projects')">PROJECTS</a>
+        <canvas id="webglCanvas"></canvas>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Hello</h1>
+                <div class="hero-buttons">
+                    <a href="#resume" class="btn btn-primary" onclick="scrollToSection('resume')">RESUME</a>
+                    <a href="projects.html" class="btn btn-secondary" onclick="scrollToSection('projects')">PROJECTS</a>
+                </div>
+                <p class="hero-description">
+                    I craft innovative digital solutions that boost profits and cut costs by transforming businesses
+                    through technology. My expertise accelerates digital transformation, delivering measurable value and
+                    competitive advantage.
+                </p>
             </div>
-            <p class="hero-description">
-                I craft innovative digital solutions that boost profits and cut costs by transforming businesses
-                through technology. My expertise accelerates digital transformation, delivering measurable value and
-                competitive advantage.
-            </p>
+            <div class="hero-image">
+            </div>
+            <!-- Down Arrow -->
+            <a class="down-arrow" onclick="scrollToSection('about-me')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+                </svg>
+            </a>
         </div>
-        <div class="hero-image">
-        </div>
-        <!-- Strzałka w dół -->
-        <a class="down-arrow" onclick="scrollToSection('about-me')">
-           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
-</svg>
-        </a>
-    </div>
-</section>
+    </section>
 
     <section id="about-me">
-
     </section>
-    <!-- About Section - STICKY PARALLAX -->
+
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="about-container">
             <div class="about-content">
                 <h2>About me</h2>
                 <p class="about-subtitle">My name is Jan Jędrzejak</p>
-                <p class="about-text"> I am a results-oriented expert in digital solutions and product ownership, with
+                <p class="about-text">I am a results-oriented expert in digital solutions and product ownership, with
                     strong expertise in Salesforce Digital Experience, HCL WebSpheres, Sitecore, and Microsoft Power
                     Platform. I excel in managing and optimizing complex B2B eCommerce ecosystems, driving product strategy,
                     enhancing user experience, and leading process automation initiatives. I am highly adaptable to diverse
                     technologies and platforms, delivering effective solutions aligned with evolving business goals. I
                     collaborate closely with stakeholders to ensure alignment of product vision, usability, and performance,
-                    consistently achieving impactful results in dynamic, global environments. </p> <a
-                    href="https://www.linkedin.com/in/janjedrzejak/" class="social-link" title="LinkedIn">in</a>
-                <div> <a href="#contact" class="btn btn-primary reach-out-btn" onclick="scrollToSection('contact')">Reach
-                        out</a> </div>
+                    consistently achieving impactful results in dynamic, global environments.</p>
+                <a href="https://www.linkedin.com/in/janjedrzejak/" class="social-link" title="LinkedIn">in</a>
+                <div><a href="#contact" class="btn btn-primary reach-out-btn" onclick="scrollToSection('contact')">Reach
+                        out</a></div>
             </div>
             <div class="about-image">
-                <div class="profile-image"> <img src="img/me.jpg" alt="Jan Jędrzejak"> </div>
+                <div class="profile-image"><img src="img/me.jpg" alt="Jan Jędrzejak"></div>
             </div>
         </div>
     </section>
-    <style>
-        @media (max-width: 768px) {
-            .about-container {
-                flex-direction: column;
-                gap: 30px;
-            }
-    
-            .about-content {
-                order: 2;
-            }
-    
-            .about-image {
-                order: 1;
-                margin-bottom: 20px;
-            }
-    
-            .profile-image {
-                height: 200px;
-                width: 200px;
-            }
-    
-            .profile-image img {
-                height: 200px;
-                width: 200px;
-                object-fit:fill;
-            }
-    
-            .about h2 {
-                font-size: 24px;
-            }
-    
-            .about-text {
-                font-size: 13px;
-                line-height: 1.6;
-            }
-        }
-    
-        @media (max-width: 480px) {
-            .about-container {
-                gap: 20px;
-            }
-    
-            .profile-image {
-                height: 200px;
-            }
-    
-            .about h2 {
-                font-size: 20px;
-            }
-    
-            .about-text {
-                font-size: 12px;
-            }
-        }
-    </style>
-
 
     <!-- Get to Know Me Section -->
     <section class="get-to-know" id="projects">
@@ -1260,170 +1086,165 @@
 
             <div style="margin-bottom: 50px;">
                 <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Work experience</h3>
-<!-- Job Entry 1 -->
-<div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2022 - Present</p>
-        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Digital Marketing Specialist & Product Owner</h4>
-        <p style="font-size: 12px; color: #666; font-weight: 500;">Linde Gas Poland</p>
-    </div>
 
-    <div style="flex: 1; min-width: 280px;">
-        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-            <li style="margin-bottom: 16px;">Managed digital content workflows on 2 platforms for 4,000+ users, boosting engagement by 15%</li>
-            <li style="margin-bottom: 16px;">Oversaw B2B e-commerce and corporate sites +30% YoY revenue, increasing organic traffic by 90% and conversions by 15% YoY. Delivered a CMS platform adopted by 11 countries, enabling streamlined content management and localization</li>
-            <li style="margin-bottom: 16px;">Led Microsoft Power Platform adoption, automating 15+ processes, improving productivity by +20% and reducing costs by +20%</li>
-            <li style="margin-bottom: 16px;">Delivered 10+ trainings and documentation, enhancing digital tool use among 100+ employees and customers</li>
-            <li style="margin-bottom: 16px;">Handled 100+ content update tickets annually, meeting 95% SLA and brand standards</li>
-            <li style="margin-bottom: 16px;">Coordinated global stakeholder communication for projects in 11 countries, accelerating deployment by 25%</li>
-        </ul>
-    </div>
-</div>
+                <!-- Job 1: Linde Gas Poland (kept) - Metrics Generalized -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2022 - Present</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Digital Marketing Specialist & Product Owner</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">Linde Gas Poland</p>
+                    </div>
+                    <div style="flex: 1; min-width: 280px;">
+                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
+                            <li style="margin-bottom: 16px;">Managed digital content workflows on multiple platforms for enterprise-scale user base, enhancing engagement and platform adoption</li>
+                            <li style="margin-bottom: 16px;">Oversaw B2B e-commerce and corporate sites optimization, achieving significant revenue growth and substantial increases in organic traffic. Delivered CMS platform adoption across multiple countries, enabling streamlined content management and localization</li>
+                            <li style="margin-bottom: 16px;">Led Microsoft Power Platform adoption, automating multiple business processes and improving team productivity while reducing operational costs</li>
+                            <li style="margin-bottom: 16px;">Delivered comprehensive training programs and documentation, enhancing digital tool adoption among enterprise users</li>
+                            <li style="margin-bottom: 16px;">Managed high volume of content update requests, maintaining SLA compliance and brand standards</li>
+                            <li style="margin-bottom: 16px;">Coordinated global stakeholder communication for multi-country projects, accelerating deployment timelines</li>
+                        </ul>
+                    </div>
+                </div>
 
-<!-- Job Entry 2 -->
-<div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2018 - 2022</p>
-        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">IS Field Support Specialist</h4>
-        <p style="font-size: 12px; color: #666; font-weight: 500;">Linde Gas Poland</p>
-    </div>
+                <!-- Job 2: Linde Gas Poland (kept) - Metrics Generalized -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2018 - 2022</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">IS Field Support Specialist</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">Linde Gas Poland</p>
+                    </div>
+                    <div style="flex: 1; min-width: 280px;">
+                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
+                            <li style="margin-bottom: 16px;">Delivered and supported IT infrastructure projects for large-scale computer environments, ensuring smooth deployment and adoption</li>
+                            <li style="margin-bottom: 16px;">Managed incidents and service requests via ITILv4 ticketing systems, maintaining high SLA compliance</li>
+                            <li style="margin-bottom: 16px;">Provided support for Microsoft 365, SAP R/3, and other enterprise applications</li>
+                            <li style="margin-bottom: 16px;">Assisted in network troubleshooting and infrastructure maintenance with regional teams</li>
+                            <li style="margin-bottom: 16px;">Led migration of large-scale network infrastructure including switches, routers, and telephone systems</li>
+                            <li style="margin-bottom: 16px;">Coordinated office network upgrades and IT system migrations, ensuring timely delivery and minimal disruption</li>
+                        </ul>
+                    </div>
+                </div>
 
-    <div style="flex: 1; min-width: 280px;">
-        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-            <li style="margin-bottom: 16px;">Delivered and supported IT projects for 500+ computers, ensuring smooth deployment and adoption</li>
-            <li style="margin-bottom: 16px;">Managed incidents and service requests via ITILv4 ticketing systems, maintaining over 95% SLA compliance</li>
-            <li style="margin-bottom: 16px;">Provided support for Microsoft 365, SAP R/3, and other corporate applications</li>
-            <li style="margin-bottom: 16px;">Assisted in network troubleshooting for Cisco and AT&T infrastructure with regional teams</li>
-            <li style="margin-bottom: 16px;">Led migration of 50+ network switches, edge routers, access points, and telephone exchanges</li>
-            <li style="margin-bottom: 16px;">Coordinated office network and cabling upgrades for 50+ users. Managed ERP integration with government reporting systems, ensuring timely delivery</li>
-        </ul>
-    </div>
-</div>
+                <!-- Job 3: TVN Grupa Discovery (kept) -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2018 - 2018</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Assistant Video Editor</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">TVN Grupa Discovery</p>
+                    </div>
+                    <div style="flex: 1; min-width: 280px;">
+                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
+                            <li style="margin-bottom: 16px;">Supported lead editor with daily editing tasks for production workflows, ensuring smooth post-production processes</li>
+                            <li style="margin-bottom: 16px;">Organized and managed media assets, including logging, selecting, and preparing material for editorial review</li>
+                            <li style="margin-bottom: 16px;">Created preliminary edits and assembly cuts based on director guidance, maintaining narrative coherence and pacing</li>
+                            <li style="margin-bottom: 16px;">Participated in production and editorial meetings to discuss progress, feedback, and creative decisions</li>
+                            <li style="margin-bottom: 16px;">Tracked post-production progress and managed schedules to ensure deadlines aligned with client requirements</li>
+                        </ul>
+                    </div>
+                </div>
 
-<!-- Job Entry 3 -->
-<div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2018 - 2018</p>
-        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Assistant Video Editor</h4>
-        <p style="font-size: 12px; color: #666; font-weight: 500;">TVN Grupa Discovery</p>
-    </div>
-    <div style="flex: 1; min-width: 280px;">
-        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-            <li style="margin-bottom: 16px;">Supported lead editor with daily editing tasks for reality show production, ensuring smooth post-production workflow</li>
-            <li style="margin-bottom: 16px;">Organized and managed raw footage, including logging, selecting, and preparing material for editorial processes</li>
-            <li style="margin-bottom: 16px;">Created preliminary edits and assembly cuts based on director and editor guidance, maintaining narrative coherence and pacing</li>
-            <li style="margin-bottom: 16px;">Participated in production and editorial meetings to discuss progress, feedback, and creative decisions</li>
-            <li style="margin-bottom: 16px;">Tracked progress and managed post-production schedules, ensuring deadlines were met in line with client requirements from TTV/TVN</li>
-        </ul>
-    </div>
-</div>
+                <!-- Job 4: TVP S.A. (kept) -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2016 - 2018</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Camera Operator</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">TVP S.A. (Telewizja Polska)</p>
+                    </div>
+                    <div style="flex: 1; min-width: 280px;">
+                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
+                            <li style="margin-bottom: 16px;">Operated professional camera equipment to capture high-quality video footage for regional broadcast operations</li>
+                            <li style="margin-bottom: 16px;">Filmed news reports and events in diverse geographic locations, ensuring visual clarity and storytelling impact</li>
+                            <li style="margin-bottom: 16px;">Collaborated with reporters and production teams to deliver footage meeting editorial requirements and broadcast deadlines</li>
+                            <li style="margin-bottom: 16px;">Managed technical aspects of camera operation including framing, lighting, and audio capture in diverse environments</li>
+                            <li style="margin-bottom: 16px;">Followed broadcast standards and safety protocols while working in varied field conditions</li>
+                        </ul>
+                    </div>
+                </div>
 
-<!-- Job Entry 4 -->
-<div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2016 - 2018</p>
-        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Camera Operator</h4>
-        <p style="font-size: 12px; color: #666; font-weight: 500;">TVP S.A. (Telewizja Polska)</p>
-    </div>
-    <div style="flex: 1; min-width: 280px;">
-        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-            <li style="margin-bottom: 16px;">Operated camera equipment to capture high-quality video footage for TVP3 Poznań broadcasts</li>
-            <li style="margin-bottom: 16px;">Filmed news reports and events in Southern Greater Poland area, ensuring visual clarity and storytelling impact</li>
-            <li style="margin-bottom: 16px;">Collaborated closely with reporters and production teams to deliver footage meeting editorial requirements and deadlines</li>
-            <li style="margin-bottom: 16px;">Managed technical aspects of camera operation including framing, lighting, and audio capture in varied outdoor and indoor environments</li>
-            <li style="margin-bottom: 16px;">Followed broadcast standards and safety protocols while working in diverse and sometimes challenging field conditions</li>
-        </ul>
-    </div>
-</div>
+                <!-- Job 5: Kino Polska TV (kept) - Program names kept since they're public -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2016 - 2018</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Video Editor</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">Kino Polska TV S.A.</p>
+                    </div>
+                    <div style="flex: 1; min-width: 280px;">
+                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
+                            <li style="margin-bottom: 16px;">Filmed and edited video content for broadcast television programs including "Bliżej! Magazyn reporterów" on ZOOM TV, maintaining high-quality video and audio standards</li>
+                            <li style="margin-bottom: 16px;">Edited recorded materials to create coherent and engaging reports aligned with production requirements and program style</li>
+                            <li style="margin-bottom: 16px;">Collaborated with directors, producers, and post-production teams to ensure smooth production processes and creative vision realization</li>
+                            <li style="margin-bottom: 16px;">Selected appropriate shots, performed editing and color correction to enhance narrative impact and viewer engagement</li>
+                            <li style="margin-bottom: 16px;">Managed filming and editing equipment, ensuring efficient operation and adherence to quality standards and delivery deadlines</li>
+                        </ul>
+                    </div>
+                </div>
 
-<!-- Job Entry 5 -->
-<div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2016 - 2018</p>
-        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Video Editor</h4>
-        <p style="font-size: 12px; color: #666; font-weight: 500;">Kino Polska TV S.A.</p>
-    </div>
-    <div style="flex: 1; min-width: 280px;">
-        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-            <li style="margin-bottom: 16px;">Filmed and recorded report footage for "Bliżej! Magazyn reporterów" magazine on ZOOM TV, ensuring high-quality video and audio standards</li>
-            <li style="margin-bottom: 16px;">Edited recorded materials to create coherent and engaging reports aligned with production requirements and program style</li>
-            <li style="margin-bottom: 16px;">Collaborated with directors, producers, and post-production teams to ensure smooth production processes and realization of creative vision</li>
-            <li style="margin-bottom: 16px;">Selected appropriate shots, performed editing and color correction to enhance narrative impact and viewer engagement</li>
-            <li style="margin-bottom: 16px;">Managed filming and editing equipment, ensuring efficient operation at all production stages and adherence to quality standards and deadlines</li>
-        </ul>
-    </div>
-</div>
+                <!-- Job 6: TV Proart (kept) - Events kept since they're public information -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2014 - 2018</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Video Editor & Camera Operator</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">wlkp24.info TV Proart</p>
+                    </div>
+                    <div style="flex: 1; min-width: 280px;">
+                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
+                            <li style="margin-bottom: 16px;">Edited news materials, reports, and advertising spots for Telewizja Proart, maintaining high broadcast quality and audience engagement</li>
+                            <li style="margin-bottom: 16px;">Created graphics for television programs and internet platforms to enhance storytelling and visual impact</li>
+                            <li style="margin-bottom: 16px;">Collaborated effectively with journalists, producers, and marketing teams to ensure alignment with brand identity and production standards</li>
+                            <li style="margin-bottom: 16px;">Managed production schedules and technical aspects of editing and graphic design to deliver timely and polished content</li>
+                            <li style="margin-bottom: 16px;">Operated camera equipment during live broadcasts of major cultural, sports, and entertainment events including international sumo championships, European SEC Speedway Championships, and International Jazz Pianists Festival</li>
+                        </ul>
+                    </div>
+                </div>
 
-<!-- Job Entry 6 -->
-<div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2014 - 2018</p>
-        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Video Editor & Camera Operator</h4>
-        <p style="font-size: 12px; color: #666; font-weight: 500;">wlkp24.info TV Proart</p>
-    </div>
-    <div style="flex: 1; min-width: 280px;">
-        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-            <li style="margin-bottom: 16px;">Edited news materials, reports, and advertising spots for Telewizja Proart, maintaining high broadcast quality and audience engagement</li>
-            <li style="margin-bottom: 16px;">Created graphics for television programs and internet platforms to enhance storytelling and visual impact</li>
-            <li style="margin-bottom: 16px;">Collaborated effectively with journalists, producers, and marketing teams to ensure alignment with brand identity and production standards</li>
-            <li style="margin-bottom: 16px;">Managed production schedules and technical aspects of editing and graphic design to deliver timely and polished content</li>
-            <li style="margin-bottom: 16px;">Operated camera equipment during live broadcasts of major cultural and sports events, including international sumo championships, European SEC Speedway Championships, and International Jazz Pianists Festival, ensuring high-quality footage and smooth live transmission</li>
-        </ul>
-    </div>
-</div>
+                <!-- Job 7: Freelance (kept) -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2012 - 2014</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Photojournalist</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">Freelance</p>
+                    </div>
+                    <div style="flex: 1; min-width: 280px;">
+                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
+                            <li style="margin-bottom: 16px;">Captured photographs documenting local events, community stories, and newsworthy situations</li>
+                            <li style="margin-bottom: 16px;">Attended press conferences, cultural events, and public gatherings to visually report community life</li>
+                            <li style="margin-bottom: 16px;">Edited and enhanced photographs using professional photo editing software while maintaining authenticity</li>
+                            <li style="margin-bottom: 16px;">Collaborated with reporters and editors to ensure visual materials complemented written stories</li>
+                            <li style="margin-bottom: 16px;">Prepared captions, descriptions, and metadata for publication; maintained photographic equipment and managed digital archives</li>
+                        </ul>
+                    </div>
+                </div>
 
-<!-- Job Entry 7 -->
-<div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2012 - 2014</p>
-        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Photojournalist</h4>
-        <p style="font-size: 12px; color: #666; font-weight: 500;">Freelance</p>
-    </div>
-    <div style="flex: 1; min-width: 280px;">
-        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-            <li style="margin-bottom: 16px;">Captured photographs documenting local events, community stories, and newsworthy situations</li>
-            <li style="margin-bottom: 16px;">Attended press conferences, cultural events, and public gatherings to visually report community life</li>
-            <li style="margin-bottom: 16px;">Edited and enhanced photographs using professional photo editing software while maintaining authenticity</li>
-            <li style="margin-bottom: 16px;">Collaborated with reporters and editors to ensure visual materials complemented written stories</li>
-            <li style="margin-bottom: 16px;">Prepared captions, descriptions, and metadata for publication; maintained photographic equipment and managed digital archives</li>
-        </ul>
-    </div>
-</div>
-
-<!-- Job Entry 8 -->
-<div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2011 - 2012</p>
-        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Photojournalist</h4>
-        <p style="font-size: 12px; color: #666; font-weight: 500;">Portal informacyjny ostrowwlkp.info</p>
-    </div>
-    <div style="flex: 1; min-width: 280px;">
-        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-            <li style="margin-bottom: 16px;">Captured photographs documenting local events, community stories, and newsworthy situations</li>
-            <li style="margin-bottom: 16px;">Attended press conferences, cultural events, and public gatherings to visually report community life</li>
-            <li style="margin-bottom: 16px;">Edited and enhanced photographs using professional photo editing software while maintaining authenticity</li>
-            <li style="margin-bottom: 16px;">Collaborated with reporters and editors to ensure visual materials complemented written stories</li>
-            <li style="margin-bottom: 16px;">Worked under tight deadlines adapting to unpredictable field conditions while upholding journalistic and ethical standards</li>
-            <li style="margin-bottom: 16px;">Built and maintained relationships with local institutions, event organizers, and media outlets</li>
-        </ul>
-    </div>
-</div>
+                <!-- Job 8: ostrowwlkp.info (kept) -->
+                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2011 - 2012</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Photojournalist</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">Portal informacyjny ostrowwlkp.info</p>
+                    </div>
+                    <div style="flex: 1; min-width: 280px;">
+                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
+                            <li style="margin-bottom: 16px;">Captured photographs documenting local events, community stories, and newsworthy situations</li>
+                            <li style="margin-bottom: 16px;">Attended press conferences, cultural events, and public gatherings to visually report community life</li>
+                            <li style="margin-bottom: 16px;">Edited and enhanced photographs using professional photo editing software while maintaining authenticity</li>
+                            <li style="margin-bottom: 16px;">Collaborated with reporters and editors to ensure visual materials complemented written stories</li>
+                            <li style="margin-bottom: 16px;">Worked under tight deadlines adapting to unpredictable field conditions while upholding journalistic and ethical standards</li>
+                            <li style="margin-bottom: 16px;">Built and maintained relationships with local institutions, event organizers, and media outlets</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <!-- Awards Section -->
             <div style="margin-top: 80px;">
                 <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Awards</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                    <div
-                        style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
-                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership
-                            Award</p>
+                    <div style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
+                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership Award</p>
                         <p style="font-size: 12px; color: #999;">2024</p>
                     </div>
-                    <div
-                        style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
-                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership
-                            Award</p>
+                    <div style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
+                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership Award</p>
                         <p style="font-size: 12px; color: #999;">2022</p>
                     </div>
                 </div>
@@ -1434,248 +1255,128 @@
                 <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Education</h3>
 
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2016 - 2018</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            M.Sc. Eng.</h4>
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2016 - 2018</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">M.Sc. Eng.</h4>
                         <p style="font-size: 12px; color: #666; font-weight: 500;">Społeczna Akademia Nauk</p>
                         <p style="font-size: 12px; color: #999; margin-top: 5px;">Łódź, Poland</p>
                     </div>
                     <div style="flex: 1;">
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good
-                        </p>
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Computer graphics and internet
-                            technologies specialization.</p>
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good</p>
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Computer graphics and internet technologies specialization.</p>
                         <p style="font-size: 14px; color: #555;"><strong>Diploma with honours.</strong></p>
                     </div>
                 </div>
 
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2012 - 2016</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            BEng</h4>
+                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2012 - 2016</p>
+                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">BEng</h4>
                         <p style="font-size: 12px; color: #666; font-weight: 500;">Społeczna Akademia Nauk</p>
                         <p style="font-size: 12px; color: #999; margin-top: 5px;">Ostrów Wielkopolski, Poland</p>
                     </div>
                     <div style="flex: 1;">
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good
-                        </p>
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Visualization and information
-                            management systems specialization.</p>
-                        <p style="font-size: 14px; color: #555;"><strong>Award for Master's Dissertation and diploma
-                                with honours.</strong></p>
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good</p>
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Visualization and information management systems specialization.</p>
+                        <p style="font-size: 14px; color: #555;"><strong>Award for Master's Dissertation and diploma with honours.</strong></p>
                     </div>
                 </div>
             </div>
 
-            <!-- Licenses & Certifications Section -->
-            <div style="margin-top: 80px; ">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Licenses &
-                    certifications</h3>
+            <!-- Licenses & Certifications -->
+            <div style="margin-top: 80px;">
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Licenses & Certifications</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">SQL (Basic)
-                            Certificate</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">SQL (Basic) Certificate</p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">HackerRank</p>
                         <p style="font-size: 11px; color: #999;">Issued Oct 2025</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Creator
-                        </p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Creator</p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued Dec 2023</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital
-                            Enthusiast - Lead in Digital I</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Enthusiast - Lead in Digital I</p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued Aug 2023</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital
-                            Enthusiast ChatGPT</p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Jul 2023</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital Explorer
-                            Product Development</p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued May 2023</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital
-                            Enthusiast Product Development</p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Feb 2023</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital
-                            Enthusiast Digital Foundations</p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Nov 2022</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital
-                            Enthusiast Scrum</p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Sep 2022</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Digital
-                            Enthusiast Data</p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Jun 2022</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">SC-900T00:
-                            Microsoft Security, Compliance and Identity Fundamentals</p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
-                        <p style="font-size: 11px; color: #999;">Issued Apr 2022</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">MS-900T01:
-                            Microsoft 365 Fundamentals</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Microsoft 365 Fundamentals</p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
                         <p style="font-size: 11px; color: #999;">Issued Mar 2022</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">AZ-900T01:
-                            Microsoft Azure Fundamentals</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Azure Fundamentals</p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
                         <p style="font-size: 11px; color: #999;">Issued Feb 2022</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Microsoft
-                            PowerApps i Flow</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Microsoft PowerApps & Flow</p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Infowave sp. z o.o.</p>
                         <p style="font-size: 11px; color: #999;">Issued Jun 2019</p>
                     </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Teams App and
-                            Solutions Workshop</p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Supremo</p>
-                        <p style="font-size: 11px; color: #999;">Training</p>
-                    </div>
                 </div>
             </div>
 
-            <!-- Professional Skillset Section -->
+            <!-- Professional Skillset -->
             <div style="margin-top: 80px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Professional skillset
-                </h3>
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Professional skillset</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Product Owner
-                            Expertise</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Product Owner Expertise</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Digital
-                            Marketing Specialist</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Digital Marketing Specialist</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">eCommerce
-                            Platform Management</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">eCommerce Platform Management</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Business and
-                            Sales Process Automation</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Business & Sales Process Automation</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">CRM Automation
-                        </p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">CRM Automation</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Content Creation
-                            and SEO Optimization</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Content Creation & SEO Optimization</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Technical and
-                            Business Communication</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Power Platform (Power Automate, Power Apps)</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Project
-                            Coordination and Team Leadership</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Salesforce Digital Experience</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Digital
-                            Transformation and CAPEX Planning</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Data Analysis
-                            and Performance Improvement</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Marketing
-                            Campaign Management</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Online Marketing
-                            Strategies</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Conversion Rate
-                            Optimization</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Products
-                            Knowledge</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">IT and Business
-                            Needs Translation into Technology Solutions</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Power Platform
-                            (Power Automate, Power Apps)</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">Salesforce
-                            Digital Experience Platform</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">HCL WebSphere
-                            and Sitecore CMS</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">JIRA and Azure
-                            DevOps Tools</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;">HCL WebSphere & Sitecore CMS</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Languages Section -->
+            <!-- Languages -->
             <div style="margin-top: 80px;">
                 <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Languages</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
                         <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Polish</p>
-                        <p style="font-size: 12px; color: #666;">native</p>
+                        <p style="font-size: 12px; color: #666;">Native</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
                         <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">English</p>
-                        <p style="font-size: 12px; color: #666;">proficient</p>
+                        <p style="font-size: 12px; color: #666;">Proficient</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="cta-container">
             <h2>Ready to Transform Your Business?</h2>
             <p>Let's collaborate on your digital transformation, automation, and eCommerce projects. I specialize in
                 building innovative solutions that drive growth and efficiency.</p>
-
             <div class="cta-features">
                 <div class="cta-feature">
                     <i class="fas fa-rocket"></i>
@@ -1693,11 +1394,9 @@
                     <p>Optimize platforms for maximum conversions and user experience</p>
                 </div>
             </div>
-
             <div class="cta-buttons">
                 <a href="mailto:jan.jedrzejak@gmail.com" class="btn-cta-primary">Get in Touch</a>
-                <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank" class="btn-cta-secondary">Connect on
-                    LinkedIn</a>
+                <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank" class="btn-cta-secondary">Connect on LinkedIn</a>
             </div>
         </div>
     </section>
@@ -1711,7 +1410,7 @@
             </div>
             <div class="footer-section">
                 <h4>Write</h4>
-                <a href="mailto:jan.jedrzejak@mailbox.org">jan.jedrzejak@gmail.com</a>
+                <a href="mailto:jan.jedrzejak@gmail.com">jan.jedrzejak@gmail.com</a>
             </div>
             <div class="footer-section">
                 <h4>Connect</h4>
@@ -1721,41 +1420,14 @@
         <div class="footer-bottom">
             <span>© 2025 by JJ</span>
             <div class="footer-links">
-                <a href="https://www.iubenda.com/privacy-policy/85171501"
-                    class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only iubenda-noiframe "
-                    title="Privacy Policy ">Privacy Policy</a>
-                <script
-                    type="text/javascript">(function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);</script>
-                <a href="https://www.iubenda.com/privacy-policy/85171501/cookie-policy"
-                    class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only iubenda-noiframe "
-                    title="Cookie Policy ">Cookie Policy</a>
-                <script
-                    type="text/javascript">(function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);</script>
-                <a href="https://www.iubenda.com/terms-and-conditions/85171501"
-                    class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only iubenda-noiframe "
-                    title="Terms and Conditions ">Terms and Conditions</a>
-                <script
-                    type="text/javascript">(function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);</script>
+                <a href="https://www.iubenda.com/privacy-policy/85171501" class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only" title="Privacy Policy">Privacy Policy</a>
+                <a href="https://www.iubenda.com/privacy-policy/85171501/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only" title="Cookie Policy">Cookie Policy</a>
+                <a href="https://www.iubenda.com/terms-and-conditions/85171501" class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only" title="Terms and Conditions">Terms and Conditions</a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling hero content on scroll
-        window.addEventListener('scroll', function() {
-            const heroContent = document.querySelector('.hero-content');
-            const heroHeight = document.querySelector('.hero').offsetHeight;
-            const scrollPosition = window.scrollY;
-
-            if (scrollPosition > heroHeight * 0.3) {
-                heroContent.classList.add('scrolled');
-            } else {
-                heroContent.classList.remove('scrolled');
-            }
-        });
-
-
-
         // Smooth scrolling navigation
         function scrollToSection(sectionId) {
             const element = document.getElementById(sectionId);
@@ -1789,26 +1461,18 @@
             document.body.classList.remove('menu-open');
         }
 
-        // Parallax scroll animation for entire "Get to Know Me" section
-        const getToKnowSection = document.querySelector('.get-to-know');
+        // Smooth scrolling hero content on scroll
+        window.addEventListener('scroll', function() {
+            const heroContent = document.querySelector('.hero-content');
+            const heroHeight = document.querySelector('.hero').offsetHeight;
+            const scrollPosition = window.scrollY;
 
-        function updateSectionPosition() {
-            if (!getToKnowSection) return;
-
-            const sectionRect = getToKnowSection.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
-
-            const sectionCenter = sectionRect.top + sectionRect.height / 2;
-            const distanceFromViewport = (sectionCenter - viewportHeight / 2) / viewportHeight;
-
-            const maxOffset = 150;
-            const offset = distanceFromViewport * maxOffset;
-
-            /* getToKnowSection.style.transform = `translateX(${offset}px)`; */
-        }
-
-        window.addEventListener('scroll', updateSectionPosition, { passive: true });
-        updateSectionPosition();
+            if (scrollPosition > heroHeight * 0.3) {
+                heroContent.classList.add('scrolled');
+            } else {
+                heroContent.classList.remove('scrolled');
+            }
+        });
 
         // Add scroll effect to navbar
         window.addEventListener('scroll', function () {
@@ -1911,11 +1575,7 @@
                 const z = Math.cos(phi);
                 positions.push(x * 2, y * 2, z * 2);
                 const t = i / particleCount;
-                colors.push(
-                    0 + t * 0.35,
-                    0.8 - t * 0.5,
-                    1.0 - t * 0.3
-                );
+                colors.push(0 + t * 0.35, 0.8 - t * 0.5, 1.0 - t * 0.3);
             }
 
             const positionBuffer = gl.createBuffer();
@@ -1967,24 +1627,9 @@
             function rotationMatrix(x, y, z) {
                 const cos = Math.cos;
                 const sin = Math.sin;
-                const rx = new Float32Array([
-                    1, 0, 0, 0,
-                    0, cos(x), -sin(x), 0,
-                    0, sin(x), cos(x), 0,
-                    0, 0, 0, 1
-                ]);
-                const ry = new Float32Array([
-                    cos(y), 0, sin(y), 0,
-                    0, 1, 0, 0,
-                    -sin(y), 0, cos(y), 0,
-                    0, 0, 0, 1
-                ]);
-                const rz = new Float32Array([
-                    cos(z), -sin(z), 0, 0,
-                    sin(z), cos(z), 0, 0,
-                    0, 0, 1, 0,
-                    0, 0, 0, 1
-                ]);
+                const rx = new Float32Array([1, 0, 0, 0, 0, cos(x), -sin(x), 0, 0, sin(x), cos(x), 0, 0, 0, 0, 1]);
+                const ry = new Float32Array([cos(y), 0, sin(y), 0, 0, 1, 0, 0, -sin(y), 0, cos(y), 0, 0, 0, 0, 1]);
+                const rz = new Float32Array([cos(z), -sin(z), 0, 0, sin(z), cos(z), 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]);
                 const rxy = multiplyMatrices(ry, rx);
                 return multiplyMatrices(rz, rxy);
             }
