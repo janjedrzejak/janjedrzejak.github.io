@@ -1,35 +1,34 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Title & Meta Description -->
-    <title>Projects - Jan Jędrzejak | Digital Solutions & eCommerce</title>
-    <meta name="description" content="Explore Jan Jędrzejak's portfolio of digital transformation, eCommerce optimization, and automation projects. Showcasing real-world implementations and measurable results.">
+    <title>Blog - Jan Jędrzejak | Digital Solutions & eCommerce</title>
+    <meta name="description" content="Read Jan Jędrzejak's expert blog on digital transformation, eCommerce optimization, business automation, and product management. Insights, tips, and analysis from the digital business world.">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    
+
     <!-- Keywords -->
-    <meta name="keywords" content="projects portfolio, eCommerce, digital transformation, automation, Salesforce, Power Platform, case studies, B2B solutions">
+    <meta name="keywords" content="blog, digital, eCommerce, automation, digital transformation, technology, product management, Power Platform, Salesforce, analysis">
 
     <!-- Author & Language -->
     <meta name="author" content="Jan Jędrzejak">
-    <meta name="language" content="en, pl">
-    <meta http-equiv="Content-Language" content="en-US, pl-PL">
+    <meta name="language" content="en">
+    <meta http-equiv="Content-Language" content="en-US">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://janjedrzejak.github.io/projects.html">
+    <link rel="canonical" href="https://janjedrzejak.github.io/blog.html">
 
     <!-- Open Graph (Social Media) -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://janjedrzejak.github.io/projects.html">
-    <meta property="og:title" content="Projects - Jan Jędrzejak | Digital Solutions & eCommerce">
-    <meta property="og:description" content="Explore digital transformation and eCommerce projects with measurable business impact.">
-    <meta property="og:image" content="https://janjedrzejak.github.io/img/og-image.jpg">
+    <meta property="og:url" content="https://janjedrzejak.github.io/blog.html">
+    <meta property="og:title" content="Blog - Jan Jędrzejak | Digital Solutions & eCommerce">
+    <meta property="og:description" content="Blog on digital transformation, eCommerce, and business automation.">
+    <meta property="og:image" content="https://janjedrzejak.github.io/img/og-image-blog.jpg">
     <meta property="og:site_name" content="Jan Jędrzejak - Digital Expert">
     <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="pl_PL">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV"></script>
@@ -44,14 +43,14 @@
     <script type="text/javascript">
         var _iub = _iub || [];
         _iub.csConfiguration = { "siteId": 4313953, "cookiePolicyId": 85171501, "storage": { "useSiteId": true } };
-        _iub.csLangConfiguration = { "en": { "cookiePolicyId": 85171501 }, "pl": { "cookiePolicyId": 95467044 } };
+        _iub.csLangConfiguration = { "en": { "cookiePolicyId": 85171501 } };
     </script>
     <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4313953.js"></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         * {
             margin: 0;
@@ -322,15 +321,15 @@
             margin: 0 auto;
         }
 
-        /* Projects Grid */
-        .projects-grid {
+        /* Blog Grid */
+        .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
             margin-bottom: 80px;
         }
 
-        .project-card {
+        .blog-card {
             background-color: #f9f9f9;
             border-radius: 8px;
             overflow: hidden;
@@ -340,13 +339,13 @@
             flex-direction: column;
         }
 
-        .project-card:hover {
+        .blog-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             border-color: #00a8e8;
         }
 
-        .project-image {
+        .blog-image {
             width: 100%;
             height: 220px;
             background: linear-gradient(135deg, #00a8e8 0%, #0087b8 100%);
@@ -359,18 +358,18 @@
             overflow: hidden;
         }
 
-        .project-image i {
+        .blog-image i {
             z-index: 1;
         }
 
-        .project-content {
+        .blog-content {
             padding: 30px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .project-category {
+        .blog-category {
             font-size: 11px;
             font-weight: 700;
             color: #00a8e8;
@@ -379,7 +378,16 @@
             margin-bottom: 10px;
         }
 
-        .project-title {
+        .blog-meta {
+            font-size: 12px;
+            font-weight: 600;
+            color: #00a8e8;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .blog-title {
             font-size: 20px;
             font-weight: 700;
             color: #000;
@@ -387,7 +395,7 @@
             line-height: 1.3;
         }
 
-        .project-description {
+        .blog-description {
             font-size: 14px;
             color: #666;
             line-height: 1.7;
@@ -395,62 +403,18 @@
             flex-grow: 1;
         }
 
-        .project-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .project-tag {
-            font-size: 11px;
-            background-color: #fff;
-            color: #333;
-            padding: 5px 12px;
-            border-radius: 20px;
-            border: 1px solid #ddd;
-        }
-
-        .project-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: auto;
-            padding-top: 20px;
-            border-top: 1px solid #e5e5e5;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-value {
-            font-size: 18px;
-            font-weight: 700;
-            color: #00a8e8;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            font-size: 11px;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .project-link {
+        .blog-link {
             display: inline-block;
-            margin-top: 15px;
             color: #00a8e8;
             text-decoration: none;
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 1px;
             transition: color 0.3s ease;
+            margin-top: auto;
         }
 
-        .project-link:hover {
+        .blog-link:hover {
             color: #0087b8;
         }
 
@@ -613,7 +577,7 @@
                 font-size: 14px;
             }
 
-            .projects-grid {
+            .blog-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -661,7 +625,7 @@
                 padding: 40px 20px;
             }
 
-            .project-card {
+            .blog-card {
                 margin-bottom: 20px;
             }
 
@@ -682,9 +646,9 @@
         <ul class="nav-links">
             <li><a href="index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
             <li><a href="index.html#resume" onclick="scrollToSection('resume')">RESUME</a></li>
-            <li><a class="active">PROJECTS</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
             <li><a href="index.html#contact" onclick="scrollToSection('contact')">CONTACT</a></li>
-            <li><a href="blog.html">BLOG</a></li>
+            <li><a class="active">BLOG</a></li>
         </ul>
         <button class="hamburger" id="hamburger">
             <span></span>
@@ -697,9 +661,9 @@
     <ul class="mobile-menu" id="mobileMenu">
         <li><a href="index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
         <li><a href="index.html#resume">RESUME</a></li>
-        <li><a class="active">PROJECTS</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
         <li><a href="index.html#contact">CONTACT</a></li>
-        <li><a href="blog.html">BLOG</a></li>
+        <li><a class="active">BLOG</a></li>
     </ul>
 
     <!-- Bottom Toolbar - Mobile Only -->
@@ -719,263 +683,91 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1>Projects</h1>
-        <p>Discover the digital solutions and transformations I've led. Real-world implementations delivering measurable business impact.</p>
+        <h1>Blog</h1>
+        <p>Insights on digital transformation, eCommerce optimization, business automation, and product management. Expert perspectives, practical tips, and industry analysis.</p>
     </section>
 
     <!-- Main Content -->
     <div class="projects-container">
         <!-- Breadcrumb -->
         <div class="breadcrumb">
-            <a href="index.html">HOME</a> / PROJECTS
+            <a href="index.html">HOME</a> / BLOG
         </div>
 
-        <!-- Projects Intro -->
+        <!-- Blog Intro -->
         <div class="projects-intro">
-            <h2>Featured Projects</h2>
+            <h2>Latest Articles</h2>
             <div class="divider"></div>
-            <p>Throughout my career, I've led digital transformation initiatives, optimized eCommerce platforms, and implemented automation solutions across multiple organizations and markets.</p>
+            <p>Discover expert insights on trends, practical implementations, and industry perspectives on digital solutions in business.</p>
         </div>
 
-        <!-- Projects Grid -->
-        <div class="projects-grid">
-            <!-- Project 1: eCommerce Optimization -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-shopping-cart"></i>
+        <!-- Blog Grid -->
+        <div class="blog-grid">
+            <!-- Article 1 -->
+            <div class="blog-card">
+                <div class="blog-image">
+                    <i class="fas fa-chart-line"></i>
                 </div>
-                <div class="project-content">
-                    <span class="project-category">Linde Gas Poland</span>
-                    <h3 class="project-title">B2B eCommerce Platform Optimization</h3>
-                    <p class="project-description">
-                        Managed and optimized B2B eCommerce and corporate sites, driving significant business growth through strategic improvements in user experience and conversion optimization.
+                <div class="blog-content">
+                    <span class="blog-meta">November 2025 - eCommerce</span>
+                    <h3 class="blog-title">Tripling B2B eCommerce Conversion in 3 Years - A Gas Industry Case Study</h3>
+                    <p class="blog-description">
+                        In-depth analysis of optimization efforts in an eCommerce platform: from UX implementations through process automation to lead and revenue growth. Concrete metrics, measurable results, and inspiration for your own initiatives.
                     </p>
-                    <div class="project-meta">
-                        <span class="project-tag">eCommerce</span>
-                        <span class="project-tag">UX/UI</span>
-                        <span class="project-tag">Conversion Rate Optimization</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <span class="stat-value">+30%</span>
-                            <span class="stat-label">YoY Revenue</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">+90%</span>
-                            <span class="stat-label">Organic Traffic</span>
-                        </div>
-                    </div>
+                    <a class="blog-link" href="blog/tripled-b2b-conversion.html">Read full article &rarr;</a>
                 </div>
             </div>
 
-            <!-- Project 2: CMS Implementation -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-globe"></i>
+            <!-- Article 2 -->
+            <div class="blog-card">
+                <div class="blog-image">
+                    <i class="fas fa-robot"></i>
                 </div>
-                <div class="project-content">
-                    <span class="project-category">Linde Gas Poland</span>
-                    <h3 class="project-title">Multi-Country CMS Platform</h3>
-                    <p class="project-description">
-                        Delivered a comprehensive CMS platform enabling streamlined content management and localization across 11 countries, improving operational efficiency and content consistency.
+                <div class="blog-content">
+                    <span class="blog-meta">October 2025 - Automation</span>
+                    <h3 class="blog-title">Power Platform in Practice: Best Automations for Sales Teams</h3>
+                    <p class="blog-description">
+                        Real-world examples: How to improve sales team efficiency using Power Automate and Power Apps. Find proven scenarios, key insights, and practical tips to get started today.
                     </p>
-                    <div class="project-meta">
-                        <span class="project-tag">CMS</span>
-                        <span class="project-tag">Localization</span>
-                        <span class="project-tag">Multi-region</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <span class="stat-value">11</span>
-                            <span class="stat-label">Countries</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">4000+</span>
-                            <span class="stat-label">Users</span>
-                        </div>
-                    </div>
+                    <a class="blog-link" href="blog/power-platform-sales-automation.html">Read full article &rarr;</a>
                 </div>
             </div>
 
-            <!-- Project 3: Process Automation -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-cogs"></i>
+            <!-- Article 3 -->
+            <div class="blog-card">
+                <div class="blog-image">
+                    <i class="fas fa-lightbulb"></i>
                 </div>
-                <div class="project-content">
-                    <span class="project-category">Linde Gas Poland</span>
-                    <h3 class="project-title">Microsoft Power Platform Automation</h3>
-                    <p class="project-description">
-                        Led enterprise-wide adoption of Microsoft Power Platform, automating critical business processes and improving team productivity while reducing operational costs.
+                <div class="blog-content">
+                    <span class="blog-meta">September 2025 - Product Management</span>
+                    <h3 class="blog-title">Collecting Business Requirements Effectively: Practical Techniques for Product Owners</h3>
+                    <p class="blog-description">
+                        Discussion of tools and methods that help gather client and team needs - workshops, surveys, feature request analysis, and backlog management. Examples from large-scale implementations.
                     </p>
-                    <div class="project-meta">
-                        <span class="project-tag">Power Automate</span>
-                        <span class="project-tag">Power Apps</span>
-                        <span class="project-tag">Automation</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <span class="stat-value">15+</span>
-                            <span class="stat-label">Processes Automated</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">+20%</span>
-                            <span class="stat-label">Productivity</span>
-                        </div>
-                    </div>
+                    <a class="blog-link" href="blog/effective-requirements-gathering.html">Read full article &rarr;</a>
                 </div>
             </div>
 
-            <!-- Project 4: Digital Content Management -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-file-alt"></i>
+            <!-- Article 4 -->
+            <div class="blog-card">
+                <div class="blog-image">
+                    <i class="fas fa-bolt"></i>
                 </div>
-                <div class="project-content">
-                    <span class="project-category">Linde Gas Poland</span>
-                    <h3 class="project-title">Digital Content Workflow Management</h3>
-                    <p class="project-description">
-                        Managed digital content workflows across multiple platforms for 4,000+ users, improving engagement through strategic content optimization and delivery.
+                <div class="blog-content">
+                    <span class="blog-meta">August 2025 - Digital Transformation</span>
+                    <h3 class="blog-title">Digital Transformation in Industrial Practice - What to Focus On</h3>
+                    <p class="blog-description">
+                        Case studies and lessons from leading digital transformation in an industrial company: what works, what doesn't, and how to convince teams to embrace technological change.
                     </p>
-                    <div class="project-meta">
-                        <span class="project-tag">Content Management</span>
-                        <span class="project-tag">Engagement</span>
-                        <span class="project-tag">Workflow</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <span class="stat-value">+15%</span>
-                            <span class="stat-label">Engagement</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">2</span>
-                            <span class="stat-label">Platforms</span>
-                        </div>
-                    </div>
+                    <a class="blog-link" href="blog/industrial-digital-transformation.html">Read full article &rarr;</a>
                 </div>
             </div>
-
-            <!-- Project 5: Video Production -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-film"></i>
-                </div>
-                <div class="project-content">
-                    <span class="project-category">TVN Grupa Discovery / Kino Polska TV / TVP</span>
-                    <h3 class="project-title">Television & Video Content Production</h3>
-                    <p class="project-description">
-                        Supported video production and editorial workflows for reality TV shows and magazine programs, ensuring high-quality content delivery to broadcast standards.
-                    </p>
-                    <div class="project-meta">
-                        <span class="project-tag">Video Editing</span>
-                        <span class="project-tag">Post-production</span>
-                        <span class="project-tag">Broadcast</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <span class="stat-value">100%</span>
-                            <span class="stat-label">Delivered on time</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">50+</span>
-                            <span class="stat-label">Episodes Delivered</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 6: IT Infrastructure -->
-            <div class="project-card">
-                <div class="project-image">
-                    <i class="fas fa-network-wired"></i>
-                </div>
-                <div class="project-content">
-                    <span class="project-category">Linde Gas Poland</span>
-                    <h3 class="project-title">IT Infrastructure & Network Migration</h3>
-                    <p class="project-description">
-                        Led large-scale IT infrastructure projects including network switch migrations and office upgrades, ensuring minimal downtime and seamless operational continuity.
-                    </p>
-                    <div class="project-meta">
-                        <span class="project-tag">Infrastructure</span>
-                        <span class="project-tag">Networking</span>
-                        <span class="project-tag">Migration</span>
-                    </div>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <span class="stat-value">50+</span>
-                            <span class="stat-label">Network Devices</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-value">500+</span>
-                            <span class="stat-label">Computers Supported</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 7: Editing Over 100 Programs for TV Proart -->
-<div class="project-card">
-    <div class="project-image">
-        <i class="fas fa-video"></i>
-    </div>
-    <div class="project-content">
-        <span class="project-category">TV Proart</span>
-        <h3 class="project-title">Editing Over 100 TV Programs</h3>
-        <p class="project-description">
-            Responsible for editing over 100 programs for the local TV station TV Proart, ensuring high production quality and timely delivery of materials.
-        </p>
-        <div class="project-meta">
-            <span class="project-tag">Editing</span>
-            <span class="project-tag">Video</span>
-            <span class="project-tag">Local TV</span>
-        </div>
-        <div class="project-stats">
-            <div class="stat-item">
-                <span class="stat-value">100+</span>
-                <span class="stat-label">Programs Edited</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-value">100%</span>
-                <span class="stat-label">On-Time Delivery</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Project 8: Camera Operator for TV Proart and TVP3 -->
-<div class="project-card">
-    <div class="project-image">
-        <i class="fas fa-video-camera"></i>
-    </div>
-    <div class="project-content">
-        <span class="project-category">TV Proart / TVP3</span>
-        <h3 class="project-title">Camera Operator - Over 100 Live Broadcast Events</h3>
-        <p class="project-description">
-            Performed camera operator duties during over 100 live events, including regional and national broadcasts, for local TV Proart and TVP3.
-        </p>
-        <div class="project-meta">
-            <span class="project-tag">Camera Operator</span>
-            <span class="project-tag">Live Broadcasts</span>
-            <span class="project-tag">Television</span>
-        </div>
-        <div class="project-stats">
-            <div class="stat-item">
-                <span class="stat-value">100+</span>
-                <span class="stat-label">Events Covered</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-value">Regional & National</span>
-                <span class="stat-label">Broadcasts</span>
-            </div>
-        </div>
-    </div>
-</div>
-
         </div>
 
         <!-- CTA Section -->
         <section class="cta-section">
-            <h2>Ready to Collaborate?</h2>
-            <p>Let's discuss how I can help transform your business through digital solutions and strategic automation.</p>
+            <h2>Have Questions or Topic Ideas?</h2>
+            <p>I'd love to hear from you - feel free to reach out or suggest new topics for the blog.</p>
             <div class="cta-buttons">
                 <a href="mailto:jan.jedrzejak@gmail.com" class="btn btn-primary">Get in Touch</a>
                 <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
@@ -991,11 +783,11 @@
                 <a href="tel:+48690661143">+48 690 661 143</a>
             </div>
             <div class="footer-section">
-                <h4>Write</h4>
+                <h4>Email</h4>
                 <a href="mailto:jan.jedrzejak@gmail.com">jan.jedrzejak@gmail.com</a>
             </div>
             <div class="footer-section">
-                <h4>Connect</h4>
+                <h4>Social</h4>
                 <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank">LinkedIn</a>
             </div>
         </div>
@@ -1037,7 +829,6 @@
         // Navigation scroll functionality
         function scrollToSection(sectionId) {
             closeMenu();
-            // This would navigate to home page and scroll to section
             window.location.href = '/#' + sectionId;
         }
 
