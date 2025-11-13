@@ -1044,6 +1044,16 @@
 .down-arrow:hover {
     color: #0078d4;
 }
+
+.hero-content {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero-content.scrolled {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
     </style>
 </head>
 
@@ -1727,6 +1737,21 @@
     </footer>
 
     <script>
+        // Smooth scrolling hero content on scroll
+        window.addEventListener('scroll', function() {
+            const heroContent = document.querySelector('.hero-content');
+            const heroHeight = document.querySelector('.hero').offsetHeight;
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > heroHeight * 0.3) {
+                heroContent.classList.add('scrolled');
+            } else {
+                heroContent.classList.remove('scrolled');
+            }
+        });
+
+
+
         // Smooth scrolling navigation
         function scrollToSection(sectionId) {
             const element = document.getElementById(sectionId);
