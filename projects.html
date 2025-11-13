@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +12,18 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     
     <!-- Keywords -->
-    <meta name="keywords" content="projects portfolio, eCommerce, digital transformation, automation, Salesforce, Power Platform, case studies, B2B solutions">
+    <meta name="keywords" content="projects portfolio, eCommerce, digital transformation, automation, Power Platform, B2B solutions, enterprise applications">
+
 
     <!-- Author & Language -->
     <meta name="author" content="Jan Jędrzejak">
     <meta name="language" content="en, pl">
     <meta http-equiv="Content-Language" content="en-US, pl-PL">
 
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://janjedrzejak.github.io/projects.html">
+
 
     <!-- Open Graph (Social Media) -->
     <meta property="og:type" content="website">
@@ -31,6 +35,7 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
 
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV"></script>
     <script>
@@ -39,6 +44,7 @@
         gtag('js', new Date());
         gtag('config', 'G-9XTCEZ21TV');
     </script>
+
 
     <!-- Iubenda Cookie & Privacy -->
     <script type="text/javascript">
@@ -50,6 +56,7 @@
     <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
     <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -59,6 +66,7 @@
             box-sizing: border-box;
         }
 
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -66,9 +74,11 @@
             overflow-x: hidden;
         }
 
+
         body.menu-open {
             overflow: hidden;
         }
+
 
         /* Navigation */
         nav {
@@ -84,6 +94,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
+
         .logo {
             display: flex;
             align-items: center;
@@ -95,6 +106,7 @@
             cursor: pointer;
         }
 
+
         .logo-icon {
             width: 20px;
             height: 20px;
@@ -102,11 +114,13 @@
             border-radius: 3px;
         }
 
+
         .nav-links {
             display: flex;
             gap: 30px;
             list-style: none;
         }
+
 
         .nav-links a {
             color: #fff;
@@ -118,10 +132,12 @@
             cursor: pointer;
         }
 
+
         .nav-links a:hover,
         .nav-links a.active {
             color: #00a8e8;
         }
+
 
         /* Hamburger Menu */
         .hamburger {
@@ -135,6 +151,7 @@
             z-index: 1001;
         }
 
+
         .hamburger span {
             width: 25px;
             height: 3px;
@@ -143,17 +160,21 @@
             border-radius: 2px;
         }
 
+
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(10px, 10px);
         }
+
 
         .hamburger.active span:nth-child(2) {
             opacity: 0;
         }
 
+
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(7px, -7px);
         }
+
 
         /* Mobile Menu */
         .mobile-menu {
@@ -171,14 +192,17 @@
             z-index: 999;
         }
 
+
         .mobile-menu.active {
             display: flex;
         }
+
 
         .mobile-menu li {
             margin: 0;
             border-bottom: none;
         }
+
 
         .mobile-menu a {
             display: block;
@@ -192,10 +216,12 @@
             text-align: center;
         }
 
+
         .mobile-menu a:hover {
             color: #00a8e8;
             transform: scale(1.1);
         }
+
 
         /* Bottom Toolbar - Mobile Only */
         .bottom-toolbar {
@@ -211,6 +237,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
+
         .toolbar-container {
             display: flex;
             justify-content: center;
@@ -219,6 +246,7 @@
             max-width: 100%;
             margin: 0 auto;
         }
+
 
         .toolbar-icon {
             display: flex;
@@ -235,11 +263,13 @@
             cursor: pointer;
         }
 
+
         .toolbar-icon:hover {
             background-color: #0087b8;
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 168, 232, 0.3);
         }
+
 
         /* Page Header */
         .page-header {
@@ -252,12 +282,14 @@
             overflow: hidden;
         }
 
+
         .page-header h1 {
             font-size: 64px;
             font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.1;
         }
+
 
         .page-header p {
             font-size: 18px;
@@ -266,6 +298,7 @@
             margin: 0 auto;
             line-height: 1.8;
         }
+
 
         /* Breadcrumb */
         .breadcrumb {
@@ -278,15 +311,18 @@
             letter-spacing: 1px;
         }
 
+
         .breadcrumb a {
             color: #00a8e8;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
+
         .breadcrumb a:hover {
             color: #000;
         }
+
 
         /* Main Content */
         .projects-container {
@@ -295,10 +331,12 @@
             padding: 80px 40px;
         }
 
+
         .projects-intro {
             text-align: center;
             margin-bottom: 80px;
         }
+
 
         .projects-intro h2 {
             font-size: 44px;
@@ -307,12 +345,14 @@
             color: #000;
         }
 
+
         .divider {
             width: 40px;
             height: 4px;
             background-color: #00a8e8;
             margin: 0 auto 30px;
         }
+
 
         .projects-intro p {
             font-size: 16px;
@@ -322,6 +362,7 @@
             margin: 0 auto;
         }
 
+
         /* Projects Grid */
         .projects-grid {
             display: grid;
@@ -329,6 +370,7 @@
             gap: 40px;
             margin-bottom: 80px;
         }
+
 
         .project-card {
             background-color: #f9f9f9;
@@ -340,11 +382,13 @@
             flex-direction: column;
         }
 
+
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             border-color: #00a8e8;
         }
+
 
         .project-image {
             width: 100%;
@@ -359,9 +403,11 @@
             overflow: hidden;
         }
 
+
         .project-image i {
             z-index: 1;
         }
+
 
         .project-content {
             padding: 30px;
@@ -369,6 +415,7 @@
             display: flex;
             flex-direction: column;
         }
+
 
         .project-category {
             font-size: 11px;
@@ -379,6 +426,7 @@
             margin-bottom: 10px;
         }
 
+
         .project-title {
             font-size: 20px;
             font-weight: 700;
@@ -386,6 +434,7 @@
             margin-bottom: 15px;
             line-height: 1.3;
         }
+
 
         .project-description {
             font-size: 14px;
@@ -395,12 +444,14 @@
             flex-grow: 1;
         }
 
+
         .project-meta {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 20px;
         }
+
 
         .project-tag {
             font-size: 11px;
@@ -411,6 +462,7 @@
             border: 1px solid #ddd;
         }
 
+
         .project-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -420,9 +472,11 @@
             border-top: 1px solid #e5e5e5;
         }
 
+
         .stat-item {
             text-align: center;
         }
+
 
         .stat-value {
             font-size: 18px;
@@ -432,12 +486,14 @@
             margin-bottom: 5px;
         }
 
+
         .stat-label {
             font-size: 11px;
             color: #999;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
 
         .project-link {
             display: inline-block;
@@ -450,9 +506,11 @@
             transition: color 0.3s ease;
         }
 
+
         .project-link:hover {
             color: #0087b8;
         }
+
 
         /* CTA Section */
         .cta-section {
@@ -464,11 +522,13 @@
             margin-bottom: 80px;
         }
 
+
         .cta-section h2 {
             font-size: 44px;
             font-weight: 700;
             margin-bottom: 20px;
         }
+
 
         .cta-section p {
             font-size: 16px;
@@ -476,12 +536,14 @@
             opacity: 0.95;
         }
 
+
         .cta-buttons {
             display: flex;
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
         }
+
 
         .btn {
             padding: 12px 25px;
@@ -496,15 +558,18 @@
             display: inline-block;
         }
 
+
         .btn-primary {
             background-color: #fff;
             color: #00a8e8;
         }
 
+
         .btn-primary:hover {
             background-color: #f5f5f5;
             transform: translateY(-2px);
         }
+
 
         .btn-secondary {
             background-color: transparent;
@@ -512,9 +577,11 @@
             border: 2px solid #fff;
         }
 
+
         .btn-secondary:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
+
 
         /* Footer */
         footer {
@@ -525,6 +592,7 @@
             z-index: 99;
         }
 
+
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -533,6 +601,7 @@
             gap: 40px;
         }
 
+
         .footer-section h4 {
             font-size: 12px;
             font-weight: 600;
@@ -540,6 +609,7 @@
             margin-bottom: 15px;
             text-transform: uppercase;
         }
+
 
         .footer-section a {
             display: block;
@@ -550,9 +620,11 @@
             transition: color 0.3s ease;
         }
 
+
         .footer-section a:hover {
             color: #00a8e8;
         }
+
 
         .footer-bottom {
             margin-top: 30px;
@@ -565,10 +637,12 @@
             color: #aaa;
         }
 
+
         .footer-links {
             display: flex;
             gap: 20px;
         }
+
 
         .footer-links a {
             color: #aaa;
@@ -578,9 +652,11 @@
             margin: 0;
         }
 
+
         .footer-links a:hover {
             color: #00a8e8;
         }
+
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -588,82 +664,101 @@
                 display: none;
             }
 
+
             .hamburger {
                 display: flex;
             }
+
 
             .bottom-toolbar {
                 display: flex;
             }
 
+
             body {
                 padding-bottom: 80px;
             }
+
 
             .page-header {
                 padding-top: 100px;
                 padding-bottom: 60px;
             }
 
+
             .page-header h1 {
                 font-size: 36px;
             }
+
 
             .page-header p {
                 font-size: 14px;
             }
 
+
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+
 
             .projects-intro h2 {
                 font-size: 32px;
             }
 
+
             .cta-section {
                 padding: 50px 20px;
             }
+
 
             .cta-section h2 {
                 font-size: 32px;
             }
 
+
             .cta-buttons {
                 flex-direction: column;
             }
+
 
             .btn {
                 width: 100%;
                 text-align: center;
             }
 
+
             .footer-container {
                 grid-template-columns: 1fr;
             }
+
 
             .footer-bottom {
                 flex-direction: column;
                 gap: 15px;
             }
 
+
             .footer-links {
                 flex-direction: column;
             }
         }
+
 
         @media (max-width: 480px) {
             .page-header h1 {
                 font-size: 28px;
             }
 
+
             .projects-container {
                 padding: 40px 20px;
             }
 
+
             .project-card {
                 margin-bottom: 20px;
             }
+
 
             .breadcrumb {
                 padding: 20px 20px 0;
@@ -671,6 +766,7 @@
         }
     </style>
 </head>
+
 
 <body>
     <!-- Navigation -->
@@ -693,6 +789,7 @@
         </button>
     </nav>
 
+
     <!-- Mobile Menu -->
     <ul class="mobile-menu" id="mobileMenu">
         <li><a href="index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
@@ -701,6 +798,7 @@
         <li><a href="index.html#contact">CONTACT</a></li>
         <li><a href="blog.html">BLOG</a></li>
     </ul>
+
 
     <!-- Bottom Toolbar - Mobile Only -->
     <div class="bottom-toolbar">
@@ -717,11 +815,13 @@
         </div>
     </div>
 
+
     <!-- Page Header -->
     <section class="page-header">
         <h1>Projects</h1>
         <p>Discover the digital solutions and transformations I've led. Real-world implementations delivering measurable business impact.</p>
     </section>
+
 
     <!-- Main Content -->
     <div class="projects-container">
@@ -730,12 +830,14 @@
             <a href="index.html">HOME</a> / PROJECTS
         </div>
 
+
         <!-- Projects Intro -->
         <div class="projects-intro">
             <h2>Featured Projects</h2>
             <div class="divider"></div>
             <p>Throughout my career, I've led digital transformation initiatives, optimized eCommerce platforms, and implemented automation solutions across multiple organizations and markets.</p>
         </div>
+
 
         <!-- Projects Grid -->
         <div class="projects-grid">
@@ -745,28 +847,29 @@
                     <i class="fas fa-shopping-cart"></i>
                 </div>
                 <div class="project-content">
-                    <span class="project-category">Linde Gas Poland</span>
+                    <span class="project-category">Enterprise B2B Solutions</span>
                     <h3 class="project-title">B2B eCommerce Platform Optimization</h3>
                     <p class="project-description">
-                        Managed and optimized B2B eCommerce and corporate sites, driving significant business growth through strategic improvements in user experience and conversion optimization.
+                        Managed and optimized B2B eCommerce and corporate sites, driving significant business growth through strategic improvements in user experience, conversion optimization, and customer journey refinement.
                     </p>
                     <div class="project-meta">
                         <span class="project-tag">eCommerce</span>
                         <span class="project-tag">UX/UI</span>
-                        <span class="project-tag">Conversion Rate Optimization</span>
+                        <span class="project-tag">CRO</span>
                     </div>
                     <div class="project-stats">
                         <div class="stat-item">
-                            <span class="stat-value">+30%</span>
-                            <span class="stat-label">YoY Revenue</span>
+                            <span class="stat-value">Significant</span>
+                            <span class="stat-label">Revenue Growth</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-value">+90%</span>
-                            <span class="stat-label">Organic Traffic</span>
+                            <span class="stat-value">Substantial</span>
+                            <span class="stat-label">Traffic Increase</span>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- Project 2: CMS Implementation -->
             <div class="project-card">
@@ -774,10 +877,10 @@
                     <i class="fas fa-globe"></i>
                 </div>
                 <div class="project-content">
-                    <span class="project-category">Linde Gas Poland</span>
+                    <span class="project-category">Enterprise B2B Solutions</span>
                     <h3 class="project-title">Multi-Country CMS Platform</h3>
                     <p class="project-description">
-                        Delivered a comprehensive CMS platform enabling streamlined content management and localization across 11 countries, improving operational efficiency and content consistency.
+                        Delivered a comprehensive CMS platform enabling streamlined content management and localization across multiple countries, improving operational efficiency and content consistency across markets.
                     </p>
                     <div class="project-meta">
                         <span class="project-tag">CMS</span>
@@ -786,16 +889,17 @@
                     </div>
                     <div class="project-stats">
                         <div class="stat-item">
-                            <span class="stat-value">11</span>
-                            <span class="stat-label">Countries</span>
+                            <span class="stat-value">Multi</span>
+                            <span class="stat-label">Geographic Regions</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-value">4000+</span>
-                            <span class="stat-label">Users</span>
+                            <span class="stat-value">Enterprise</span>
+                            <span class="stat-label">Scale</span>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- Project 3: Process Automation -->
             <div class="project-card">
@@ -803,28 +907,29 @@
                     <i class="fas fa-cogs"></i>
                 </div>
                 <div class="project-content">
-                    <span class="project-category">Linde Gas Poland</span>
-                    <h3 class="project-title">Microsoft Power Platform Automation</h3>
+                    <span class="project-category">Enterprise B2B Solutions</span>
+                    <h3 class="project-title">Enterprise Process Automation</h3>
                     <p class="project-description">
-                        Led enterprise-wide adoption of Microsoft Power Platform, automating critical business processes and improving team productivity while reducing operational costs.
+                        Led enterprise-wide adoption of advanced automation platforms, streamlining critical business processes and improving team productivity while reducing operational costs and manual work.
                     </p>
                     <div class="project-meta">
-                        <span class="project-tag">Power Automate</span>
-                        <span class="project-tag">Power Apps</span>
                         <span class="project-tag">Automation</span>
+                        <span class="project-tag">Power Platform</span>
+                        <span class="project-tag">Workflow</span>
                     </div>
                     <div class="project-stats">
                         <div class="stat-item">
-                            <span class="stat-value">15+</span>
+                            <span class="stat-value">Multiple</span>
                             <span class="stat-label">Processes Automated</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-value">+20%</span>
+                            <span class="stat-value">Improved</span>
                             <span class="stat-label">Productivity</span>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- Project 4: Digital Content Management -->
             <div class="project-card">
@@ -832,10 +937,10 @@
                     <i class="fas fa-file-alt"></i>
                 </div>
                 <div class="project-content">
-                    <span class="project-category">Linde Gas Poland</span>
+                    <span class="project-category">Enterprise B2B Solutions</span>
                     <h3 class="project-title">Digital Content Workflow Management</h3>
                     <p class="project-description">
-                        Managed digital content workflows across multiple platforms for 4,000+ users, improving engagement through strategic content optimization and delivery.
+                        Managed digital content workflows across multiple platforms, improving user engagement through strategic content optimization, personalization, and enhanced delivery mechanisms.
                     </p>
                     <div class="project-meta">
                         <span class="project-tag">Content Management</span>
@@ -844,16 +949,17 @@
                     </div>
                     <div class="project-stats">
                         <div class="stat-item">
-                            <span class="stat-value">+15%</span>
+                            <span class="stat-value">Improved</span>
                             <span class="stat-label">Engagement</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-value">2</span>
+                            <span class="stat-value">Multiple</span>
                             <span class="stat-label">Platforms</span>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- Project 5: Video Production -->
             <div class="project-card">
@@ -861,10 +967,10 @@
                     <i class="fas fa-film"></i>
                 </div>
                 <div class="project-content">
-                    <span class="project-category">TVN Grupa Discovery / Kino Polska TV / TVP</span>
+                    <span class="project-category">Media & Broadcast</span>
                     <h3 class="project-title">Television & Video Content Production</h3>
                     <p class="project-description">
-                        Supported video production and editorial workflows for reality TV shows and magazine programs, ensuring high-quality content delivery to broadcast standards.
+                        Supported video production and editorial workflows for broadcast content, ensuring high-quality content delivery to broadcast standards and timely project completion.
                     </p>
                     <div class="project-meta">
                         <span class="project-tag">Video Editing</span>
@@ -873,16 +979,17 @@
                     </div>
                     <div class="project-stats">
                         <div class="stat-item">
-                            <span class="stat-value">100%</span>
-                            <span class="stat-label">Delivered on time</span>
+                            <span class="stat-value">Consistent</span>
+                            <span class="stat-label">Quality Delivery</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-value">50+</span>
-                            <span class="stat-label">Episodes Delivered</span>
+                            <span class="stat-value">Multiple</span>
+                            <span class="stat-label">Productions</span>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- Project 6: IT Infrastructure -->
             <div class="project-card">
@@ -890,10 +997,10 @@
                     <i class="fas fa-network-wired"></i>
                 </div>
                 <div class="project-content">
-                    <span class="project-category">Linde Gas Poland</span>
-                    <h3 class="project-title">IT Infrastructure & Network Migration</h3>
+                    <span class="project-category">Enterprise B2B Solutions</span>
+                    <h3 class="project-title">IT Infrastructure & Network Systems</h3>
                     <p class="project-description">
-                        Led large-scale IT infrastructure projects including network switch migrations and office upgrades, ensuring minimal downtime and seamless operational continuity.
+                        Led large-scale IT infrastructure projects including system migrations and office technology upgrades, ensuring minimal downtime and seamless operational continuity.
                     </p>
                     <div class="project-meta">
                         <span class="project-tag">Infrastructure</span>
@@ -902,75 +1009,80 @@
                     </div>
                     <div class="project-stats">
                         <div class="stat-item">
-                            <span class="stat-value">50+</span>
-                            <span class="stat-label">Network Devices</span>
+                            <span class="stat-value">Large Scale</span>
+                            <span class="stat-label">Deployment</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-value">500+</span>
-                            <span class="stat-label">Computers Supported</span>
+                            <span class="stat-value">Multiple</span>
+                            <span class="stat-label">User Base</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Project 7: Editing Over 100 Programs for TV Proart -->
-<div class="project-card">
-    <div class="project-image">
-        <i class="fas fa-video"></i>
-    </div>
-    <div class="project-content">
-        <span class="project-category">TV Proart</span>
-        <h3 class="project-title">Editing Over 100 TV Programs</h3>
-        <p class="project-description">
-            Responsible for editing over 100 programs for the local TV station TV Proart, ensuring high production quality and timely delivery of materials.
-        </p>
-        <div class="project-meta">
-            <span class="project-tag">Editing</span>
-            <span class="project-tag">Video</span>
-            <span class="project-tag">Local TV</span>
-        </div>
-        <div class="project-stats">
-            <div class="stat-item">
-                <span class="stat-value">100+</span>
-                <span class="stat-label">Programs Edited</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-value">100%</span>
-                <span class="stat-label">On-Time Delivery</span>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- Project 8: Camera Operator for TV Proart and TVP3 -->
-<div class="project-card">
-    <div class="project-image">
-        <i class="fas fa-video-camera"></i>
-    </div>
-    <div class="project-content">
-        <span class="project-category">TV Proart / TVP3</span>
-        <h3 class="project-title">Camera Operator - Over 100 Live Broadcast Events</h3>
-        <p class="project-description">
-            Performed camera operator duties during over 100 live events, including regional and national broadcasts, for local TV Proart and TVP3.
-        </p>
-        <div class="project-meta">
-            <span class="project-tag">Camera Operator</span>
-            <span class="project-tag">Live Broadcasts</span>
-            <span class="project-tag">Television</span>
-        </div>
-        <div class="project-stats">
-            <div class="stat-item">
-                <span class="stat-value">100+</span>
-                <span class="stat-label">Events Covered</span>
+
+            <!-- Project 7: Video Editing -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Media & Broadcast</span>
+                    <h3 class="project-title">Video Editing & Production</h3>
+                    <p class="project-description">
+                        Directed comprehensive video editing operations for broadcast content, ensuring high production quality and timely delivery of materials across multiple projects and formats.
+                    </p>
+                    <div class="project-meta">
+                        <span class="project-tag">Editing</span>
+                        <span class="project-tag">Video Production</span>
+                        <span class="project-tag">Media</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">Numerous</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">Reliable</span>
+                            <span class="stat-label">Delivery</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="stat-item">
-                <span class="stat-value">Regional & National</span>
-                <span class="stat-label">Broadcasts</span>
+
+
+            <!-- Project 8: Camera Operations -->
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-video-camera"></i>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Media & Broadcast</span>
+                    <h3 class="project-title">Live Broadcast Camera Operations</h3>
+                    <p class="project-description">
+                        Performed camera operations during live events and broadcasts, delivering professional technical execution and seamless content capture for regional and national broadcast distribution.
+                    </p>
+                    <div class="project-meta">
+                        <span class="project-tag">Camera Operations</span>
+                        <span class="project-tag">Live Broadcasting</span>
+                        <span class="project-tag">Television</span>
+                    </div>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">Numerous</span>
+                            <span class="stat-label">Live Events</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">Professional</span>
+                            <span class="stat-label">Standards</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
+
 
         </div>
+
 
         <!-- CTA Section -->
         <section class="cta-section">
@@ -982,6 +1094,7 @@
             </div>
         </section>
     </div>
+
 
     <!-- Footer -->
     <footer>
@@ -1009,16 +1122,19 @@
         </div>
     </footer>
 
+
     <script>
         // Hamburger menu toggle
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
+
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             document.body.classList.toggle('menu-open');
         });
+
 
         // Close menu when pressing Escape
         document.addEventListener('keydown', (event) => {
@@ -1027,12 +1143,14 @@
             }
         });
 
+
         // Close menu function
         function closeMenu() {
             hamburger.classList.remove('active');
             mobileMenu.classList.remove('active');
             document.body.classList.remove('menu-open');
         }
+
 
         // Navigation scroll functionality
         function scrollToSection(sectionId) {
@@ -1041,9 +1159,11 @@
             window.location.href = '/#' + sectionId;
         }
 
+
         function scrollToHome() {
             window.location.href = '/';
         }
+
 
         // Add scroll effect to navbar
         window.addEventListener('scroll', function () {
@@ -1056,5 +1176,6 @@
         });
     </script>
 </body>
+
 
 </html>
