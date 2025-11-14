@@ -1277,8 +1277,10 @@
             }
 
             .down-arrow {
-                position: unset;
-                bottom: 50px;
+                position: fixed;
+                bottom: 100px;
+                left:50%;
+                font-size: 58px;
             }
         }
 
