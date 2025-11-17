@@ -618,6 +618,27 @@
             }
         });
 
+                // Parallax scroll animation for entire "Get to Know Me" section
+        const getToKnowSection = document.querySelector('.get-to-know');
+
+        function updateSectionPosition() {
+            if (!getToKnowSection) return;
+
+            const sectionRect = getToKnowSection.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            const sectionCenter = sectionRect.top + sectionRect.height / 2;
+            const distanceFromViewport = (sectionCenter - viewportHeight / 2) / viewportHeight;
+
+            const maxOffset = 150;
+            const offset = distanceFromViewport * maxOffset;
+
+            /* getToKnowSection.style.transform = `translateX(${offset}px)`; */
+        }
+
+        window.addEventListener('scroll', updateSectionPosition, { passive: true });
+        updateSectionPosition();
+
         // Add scroll effect to navbar
         window.addEventListener('scroll', function () {
             const nav = document.querySelector('nav');
@@ -719,7 +740,11 @@
                 const z = Math.cos(phi);
                 positions.push(x * 2, y * 2, z * 2);
                 const t = i / particleCount;
-                colors.push(0 + t * 0.35, 0.8 - t * 0.5, 1.0 - t * 0.3);
+                colors.push(
+                    0 + t * 0.35,
+                    0.8 - t * 0.5,
+                    1.0 - t * 0.3
+                );
             }
 
             const positionBuffer = gl.createBuffer();
@@ -771,9 +796,24 @@
             function rotationMatrix(x, y, z) {
                 const cos = Math.cos;
                 const sin = Math.sin;
-                const rx = new Float32Array([1, 0, 0, 0, 0, cos(x), -sin(x), 0, 0, sin(x), cos(x), 0, 0, 0, 0, 1]);
-                const ry = new Float32Array([cos(y), 0, sin(y), 0, 0, 1, 0, 0, -sin(y), 0, cos(y), 0, 0, 0, 0, 1]);
-                const rz = new Float32Array([cos(z), -sin(z), 0, 0, sin(z), cos(z), 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]);
+                const rx = new Float32Array([
+                    1, 0, 0, 0,
+                    0, cos(x), -sin(x), 0,
+                    0, sin(x), cos(x), 0,
+                    0, 0, 0, 1
+                ]);
+                const ry = new Float32Array([
+                    cos(y), 0, sin(y), 0,
+                    0, 1, 0, 0,
+                    -sin(y), 0, cos(y), 0,
+                    0, 0, 0, 1
+                ]);
+                const rz = new Float32Array([
+                    cos(z), -sin(z), 0, 0,
+                    sin(z), cos(z), 0, 0,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1
+                ]);
                 const rxy = multiplyMatrices(ry, rx);
                 return multiplyMatrices(rz, rxy);
             }
@@ -789,7 +829,7 @@
                 const scrolled = window.scrollY;
                 const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
                 const scrollPercent = scrolled / maxScroll;
-                scrollZoom = -5 + scrollPercent * 50.5;
+                scrollZoom = -5 + scrollPercent * 10.5;
             }, { passive: true });
 
             function animate() {
