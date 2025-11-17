@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Title & Meta Description -->
-    <title>Jan Jędrzejak - Digital Expert | Product Owner & Digital Solutions</title>
-    <meta name="description"
-        content="Discover Jan Jędrzejak's expertise in digital transformation, product ownership, and eCommerce optimization. Specializing in Salesforce, Microsoft Power Platform, and B2B solutions.">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <!-- Title Meta Description -->
+    <title>Jan Jędrzejak - Digital Expert | Product Owner | Digital Solutions</title>
+    <meta name="description" content="Discover Jan Jędrzejak's expertise in digital transformation, product ownership, and eCommerce optimization. Specializing in Salesforce, Microsoft Power Platform, and B2B solutions.">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    
     <!-- Keywords -->
-    <meta name="keywords"
-        content="digital expert, product owner, eCommerce, digital transformation, automation, Salesforce, Power Platform, B2B, CRM, marketing automation, portfolio">
-
-    <!-- Author & Language -->
+    <meta name="keywords" content="digital expert, product owner, eCommerce, digital transformation, automation, Salesforce, Power Platform, B2B, CRM, marketing automation, portfolio">
+    
+    <!-- Author Language -->
     <meta name="author" content="Jan Jędrzejak">
     <meta name="language" content="en, pl">
     <meta http-equiv="Content-Language" content="en-US, pl-PL">
-
+    
     <!-- Canonical URL - GitHub Pages -->
-    <link rel="canonical" href="https://janjedrzejak.github.io/">
-
-    <!-- Open Graph (Social Media) -->
+    <link rel="canonical" href="https://janjedrzejak.github.io">
+    
+    <!-- Open Graph Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://janjedrzejak.github.io/">
-    <meta property="og:title" content="Jan Jędrzejak - Digital Expert | Product Owner & Digital Solutions">
-    <meta property="og:description"
-        content="Results-oriented expert in digital solutions, product ownership, and eCommerce optimization. Specializing in B2B platforms, automation, and process improvement.">
+    <meta property="og:url" content="https://janjedrzejak.github.io">
+    <meta property="og:title" content="Jan Jędrzejak - Digital Expert | Product Owner | Digital Solutions">
+    <meta property="og:description" content="Results-oriented expert in digital solutions, product ownership, and eCommerce optimization. Specializing in B2B platforms, automation, and process improvement.">
     <meta property="og:image" content="https://janjedrzejak.github.io/img/og-image.jpg">
     <meta property="og:image:width" content="500">
     <meta property="og:image:height" content="500">
@@ -35,176 +31,165 @@
     <meta property="og:site_name" content="Jan Jędrzejak - Digital Expert">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
-
+    
     <!-- Silktide Cookie Banner - POPRAWIONA WERSJA -->
-<script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css">
-
-
-<link rel="stylesheet" id="silktide-consent-manager-css" href="cookie/silktide-consent-manager.css">
-<script src="cookie/silktide-consent-manager.js"></script>
-<script>
-silktideCookieBannerManager.updateCookieBannerConfig({
-  background: {
-    showBackground: true
-  },
-  cookieIcon: {
-    position: "bottomRight"
-  },
-  cookieTypes: [
-    {
-      id: "necessary",
-      name: "Necessary",
-      description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
-      required: true,
-      onAccept: function() {
-        console.log('Add logic for the required Necessary here');
-      }
-    },
-    {
-      id: "analytics",
-      name: "Analytics",
-      description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
-      required: false,
-      onAccept: function() {
-        gtag('consent', 'update', {
-          analytics_storage: 'granted',
-        });
-        dataLayer.push({
-          'event': 'consent_accepted_analytics',
-        });
-      },
-      onReject: function() {
-        gtag('consent', 'update', {
-          analytics_storage: 'denied',
-        });
-      }
-    },
-    {
-      id: "advertising",
-      name: "Advertising",
-      description: "<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>",
-      required: false,
-      onAccept: function() {
-        gtag('consent', 'update', {
-          analytics_storage: 'granted',
-        });
-        dataLayer.push({
-          'event': 'consent_accepted_advertising',
-        });
-      },
-      onReject: function() {
-        gtag('consent', 'update', {
-          analytics_storage: 'denied',
-        });
-      }
-    }
-  ],
-  text: {
-    banner: {
-      description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookie Policy.</a></p>",
-      acceptAllButtonText: "Accept all",
-      acceptAllButtonAccessibleLabel: "Accept all cookies",
-      rejectNonEssentialButtonText: "Reject non-essential",
-      rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
-      preferencesButtonText: "Preferences",
-      preferencesButtonAccessibleLabel: "Toggle preferences"
-    },
-    preferences: {
-      title: "Customize your cookie preferences",
-      description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
-      creditLinkText: "Get this banner for free",
-      creditLinkAccessibleLabel: "Get this banner for free"
-    }
-  }
-});
-</script>
-<script>
-    // Inicjalizuj dataLayer PRZED załadowaniem GA
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-
-    // Ustaw domyślnie - tracking jest WYŁĄCZONY
-    gtag('consent', 'default', {
-        'analytics_storage': 'denied'
-    });
-
-    // Flaga czy GA już się załadował
-    var gaLoaded = false;
-
-    // Funkcja do załadowania Google Analytics
-    function loadGoogleAnalytics() {
-        if (gaLoaded) return; // Załaduj tylko raz
-        gaLoaded = true;
-
-        // Dynamicznie załaduj skrypt GA
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV';
-        document.head.appendChild(script);
-
-        // Po załadowaniu skryptu, ustaw konfigurację
-        script.onload = function() {
-            gtag('consent', 'update', {
-                'analytics_storage': 'granted'
-            });
-            gtag('config', 'G-9XTCEZ21TV', {
-                'page_path': window.location.pathname,
-                'page_title': document.title
-            });
-            console.log('✓ Google Analytics załadowany i aktywny');
-        };
-    }
-
-    // NASŁUCHAJ ZMIANY PREFERENCJI COOKIES Z SILKTIDE
-    document.addEventListener('DOMContentLoaded', function() {
-        // Czekaj aż Silktide Manager się załaduje
-        var checkSilktide = setInterval(function() {
-            if (typeof silktideCookieBannerManager !== 'undefined') {
-                clearInterval(checkSilktide);
-
-                // Nasłuchuj akceptację Analytics
-                silktideCookieBannerManager.onCategoryAccepted('analytics', function() {
-                    console.log('✓ Użytkownik zaakceptował Analytics - załadowuję GA...');
-                    loadGoogleAnalytics();
-                });
-
-                // Nasłuchuj odrzucenie Analytics
-                silktideCookieBannerManager.onCategoryRejected('analytics', function() {
-                    console.log('✗ Użytkownik odrzucił Analytics');
-                    gtag('consent', 'update', {
-                        'analytics_storage': 'denied'
-                    });
-                });
-
-                // Sprawdź czy cookies były już wcześniej zaakceptowane
-                var savedPreferences = localStorage.getItem('silktide-cookie-consent');
-                if (savedPreferences) {
-                    try {
-                        var preferences = JSON.parse(savedPreferences);
-                        if (preferences.analytics) {
-                            console.log('✓ Poprzednio zaakceptowane Analytics - załadowuję GA...');
-                            loadGoogleAnalytics();
-                        }
-                    } catch(e) {
-                        console.error('Błąd parsowania preferences:', e);
+    <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css">
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="cookie/silktide-consent-manager.css">
+    <script src="cookie/silktide-consent-manager.js"></script>
+    
+    <script>
+        silktideCookieBannerManager.updateCookieBannerConfig({
+            background: { showBackground: true },
+            cookieIcon: { position: 'bottomRight' },
+            cookieTypes: [
+                {
+                    id: 'necessary',
+                    name: 'Necessary',
+                    description: '<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>',
+                    required: true,
+                    onAccept: function () {
+                        console.log('Add logic for the required Necessary here');
+                    }
+                },
+                {
+                    id: 'analytics',
+                    name: 'Analytics',
+                    description: '<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>',
+                    required: false,
+                    onAccept: function () {
+                        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+                        dataLayer.push({ event: 'consent_accepted_analytics' });
+                    },
+                    onReject: function () {
+                        gtag('consent', 'update', { 'analytics_storage': 'denied' });
+                    }
+                },
+                {
+                    id: 'advertising',
+                    name: 'Advertising',
+                    description: '<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>',
+                    required: false,
+                    onAccept: function () {
+                        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+                        dataLayer.push({ event: 'consent_accepted_advertising' });
+                    },
+                    onReject: function () {
+                        gtag('consent', 'update', { 'analytics_storage': 'denied' });
                     }
                 }
+            ],
+            text: {
+                banner: {
+                    description: '<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href="https://your-website.com/cookie-policy" target="_blank">Cookie Policy.</a></p>',
+                    acceptAllButtonText: 'Accept all',
+                    acceptAllButtonAccessibleLabel: 'Accept all cookies',
+                    rejectNonEssentialButtonText: 'Reject non-essential',
+                    rejectNonEssentialButtonAccessibleLabel: 'Reject non-essential',
+                    preferencesButtonText: 'Preferences',
+                    preferencesButtonAccessibleLabel: 'Toggle preferences'
+                },
+                preferences: {
+                    title: 'Customize your cookie preferences',
+                    description: '<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>',
+                    creditLinkText: 'Get this banner for free',
+                    creditLinkAccessibleLabel: 'Get this banner for free'
+                }
             }
-        }, 100); // Sprawdzaj co 100ms
-    });
-</script>
+        });
+    </script>
+
+    <script>
+        // Inicjalizuj dataLayer PRZED załadowaniem GA
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        // Ustaw domyślnie - tracking jest WYŁĄCZONY
+        gtag('consent', 'default', { 'analytics_storage': 'denied' });
+
+        // Flaga czy GA już się załadowała
+        var gaLoaded = false;
+
+        // Funkcja do załadowania Google Analytics
+        function loadGoogleAnalytics() {
+            if (gaLoaded) return; // Załaduj tylko raz
+            gaLoaded = true;
+
+            // Dynamicznie załaduj skrypt GA
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV';
+            document.head.appendChild(script);
+
+            // Po załadowaniu skryptu, ustaw konfigurację
+            script.onload = function () {
+                gtag('consent', 'update', { 'analytics_storage': 'granted' });
+                gtag('config', 'G-9XTCEZ21TV', {
+                    'page_path': window.location.pathname,
+                    'page_title': document.title
+                });
+                console.log('Google Analytics załadowany i aktywny');
+            };
+        }
+
+        // NASŁUCHAJ ZMIANY PREFERENCJI COOKIES Z SILKTIDE
+        document.addEventListener('DOMContentLoaded', function () {
+            // Czekaj aż Silktide Manager się załaduje
+            var checkSilktide = setInterval(function () {
+                if (typeof silktideCookieBannerManager !== 'undefined') {
+                    clearInterval(checkSilktide);
+
+                    // Nasłuchuj akceptacji Analytics
+                    silktideCookieBannerManager.onCategoryAccepted('analytics', function () {
+                        console.log('Użytkownik zaakceptował Analytics - załadowuj GA...');
+                        loadGoogleAnalytics();
+                    });
+
+                    // Nasłuchuj odrzucenia Analytics
+                    silktideCookieBannerManager.onCategoryRejected('analytics', function () {
+                        console.log('Użytkownik odrzucił Analytics');
+                        gtag('consent', 'update', { 'analytics_storage': 'denied' });
+                    });
+
+                    // Sprawdź czy cookies były już wcześniej zaakceptowane
+                    var savedPreferences = localStorage.getItem('silktide-cookie-consent');
+                    if (savedPreferences) {
+                        try {
+                            var preferences = JSON.parse(savedPreferences);
+                            if (preferences.analytics) {
+                                console.log('Poprzednio zaakceptowane Analytics - załadowuj GA...');
+                                loadGoogleAnalytics();
+                            }
+                        } catch (e) {
+                            console.error('Błąd parsowania preferences: ', e);
+                        }
+                    }
+                }
+            }, 100);
+        });
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styl.css">
+    
 </head>
-
 <body>
+    <!-- Modal for Certificate Images -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCertificateModal()">&times;</span>
+            <img id="certificateImage" src="" alt="Certificate">
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav>
         <div class="logo">
             <div class="logo-icon"></div>
-            <a onclick="scrollToSection('hero')"><span>Jan Jędrzejak /<strong>DIGITAL EXPERT</strong></span></a>
+            <a onclick="scrollToSection('hero')">
+                <span>Jan Jędrzejak</span>
+                <strong>DIGITAL EXPERT</strong>
+            </a>
         </div>
         <ul class="nav-links">
             <li><a onclick="scrollToSection('about-me')">ABOUT ME</a></li>
@@ -232,13 +217,13 @@ silktideCookieBannerManager.updateCookieBannerConfig({
     <!-- Bottom Toolbar - Mobile Only -->
     <div class="bottom-toolbar">
         <div class="toolbar-container">
-            <a href="tel:+48690661143" class="toolbar-icon" title="Call">
+            <a href="tel:48690661143" class="toolbar-icon" title="Call">
                 <i class="fas fa-phone"></i>
             </a>
             <a href="mailto:jan.jedrzejak@gmail.com" class="toolbar-icon" title="Email">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank" class="toolbar-icon" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank" class="toolbar-icon" title="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
@@ -251,29 +236,20 @@ silktideCookieBannerManager.updateCookieBannerConfig({
             <div class="hero-content">
                 <h1>Hello</h1>
                 <div class="hero-buttons">
-                    <a href="#resume" class="btn btn-secondary" onclick="scrollToSection('resume')">RESUME</a>
+                    <a href="resume" class="btn btn-secondary" onclick="scrollToSection('resume')">RESUME</a>
                     <a href="projects.html" class="btn btn-secondary" onclick="scrollToSection('projects')">PROJECTS</a>
                 </div>
-                <p class="hero-description">
-                    I craft innovative digital solutions that boost profits and cut costs by transforming businesses
-                    through technology. My expertise accelerates digital transformation, delivering measurable value and
-                    competitive advantage.
-                </p>
+                <p class="hero-description">I craft innovative digital solutions that boost profits and cut costs by transforming businesses through technology. My expertise accelerates digital transformation, delivering measurable value and competitive advantage.</p>
             </div>
-            <div class="hero-image">
-            </div>
+            <div class="hero-image"></div>
+
             <!-- Down Arrow -->
             <a class="down-arrow" onclick="scrollToSection('about-me')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" fill="currentColor"
-                    class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
                 </svg>
             </a>
         </div>
-    </section>
-
-    <section id="about-me">
     </section>
 
     <!-- About Section -->
@@ -282,20 +258,13 @@ silktideCookieBannerManager.updateCookieBannerConfig({
             <div class="about-content">
                 <h2>About me</h2>
                 <p class="about-subtitle">My name is Jan Jędrzejak</p>
-                <p class="about-text">I am a results-oriented expert in digital solutions and product ownership, with
-                    strong expertise in Salesforce Digital Experience, HCL WebSpheres, Sitecore, and Microsoft Power
-                    Platform. I excel in managing and optimizing complex B2B eCommerce ecosystems, driving product
-                    strategy,
-                    enhancing user experience, and leading process automation initiatives. I am highly adaptable to
-                    diverse
-                    technologies and platforms, delivering effective solutions aligned with evolving business goals. I
-                    collaborate closely with stakeholders to ensure alignment of product vision, usability, and
-                    performance,
-                    consistently achieving impactful results in dynamic, global environments.</p>
-                <a href="https://www.linkedin.com/in/janjedrzejak/" class="social-link" title="LinkedIn">in</a>
-                <div><a href="#contact" class="download-button" onclick="scrollToSection('contact')">Reach
-                        out</a></div>
+                <p class="about-text">I am a results-oriented expert in digital solutions and product ownership, with strong expertise in Salesforce Digital Experience, HCL WebSpheres, Sitecore, and Microsoft Power Platform. I excel in managing and optimizing complex B2B eCommerce ecosystems, driving product strategy, enhancing user experience, and leading process automation initiatives. I am highly adaptable to diverse technologies and platforms, delivering effective solutions aligned with evolving business goals. I collaborate closely with stakeholders to ensure alignment of product vision, usability, and performance, consistently achieving impactful results in dynamic, global environments.</p>
+                <a href="https://www.linkedin.com/in/janjedrzejak" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <div><a href="contact" class="download-button" onclick="scrollToSection('contact')">Reach out</a></div>
             </div>
+
             <div class="about-image">
                 <div class="profile-image"><img src="img/me.jpg" alt="Jan Jędrzejak"></div>
             </div>
@@ -307,29 +276,23 @@ silktideCookieBannerManager.updateCookieBannerConfig({
         <div class="get-to-know-container">
             <h2>Get to know me</h2>
             <div class="divider"></div>
-            <p class="get-to-know-text">
-                Explore my career highlights, key projects, and connect with me directly.
-            </p>
+            <p class="get-to-know-text">Explore my career highlights, key projects, and connect with me directly.</p>
             <div class="tiles-container">
                 <div class="tile">
                     <h3>Professional Summary</h3>
-                    <p>Product Owner with expertise in digital transformation, eCommerce platforms, and B2B
-                        solutions across European markets.</p>
+                    <p>Product Owner with expertise in digital transformation, eCommerce platforms, and B2B solutions across European markets.</p>
                 </div>
                 <div class="tile">
                     <h3>Projects</h3>
-                    <p>Led optimization of eCommerce platforms, CRM expansion, and digital content workflow management
-                        across multiple countries.</p>
+                    <p>Led optimization of eCommerce platforms, CRM expansion, and digital content workflow management across multiple countries.</p>
                 </div>
                 <div class="tile">
                     <h3>Contact</h3>
-                    <p>Let's collaborate on digital solutions and innovation. Reach out to discuss how I can support
-                        your business transformation goals.</p>
+                    <p>Let's collaborate on digital solutions and innovation. Reach out to discuss how I can support your business transformation goals.</p>
                 </div>
                 <div class="tile">
                     <h3>Blog</h3>
-                    <p>My posts where I share my subjective observations on various topics. This is a space for personal
-                        insights and reflections, inviting you to explore thoughts from my perspective.</p>
+                    <p>My posts where I share my subjective observations on various topics. This is a space for personal insights and reflections, inviting you to explore thoughts from my perspective.</p>
                 </div>
             </div>
         </div>
@@ -340,15 +303,13 @@ silktideCookieBannerManager.updateCookieBannerConfig({
         <div style="max-width: 1200px; margin: 0 auto;">
             <div class="resume-header-wrapper">
                 <h2>Resume</h2>
-                <a href="res/JanJedrzejakCV.pdf" class="download-button">
-                    <i class="fas fa-download"></i>
-                    Download CV (PDF)
+                <a href="resJanJedrzejakCV.pdf" class="download-button">
+                    <i class="fas fa-download"></i> Download CV PDF
                 </a>
             </div>
 
-            <div style="margin-bottom: 50px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Work experience</h3>
-
+            <!-- Work Experience -->
+            <div style="margin-top: 80px;">
                 <!-- Job 1: Linde Gas Poland (kept) - Metrics Generalized -->
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
                     <div
@@ -584,253 +545,281 @@ silktideCookieBannerManager.updateCookieBannerConfig({
                     </div>
                 </div>
             </div>
+            
 
-            <!-- Awards Section -->
+            <!-- Education -->
             <div style="margin-top: 80px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Awards</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                    <div
-                        style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
-                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership
-                            Award</p>
-                        <p style="font-size: 12px; color: #999;">2024</p>
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Education</h3>
+                <div style="display: grid; gap: 40px;">
+                    <div style="display: grid; grid-template-columns: 180px 1fr; gap: 30px; align-items: start;">
+                        <div style="font-size: 13px; color: #666;"><strong>2016 - 2018</strong></div>
+                        <div>
+                            <p style="font-size: 16px; font-weight: 600; color: #000; margin: 0 0 6px 0;">Master's Degree</p>
+                            <p style="font-size: 14px; color: #666; margin: 0 0 12px 0;"><strong>Społeczna Akademia Nauk</strong> • Łódź, Poland</p>
+                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 8px 0;"><strong>Grade:</strong> Very good</p>
+                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 8px 0;">Computer graphics and internet technologies specialization.</p>
+                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0;"><strong>Diploma with honours.</strong></p>
+                        </div>
                     </div>
-                    <div
-                        style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
-                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership
-                            Award</p>
-                        <p style="font-size: 12px; color: #999;">2022</p>
+                    <div style="display: grid; grid-template-columns: 180px 1fr; gap: 30px; align-items: start;">
+                        <div style="font-size: 13px; color: #666;"><strong>2012 - 2016</strong></div>
+                        <div>
+                            <p style="font-size: 16px; font-weight: 600; color: #000; margin: 0 0 6px 0;">Bachelor's Degree</p>
+                            <p style="font-size: 14px; color: #666; margin: 0 0 12px 0;"><strong>Społeczna Akademia Nauk</strong> • Ostrów Wielkopolski, Poland</p>
+                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 8px 0;"><strong>Grade:</strong> Very good</p>
+                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 8px 0;">Visualization and information management systems specialization.</p>
+                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0;"><strong>Award for Master's Dissertation and diploma with honours.</strong></p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Education Section -->
+            <!-- Awards -->
             <div style="margin-top: 80px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Education</h3>
-
-                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2016 - 2018</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            M.Sc. Eng.</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">Społeczna Akademia Nauk</p>
-                        <p style="font-size: 12px; color: #999; margin-top: 5px;">Łódź, Poland</p>
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Awards & Recognition</h3>
+                <div style="display: grid; gap: 25px;">
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i class="fas fa-trophy" style="color: #ffc107; margin-right: 8px;"></i>Linde Leadership Award</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde Gas Poland</p>
+                        <p style="font-size: 11px; color: #999;">Awarded 2024</p>
                     </div>
-                    <div style="flex: 1;">
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good
-                        </p>
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Computer graphics and internet
-                            technologies specialization.</p>
-                        <p style="font-size: 14px; color: #555;"><strong>Diploma with honours.</strong></p>
-                    </div>
-                </div>
-
-                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2012 - 2016</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            BEng</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">Społeczna Akademia Nauk</p>
-                        <p style="font-size: 12px; color: #999; margin-top: 5px;">Ostrów Wielkopolski, Poland</p>
-                    </div>
-                    <div style="flex: 1;">
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good
-                        </p>
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Visualization and information
-                            management systems specialization.</p>
-                        <p style="font-size: 14px; color: #555;"><strong>Award for Master's Dissertation and diploma
-                                with honours.</strong></p>
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i class="fas fa-trophy" style="color: #ffc107; margin-right: 8px;"></i>Linde Leadership Award</p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde Gas Poland</p>
+                        <p style="font-size: 11px; color: #999;">Awarded 2022</p>
                     </div>
                 </div>
             </div>
 
             <!-- Licenses & Certifications -->
             <div style="margin-top: 80px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Licenses &
-                    Certifications</h3>
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Licenses & Certifications</h3>
+                
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                    
+                    <!-- Six Sigma Yellow Belt Professional - WITH LINK -->
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
-                                href="https://www.hackerrank.com/certificates/3a4e123ca642" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;"><i
-                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>SQL
-                                (Basic) Certificate</a></p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">HackerRank</p>
-                        <p style="font-size: 11px; color: #999;">Issued Oct 2025</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="https://www.scrumstudy.com/certification/verify?type=Six%20Sigma%20Yellow%20Belt%20Professional&number=1126494" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Six Sigma Yellow Belt Professional
+                            </a>
+                        </p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Scrum Study</p>
+                        <p style="font-size: 11px; color: #999;">Issued Nov 2025</p>
                     </div>
+
+                    <!-- SCRUMstudy Scrum Master Certified - WITH LINK & IMAGE MODAL -->
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
-                                href="https://www.credly.com/badges/314b81f0-ec9c-4f71-9271-9ff2aa55a979"
-                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
-                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Creator</a></p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="https://www.scrumstudy.com" target="_blank" onclick="openCertificateModal(event, 'res/SCRUMstudy-Scrum-Mater-Certified.jpeg')" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>SCRUMstudy Scrum Master Certified (SMC)
+                            </a>
+                        </p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Scrum Study</p>
+                        <p style="font-size: 11px; color: #999;">Issued Jul 2024</p>
+                    </div>
+
+                    <!-- Digital Creator - WITH LINK -->
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="https://www.credly.com/badges/314b81f0-ec9c-4f71-9271-9ff2aa55a979" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Creator
+                            </a>
+                        </p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued Dec 2023</p>
                     </div>
+
+                    <!-- Digital Explorer Product Development - WITH LINK -->
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
-                                href="https://www.credly.com/badges/a65a55d5-edd6-44af-822c-5ac8ad205fa1"
-                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
-                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Enthusiast - Lead in Digital I</a></p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="https://www.credly.com/badges/b2681b12-445e-4457-8199-258843a8933b" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Explorer Product Development
+                            </a>
+                        </p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued May 2023</p>
+                    </div>
+
+                    <!-- Digital Enthusiast Scrum - WITH LINK -->
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="https://www.credly.com/badges/0e98cd30-a798-4418-ba2b-914936270d91" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Enthusiast Scrum
+                            </a>
+                        </p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued Sep 2022</p>
+                    </div>
+
+                    <!-- Digital Enthusiast New Product Development - WITH LINK -->
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="https://www.credly.com/badges/36867792-9a9c-45a9-ab3b-329ae50c0be5" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Enthusiast New Product Development
+                            </a>
+                        </p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued Feb 2023</p>
+                    </div>
+
+                    <!-- Digital Enthusiast - Lead in Digital I - WITH LINK -->
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="https://www.credly.com/badges/a65a55d5-edd6-44af-822c-5ac8ad205fa1" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Enthusiast - Lead in Digital I
+                            </a>
+                        </p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued Aug 2023</p>
                     </div>
+
+                    <!-- Power Automate Workshop (COGNITY) - MODAL ONLY -->
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i
-                                class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft 365
-                            Fundamentals</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="#" onclick="openCertificateModal(event, 'res/Introducing-to-Power-Automate-Workshop.jpeg')" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Introducting to Power Automate Workshop
+                            </a>
+                        </p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">COGNITY</p>
+                        <p style="font-size: 11px; color: #999;">Issued Nov 2023</p>
+                    </div>
+
+                    <!-- Digital Enthusiast Digital Foundations - WITH LINK -->
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="https://www.credly.com/badges/e1d93d5b-e605-4f35-910d-eb753d565b70" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Enthusiast Digital Foundations
+                            </a>
+                        </p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued Nov 2022</p>
+                    </div>
+
+                    <!-- Digital Enthusiast ChatGPT - WITH LINK -->
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="https://www.credly.com/badges/19be2e49-27fe-4c7d-a55e-0f8f9717ef55" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Enthusiast ChatGPT
+                            </a>
+                        </p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
+                        <p style="font-size: 11px; color: #999;">Issued Jul 2023</p>
+                    </div>
+
+                    <!-- SQL Basic Certificate - WITH LINK -->
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="https://www.hackerrank.com/certificates/3a4e123ca642" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>SQL Basic Certificate
+                            </a>
+                        </p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">HackerRank</p>
+                        <p style="font-size: 11px; color: #999;">Issued Oct 2025</p>
+                    </div>
+
+                    <!-- Microsoft 365 Fundamentals - MODAL ONLY -->
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="#" onclick="openCertificateModal(event, 'res/Microsoft365Fundamentals.jpeg')" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft 365 Fundamentals
+                            </a>
+                        </p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
                         <p style="font-size: 11px; color: #999;">Issued Mar 2022</p>
                     </div>
+
+                    <!-- Microsoft Security, Compliance, and Identity Fundamentals - MODAL ONLY -->
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i
-                                class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Azure
-                            Fundamentals</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="#" onclick="openCertificateModal(event, 'res/MicrosoftSecurityComplianceIdentityFundamentals.jpeg')" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft Security, Compliance, and Identity Fundamentals
+                            </a>
+                        </p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
+                        <p style="font-size: 11px; color: #999;">Issued Apr 2022</p>
+                    </div>
+
+                    <!-- Azure Fundamentals - MODAL ONLY -->
+                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="#" onclick="openCertificateModal(event, 'res/MicrosoftAzureFundamentals.jpeg')" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft Azure Fundamentals
+                            </a>
+                        </p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
                         <p style="font-size: 11px; color: #999;">Issued Feb 2022</p>
                     </div>
+
+                    <!-- Teams App and Solutions Workshop - MODAL ONLY -->
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i
-                                class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft
-                            PowerApps & Flow</p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Infowave sp. z o.o.</p>
-                        <p style="font-size: 11px; color: #999;">Issued Jun 2019</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
+                            <a href="#" onclick="openCertificateModal(event, 'res/TeamsAppandSolutionWorkshop.jpeg')" style="text-decoration: none; color: #000; cursor: pointer;">
+                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Teams App and Solutions Workshop
+                            </a>
+                        </p>
+                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft & SUPREMO</p>
+                        <p style="font-size: 11px; color: #999;">Issued Oct 2021</p>
                     </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
-                                href="https://www.credly.com/badges/19be2e49-27fe-4c7d-a55e-0f8f9717ef55"
-                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
-                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Enthusiast ChatGPT</a></p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Jan 2024</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
-                                href="https://www.credly.com/badges/36867792-9a9c-45a9-ab3b-329ae50c0be5"
-                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
-                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Enthusiast New Product Development</a></p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Mar 2024</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
-                                href="https://www.credly.com/badges/e1d93d5b-e605-4f35-910d-eb753d565b70"
-                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
-                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Enthusiast Digital Foundations</a></p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Feb 2024</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
-                                href="https://www.credly.com/badges/0e98cd30-a798-4418-ba2b-914936270d91"
-                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
-                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Enthusiast Scrum</a></p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Apr 2024</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
-                                href="https://www.credly.com/badges/b2681b12-445e-4457-8199-258843a8933b"
-                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
-                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Explorer Product Development</a></p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued May 2024</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
-                                href="https://www.credly.com/badges/c0b2ab63-66c7-43fa-bcd5-1c6e9c6d9ff7"
-                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
-                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Enthusiast Data</a></p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Jun 2024</p>
-                    </div>
+
                 </div>
             </div>
 
-            <!-- Professional Skillset -->
+            <!-- Skills -->
             <div style="margin-top: 80px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Professional skillset
-                </h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
-                                class="fas fa-tasks" style="color: #00a8e8; margin-right: 8px;"></i>Product Owner
-                            Expertise</p>
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Skills</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+                    <div>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 15px;">Technical Skills</p>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Product Owner Expertise</li>
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Digital Marketing Specialist</li>
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>eCommerce Platform Management</li>
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Business & Sales Process Automation</li>
+                        </ul>
                     </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
-                                class="fas fa-bullhorn" style="color: #00a8e8; margin-right: 8px;"></i>Digital Marketing
-                            Specialist</p>
+                    <div>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 15px;">Platform & Tools</p>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>CRM Automation</li>
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Content Creation & SEO Optimization</li>
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Power Platform (Power Automate, Power Apps)</li>
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Salesforce Digital Experience</li>
+                        </ul>
                     </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
-                                class="fas fa-shopping-cart" style="color: #00a8e8; margin-right: 8px;"></i>eCommerce
-                            Platform Management</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
-                                class="fas fa-cogs" style="color: #00a8e8; margin-right: 8px;"></i>Business & Sales
-                            Process Automation</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
-                                class="fas fa-database" style="color: #00a8e8; margin-right: 8px;"></i>CRM Automation
-                        </p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
-                                class="fas fa-pen-fancy" style="color: #00a8e8; margin-right: 8px;"></i>Content Creation
-                            & SEO Optimization</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
-                                class="fas fa-bolt" style="color: #00a8e8; margin-right: 8px;"></i>Power Platform (Power
-                            Automate, Power Apps)</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
-                                class="fas fa-cloud" style="color: #00a8e8; margin-right: 8px;"></i>Salesforce Digital
-                            Experience</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
-                                class="fas fa-code" style="color: #00a8e8; margin-right: 8px;"></i>HCL WebSphere &
-                            Sitecore CMS</p>
+                    <div>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 15px;">Enterprise Systems</p>
+                        <ul style="list-style: none; padding: 0; margin: 0;">
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>HCL WebSphere & Sitecore CMS</li>
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Business Intelligence & Analytics</li>
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Azure & Cloud Services</li>
+                            <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Agile & Scrum Methodology</li>
+                        </ul>
                     </div>
                 </div>
-
-
             </div>
 
             <!-- Languages -->
             <div style="margin-top: 80px;">
                 <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Languages</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">Polish</p>
-                        <p style="font-size: 12px; color: #666;">Native</p>
+                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 12px;">Polish</p>
+                        <div style="width: 100%; height: 6px; background-color: #e5e5e5; border-radius: 3px; overflow: hidden;">
+                            <div style="width: 100%; height: 100%; background-color: #00a8e8;"></div>
+                        </div>
+                        <p style="font-size: 12px; color: #666; margin-top: 8px;">Native</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">English</p>
-                        <p style="font-size: 12px; color: #666;">Proficient</p>
+                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 12px;">English</p>
+                        <div style="width: 100%; height: 6px; background-color: #e5e5e5; border-radius: 3px; overflow: hidden;">
+                            <div style="width: 80%; height: 100%; background-color: #00a8e8;"></div>
+                        </div>
+                        <p style="font-size: 12px; color: #666; margin-top: 8px;">Proficient</p>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -838,8 +827,7 @@ silktideCookieBannerManager.updateCookieBannerConfig({
     <section class="cta-section" id="contact">
         <div class="cta-container">
             <h2>Ready to Transform Your Business?</h2>
-            <p>Let's collaborate on your digital transformation, automation, and eCommerce projects. I specialize in
-                building innovative solutions that drive growth and efficiency.</p>
+            <p>Let's collaborate on your digital transformation, automation, and eCommerce projects. I specialize in building innovative solutions that drive growth and efficiency.</p>
             <div class="cta-features">
                 <div class="cta-feature">
                     <i class="fas fa-rocket"></i>
@@ -859,8 +847,7 @@ silktideCookieBannerManager.updateCookieBannerConfig({
             </div>
             <div class="cta-buttons">
                 <a href="mailto:jan.jedrzejak@gmail.com" class="btn-cta-primary">Get in Touch</a>
-                <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank" class="btn-cta-secondary">Connect on
-                    LinkedIn</a>
+                <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank" class="btn-cta-secondary">Connect on LinkedIn</a>
             </div>
         </div>
     </section>
@@ -870,7 +857,7 @@ silktideCookieBannerManager.updateCookieBannerConfig({
         <div class="footer-container">
             <div class="footer-section">
                 <h4>Call</h4>
-                <a href="tel:+48690661143">+48 690 661 143</a>
+                <a href="tel:48690661143">+48 690 661 143</a>
             </div>
             <div class="footer-section">
                 <h4>Write</h4>
@@ -878,19 +865,65 @@ silktideCookieBannerManager.updateCookieBannerConfig({
             </div>
             <div class="footer-section">
                 <h4>Connect</h4>
-                <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank">LinkedIn</a>
             </div>
         </div>
         <div class="footer-bottom">
             <span>© 2025 by JJ</span>
             <div class="footer-links">
-                <a href="privacy.html" title="Privacy Policy">Privacy Policy</a> | 
+                <a href="privacy.html" title="Privacy Policy">Privacy Policy</a>
                 <a href="cookies-policy.html" title="Cookie Policy">Cookie Policy</a>
             </div>
         </div>
     </footer>
 
     <script>
+        // Certificate Modal Functions
+        function openCertificateModal(event, imagePath) {
+            event.preventDefault();
+            const modal = document.getElementById('certificateModal');
+            const img = document.getElementById('certificateImage');
+            img.src = imagePath;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Zablokuj scroll
+        }
+
+        function closeCertificateModal() {
+            const modal = document.getElementById('certificateModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Przywróć scroll
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('certificateModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeCertificateModal();
+            }
+        });
+
+        // Smooth scroll behavior for links
+        document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
         // Smooth scrolling navigation
         function scrollToSection(sectionId) {
             const element = document.getElementById(sectionId);
@@ -911,10 +944,8 @@ silktideCookieBannerManager.updateCookieBannerConfig({
         });
 
         // Close menu when pressing Escape
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') {
-                closeMenu();
-            }
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') closeMenu();
         });
 
         // Close menu function
@@ -924,65 +955,9 @@ silktideCookieBannerManager.updateCookieBannerConfig({
             document.body.classList.remove('menu-open');
         }
 
-        // Smooth scrolling hero content on scroll
-        window.addEventListener('scroll', function () {
-            const heroContent = document.querySelector('.hero-content');
-            const heroHeight = document.querySelector('.hero').offsetHeight;
-            const scrollPosition = window.scrollY;
-
-            if (scrollPosition > heroHeight * 0.3) {
-                heroContent.classList.add('scrolled');
-            } else {
-                heroContent.classList.remove('scrolled');
-            }
-        });
-
-        // Parallax scroll animation for entire "Get to Know Me" section
-        const getToKnowSection = document.querySelector('.get-to-know');
-
-        function updateSectionPosition() {
-            if (!getToKnowSection) return;
-
-            const sectionRect = getToKnowSection.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
-
-            const sectionCenter = sectionRect.top + sectionRect.height / 2;
-            const distanceFromViewport = (sectionCenter - viewportHeight / 2) / viewportHeight;
-
-            const maxOffset = 150;
-            const offset = distanceFromViewport * maxOffset;
-
-            /* getToKnowSection.style.transform = `translateX(${offset}px)`; */
-        }
-
-        window.addEventListener('scroll', updateSectionPosition, { passive: true });
-        updateSectionPosition();
-
-        // Add scroll effect to navbar
-        window.addEventListener('scroll', function () {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.3)';
-            } else {
-                nav.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
-            }
-        });
-
-        // Smooth scroll behavior for links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
+        // Smooth scrolling for mobile menu items
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
         });
 
         // WebGL Particle Sphere Animation
@@ -997,6 +972,7 @@ silktideCookieBannerManager.updateCookieBannerConfig({
                 canvas.height = window.innerHeight;
                 gl.viewport(0, 0, canvas.width, canvas.height);
             }
+
             resizeCanvas();
             window.addEventListener('resize', resizeCanvas);
 
@@ -1025,8 +1001,9 @@ silktideCookieBannerManager.updateCookieBannerConfig({
                 const shader = gl.createShader(type);
                 gl.shaderSource(shader, source);
                 gl.compileShader(shader);
+
                 if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-                    console.error('Shader compile error:', gl.getShaderInfoLog(shader));
+                    console.error('Shader compile error: ', gl.getShaderInfoLog(shader));
                     gl.deleteShader(shader);
                     return null;
                 }
@@ -1035,14 +1012,13 @@ silktideCookieBannerManager.updateCookieBannerConfig({
 
             const vertexShader = compileShader(vertexShaderSource, gl.VERTEX_SHADER);
             const fragmentShader = compileShader(fragmentShaderSource, gl.FRAGMENT_SHADER);
-
             const program = gl.createProgram();
             gl.attachShader(program, vertexShader);
             gl.attachShader(program, fragmentShader);
             gl.linkProgram(program);
 
             if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-                console.error('Program link error:', gl.getProgramInfoLog(program));
+                console.error('Program link error: ', gl.getProgramInfoLog(program));
             }
 
             gl.useProgram(program);
@@ -1054,17 +1030,70 @@ silktideCookieBannerManager.updateCookieBannerConfig({
             for (let i = 0; i < particleCount; i++) {
                 const phi = Math.acos(-1 + (2 * i) / particleCount);
                 const theta = Math.sqrt(particleCount * Math.PI) * phi;
+
                 const x = Math.cos(theta) * Math.sin(phi);
                 const y = Math.sin(theta) * Math.sin(phi);
                 const z = Math.cos(phi);
+
                 positions.push(x * 2, y * 2, z * 2);
+
                 const t = i / particleCount;
-                colors.push(
-                    0 + t * 0.35,
-                    0.8 - t * 0.5,
-                    1.0 - t * 0.3
-                );
+                colors.push(0 + t * 0.35, 0.8 - t * 0.5, 1.0 - t * 0.3);
             }
+
+            function perspectiveMatrix(fov, aspect, near, far) {
+                const f = 1.0 / Math.tan(fov / 2);
+                const nf = 1 / (near - far);
+                return new Float32Array([
+                    f / aspect, 0, 0, 0,
+                    0, f, 0, 0,
+                    0, 0, (far + near) * nf, -1,
+                    0, 0, 2 * far * near * nf, 0
+                ]);
+            }
+
+            function rotationMatrix(x, y, z) {
+                const cos = Math.cos;
+                const sin = Math.sin;
+
+                const rx = new Float32Array([
+                    1, 0, 0, 0,
+                    0, cos(x), -sin(x), 0,
+                    0, sin(x), cos(x), 0,
+                    0, 0, 0, 1
+                ]);
+
+                const ry = new Float32Array([
+                    cos(y), 0, sin(y), 0,
+                    0, 1, 0, 0,
+                    -sin(y), 0, cos(y), 0,
+                    0, 0, 0, 1
+                ]);
+
+                const rz = new Float32Array([
+                    cos(z), -sin(z), 0, 0,
+                    sin(z), cos(z), 0, 0,
+                    0, 0, 1, 0,
+                    0, 0, 0, 1
+                ]);
+
+                const rxy = multiplyMatrices(ry, rx);
+                return multiplyMatrices(rz, rxy);
+            }
+
+            let time = 0;
+            let scrollZoom = -5;
+
+            gl.enable(gl.BLEND);
+            gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+            gl.clearColor(0, 0, 0, 1);
+
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY;
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = scrolled / maxScroll;
+                scrollZoom = -5 + scrollPercent * 10.5;
+            }, { passive: true });
 
             const positionBuffer = gl.createBuffer();
             gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
@@ -1101,72 +1130,44 @@ silktideCookieBannerManager.updateCookieBannerConfig({
                 return result;
             }
 
-            function perspectiveMatrix(fov, aspect, near, far) {
-                const f = 1.0 / Math.tan(fov / 2);
-                const nf = 1 / (near - far);
-                return new Float32Array([
-                    f / aspect, 0, 0, 0,
-                    0, f, 0, 0,
-                    0, 0, (far + near) * nf, -1,
-                    0, 0, (2 * far * near) * nf, 0
-                ]);
-            }
-
-            function rotationMatrix(x, y, z) {
-                const cos = Math.cos;
-                const sin = Math.sin;
-                const rx = new Float32Array([
-                    1, 0, 0, 0,
-                    0, cos(x), -sin(x), 0,
-                    0, sin(x), cos(x), 0,
-                    0, 0, 0, 1
-                ]);
-                const ry = new Float32Array([
-                    cos(y), 0, sin(y), 0,
-                    0, 1, 0, 0,
-                    -sin(y), 0, cos(y), 0,
-                    0, 0, 0, 1
-                ]);
-                const rz = new Float32Array([
-                    cos(z), -sin(z), 0, 0,
-                    sin(z), cos(z), 0, 0,
-                    0, 0, 1, 0,
-                    0, 0, 0, 1
-                ]);
-                const rxy = multiplyMatrices(ry, rx);
-                return multiplyMatrices(rz, rxy);
-            }
-
-            let time = 0;
-            let scrollZoom = -5;
-
-            gl.enable(gl.BLEND);
-            gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
-            gl.clearColor(0, 0, 0, 1);
-
-            window.addEventListener('scroll', () => {
-                const scrolled = window.scrollY;
-                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-                const scrollPercent = scrolled / maxScroll;
-                scrollZoom = -5 + scrollPercent * 10.5;
-            }, { passive: true });
-
             function animate() {
                 gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
                 time += 0.003;
+
                 const projMatrix = perspectiveMatrix(Math.PI / 3, canvas.width / canvas.height, 0.1, 100);
                 const modelViewMatrix = rotationMatrix(0, 0.3, time * 0.8);
-                const identity = new Float32Array([1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, scrollZoom, 1]);
+                const identity = new Float32Array([
+                    1, 0, 0, 0,
+                    0, 1, 0, 0,
+                    0, 0, 1, 0,
+                    0, 0, scrollZoom, 1
+                ]);
                 const modelView = multiplyMatrices(identity, modelViewMatrix);
+
                 gl.uniformMatrix4fv(projectionMatrixLocation, false, projMatrix);
                 gl.uniformMatrix4fv(modelViewMatrixLocation, false, modelView);
                 gl.drawArrays(gl.POINTS, 0, particleCount);
+
                 requestAnimationFrame(animate);
             }
 
             animate();
         }
+
+        // Smooth scrolling hero content on scroll
+        window.addEventListener('scroll', function () {
+            const heroContent = document.querySelector('.hero-content');
+            const heroHeight = document.querySelector('.hero').offsetHeight;
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > heroHeight * 0.3) {
+                heroContent.classList.add('scrolled');
+            } else {
+                heroContent.classList.remove('scrolled');
+            }
+        });
+
+        
     </script>
 </body>
-
 </html>
