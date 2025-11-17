@@ -36,69 +36,128 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
 
-    <!-- Silktide Cookie Banner -->
-    <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css">
+    <!-- Silktide Cookie Banner - POPRAWIONA WERSJA -->
+<script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css">
 
-    <script>
-        window.CookieConsent.run({
-            // Ustawienia baneru
-            categories: {
-                necessary: {
-                    label: "Niezbędne",
-                    description: "Pliki cookie niezbędne do funkcjonowania strony"
+<script>
+    // Czekaj aż skrypt Silktide się załaduje
+    window.addEventListener('load', function() {
+        if (window.CookieConsent) {
+            window.CookieConsent.run({
+                // ===== WAŻNE: Ustawienia ogólne =====
+                autoShowModal: true,
+                hidePreferencesButton: false,
+                
+                // Kategorie cookies
+                categories: {
+                    necessary: {
+                        label: "Niezbędne",
+                        description: "Pliki cookie niezbędne do funkcjonowania strony",
+                        enabled: true,
+                        readOnly: true
+                    },
+                    analytics: {
+                        label: "Analityczne",
+                        description: "Google Analytics - analiza ruchu na stronie",
+                        recommended: true,
+                        enabled: false,
+                        readOnly: false
+                    },
+                    marketing: {
+                        label: "Marketingowe",
+                        description: "Reklamy i analiza konwersji",
+                        enabled: false,
+                        readOnly: false
+                    }
                 },
-                analytics: {
-                    label: "Analityczne",
-                    description: "Google Analytics - analiza ruchu na stronie",
-                    recommended: true
-                },
-                marketing: {
-                    label: "Marketingowe",
-                    description: "Reklamy i analiza konwersji"
-                }
-            },
-            language: {
-                root: "pl",
-                translations: {
-                    pl: {
-                        consentModal: {
-                            title: "Szanujemy Twoją prywatność",
-                            description: "Nasza strona używa plików cookie do analizy ruchu. Możesz wybrać, które cookies chcesz zaakceptować.",
-                            acceptAllBtn: "Zaakceptuj wszystkie",
-                            rejectAllBtn: "Odrzuć",
-                            managePreferencesBtn: "Ustawienia",
-                            closeIconLabel: "Zamknij"
-                        },
-                        preferencesModal: {
-                            savePreferencesBtn: "Zapisz ustawienia"
+                
+                // Ustawienia języka i tekstów
+                language: {
+                    root: "pl",
+                    translations: {
+                        pl: {
+                            consentModal: {
+                                title: "Szanujemy Twoją prywatność 🍪",
+                                description: "Nasza strona używa plików cookie do analizy ruchu i poprawy doświadczenia. Możesz wybrać, które cookies chcesz zaakceptować.",
+                                acceptAllBtn: "Zaakceptuj wszystkie",
+                                acceptNecessaryBtn: "Zaakceptuj niezbędne",
+                                rejectAllBtn: "Odrzuć opcjonalne",
+                                managePreferencesBtn: "Ustawienia"
+                            },
+                            preferencesModal: {
+                                title: "Zarządzaj preferencjami cookies",
+                                acceptAllBtn: "Zaakceptuj wszystkie",
+                                rejectAllBtn: "Odrzuć wszystkie",
+                                savePreferencesBtn: "Zapisz preferencje",
+                                sections: [
+                                    {
+                                        title: "Cookies niezbędne",
+                                        description: "Zawsze aktywne, niezbędne do działania strony"
+                                    },
+                                    {
+                                        title: "Cookies analityczne",
+                                        description: "Pomagają nam zrozumieć, jak używana jest nasza strona"
+                                    },
+                                    {
+                                        title: "Cookies marketingowe",
+                                        description: "Używane do wyświetlania reklam i śledzenia konwersji"
+                                    }
+                                ]
+                            }
                         }
                     }
                 }
-            }
-        });
-    </script>
+            });
+        }
+    });
+</script>
 
-    <!-- Google Analytics - załaduje się po wyrażeniu zgody -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV"></script>
-    <script>
-        // Domyślnie wyłączamy tracking
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('consent', 'default', {
-            'analytics_storage': 'denied'
-        });
+<!-- Google Analytics - warunkowe załadowanie -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    
+    // Domyślnie wyłączamy tracking
+    gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied'
+    });
 
-        // Po wyrażeniu zgody przez użytkownika
-        document.addEventListener('cc:onChange', function (e) {
-            if (e.detail.categories.analytics) {
+    // Nasłuchuj zmian w preferencjach cookies
+    document.addEventListener('cc:onChange', function(e) {
+        // Jeśli użytkownik zaakceptuje analytics
+        if (e.detail.categories.analytics) {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted',
+                'ad_storage': e.detail.categories.marketing ? 'granted' : 'denied'
+            });
+            gtag('config', 'G-9XTCEZ21TV', {
+                'page_path': window.location.pathname
+            });
+        } else {
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied'
+            });
+        }
+    });
+    
+    // Jeśli wszystkie cookies już zaakceptowane przy poprzedniej wizycie
+    window.addEventListener('load', function() {
+        if (localStorage.getItem('cc_cookie')) {
+            var preferences = JSON.parse(localStorage.getItem('cc_cookie'));
+            if (preferences.categories && preferences.categories.analytics) {
                 gtag('consent', 'update', {
-                    'analytics_storage': 'granted'
+                    'analytics_storage': 'granted',
+                    'ad_storage': preferences.categories.marketing ? 'granted' : 'denied'
                 });
                 gtag('config', 'G-9XTCEZ21TV');
             }
-        });
-    </script>
+        }
+    });
+</script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styl.css">
 </head>
