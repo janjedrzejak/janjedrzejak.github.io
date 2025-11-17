@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title & Meta Description -->
+    <title>Cookie Policy - Jan Jędrzejak | Digital Expert</title>
+    <meta name="description"
+        content="Cookie Policy for Jan Jędrzejak's website. Learn about the cookies we use and how to manage them.">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <!-- Keywords -->
+    <meta name="keywords" content="cookie policy, cookies, GDPR, RODO, data protection">
+
+    <!-- Author & Language -->
+    <meta name="author" content="Jan Jędrzejak">
+    <meta name="language" content="en, pl">
+    <meta http-equiv="Content-Language" content="en-US, pl-PL">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://janjedrzejak.github.io/cookies-policy">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://janjedrzejak.github.io/cookies-policy">
+    <meta property="og:title" content="Cookie Policy - Jan Jędrzejak">
+    <meta property="og:description"
+        content="Cookie Policy and information about cookies used on janjedrzejak.github.io">
+    <meta property="og:site_name" content="Jan Jędrzejak - Digital Expert">
+
+    <!-- Silktide Cookie Banner & Google Analytics - COMPLETE FIX -->
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="/cookie/silktide-consent-manager.css">
+    <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
+    <script src="/cookie/silktide-consent-manager.js"></script>
+    <script>
+        silktideCookieBannerManager.updateCookieBannerConfig({
+            background: {
+                showBackground: true
+            },
+            cookieIcon: {
+                position: "bottomRight"
+            },
+            cookieTypes: [
+                {
+                    id: "necessary",
+                    name: "Necessary",
+                    description: "<p>These cookies are necessary for the website to function properly and cannot be switched off.</p>",
+                    required: true,
+                    onAccept: function() {
+                        console.log('Necessary cookies accepted');
+                    }
+                },
+                {
+                    id: "analytics",
+                    name: "Analytics",
+                    description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+                    required: false,
+                    onAccept: function() {
+                        loadGoogleAnalytics();
+                        gtag('consent', 'update', {
+                            analytics_storage: 'granted',
+                        });
+                        dataLayer.push({
+                            'event': 'consent_accepted_analytics',
+                        });
+                    },
+                    onReject: function() {
+                        gtag('consent', 'update', {
+                            analytics_storage: 'denied',
+                        });
+                    }
+                },
+                {
+                    id: "advertising",
+                    name: "Advertising",
+                    description: "<p>These cookies provide extra features and personalization to improve your experience.</p>",
+                    required: false,
+                    onAccept: function() {
+                        gtag('consent', 'update', {
+                            analytics_storage: 'granted',
+                        });
+                        dataLayer.push({
+                            'event': 'consent_accepted_advertising',
+                        });
+                    },
+                    onReject: function() {
+                        gtag('consent', 'update', {
+                            analytics_storage: 'denied',
+                        });
+                    }
+                }
+            ],
+            text: {
+                banner: {
+                    description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"/privacy/\" target=\"_blank\">Privacy Policy.</a> <a href=\"/cookies-policy/\" target=\"_blank\">Cookie Policy.</a></p>",
+                    acceptAllButtonText: "Accept all",
+                    acceptAllButtonAccessibleLabel: "Accept all cookies",
+                    rejectNonEssentialButtonText: "Reject non-essential",
+                    rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+                    preferencesButtonText: "Preferences",
+                    preferencesButtonAccessibleLabel: "Toggle preferences"
+                },
+                preferences: {
+                    title: "Customize your cookie preferences",
+                    description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+                    creditLinkText: "Get this banner for free",
+                    creditLinkAccessibleLabel: "Get this banner for free"
+                }
+            }
+        });
+    </script>
+
+    <!-- Google Analytics - Conditional Loading -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied'
+        });
+
+        var gaLoaded = false;
+
+        function loadGoogleAnalytics() {
+            if (gaLoaded) return;
+            gaLoaded = true;
+
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV';
+            document.head.appendChild(script);
+
+            script.onload = function() {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'granted'
+                });
+                gtag('config', 'G-9XTCEZ21TV', {
+                    'page_path': window.location.pathname,
+                    'page_title': document.title
+                });
+                console.log('✓ Google Analytics loaded and active');
+            };
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var checkSilktide = setInterval(function() {
+                if (typeof silktideCookieBannerManager !== 'undefined') {
+                    clearInterval(checkSilktide);
+
+                    var savedPreferences = localStorage.getItem('silktide-cookie-consent');
+                    if (savedPreferences) {
+                        try {
+                            var preferences = JSON.parse(savedPreferences);
+                            if (preferences.analytics) {
+                                console.log('✓ Previously accepted Analytics - loading GA...');
+                                loadGoogleAnalytics();
+                            }
+                        } catch(e) {
+                            console.error('Error parsing preferences:', e);
+                        }
+                    }
+                }
+            }, 100);
+        });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styl.css">
+    <style>
+        .privacy-container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .privacy-container h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .privacy-container .update-date {
+            color: #7f8c8d;
+            font-size: 0.95em;
+            margin-bottom: 30px;
+        }
+
+        .privacy-container h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #34495e;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .privacy-container h3 {
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .privacy-container p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .privacy-container ul,
+        .privacy-container ol {
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+        .privacy-container li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .privacy-container a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .privacy-container a:hover {
+            color: #2980b9;
+            border-bottom-color: #2980b9;
+        }
+
+        .privacy-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #f9f9f9;
+        }
+
+        .privacy-container table th {
+            background: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .privacy-container table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .privacy-container table tr:hover {
+            background: #f0f0f0;
+        }
+
+        .privacy-container .highlight-box {
+            background: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .privacy-container .highlight-box strong {
+            color: #2c3e50;
+        }
+
+        .back-link {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .back-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-link a:hover {
+            background: #2980b9;
+            border: none;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <a onclick="scrollToSection('hero')"><span>Jan Jędrzejak /<strong>DIGITAL EXPERT</strong></span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a onclick="scrollToSection('about-me')">ABOUT ME</a></li>
+            <li><a onclick="scrollToSection('resume')">RESUME</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a onclick="scrollToSection('contact')">CONTACT</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <ul class="mobile-menu" id="mobileMenu">
+        <li><a onclick="scrollToSection('about-me')">ABOUT ME</a></li>
+        <li><a onclick="scrollToSection('resume')">RESUME</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a onclick="scrollToSection('contact')">CONTACT</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+    </ul>
+
+    <!-- Bottom Toolbar - Mobile Only -->
+    <div class="bottom-toolbar">
+        <div class="toolbar-container">
+            <a href="tel:+48690661143" class="toolbar-icon" title="Call">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="mailto:jan.jedrzejak@gmail.com" class="toolbar-icon" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank" class="toolbar-icon" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="privacy-container">
+        <h1>Cookie Policy</h1>
+        <div class="update-date"><strong>Last Updated:</strong> November 17, 2025</div>
+
+        <h2>1. What Are Cookies?</h2>
+        <p>Cookies are small text files that a website saves on your device (computer, tablet, smartphone). They are used to:</p>
+        <ul>
+            <li>Remember your preferences</li>
+            <li>Track activity on the website</li>
+            <li>Ensure security</li>
+            <li>Personalize content</li>
+        </ul>
+
+        <h2>2. What Cookies Do We Use?</h2>
+        <p>My website uses three categories of cookies:</p>
+
+        <h3>2.1 Essential Cookies (Always Active)</h3>
+        <p>These cookies are <strong>mandatory</strong> for the site to function and <strong>do not require</strong> your consent:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cookie</th>
+                    <th>Provider</th>
+                    <th>Duration</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>cc_cookie</code></td>
+                    <td>Silktide Cookie Consent</td>
+                    <td>365 days</td>
+                    <td>Remember your cookie preferences</td>
+                </tr>
+                <tr>
+                    <td>Session identifiers</td>
+                    <td>GitHub Pages</td>
+                    <td>1 session</td>
+                    <td>Security and site stability</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>How to disable:</strong> Unfortunately, you cannot - they are essential for the site to work.</p>
+
+        <h3>2.2 Analytics Cookies (Requires Consent)</h3>
+        <p>These cookies help me <strong>analyze</strong> how visitors use the site:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cookie</th>
+                    <th>Provider</th>
+                    <th>Duration</th>
+                    <th>Purpose</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>_ga</code></td>
+                    <td>Google LLC (Analytics)</td>
+                    <td>25 months</td>
+                    <td>Unique user identifier</td>
+                    <td>Anonymous ID</td>
+                </tr>
+                <tr>
+                    <td><code>_ga_[ID]</code></td>
+                    <td>Google LLC (Analytics)</td>
+                    <td>25 months</td>
+                    <td>Session and conversion tracking</td>
+                    <td>Session ID</td>
+                </tr>
+                <tr>
+                    <td><code>_gat</code></td>
+                    <td>Google LLC (Analytics)</td>
+                    <td>1 minute</td>
+                    <td>Request frequency limiting</td>
+                    <td>Request counter</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>What Data We Collect:</h4>
+        <ul>
+            <li>Pages you visit</li>
+            <li>Time spent on the site</li>
+            <li>Device type (computer/phone/tablet)</li>
+            <li>Operating system</li>
+            <li>Web browser</li>
+            <li>Approximate location (country level)</li>
+            <li>Traffic source (search engine, direct, etc.)</li>
+        </ul>
+
+        <h4>How to Disable:</h4>
+        <ul>
+            <li>Reject them during your first visit</li>
+            <li>Click "Manage Preferences" in the cookie banner</li>
+            <li>Disable them in your browser settings</li>
+        </ul>
+
+        <h4>Why We Collect Them:</h4>
+        <ul>
+            <li>Understand which pages are popular</li>
+            <li>Identify technical issues</li>
+            <li>Improve user experience</li>
+            <li>Measure effectiveness</li>
+        </ul>
+
+        <h3>2.3 Marketing Cookies (Requires Consent)</h3>
+        <p>These cookies are used for <strong>conversion tracking</strong> and <strong>ad personalization</strong>:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cookie</th>
+                    <th>Provider</th>
+                    <th>Duration</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Marketing cookies GA</td>
+                    <td>Google LLC</td>
+                    <td>25 months</td>
+                    <td>Conversion tracking</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>What Data We Collect:</h4>
+        <ul>
+            <li>Whether you clicked on links to my CV/portfolio</li>
+            <li>Whether you downloaded documents</li>
+            <li>Where you found my site (in ad context)</li>
+        </ul>
+
+        <h4>How to Disable:</h4>
+        <ul>
+            <li>Reject during banner configuration</li>
+            <li>Click "Manage Preferences"</li>
+        </ul>
+
+        <h4>Why We Collect Them:</h4>
+        <ul>
+            <li>Improve advertising campaigns</li>
+            <li>Measure ROI (return on investment)</li>
+            <li>Better ad targeting</li>
+        </ul>
+
+        <h2>3. Cookie Providers and Their Policies</h2>
+
+        <h3>Google Analytics (Google LLC)</h3>
+        <ul>
+            <li><strong>Website:</strong> <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+            <li><strong>Opt-out:</strong> <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">tools.google.com/dlpage/gaoptout</a></li>
+            <li><strong>Data Location:</strong> EU data servers (Ireland)</li>
+            <li><strong>GDPR:</strong> Fully compliant with GDPR</li>
+        </ul>
+
+        <h3>Silktide Cookie Consent Manager</h3>
+        <ul>
+            <li><strong>Website:</strong> <a href="https://silktide.com/products/cookie-banner" target="_blank">silktide.com/products/cookie-banner</a></li>
+            <li><strong>Cookies:</strong> Only stores user preferences (no analytics)</li>
+        </ul>
+
+        <h2>4. How to Manage Cookies</h2>
+
+        <h3>In Our Cookie Banner</h3>
+        <p>Easily change your preferences:</p>
+        <ol>
+            <li>Find the cookie banner at the bottom of the page</li>
+            <li>Click "Preferences" / "Settings"</li>
+            <li>Select which cookies you accept</li>
+            <li>Click "Save Preferences"</li>
+        </ol>
+
+        <h3>In Your Browser</h3>
+        <p>Most browsers allow you to manage cookies:</p>
+
+        <h4>Chrome:</h4>
+        <ol>
+            <li>Settings → Privacy and Security</li>
+            <li>Cookies and Site Data</li>
+            <li>Manage All Site Data</li>
+        </ol>
+
+        <h4>Firefox:</h4>
+        <ol>
+            <li>Settings → Privacy & Security</li>
+            <li>History → Cookies</li>
+            <li>Manage Site Data</li>
+        </ol>
+
+        <h4>Safari:</h4>
+        <ol>
+            <li>Preferences → Privacy</li>
+            <li>Manage Website Data</li>
+        </ol>
+
+        <h4>Edge:</h4>
+        <ol>
+            <li>Settings → Privacy and Services</li>
+            <li>Cookies and Other Site Data</li>
+        </ol>
+
+        <h3>Google Analytics Opt-Out Extension</h3>
+        <p>Google provides a browser extension to disable Google Analytics on all sites:</p>
+        <p>👉 <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Download Google Analytics Opt-Out Extension</a></p>
+
+        <h2>5. Third-Party Cookies</h2>
+        <p>Your site may contain cookies from:</p>
+        <ul>
+            <li><strong>Google Analytics</strong> (Google LLC) - analytics</li>
+            <li>Potentially <strong>LinkedIn, GitHub</strong> - if their widgets are embedded</li>
+        </ul>
+        <p>These cookies are regulated by their own privacy policies.</p>
+
+        <h2>6. GDPR/RODO Compliance</h2>
+        <div class="highlight-box">
+            <p><strong>Fully GDPR Compliant:</strong></p>
+            <ul>
+                <li>✅ Requires <strong>explicit consent</strong> before loading Google Analytics</li>
+                <li>✅ Does NOT set analytics cookies <strong>without consent</strong></li>
+                <li>✅ Consent is <strong>granular</strong> – you can choose individual categories</li>
+                <li>✅ You can <strong>withdraw consent</strong> at any time</li>
+                <li>✅ Silence is NOT treated as consent</li>
+            </ul>
+        </div>
+
+        <h2>7. Security</h2>
+        <p>My cookies are:</p>
+        <ul>
+            <li>✅ Encrypted (HTTPS)</li>
+            <li>✅ Stored on secure servers</li>
+            <li>✅ Protected against modification</li>
+            <li>✅ Secure against theft</li>
+        </ul>
+
+        <h2>8. Additional Resources</h2>
+        <ul>
+            <li><a href="https://uodo.gov.pl" target="_blank">UODO (Office for Personal Data Protection)</a></li>
+            <li><a href="https://ec.europa.eu/info/law/law-topic/data-protection_en" target="_blank">European Commission - Data Protection</a></li>
+            <li><a href="https://www.aboutcookies.org" target="_blank">What are cookies? (Official definition)</a></li>
+        </ul>
+
+        <div class="back-link">
+            <a href="index.html">← Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Call</h4>
+                <a href="tel:+4.8690661143e+10">+48 690 661 143</a>
+            </div>
+            <div class="footer-section">
+                <h4>Write</h4>
+                <a href="mailto:jan.jedrzejak@gmail.com">jan.jedrzejak@gmail.com</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 by JJ</span>
+            <div class="footer-links">
+                <a href="privacy.html" title="Privacy Policy">Privacy Policy</a> | 
+                <a href="cookies-policy.html" title="Cookie Policy">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

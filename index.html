@@ -40,122 +40,158 @@
 <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css">
 
-<script>
-    // Czekaj aż skrypt Silktide się załaduje
-    window.addEventListener('load', function() {
-        if (window.CookieConsent) {
-            window.CookieConsent.run({
-                // ===== WAŻNE: Ustawienia ogólne =====
-                autoShowModal: true,
-                hidePreferencesButton: false,
-                
-                // Kategorie cookies
-                categories: {
-                    necessary: {
-                        label: "Niezbędne",
-                        description: "Pliki cookie niezbędne do funkcjonowania strony",
-                        enabled: true,
-                        readOnly: true
-                    },
-                    analytics: {
-                        label: "Analityczne",
-                        description: "Google Analytics - analiza ruchu na stronie",
-                        recommended: true,
-                        enabled: false,
-                        readOnly: false
-                    },
-                    marketing: {
-                        label: "Marketingowe",
-                        description: "Reklamy i analiza konwersji",
-                        enabled: false,
-                        readOnly: false
-                    }
-                },
-                
-                // Ustawienia języka i tekstów
-                language: {
-                    root: "pl",
-                    translations: {
-                        pl: {
-                            consentModal: {
-                                title: "Szanujemy Twoją prywatność 🍪",
-                                description: "Nasza strona używa plików cookie do analizy ruchu i poprawy doświadczenia. Możesz wybrać, które cookies chcesz zaakceptować.",
-                                acceptAllBtn: "Zaakceptuj wszystkie",
-                                acceptNecessaryBtn: "Zaakceptuj niezbędne",
-                                rejectAllBtn: "Odrzuć opcjonalne",
-                                managePreferencesBtn: "Ustawienia"
-                            },
-                            preferencesModal: {
-                                title: "Zarządzaj preferencjami cookies",
-                                acceptAllBtn: "Zaakceptuj wszystkie",
-                                rejectAllBtn: "Odrzuć wszystkie",
-                                savePreferencesBtn: "Zapisz preferencje",
-                                sections: [
-                                    {
-                                        title: "Cookies niezbędne",
-                                        description: "Zawsze aktywne, niezbędne do działania strony"
-                                    },
-                                    {
-                                        title: "Cookies analityczne",
-                                        description: "Pomagają nam zrozumieć, jak używana jest nasza strona"
-                                    },
-                                    {
-                                        title: "Cookies marketingowe",
-                                        description: "Używane do wyświetlania reklam i śledzenia konwersji"
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                }
-            });
-        }
-    });
-</script>
 
-<!-- Google Analytics - warunkowe załadowanie -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV"></script>
+<link rel="stylesheet" id="silktide-consent-manager-css" href="cookie/silktide-consent-manager.css">
+<script src="cookie/silktide-consent-manager.js"></script>
 <script>
+silktideCookieBannerManager.updateCookieBannerConfig({
+  background: {
+    showBackground: true
+  },
+  cookieIcon: {
+    position: "bottomRight"
+  },
+  cookieTypes: [
+    {
+      id: "necessary",
+      name: "Necessary",
+      description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+      required: true,
+      onAccept: function() {
+        console.log('Add logic for the required Necessary here');
+      }
+    },
+    {
+      id: "analytics",
+      name: "Analytics",
+      description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+      required: false,
+      onAccept: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+        });
+        dataLayer.push({
+          'event': 'consent_accepted_analytics',
+        });
+      },
+      onReject: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'denied',
+        });
+      }
+    },
+    {
+      id: "advertising",
+      name: "Advertising",
+      description: "<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>",
+      required: false,
+      onAccept: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+        });
+        dataLayer.push({
+          'event': 'consent_accepted_advertising',
+        });
+      },
+      onReject: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'denied',
+        });
+      }
+    }
+  ],
+  text: {
+    banner: {
+      description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookie Policy.</a></p>",
+      acceptAllButtonText: "Accept all",
+      acceptAllButtonAccessibleLabel: "Accept all cookies",
+      rejectNonEssentialButtonText: "Reject non-essential",
+      rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+      preferencesButtonText: "Preferences",
+      preferencesButtonAccessibleLabel: "Toggle preferences"
+    },
+    preferences: {
+      title: "Customize your cookie preferences",
+      description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+      creditLinkText: "Get this banner for free",
+      creditLinkAccessibleLabel: "Get this banner for free"
+    }
+  }
+});
+</script>
+<script>
+    // Inicjalizuj dataLayer PRZED załadowaniem GA
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    
-    // Domyślnie wyłączamy tracking
+
+    // Ustaw domyślnie - tracking jest WYŁĄCZONY
     gtag('consent', 'default', {
-        'analytics_storage': 'denied',
-        'ad_storage': 'denied'
+        'analytics_storage': 'denied'
     });
 
-    // Nasłuchuj zmian w preferencjach cookies
-    document.addEventListener('cc:onChange', function(e) {
-        // Jeśli użytkownik zaakceptuje analytics
-        if (e.detail.categories.analytics) {
+    // Flaga czy GA już się załadował
+    var gaLoaded = false;
+
+    // Funkcja do załadowania Google Analytics
+    function loadGoogleAnalytics() {
+        if (gaLoaded) return; // Załaduj tylko raz
+        gaLoaded = true;
+
+        // Dynamicznie załaduj skrypt GA
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV';
+        document.head.appendChild(script);
+
+        // Po załadowaniu skryptu, ustaw konfigurację
+        script.onload = function() {
             gtag('consent', 'update', {
-                'analytics_storage': 'granted',
-                'ad_storage': e.detail.categories.marketing ? 'granted' : 'denied'
+                'analytics_storage': 'granted'
             });
             gtag('config', 'G-9XTCEZ21TV', {
-                'page_path': window.location.pathname
+                'page_path': window.location.pathname,
+                'page_title': document.title
             });
-        } else {
-            gtag('consent', 'update', {
-                'analytics_storage': 'denied',
-                'ad_storage': 'denied'
-            });
-        }
-    });
-    
-    // Jeśli wszystkie cookies już zaakceptowane przy poprzedniej wizycie
-    window.addEventListener('load', function() {
-        if (localStorage.getItem('cc_cookie')) {
-            var preferences = JSON.parse(localStorage.getItem('cc_cookie'));
-            if (preferences.categories && preferences.categories.analytics) {
-                gtag('consent', 'update', {
-                    'analytics_storage': 'granted',
-                    'ad_storage': preferences.categories.marketing ? 'granted' : 'denied'
+            console.log('✓ Google Analytics załadowany i aktywny');
+        };
+    }
+
+    // NASŁUCHAJ ZMIANY PREFERENCJI COOKIES Z SILKTIDE
+    document.addEventListener('DOMContentLoaded', function() {
+        // Czekaj aż Silktide Manager się załaduje
+        var checkSilktide = setInterval(function() {
+            if (typeof silktideCookieBannerManager !== 'undefined') {
+                clearInterval(checkSilktide);
+
+                // Nasłuchuj akceptację Analytics
+                silktideCookieBannerManager.onCategoryAccepted('analytics', function() {
+                    console.log('✓ Użytkownik zaakceptował Analytics - załadowuję GA...');
+                    loadGoogleAnalytics();
                 });
-                gtag('config', 'G-9XTCEZ21TV');
+
+                // Nasłuchuj odrzucenie Analytics
+                silktideCookieBannerManager.onCategoryRejected('analytics', function() {
+                    console.log('✗ Użytkownik odrzucił Analytics');
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'denied'
+                    });
+                });
+
+                // Sprawdź czy cookies były już wcześniej zaakceptowane
+                var savedPreferences = localStorage.getItem('silktide-cookie-consent');
+                if (savedPreferences) {
+                    try {
+                        var preferences = JSON.parse(savedPreferences);
+                        if (preferences.analytics) {
+                            console.log('✓ Poprzednio zaakceptowane Analytics - załadowuję GA...');
+                            loadGoogleAnalytics();
+                        }
+                    } catch(e) {
+                        console.error('Błąd parsowania preferences:', e);
+                    }
+                }
             }
-        }
+        }, 100); // Sprawdzaj co 100ms
     });
 </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -848,15 +884,8 @@
         <div class="footer-bottom">
             <span>© 2025 by JJ</span>
             <div class="footer-links">
-                <a href="https://www.iubenda.com/privacy-policy/85171501"
-                    class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only" title="Privacy Policy">Privacy
-                    Policy</a>
-                <a href="https://www.iubenda.com/privacy-policy/85171501/cookie-policy"
-                    class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only" title="Cookie Policy">Cookie
-                    Policy</a>
-                <a href="https://www.iubenda.com/terms-and-conditions/85171501"
-                    class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only"
-                    title="Terms and Conditions">Terms and Conditions</a>
+                <a href="privacy.html" title="Privacy Policy">Privacy Policy</a> | 
+                <a href="cookies-policy.html" title="Cookie Policy">Cookie Policy</a>
             </div>
         </div>
     </footer>
