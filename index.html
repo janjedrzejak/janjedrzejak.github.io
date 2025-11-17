@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Title & Meta Description -->
     <title>Jan Jędrzejak - Digital Expert | Product Owner & Digital Solutions</title>
-    <meta name="description" content="Discover Jan Jędrzejak's expertise in digital transformation, product ownership, and eCommerce optimization. Specializing in Salesforce, Microsoft Power Platform, and B2B solutions.">
+    <meta name="description"
+        content="Discover Jan Jędrzejak's expertise in digital transformation, product ownership, and eCommerce optimization. Specializing in Salesforce, Microsoft Power Platform, and B2B solutions.">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <!-- Keywords -->
-    <meta name="keywords" content="digital expert, product owner, eCommerce, digital transformation, automation, Salesforce, Power Platform, B2B, CRM, marketing automation, portfolio">
+    <meta name="keywords"
+        content="digital expert, product owner, eCommerce, digital transformation, automation, Salesforce, Power Platform, B2B, CRM, marketing automation, portfolio">
 
     <!-- Author & Language -->
     <meta name="author" content="Jan Jędrzejak">
@@ -24,7 +26,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://janjedrzejak.github.io/">
     <meta property="og:title" content="Jan Jędrzejak - Digital Expert | Product Owner & Digital Solutions">
-    <meta property="og:description" content="Results-oriented expert in digital solutions, product ownership, and eCommerce optimization. Specializing in B2B platforms, automation, and process improvement.">
+    <meta property="og:description"
+        content="Results-oriented expert in digital solutions, product ownership, and eCommerce optimization. Specializing in B2B platforms, automation, and process improvement.">
     <meta property="og:image" content="https://janjedrzejak.github.io/img/og-image.jpg">
     <meta property="og:image:width" content="500">
     <meta property="og:image:height" content="500">
@@ -33,22 +36,69 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Silktide Cookie Banner -->
+    <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css">
+
+    <script>
+        window.CookieConsent.run({
+            // Ustawienia baneru
+            categories: {
+                necessary: {
+                    label: "Niezbędne",
+                    description: "Pliki cookie niezbędne do funkcjonowania strony"
+                },
+                analytics: {
+                    label: "Analityczne",
+                    description: "Google Analytics - analiza ruchu na stronie",
+                    recommended: true
+                },
+                marketing: {
+                    label: "Marketingowe",
+                    description: "Reklamy i analiza konwersji"
+                }
+            },
+            language: {
+                root: "pl",
+                translations: {
+                    pl: {
+                        consentModal: {
+                            title: "Szanujemy Twoją prywatność",
+                            description: "Nasza strona używa plików cookie do analizy ruchu. Możesz wybrać, które cookies chcesz zaakceptować.",
+                            acceptAllBtn: "Zaakceptuj wszystkie",
+                            rejectAllBtn: "Odrzuć",
+                            managePreferencesBtn: "Ustawienia",
+                            closeIconLabel: "Zamknij"
+                        },
+                        preferencesModal: {
+                            savePreferencesBtn: "Zapisz ustawienia"
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <!-- Google Analytics - załaduje się po wyrażeniu zgody -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV"></script>
     <script>
+        // Domyślnie wyłączamy tracking
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-9XTCEZ21TV');
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied'
+        });
+
+        // Po wyrażeniu zgody przez użytkownika
+        document.addEventListener('cc:onChange', function (e) {
+            if (e.detail.categories.analytics) {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'granted'
+                });
+                gtag('config', 'G-9XTCEZ21TV');
+            }
+        });
     </script>
-    <script type="text/javascript">
-        var _iub = _iub || [];
-        _iub.csConfiguration = { "siteId": 4313953, "cookiePolicyId": 85171501, "storage": { "useSiteId": true } };
-        _iub.csLangConfiguration = { "en": { "cookiePolicyId": 85171501 }, "pl": { "cookiePolicyId": 95467044 } };
-    </script>
-    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/4313953.js"></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
-    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styl.css">
 </head>
@@ -119,8 +169,10 @@
             </div>
             <!-- Down Arrow -->
             <a class="down-arrow" onclick="scrollToSection('about-me')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" fill="currentColor"
+                    class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
                 </svg>
             </a>
         </div>
@@ -137,10 +189,13 @@
                 <p class="about-subtitle">My name is Jan Jędrzejak</p>
                 <p class="about-text">I am a results-oriented expert in digital solutions and product ownership, with
                     strong expertise in Salesforce Digital Experience, HCL WebSpheres, Sitecore, and Microsoft Power
-                    Platform. I excel in managing and optimizing complex B2B eCommerce ecosystems, driving product strategy,
-                    enhancing user experience, and leading process automation initiatives. I am highly adaptable to diverse
+                    Platform. I excel in managing and optimizing complex B2B eCommerce ecosystems, driving product
+                    strategy,
+                    enhancing user experience, and leading process automation initiatives. I am highly adaptable to
+                    diverse
                     technologies and platforms, delivering effective solutions aligned with evolving business goals. I
-                    collaborate closely with stakeholders to ensure alignment of product vision, usability, and performance,
+                    collaborate closely with stakeholders to ensure alignment of product vision, usability, and
+                    performance,
                     consistently achieving impactful results in dynamic, global environments.</p>
                 <a href="https://www.linkedin.com/in/janjedrzejak/" class="social-link" title="LinkedIn">in</a>
                 <div><a href="#contact" class="download-button" onclick="scrollToSection('contact')">Reach
@@ -201,147 +256,235 @@
 
                 <!-- Job 1: Linde Gas Poland (kept) - Metrics Generalized -->
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2022 - Present</p>
-                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Digital Marketing Specialist & Product Owner</h4>
+                    <div
+                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p
+                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
+                            2022 - Present</p>
+                        <h4
+                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
+                            Digital Marketing Specialist & Product Owner</h4>
                         <p style="font-size: 12px; color: #666; font-weight: 500;">Linde Gas Poland</p>
                     </div>
                     <div style="flex: 1; min-width: 280px;">
                         <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Managed digital content workflows on multiple platforms for enterprise-scale user base, enhancing engagement and platform adoption</li>
-                            <li style="margin-bottom: 16px;">Oversaw B2B e-commerce and corporate sites optimization, achieving significant revenue growth and substantial increases in organic traffic. Delivered CMS platform adoption across multiple countries, enabling streamlined content management and localization</li>
-                            <li style="margin-bottom: 16px;">Led Microsoft Power Platform adoption, automating multiple business processes and improving team productivity while reducing operational costs</li>
-                            <li style="margin-bottom: 16px;">Delivered comprehensive training programs and documentation, enhancing digital tool adoption among enterprise users</li>
-                            <li style="margin-bottom: 16px;">Managed high volume of content update requests, maintaining SLA compliance and brand standards</li>
-                            <li style="margin-bottom: 16px;">Coordinated global stakeholder communication for multi-country projects, accelerating deployment timelines</li>
+                            <li style="margin-bottom: 16px;">Managed digital content workflows on multiple platforms for
+                                enterprise-scale user base, enhancing engagement and platform adoption</li>
+                            <li style="margin-bottom: 16px;">Oversaw B2B e-commerce and corporate sites optimization,
+                                achieving significant revenue growth and substantial increases in organic traffic.
+                                Delivered CMS platform adoption across multiple countries, enabling streamlined content
+                                management and localization</li>
+                            <li style="margin-bottom: 16px;">Led Microsoft Power Platform adoption, automating multiple
+                                business processes and improving team productivity while reducing operational costs</li>
+                            <li style="margin-bottom: 16px;">Delivered comprehensive training programs and
+                                documentation, enhancing digital tool adoption among enterprise users</li>
+                            <li style="margin-bottom: 16px;">Managed high volume of content update requests, maintaining
+                                SLA compliance and brand standards</li>
+                            <li style="margin-bottom: 16px;">Coordinated global stakeholder communication for
+                                multi-country projects, accelerating deployment timelines</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Job 2: Linde Gas Poland (kept) - Metrics Generalized -->
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2018 - 2022</p>
-                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">IS Field Support Specialist</h4>
+                    <div
+                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p
+                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
+                            2018 - 2022</p>
+                        <h4
+                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
+                            IS Field Support Specialist</h4>
                         <p style="font-size: 12px; color: #666; font-weight: 500;">Linde Gas Poland</p>
                     </div>
                     <div style="flex: 1; min-width: 280px;">
                         <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Delivered and supported IT infrastructure projects for large-scale computer environments, ensuring smooth deployment and adoption</li>
-                            <li style="margin-bottom: 16px;">Managed incidents and service requests via ITILv4 ticketing systems, maintaining high SLA compliance</li>
-                            <li style="margin-bottom: 16px;">Provided support for Microsoft 365, SAP R/3, and other enterprise applications</li>
-                            <li style="margin-bottom: 16px;">Assisted in network troubleshooting and infrastructure maintenance with regional teams</li>
-                            <li style="margin-bottom: 16px;">Led migration of large-scale network infrastructure including switches, routers, and telephone systems</li>
-                            <li style="margin-bottom: 16px;">Coordinated office network upgrades and IT system migrations, ensuring timely delivery and minimal disruption</li>
+                            <li style="margin-bottom: 16px;">Delivered and supported IT infrastructure projects for
+                                large-scale computer environments, ensuring smooth deployment and adoption</li>
+                            <li style="margin-bottom: 16px;">Managed incidents and service requests via ITILv4 ticketing
+                                systems, maintaining high SLA compliance</li>
+                            <li style="margin-bottom: 16px;">Provided support for Microsoft 365, SAP R/3, and other
+                                enterprise applications</li>
+                            <li style="margin-bottom: 16px;">Assisted in network troubleshooting and infrastructure
+                                maintenance with regional teams</li>
+                            <li style="margin-bottom: 16px;">Led migration of large-scale network infrastructure
+                                including switches, routers, and telephone systems</li>
+                            <li style="margin-bottom: 16px;">Coordinated office network upgrades and IT system
+                                migrations, ensuring timely delivery and minimal disruption</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Job 3: TVN Grupa Discovery (kept) -->
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2018 - 2018</p>
-                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Assistant Video Editor</h4>
+                    <div
+                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p
+                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
+                            2018 - 2018</p>
+                        <h4
+                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
+                            Assistant Video Editor</h4>
                         <p style="font-size: 12px; color: #666; font-weight: 500;">TVN Grupa Discovery</p>
                     </div>
                     <div style="flex: 1; min-width: 280px;">
                         <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Supported lead editor with daily editing tasks for production workflows, ensuring smooth post-production processes</li>
-                            <li style="margin-bottom: 16px;">Organized and managed media assets, including logging, selecting, and preparing material for editorial review</li>
-                            <li style="margin-bottom: 16px;">Created preliminary edits and assembly cuts based on director guidance, maintaining narrative coherence and pacing</li>
-                            <li style="margin-bottom: 16px;">Participated in production and editorial meetings to discuss progress, feedback, and creative decisions</li>
-                            <li style="margin-bottom: 16px;">Tracked post-production progress and managed schedules to ensure deadlines aligned with client requirements</li>
+                            <li style="margin-bottom: 16px;">Supported lead editor with daily editing tasks for
+                                production workflows, ensuring smooth post-production processes</li>
+                            <li style="margin-bottom: 16px;">Organized and managed media assets, including logging,
+                                selecting, and preparing material for editorial review</li>
+                            <li style="margin-bottom: 16px;">Created preliminary edits and assembly cuts based on
+                                director guidance, maintaining narrative coherence and pacing</li>
+                            <li style="margin-bottom: 16px;">Participated in production and editorial meetings to
+                                discuss progress, feedback, and creative decisions</li>
+                            <li style="margin-bottom: 16px;">Tracked post-production progress and managed schedules to
+                                ensure deadlines aligned with client requirements</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Job 4: TVP S.A. (kept) -->
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2016 - 2018</p>
-                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Camera Operator</h4>
+                    <div
+                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p
+                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
+                            2016 - 2018</p>
+                        <h4
+                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
+                            Camera Operator</h4>
                         <p style="font-size: 12px; color: #666; font-weight: 500;">TVP S.A. (Telewizja Polska)</p>
                     </div>
                     <div style="flex: 1; min-width: 280px;">
                         <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Operated professional camera equipment to capture high-quality video footage for regional broadcast operations</li>
-                            <li style="margin-bottom: 16px;">Filmed news reports and events in diverse geographic locations, ensuring visual clarity and storytelling impact</li>
-                            <li style="margin-bottom: 16px;">Collaborated with reporters and production teams to deliver footage meeting editorial requirements and broadcast deadlines</li>
-                            <li style="margin-bottom: 16px;">Managed technical aspects of camera operation including framing, lighting, and audio capture in diverse environments</li>
-                            <li style="margin-bottom: 16px;">Followed broadcast standards and safety protocols while working in varied field conditions</li>
+                            <li style="margin-bottom: 16px;">Operated professional camera equipment to capture
+                                high-quality video footage for regional broadcast operations</li>
+                            <li style="margin-bottom: 16px;">Filmed news reports and events in diverse geographic
+                                locations, ensuring visual clarity and storytelling impact</li>
+                            <li style="margin-bottom: 16px;">Collaborated with reporters and production teams to deliver
+                                footage meeting editorial requirements and broadcast deadlines</li>
+                            <li style="margin-bottom: 16px;">Managed technical aspects of camera operation including
+                                framing, lighting, and audio capture in diverse environments</li>
+                            <li style="margin-bottom: 16px;">Followed broadcast standards and safety protocols while
+                                working in varied field conditions</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Job 5: Kino Polska TV (kept) - Program names kept since they're public -->
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2016 - 2018</p>
-                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Video Editor</h4>
+                    <div
+                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p
+                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
+                            2016 - 2018</p>
+                        <h4
+                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
+                            Video Editor</h4>
                         <p style="font-size: 12px; color: #666; font-weight: 500;">Kino Polska TV S.A.</p>
                     </div>
                     <div style="flex: 1; min-width: 280px;">
                         <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Filmed and edited video content for broadcast television programs including "Bliżej! Magazyn reporterów" on ZOOM TV, maintaining high-quality video and audio standards</li>
-                            <li style="margin-bottom: 16px;">Edited recorded materials to create coherent and engaging reports aligned with production requirements and program style</li>
-                            <li style="margin-bottom: 16px;">Collaborated with directors, producers, and post-production teams to ensure smooth production processes and creative vision realization</li>
-                            <li style="margin-bottom: 16px;">Selected appropriate shots, performed editing and color correction to enhance narrative impact and viewer engagement</li>
-                            <li style="margin-bottom: 16px;">Managed filming and editing equipment, ensuring efficient operation and adherence to quality standards and delivery deadlines</li>
+                            <li style="margin-bottom: 16px;">Filmed and edited video content for broadcast television
+                                programs including "Bliżej! Magazyn reporterów" on ZOOM TV, maintaining high-quality
+                                video and audio standards</li>
+                            <li style="margin-bottom: 16px;">Edited recorded materials to create coherent and engaging
+                                reports aligned with production requirements and program style</li>
+                            <li style="margin-bottom: 16px;">Collaborated with directors, producers, and post-production
+                                teams to ensure smooth production processes and creative vision realization</li>
+                            <li style="margin-bottom: 16px;">Selected appropriate shots, performed editing and color
+                                correction to enhance narrative impact and viewer engagement</li>
+                            <li style="margin-bottom: 16px;">Managed filming and editing equipment, ensuring efficient
+                                operation and adherence to quality standards and delivery deadlines</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Job 6: TV Proart (kept) - Events kept since they're public information -->
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2014 - 2018</p>
-                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Video Editor & Camera Operator</h4>
+                    <div
+                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p
+                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
+                            2014 - 2018</p>
+                        <h4
+                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
+                            Video Editor & Camera Operator</h4>
                         <p style="font-size: 12px; color: #666; font-weight: 500;">wlkp24.info TV Proart</p>
                     </div>
                     <div style="flex: 1; min-width: 280px;">
                         <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Edited news materials, reports, and advertising spots for Telewizja Proart, maintaining high broadcast quality and audience engagement</li>
-                            <li style="margin-bottom: 16px;">Created graphics for television programs and internet platforms to enhance storytelling and visual impact</li>
-                            <li style="margin-bottom: 16px;">Collaborated effectively with journalists, producers, and marketing teams to ensure alignment with brand identity and production standards</li>
-                            <li style="margin-bottom: 16px;">Managed production schedules and technical aspects of editing and graphic design to deliver timely and polished content</li>
-                            <li style="margin-bottom: 16px;">Operated camera equipment during live broadcasts of major cultural, sports, and entertainment events including international sumo championships, European SEC Speedway Championships, and International Jazz Pianists Festival</li>
+                            <li style="margin-bottom: 16px;">Edited news materials, reports, and advertising spots for
+                                Telewizja Proart, maintaining high broadcast quality and audience engagement</li>
+                            <li style="margin-bottom: 16px;">Created graphics for television programs and internet
+                                platforms to enhance storytelling and visual impact</li>
+                            <li style="margin-bottom: 16px;">Collaborated effectively with journalists, producers, and
+                                marketing teams to ensure alignment with brand identity and production standards</li>
+                            <li style="margin-bottom: 16px;">Managed production schedules and technical aspects of
+                                editing and graphic design to deliver timely and polished content</li>
+                            <li style="margin-bottom: 16px;">Operated camera equipment during live broadcasts of major
+                                cultural, sports, and entertainment events including international sumo championships,
+                                European SEC Speedway Championships, and International Jazz Pianists Festival</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Job 7: Freelance (kept) -->
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2012 - 2014</p>
-                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Photojournalist</h4>
+                    <div
+                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p
+                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
+                            2012 - 2014</p>
+                        <h4
+                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
+                            Photojournalist</h4>
                         <p style="font-size: 12px; color: #666; font-weight: 500;">Freelance</p>
                     </div>
                     <div style="flex: 1; min-width: 280px;">
                         <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Captured photographs documenting local events, community stories, and newsworthy situations</li>
-                            <li style="margin-bottom: 16px;">Attended press conferences, cultural events, and public gatherings to visually report community life</li>
-                            <li style="margin-bottom: 16px;">Edited and enhanced photographs using professional photo editing software while maintaining authenticity</li>
-                            <li style="margin-bottom: 16px;">Collaborated with reporters and editors to ensure visual materials complemented written stories</li>
-                            <li style="margin-bottom: 16px;">Prepared captions, descriptions, and metadata for publication; maintained photographic equipment and managed digital archives</li>
+                            <li style="margin-bottom: 16px;">Captured photographs documenting local events, community
+                                stories, and newsworthy situations</li>
+                            <li style="margin-bottom: 16px;">Attended press conferences, cultural events, and public
+                                gatherings to visually report community life</li>
+                            <li style="margin-bottom: 16px;">Edited and enhanced photographs using professional photo
+                                editing software while maintaining authenticity</li>
+                            <li style="margin-bottom: 16px;">Collaborated with reporters and editors to ensure visual
+                                materials complemented written stories</li>
+                            <li style="margin-bottom: 16px;">Prepared captions, descriptions, and metadata for
+                                publication; maintained photographic equipment and managed digital archives</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Job 8: ostrowwlkp.info (kept) -->
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2011 - 2012</p>
-                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">Photojournalist</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">Portal informacyjny ostrowwlkp.info</p>
+                    <div
+                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p
+                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
+                            2011 - 2012</p>
+                        <h4
+                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
+                            Photojournalist</h4>
+                        <p style="font-size: 12px; color: #666; font-weight: 500;">Portal informacyjny ostrowwlkp.info
+                        </p>
                     </div>
                     <div style="flex: 1; min-width: 280px;">
                         <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Captured photographs documenting local events, community stories, and newsworthy situations</li>
-                            <li style="margin-bottom: 16px;">Attended press conferences, cultural events, and public gatherings to visually report community life</li>
-                            <li style="margin-bottom: 16px;">Edited and enhanced photographs using professional photo editing software while maintaining authenticity</li>
-                            <li style="margin-bottom: 16px;">Collaborated with reporters and editors to ensure visual materials complemented written stories</li>
-                            <li style="margin-bottom: 16px;">Worked under tight deadlines adapting to unpredictable field conditions while upholding journalistic and ethical standards</li>
-                            <li style="margin-bottom: 16px;">Built and maintained relationships with local institutions, event organizers, and media outlets</li>
+                            <li style="margin-bottom: 16px;">Captured photographs documenting local events, community
+                                stories, and newsworthy situations</li>
+                            <li style="margin-bottom: 16px;">Attended press conferences, cultural events, and public
+                                gatherings to visually report community life</li>
+                            <li style="margin-bottom: 16px;">Edited and enhanced photographs using professional photo
+                                editing software while maintaining authenticity</li>
+                            <li style="margin-bottom: 16px;">Collaborated with reporters and editors to ensure visual
+                                materials complemented written stories</li>
+                            <li style="margin-bottom: 16px;">Worked under tight deadlines adapting to unpredictable
+                                field conditions while upholding journalistic and ethical standards</li>
+                            <li style="margin-bottom: 16px;">Built and maintained relationships with local institutions,
+                                event organizers, and media outlets</li>
                         </ul>
                     </div>
                 </div>
@@ -351,12 +494,16 @@
             <div style="margin-top: 80px;">
                 <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Awards</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
-                    <div style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
-                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership Award</p>
+                    <div
+                        style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
+                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership
+                            Award</p>
                         <p style="font-size: 12px; color: #999;">2024</p>
                     </div>
-                    <div style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
-                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership Award</p>
+                    <div
+                        style="background-color: #fff; padding: 25px; border-left: 4px solid #00a8e8; border-radius: 4px;">
+                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 8px;">Linde Leadership
+                            Award</p>
                         <p style="font-size: 12px; color: #999;">2022</p>
                     </div>
                 </div>
@@ -367,95 +514,153 @@
                 <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Education</h3>
 
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
-                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2016 - 2018</p>
-                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">M.Sc. Eng.</h4>
+                    <div
+                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p
+                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
+                            2016 - 2018</p>
+                        <h4
+                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
+                            M.Sc. Eng.</h4>
                         <p style="font-size: 12px; color: #666; font-weight: 500;">Społeczna Akademia Nauk</p>
                         <p style="font-size: 12px; color: #999; margin-top: 5px;">Łódź, Poland</p>
                     </div>
                     <div style="flex: 1;">
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good</p>
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Computer graphics and internet technologies specialization.</p>
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good
+                        </p>
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Computer graphics and internet
+                            technologies specialization.</p>
                         <p style="font-size: 14px; color: #555;"><strong>Diploma with honours.</strong></p>
                     </div>
                 </div>
 
                 <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;">
-                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">2012 - 2016</p>
-                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">BEng</h4>
+                    <div
+                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
+                        <p
+                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
+                            2012 - 2016</p>
+                        <h4
+                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
+                            BEng</h4>
                         <p style="font-size: 12px; color: #666; font-weight: 500;">Społeczna Akademia Nauk</p>
                         <p style="font-size: 12px; color: #999; margin-top: 5px;">Ostrów Wielkopolski, Poland</p>
                     </div>
                     <div style="flex: 1;">
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good</p>
-                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Visualization and information management systems specialization.</p>
-                        <p style="font-size: 14px; color: #555;"><strong>Award for Master's Dissertation and diploma with honours.</strong></p>
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;"><strong>Grade:</strong> Very good
+                        </p>
+                        <p style="font-size: 14px; color: #555; margin-bottom: 12px;">Visualization and information
+                            management systems specialization.</p>
+                        <p style="font-size: 14px; color: #555;"><strong>Award for Master's Dissertation and diploma
+                                with honours.</strong></p>
                     </div>
                 </div>
             </div>
 
             <!-- Licenses & Certifications -->
             <div style="margin-top: 80px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Licenses & Certifications</h3>
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Licenses &
+                    Certifications</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a href="https://www.hackerrank.com/certificates/3a4e123ca642" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>SQL (Basic) Certificate</a></p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
+                                href="https://www.hackerrank.com/certificates/3a4e123ca642" target="_blank"
+                                style="text-decoration: none; color: #000; cursor: pointer;"><i
+                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>SQL
+                                (Basic) Certificate</a></p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">HackerRank</p>
                         <p style="font-size: 11px; color: #999;">Issued Oct 2025</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a href="https://www.credly.com/badges/314b81f0-ec9c-4f71-9271-9ff2aa55a979" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Creator</a></p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
+                                href="https://www.credly.com/badges/314b81f0-ec9c-4f71-9271-9ff2aa55a979"
+                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
+                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
+                                Creator</a></p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued Dec 2023</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a href="https://www.credly.com/badges/a65a55d5-edd6-44af-822c-5ac8ad205fa1" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Enthusiast - Lead in Digital I</a></p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
+                                href="https://www.credly.com/badges/a65a55d5-edd6-44af-822c-5ac8ad205fa1"
+                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
+                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
+                                Enthusiast - Lead in Digital I</a></p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued Aug 2023</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft 365 Fundamentals</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i
+                                class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft 365
+                            Fundamentals</p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
                         <p style="font-size: 11px; color: #999;">Issued Mar 2022</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Azure Fundamentals</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i
+                                class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Azure
+                            Fundamentals</p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
                         <p style="font-size: 11px; color: #999;">Issued Feb 2022</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft PowerApps & Flow</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i
+                                class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft
+                            PowerApps & Flow</p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Infowave sp. z o.o.</p>
                         <p style="font-size: 11px; color: #999;">Issued Jun 2019</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a href="https://www.credly.com/badges/19be2e49-27fe-4c7d-a55e-0f8f9717ef55" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Enthusiast ChatGPT</a></p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
+                                href="https://www.credly.com/badges/19be2e49-27fe-4c7d-a55e-0f8f9717ef55"
+                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
+                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
+                                Enthusiast ChatGPT</a></p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued Jan 2024</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a href="https://www.credly.com/badges/36867792-9a9c-45a9-ab3b-329ae50c0be5" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Enthusiast New Product Development</a></p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
+                                href="https://www.credly.com/badges/36867792-9a9c-45a9-ab3b-329ae50c0be5"
+                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
+                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
+                                Enthusiast New Product Development</a></p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued Mar 2024</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a href="https://www.credly.com/badges/e1d93d5b-e605-4f35-910d-eb753d565b70" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Enthusiast Digital Foundations</a></p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
+                                href="https://www.credly.com/badges/e1d93d5b-e605-4f35-910d-eb753d565b70"
+                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
+                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
+                                Enthusiast Digital Foundations</a></p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued Feb 2024</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a href="https://www.credly.com/badges/0e98cd30-a798-4418-ba2b-914936270d91" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Enthusiast Scrum</a></p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
+                                href="https://www.credly.com/badges/0e98cd30-a798-4418-ba2b-914936270d91"
+                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
+                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
+                                Enthusiast Scrum</a></p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued Apr 2024</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a href="https://www.credly.com/badges/b2681b12-445e-4457-8199-258843a8933b" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Explorer Product Development</a></p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
+                                href="https://www.credly.com/badges/b2681b12-445e-4457-8199-258843a8933b"
+                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
+                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
+                                Explorer Product Development</a></p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued May 2024</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a href="https://www.credly.com/badges/c0b2ab63-66c7-43fa-bcd5-1c6e9c6d9ff7" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital Enthusiast Data</a></p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><a
+                                href="https://www.credly.com/badges/c0b2ab63-66c7-43fa-bcd5-1c6e9c6d9ff7"
+                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;"><i
+                                    class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
+                                Enthusiast Data</a></p>
                         <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
                         <p style="font-size: 11px; color: #999;">Issued Jun 2024</p>
                     </div>
@@ -464,37 +669,56 @@
 
             <!-- Professional Skillset -->
             <div style="margin-top: 80px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Professional skillset</h3>
+                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Professional skillset
+                </h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i class="fas fa-tasks" style="color: #00a8e8; margin-right: 8px;"></i>Product Owner Expertise</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
+                                class="fas fa-tasks" style="color: #00a8e8; margin-right: 8px;"></i>Product Owner
+                            Expertise</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i class="fas fa-bullhorn" style="color: #00a8e8; margin-right: 8px;"></i>Digital Marketing Specialist</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
+                                class="fas fa-bullhorn" style="color: #00a8e8; margin-right: 8px;"></i>Digital Marketing
+                            Specialist</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i class="fas fa-shopping-cart" style="color: #00a8e8; margin-right: 8px;"></i>eCommerce Platform Management</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
+                                class="fas fa-shopping-cart" style="color: #00a8e8; margin-right: 8px;"></i>eCommerce
+                            Platform Management</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i class="fas fa-cogs" style="color: #00a8e8; margin-right: 8px;"></i>Business & Sales Process Automation</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
+                                class="fas fa-cogs" style="color: #00a8e8; margin-right: 8px;"></i>Business & Sales
+                            Process Automation</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i class="fas fa-database" style="color: #00a8e8; margin-right: 8px;"></i>CRM Automation</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
+                                class="fas fa-database" style="color: #00a8e8; margin-right: 8px;"></i>CRM Automation
+                        </p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i class="fas fa-pen-fancy" style="color: #00a8e8; margin-right: 8px;"></i>Content Creation & SEO Optimization</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
+                                class="fas fa-pen-fancy" style="color: #00a8e8; margin-right: 8px;"></i>Content Creation
+                            & SEO Optimization</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i class="fas fa-bolt" style="color: #00a8e8; margin-right: 8px;"></i>Power Platform (Power Automate, Power Apps)</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
+                                class="fas fa-bolt" style="color: #00a8e8; margin-right: 8px;"></i>Power Platform (Power
+                            Automate, Power Apps)</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i class="fas fa-cloud" style="color: #00a8e8; margin-right: 8px;"></i>Salesforce Digital Experience</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
+                                class="fas fa-cloud" style="color: #00a8e8; margin-right: 8px;"></i>Salesforce Digital
+                            Experience</p>
                     </div>
                     <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i class="fas fa-code" style="color: #00a8e8; margin-right: 8px;"></i>HCL WebSphere & Sitecore CMS</p>
+                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 12px;"><i
+                                class="fas fa-code" style="color: #00a8e8; margin-right: 8px;"></i>HCL WebSphere &
+                            Sitecore CMS</p>
                     </div>
                 </div>
-                    
+
 
             </div>
 
@@ -540,7 +764,8 @@
             </div>
             <div class="cta-buttons">
                 <a href="mailto:jan.jedrzejak@gmail.com" class="btn-cta-primary">Get in Touch</a>
-                <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank" class="btn-cta-secondary">Connect on LinkedIn</a>
+                <a href="https://www.linkedin.com/in/janjedrzejak/" target="_blank" class="btn-cta-secondary">Connect on
+                    LinkedIn</a>
             </div>
         </div>
     </section>
@@ -564,9 +789,15 @@
         <div class="footer-bottom">
             <span>© 2025 by JJ</span>
             <div class="footer-links">
-                <a href="https://www.iubenda.com/privacy-policy/85171501" class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only" title="Privacy Policy">Privacy Policy</a>
-                <a href="https://www.iubenda.com/privacy-policy/85171501/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only" title="Cookie Policy">Cookie Policy</a>
-                <a href="https://www.iubenda.com/terms-and-conditions/85171501" class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only" title="Terms and Conditions">Terms and Conditions</a>
+                <a href="https://www.iubenda.com/privacy-policy/85171501"
+                    class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only" title="Privacy Policy">Privacy
+                    Policy</a>
+                <a href="https://www.iubenda.com/privacy-policy/85171501/cookie-policy"
+                    class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only" title="Cookie Policy">Cookie
+                    Policy</a>
+                <a href="https://www.iubenda.com/terms-and-conditions/85171501"
+                    class="iubenda-nostyle iubenda-noiframe iubenda-embed iub-legal-only"
+                    title="Terms and Conditions">Terms and Conditions</a>
             </div>
         </div>
     </footer>
@@ -606,7 +837,7 @@
         }
 
         // Smooth scrolling hero content on scroll
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const heroContent = document.querySelector('.hero-content');
             const heroHeight = document.querySelector('.hero').offsetHeight;
             const scrollPosition = window.scrollY;
@@ -618,7 +849,7 @@
             }
         });
 
-                // Parallax scroll animation for entire "Get to Know Me" section
+        // Parallax scroll animation for entire "Get to Know Me" section
         const getToKnowSection = document.querySelector('.get-to-know');
 
         function updateSectionPosition() {
