@@ -35,28 +35,20 @@
     <meta property="og:site_name" content="Jan Jędrzejak - Digital Expert">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="pl_PL">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styl.css">
 
-        <!-- Silktide Cookie Banner - POPRAWIONA WERSJA -->
+        <!-- Silktide Cookie Banner + Google Analytics - NAPRAWIONA WERSJA -->
     <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css">
     <link rel="stylesheet" id="silktide-consent-manager-css" href="cookie/silktide-consent-manager.css">
     <script src="cookie/silktide-consent-manager.js"></script>
 
     <script>
-        // ============================================
-        // GOOGLE ANALYTICS + SILKTIDE COOKIE MANAGER
-        // ============================================
+        console.log('🔔 Inicjalizacja Silktide + GA (v2)');
 
-        console.log('🚀 Inicjalizacja GA + Cookie Manager...');
-
-        // Inicjalizuj dataLayer
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
-        // Domyślnie tracking WYŁĄCZONY
         gtag('consent', 'default', {
             'analytics_storage': 'denied',
             'ad_storage': 'denied'
@@ -64,113 +56,73 @@
 
         console.log('📊 GA: Domyślny consent = DENIED');
 
-        var gaScriptLoaded = false;
-        var lastCheckState = null;
+        let gaLoaded = false;
+        let lastAnalyticsConsent = null;
 
-        // ============================================
-        // FUNKCJA: Załaduj Google Analytics
-        // ============================================
-        function loadGoogleAnalytics() {
-            if (gaScriptLoaded) return;
-
-            gaScriptLoaded = true;
+        function loadGA() {
+            if (gaLoaded) return;
+            gaLoaded = true;
             console.log('✅ ZAŁADOWUJĘ Google Analytics...');
-
-            var script = document.createElement('script');
-            script.async = true;
+            let script = document.createElement('script');
             script.src = 'https://www.googletagmanager.com/gtag/js?id=G-9XTCEZ21TV';
-
-            script.onload = function() {
-                console.log('✅ GA SKRYPT ZAŁADOWANY');
-                gtag('consent', 'update', {
-                    'analytics_storage': 'granted',
-                    'ad_storage': 'granted'
-                });
-                gtag('config', 'G-9XTCEZ21TV', {
-                    'page_path': window.location.pathname,
-                    'page_title': document.title
-                });
+            script.async = true;
+            script.onload = () => {
+                console.log('✅ GA skrypt załadowany');
+                gtag('consent', 'update', { 'analytics_storage': 'granted', 'ad_storage': 'granted' });
+                gtag('config', 'G-9XTCEZ21TV', { 'page_path': window.location.pathname, 'page_title': document.title });
                 console.log('✅ GA AKTYWNY - Śledzenie WŁĄCZONE 🎯');
             };
-
-            script.onerror = function() {
-                console.error('❌ GA: Błąd załadowania');
-                gaScriptLoaded = false;
-            };
-
+            script.onerror = () => { console.error('❌ Błąd ładowania GA'); gaLoaded = false; };
             document.head.appendChild(script);
         }
 
-        // ============================================
-        // FUNKCJA: Wyłącz tracking
-        // ============================================
-        function disableGoogleAnalytics() {
-            console.log('🚫 WYŁĄCZAM tracking - Analytics odrzucone');
-            gtag('consent', 'update', {
-                'analytics_storage': 'denied',
-                'ad_storage': 'denied'
-            });
+        function disableGA() {
+            console.log('🚫 GA WYŁĄCZONY - Śledzenie WYŁĄCZONE');
+            gtag('consent', 'update', { 'analytics_storage': 'denied', 'ad_storage': 'denied' });
         }
 
-        // ============================================
-        // FUNKCJA: Sprawdź preferencje i załaduj GA
-        // ============================================
-        function checkAndApplyPreferences() {
-            try {
-                var savedPrefs = localStorage.getItem('silktide-cookie-consent');
+        function checkAnalyticsConsent() {
+            // Sprawdź prawidłowy klucz Silktide: silktideCookieChoice_analytics
+            let analyticsValue = localStorage.getItem('silktideCookieChoice_analytics');
+            console.log('🔍 Sprawdzam silktideCookieChoice_analytics:', analyticsValue);
 
-                if (!savedPrefs) {
-                    console.log('⚪ Brak zapisanych preferencji');
-                    return;
+            let analyticsConsented = analyticsValue === 'true' || analyticsValue === true;
+
+            if (analyticsConsented !== lastAnalyticsConsent) {
+                lastAnalyticsConsent = analyticsConsented;
+
+                if (analyticsConsented) {
+                    console.log('👍 Analytics: ZAAKCEPTOWANE');
+                    loadGA();
+                } else {
+                    console.log('👎 Analytics: ODRZUCONE');
+                    disableGA();
                 }
-
-                var prefs = JSON.parse(savedPrefs);
-                var analyticsState = prefs.analytics || false;
-
-                // Jeśli stan się zmienił, loguj i zaaplikuj
-                if (analyticsState !== lastCheckState) {
-                    lastCheckState = analyticsState;
-
-                    if (analyticsState === true) {
-                        console.log('👍 Analytics: ZAAKCEPTOWANE');
-                        loadGoogleAnalytics();
-                    } else {
-                        console.log('👎 Analytics: ODRZUCONE');
-                        disableGoogleAnalytics();
-                    }
-                }
-            } catch (e) {
-                console.error('❌ Błąd parsowania preferencji:', e);
             }
         }
 
-        // ============================================
-        // NASŁUCHUJ localStorage
-        // ============================================
-        window.addEventListener('storage', function(e) {
-            if (e.key === 'silktide-cookie-consent') {
-                console.log('🔄 ZMIANA W localStorage WYKRYTA');
-                checkAndApplyPreferences();
+        // Nasłuchuj storage event
+        window.addEventListener('storage', (e) => {
+            console.log('🔄 Storage event - klucz:', e.key, 'wartość:', e.newValue);
+            if (e.key === 'silktideCookieChoice_analytics') {
+                console.log('🎯 ZMIANA Analytics cookie WYKRYTA!');
+                checkAnalyticsConsent();
             }
         });
 
-        // ============================================
-        // CO 500ms SPRAWDZAJ ZMIANY
-        // ============================================
-        setInterval(function() {
-            checkAndApplyPreferences();
+        // Co 500ms sprawdzaj zmiany
+        setInterval(() => {
+            checkAnalyticsConsent();
         }, 500);
 
-        // ============================================
-        // CZEKAJ NA SILKTIDE I GO KONFIGURUJ
-        // ============================================
-        var silktideReady = false;
-        var silktideCheckInterval = setInterval(function() {
+        // Czekaj na Silktide
+        let silktideReady = false;
+        const checkSilktideInterval = setInterval(() => {
             if (typeof silktideCookieBannerManager !== 'undefined' && !silktideReady) {
                 silktideReady = true;
-                clearInterval(silktideCheckInterval);
+                clearInterval(checkSilktideInterval);
 
-                console.log('✓ Silktide Cookie Manager gotowy');
+                console.log('✓ Silktide Cookie Manager załadowany');
 
                 silktideCookieBannerManager.updateCookieBannerConfig({
                     background: { showBackground: true },
@@ -215,23 +167,17 @@
                 });
 
                 console.log('✓ Silktide konfiguracja gotowa');
+                console.log('🔍 Sprawdzam istniejące preferencje...');
 
-                // Sprawdź preferencje przy pierwszym załadowaniu
-                setTimeout(function() {
-                    console.log('🔍 Sprawdzam istniejące preferencje...');
-                    checkAndApplyPreferences();
+                // Sprawdź preferencje przy załadowaniu
+                setTimeout(() => {
+                    checkAnalyticsConsent();
                 }, 500);
             }
         }, 100);
 
-        // Timeout
-        setTimeout(function() {
-            clearInterval(silktideCheckInterval);
-        }, 5000);
+        setTimeout(() => clearInterval(checkSilktideInterval), 5000);
     </script>
-
-
-
     </head>
 
 <body>
