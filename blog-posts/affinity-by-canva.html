@@ -490,6 +490,127 @@
             }
         });
     </script>
+     <!-- QR Widget Start -->
+<div id="qr-widget-root">
+  <button id="qr-widget-btn" aria-label="Pokaż kod QR" type="button">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="6" height="6" stroke="white" stroke-width="2"/><rect x="15" y="3" width="6" height="6" stroke="white" stroke-width="2"/><rect x="3" y="15" width="6" height="6" stroke="white" stroke-width="2"/><rect x="15" y="15" width="6" height="6" stroke="white" stroke-width="2"/><rect x="9" y="9" width="6" height="6" stroke="white" stroke-width="2"/></svg>
+  </button>
+  <div id="qr-widget-modal" style="display:none">
+    
+    <button id="qr-widget-close" aria-label="Zamknij" type="button">&#10005;</button>
+    <div id="qr-modal-content">
+      <img src="res/qr.png" alt="Kod QR do strony" />
+      <p style="color:#fff; font-size:0.8em;">Scan and open as mobile</p>
+    </div>
+  </div>
+</div>
+<style>
+#qr-widget-root {
+  position: fixed;
+  bottom: 10px;
+  left: 24px;
+  z-index: 9999;
+}
+
+ /* Responsive */
+        @media (max-width: 768px) {
+             #qr-widget-root, #silktide-cookie-icon, #qr-widget-btn {
+                bottom: 10px;
+                width: 45px;
+                height: 45px;
+            }
+            
+        }
+
+#qr-widget-btn {
+  background: var(--color-primary, #000);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#qr-widget-btn:hover {
+  background: var(--color-primary-hover,#000);
+}
+#qr-widget-modal {
+  position: fixed;
+  bottom: 90px;
+  left: 24px;
+  background: var(--color-surface,#222);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.25);
+  padding: 20px 24px;
+  max-width: 270px;
+  display: flex;
+  align-items: center;
+  /* domyślnie display: none zamiast hidden */
+}
+#qr-widget-modal[aria-hidden="true"] {
+  display: none !important;
+}
+#qr-widget-modal img {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+#qr-modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#qr-widget-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 1.6em;
+  cursor: pointer;
+  z-index:99;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const btn = document.getElementById("qr-widget-btn");
+  const modal = document.getElementById("qr-widget-modal");
+  const closeBtn = document.getElementById("qr-widget-close");
+
+  // Widget jest domyślnie zamknięty
+  modal.setAttribute('aria-hidden', 'true');
+  modal.style.display = 'none';
+
+  btn.addEventListener("click", function(e) {
+    modal.setAttribute('aria-hidden', 'false');
+    modal.style.display = 'flex';
+  });
+  closeBtn.addEventListener("click", function(e) {
+    modal.setAttribute('aria-hidden', 'true');
+    modal.style.display = 'none';
+  });
+  window.addEventListener("keydown", function(e) {
+    if (modal.getAttribute('aria-hidden') !== 'true' && (e.key === "Escape" || e.key === "Esc")) {
+      modal.setAttribute('aria-hidden', 'true');
+      modal.style.display = 'none';
+    }
+  });
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      modal.setAttribute('aria-hidden', 'true');
+      modal.style.display = 'none';
+    }
+  });
+});
+</script>
+<!-- QR Widget End -->
 </body>
 
 </html>
