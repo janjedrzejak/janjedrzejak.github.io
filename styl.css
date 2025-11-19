@@ -1793,3 +1793,400 @@
                 text-align: left;
             }
         }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .privacy-container h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .privacy-container .update-date {
+            color: #7f8c8d;
+            font-size: 0.95em;
+            margin-bottom: 30px;
+        }
+
+        .privacy-container h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #34495e;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .privacy-container h3 {
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .privacy-container p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .privacy-container ul,
+        .privacy-container ol {
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+        .privacy-container li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .privacy-container a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .privacy-container a:hover {
+            color: #2980b9;
+            border-bottom-color: #2980b9;
+        }
+
+        .privacy-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #f9f9f9;
+        }
+
+        .privacy-container table th {
+            background: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .privacy-container table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .privacy-container table tr:hover {
+            background: #f0f0f0;
+        }
+
+        .privacy-container .highlight-box {
+            background: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .privacy-container .highlight-box strong {
+            color: #2c3e50;
+        }
+
+        .back-link {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .back-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-link a:hover {
+            background: #2980b9;
+            border: none;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .privacy-container h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .privacy-container .update-date {
+            color: #7f8c8d;
+            font-size: 0.95em;
+            margin-bottom: 30px;
+        }
+
+        .privacy-container h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #34495e;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .privacy-container h3 {
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .privacy-container p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 1em;
+        }
+
+        .privacy-container ul,
+        .privacy-container ol {
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+        .privacy-container li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .privacy-container a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .privacy-container a:hover {
+            color: #2980b9;
+            border-bottom-color: #2980b9;
+        }
+
+        .privacy-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #f9f9f9;
+        }
+
+        .privacy-container table th {
+            background: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .privacy-container table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .privacy-container table tr:hover {
+            background: #f0f0f0;
+        }
+
+        .privacy-container .highlight-box {
+            background: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .privacy-container .highlight-box strong {
+            color: #2c3e50;
+        }
+
+        .back-link {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .back-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-link a:hover {
+            background: #2980b9;
+            border: none;
+        }
+
+
+         /* LinkedIn CTA Section */
+        .linkedin-cta-section {
+            background: linear-gradient(135deg, #0a66c2 0%, #00a8e8 100%);
+            padding: 50px 40px;
+            margin: 60px -40px 0 -40px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .linkedin-cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .linkedin-cta-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .linkedin-cta-header i {
+            font-size: 32px;
+            color: #fff;
+        }
+
+        .linkedin-cta-header h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .linkedin-cta-section p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .linkedin-cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #fff;
+            color: #0a66c2;
+            padding: 14px 32px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+
+        .linkedin-cta-button:hover {
+
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .linkedin-cta-button i {
+            font-size: 16px;
+        }
+
+        .linkedin-cta-note {
+            font-size: 12px !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+            margin-top: 16px !important;
+            margin-bottom: 0 !important;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .linkedin-cta-section {
+                padding: 40px 20px;
+                margin: 60px -20px 0 -20px;
+            }
+
+            .linkedin-cta-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .linkedin-cta-header h3 {
+                font-size: 20px;
+            }
+
+            .linkedin-cta-header i {
+                font-size: 28px;
+            }
+
+            .linkedin-cta-section p {
+                font-size: 14px;
+            }
+
+            .linkedin-cta-button {
+                padding: 12px 28px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .linkedin-cta-section {
+                padding: 30px 15px;
+                margin: 40px -15px 0 -15px;
+            }
+
+            .linkedin-cta-header h3 {
+                font-size: 18px;
+            }
+
+            .linkedin-cta-header i {
+                font-size: 24px;
+            }
+
+            .linkedin-cta-section p {
+                font-size: 13px;
+                margin-bottom: 18px;
+            }
+
+            .linkedin-cta-button {
+                padding: 12px 24px;
+                font-size: 12px;
+                flex-wrap: wrap;
+            }
+
+            .linkedin-cta-note {
+                font-size: 11px !important;
+            }
+        }
