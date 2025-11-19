@@ -98,7 +98,9 @@
             </a>
         </div>
     </div>
+    <div id="scroll-progress"></div>
 <div class="projects-container">
+    
         <!-- Breadcrumb -->
         <div class="breadcrumb">
             <a href="../index.html">HOME</a> / <a href="../blog.html">BLOG</a> / Is Affinity by Canva Hype or Game Changer?
@@ -608,6 +610,19 @@ document.addEventListener("DOMContentLoaded", function() {
       modal.style.display = 'none';
     }
   });
+});
+
+</script>
+<script>
+
+
+const scrollProgress = document.getElementById('scroll-progress');
+const height =
+  document.documentElement.scrollHeight - document.documentElement.clientHeight;
+window.addEventListener('scroll', () => {
+  const scrollTop =
+    document.body.scrollTop || document.documentElement.scrollTop;
+  scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
 });
 </script>
 <!-- QR Widget End -->

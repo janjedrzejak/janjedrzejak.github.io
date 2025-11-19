@@ -2191,4 +2191,11 @@
             }
         }
 
-       
+       #scroll-progress {
+  position: fixed;
+  top: 55;
+  width: 0%;
+  height: 10px;
+  background: #00a8e8;
+  z-index: 10000;
+}
