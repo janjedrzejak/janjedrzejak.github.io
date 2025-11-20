@@ -51,7 +51,18 @@
     <link rel="stylesheet" id="silktide-consent-manager-css" href="../cookie/silktide-consent-manager.css">
     <script src="../cookie/silktide-consent-manager.js"></script>
     <script src="../cookie/silktide-consent-ga-consent.js"></script>
-</head>
+    <style>
+        #scroll-progress {
+            position: fixed;
+            top: 50px !important;
+            left: 0;
+            height: 10px;
+            background: linear-gradient(to right, #00a8e8, #0056b3);
+            width: 0%;
+            z-index: 999;
+        }
+    </style>
+    </head>
 
 <body>
     <!-- Navigation -->
@@ -501,7 +512,7 @@
     
     <button id="qr-widget-close" aria-label="Zamknij" type="button">&#10005;</button>
     <div id="qr-modal-content">
-      <img src="res/qr.png" alt="Kod QR do strony" />
+      <img src="../res/qr.png" alt="Kod QR do strony" />
       <p style="color:#fff; font-size:0.8em;">Scan and open as mobile</p>
     </div>
   </div>
