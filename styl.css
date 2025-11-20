@@ -1802,18 +1802,16 @@
         }
 
         /* Responsive */
-        
 
-        
-
-       #scroll-progress {
-  position: fixed;
-  top: 55;
-  width: 0%;
-  height: 10px;
-  background: #00a8e8;
-  z-index: 10000;
-}
+        #scroll-progress {
+            position: fixed;
+            top: 50px !important;
+            left: 0;
+            height: 10px;
+            background: linear-gradient(to right, #00a8e8, #0056b3);
+            width: 0%;
+            z-index: 999;
+        }
 
 
 
@@ -2059,6 +2057,10 @@
                 width:auto !important;
                 height: auto !important;
             }
+
+            #scroll-progress {
+            top: 40px !important;
+            }
             
 }
 
@@ -2222,6 +2224,9 @@
 
             .linkedin-cta-note {
                 font-size: 11px !important;
+            }
+            #scroll-progress {
+            top: 40px !important;
             }
         
 }
