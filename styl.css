@@ -2055,6 +2055,9 @@
             .about-text {
                 font-size:14px;
             }
+            .qr-widget-btn {
+                bottom:5px;
+            }
             
 }
 
