@@ -3,11 +3,18 @@
 }
        @media (max-width: 768px) {
         .dark-mode-toggle:hover {
-            transform: scale(1.2);
+            transform: scale(1.0);
+        }
+        .dark-mode-toggle {
+            display: flex;
+        }  
+        .toolbar-icon {
+            width: 30px;
+            height: 30px;
         }
 
         .dark-mode-toggle i {
-            font-size: 20px;
+            font-size: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
