@@ -1,4 +1,8 @@
-.dark-mode-toggle:hover {
+       .dark-mode {
+        display: none;
+       }
+       @media (max-width: 768px) {
+        .dark-mode-toggle:hover {
             transform: scale(1.2);
         }
 
@@ -145,3 +149,4 @@
         .dark-mode .back-to-blog {
             color:#fff;
         }
+    }
