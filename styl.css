@@ -2199,3 +2199,12 @@
   background: #00a8e8;
   z-index: 10000;
 }
+
+
+
+ /* Responsive */
+        @media (max-width: 768px) {
+            .about-text {
+                font-size:14px;
+            }
+            }
