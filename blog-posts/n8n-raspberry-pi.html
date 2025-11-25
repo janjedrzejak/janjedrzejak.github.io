@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title Meta Description -->
+    <title>Self-Host n8n on Raspberry Pi 3+ - Complete Home Automation Setup Guide | Jan Jędrzejak Blog</title>
+    <meta name="description" content="Step-by-step guide to install and configure n8n on Raspberry Pi 3+ using Docker. Perfect for home automation, workflow automation, and local deployment without cloud costs.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Jedrzejak">
+    <link rel="manifest" href="../img/site.webmanifest">
+    
+    <!-- Keywords -->
+    <meta name="keywords" content="n8n, Raspberry Pi, home automation, Docker, workflow automation, self-hosted, automation platform, local deployment, AI agents">
+    
+    <!-- Author Language -->
+    <meta name="author" content="Jan Jędrzejak">
+    <meta name="language" content="en">
+    <meta http-equiv="Content-Language" content="en-US">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://janjedrzejak.github.io/blog-posts/n8n-raspberry-pi.html">
+    
+    <!-- Open Graph Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://janjedrzejak.github.io/blog-posts/n8n-raspberry-pi.html">
+    <meta property="og:title" content="Self-Host n8n on Raspberry Pi 3+ - Complete Home Automation Setup Guide">
+    <meta property="og:description" content="Learn how to install n8n on Raspberry Pi 3+ with Docker for complete workflow automation control, zero cloud costs, and privacy.">
+    <meta property="og:image" content="https://janjedrzejak.github.io/img/og-image-n8n.jpg">
+    <meta property="og:site_name" content="Jan Jędrzejak - Digital Expert">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Article Meta -->
+    <meta property="article:published_time" content="2025-11-25T00:00:00Z">
+    <meta property="article:author" content="Jan Jędrzejak">
+    <meta property="article:tag" content="n8n">
+    <meta property="article:tag" content="Raspberry Pi">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Home Automation">
+    <meta property="article:tag" content="Workflow Automation">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styl.css">
+    <link rel="stylesheet" href="../styl-dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Silktide Cookie Banner Google Analytics -->
+    <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css">
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="../cookies/silktide-consent-manager.css">
+    <script src="../cookies/silktide-consent-manager.js"></script>
+    <script src="../cookies/silktide-consent-ga-consent.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html" class="logo">
+            <div class="logo-icon"></div>
+            <span>Jan Jędrzejak /<strong>DIGITAL EXPERT</strong></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
+            <li><a href="../index.html#resume" onclick="scrollToSection('resume')">RESUME</a></li>
+            <li><a href="../projects.html">PROJECTS</a></li>
+            <li><a href="../index.html#contact" onclick="scrollToSection('contact')">CONTACT</a></li>
+            <li><a href="../blog.html">BLOG</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <ul class="mobile-menu" id="mobileMenu">
+        <li><a href="../index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
+        <li><a href="../index.html#resume">RESUME</a></li>
+        <li><a href="../projects.html">PROJECTS</a></li>
+        <li><a href="../index.html#contact">CONTACT</a></li>
+        <li><a href="../blog.html">BLOG</a></li>
+    </ul>
+
+    <!-- Bottom Toolbar Mobile -->
+    <div class="bottom-toolbar">
+        <div class="toolbar-container">
+            <a href="tel:+48690661143" class="toolbar-icon" title="Call">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="mailto:jan.jedrzejak@gmail.com" class="toolbar-icon" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank" class="toolbar-icon" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+
+    <div id="scroll-progress"></div>
+
+    <div class="projects-container">
+        <div class="dark-mode-toggle-container">
+            <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="../index.html">HOME</a> > <a href="../blog.html">BLOG</a> > Self-Host n8n on Raspberry Pi 3+
+        </div>
+
+        <!-- Article Content -->
+        <div class="article-container">
+            <div class="article-header">
+                <span class="article-category">Home Automation & Self-Hosting</span>
+                <h1>Self-Host n8n on Raspberry Pi 3+ Complete Setup Guide</h1>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar"></i> November 25, 2025</span>
+                    <span><i class="far fa-user"></i> Jan Jędrzejak</span>
+                    <span><i class="far fa-clock"></i> 22 min read</span>
+                </div>
+            </div>
+
+            <div class="article-content">
+                <h2>What Is n8n? A Powerful Automation Platform You Need to Know</h2>
+                <h3>Beyond Zapier and Make: The Open-Source Alternative</h3>
+                <p>
+                    <strong>n8n</strong> is an open-source workflow automation platform that lets you connect applications, APIs, and services into powerful automated sequences without writing a single line of code (though you can, if you want to).
+                </p>
+                <p>
+                    Think of it as the sophisticated younger sibling of tools like Zapier or Make (formerly Integromat). Unlike those cloud-only platforms, n8n is:
+                </p>
+                <ul>
+                    <li><strong>Open-source</strong> - Fully auditable, no vendor lock-in, community-driven development</li>
+                    <li><strong>Self-hostable</strong> - Run it on your own server, Raspberry Pi, or cloud infrastructure</li>
+                    <li><strong>Privacy-first</strong> - Your data never leaves your network unless you explicitly send it somewhere</li>
+                    <li><strong>Feature-rich</strong> - 400+ node types (integrations) covering everything from email to API webhooks to database operations</li>
+                    <li><strong>Infinitely extendable</strong> - Create custom nodes, build your own integrations, adapt it to any workflow</li>
+                </ul>
+
+                <h3>Why Is n8n Gaining Traction?</h3>
+                <p>
+                    The automation platform market has exploded in recent years as businesses realized that repetitive tasks can be eliminated entirely. But most solutions come with a catch:
+                </p>
+                <ul>
+                    <li><strong>Zapier</strong> and <strong>Make</strong> charge per task execution (often $0.01-0.10 per operation), which adds up fast for active workflows</li>
+                    <li><strong>Enterprise automation tools</strong> (UiPath, Automation Anywhere) cost thousands per month and require IT departments to manage</li>
+                    <li><strong>DIY solutions</strong> require developers to build custom integrations from scratch</li>
+                </ul>
+                <p>
+                    n8n fills the gap: <strong>professional-grade automation for teams and individuals who want control, privacy, and reasonable costs</strong>.
+                </p>
+                <p>
+                    It's grown popular because:
+                </p>
+                <ul>
+                    <li>Companies tired of Zapier's pricing adopted n8n for on-premise deployment</li>
+                    <li>Privacy-conscious teams discovered it runs completely on private infrastructure</li>
+                    <li>AI/ML practitioners found it perfect for integrating large language models into automation workflows</li>
+                    <li>Developers appreciated the visual workflow builder that doesn't sacrifice flexibility</li>
+                </ul>
+
+                <h2>Introduction: Why Self-Host n8n at Home?</h2>
+                <p>
+                    If you're tired of paying monthly subscription fees for workflow automation platforms, struggling with cloud vendor lock-in, or simply want complete privacy and control over your automations, <strong>n8n on Raspberry Pi</strong> is the answer.
+                </p>
+                <p>
+                    In this guide, I'll walk you through every step-from Docker installation to accessing n8n on your local network. By the end, you'll have a fully functional automation engine running 24/7 on hardware that costs less than $50.
+                </p>
+
+                <h2>Why Raspberry Pi 3+ for n8n?</h2>
+                <h3>The Case for Home Automation Infrastructure</h3>
+                <p>
+                    Raspberry Pi 3+ strikes the perfect balance between:
+                </p>
+                <ul>
+                    <li><strong>Cost efficiency</strong> - Single-board computer at ~$35-50 versus cloud infrastructure costs</li>
+                    <li><strong>Adequate performance</strong> - Handles 100+ simultaneous workflows without breaking a sweat</li>
+                    <li><strong>Low power consumption</strong> - ~5-10W versus traditional servers (often 200+W)</li>
+                    <li><strong>Reliability for personal use</strong> - Stable, 24/7 uptime suitable for home automation</li>
+                    <li><strong>Privacy</strong> - Zero data leaves your network unless you explicitly send it</li>
+                </ul>
+                <p>
+                    For freelancers, digital marketing teams, and eCommerce specialists running personal automation workflows (not enterprise-scale), this setup is genuinely transformative.
+                </p>
+
+                <h2>Why Not n8n Cloud, VPS Solutions, or Oracle Cloud Free Tier?</h2>
+                <h3>The Hidden Costs of Learning Automation Online</h3>
+                <p>
+                    When I started learning n8n, the obvious options seemed attractive at first:
+                </p>
+                <ul>
+                    <li><strong>n8n Cloud</strong> - Convenient, but fully paid with monthly subscriptions that quickly lose their value when you're just testing scenarios and learning the platform.</li>
+                    <li><strong>VPS solutions like Micr.us</strong> - Great for small projects, but you're adding yet <strong>another recurring monthly bill</strong> just to have the privilege of experimenting with automation.</li>
+                    <li><strong>Oracle Cloud Free Tier</strong> - Long considered a clever "workaround" for free n8n hosting. Recently, however, I started seeing <strong>compute billing warnings in the dashboard</strong>, and I'm currently waiting for Oracle to clarify whether this is just a system notification or an actual risk of being invoiced.</li>
+                </ul>
+                <p>
+                    The reality is this: <strong>every cloud solution for learning n8n carries either immediate costs or future billing risk</strong> - either you pay upfront, or you risk being charged later when free tier limits change or terms update.
+                </p>
+
+                <h3>Raspberry Pi: Your Own Hardware, Your Own Rules</h3>
+                <p>
+                    Raspberry Pi wins on simplicity: <strong>you pay once for hardware, then operate without fear of future invoices</strong>, CPU limits, or sudden changes to cloud service terms.
+                </p>
+
+                <h2>The Forgotten Raspberry Pi in Your IT Closet</h2>
+                <h3>From Unused Hardware to Home Automation Agent</h3>
+                <p>
+                    Here's a practical reality check: somewhere in your IT environment, there's likely a Raspberry Pi that's:
+                </p>
+                <ul>
+                    <li>Sitting in a closet or drawer from a previous project, proof-of-concept, or hackathon,</li>
+                    <li>Gathering dust as a "temporary server" or Linux learning experiment you meant to complete,</li>
+                    <li>Waiting for "some interesting project when I have time."</li>
+                </ul>
+                <p>
+                    That forgotten hardware is actually the <strong>perfect foundation for a small, local automation agent</strong> in your internal network. Instead of paying for cloud environments or test subscriptions, you can dust off your old Raspberry Pi and transform it into:
+                </p>
+                <ul>
+                    <li><strong>A personal automation hub</strong> running n8n workflows on your local network</li>
+                    <li>A safe testing ground for scenario development without touching production systems</li>
+                    <li>An integration layer for simple tasks: notifications, API webhooks, admin automation, smart home control</li>
+                    <li>A completely private environment where <strong>zero data leaves your network</strong> unless you explicitly configure it</li>
+                </ul>
+                <p>
+                    This is exactly what this guide will help you build.
+                </p>
+
+                <h2>Architecture Overview: What We're Building</h2>
+                <p>
+                    Before diving into the installation steps, let's understand the architecture:
+                </p>
+                <div class="highlight-box">
+                    <p><strong>The Stack:</strong></p>
+                    <ul>
+                        <li><strong>Raspberry Pi 3+</strong> - ARM64-based single-board computer running Raspberry Pi OS (Debian Trixie)</li>
+                        <li><strong>Docker</strong> - Container runtime for isolated, reproducible deployments</li>
+                        <li><strong>n8n Container</strong> - Workflow automation engine with 400+ integrations</li>
+                        <li><strong>Local Network Access</strong> - Accessible via IP address on your home network</li>
+                        <li><strong>Data Persistence</strong> - All workflows and configurations stored locally on Raspberry Pi</li>
+                    </ul>
+                </div>
+
+                <h2>Prerequisites</h2>
+                <p>
+                    Before you start, ensure you have:
+                </p>
+                <ul>
+                    <li>Raspberry Pi 3+ (or newer) with at least 2GB RAM</li>
+                    <li>Fresh installation of Raspberry Pi OS (Debian Trixie recommended)</li>
+                    <li>SSH access to Raspberry Pi or direct terminal access</li>
+                    <li>Static IP configured (or reserved DHCP lease) for reliable local access</li>
+                    <li>Another computer or phone on the same network to test access</li>
+                    <li>~10GB free disk space for Docker images and n8n data</li>
+                </ul>
+
+                <h2>Step 1: System Update and Preparation</h2>
+                <h3>Update OS and Packages</h3>
+                <p>First, ensure your Raspberry Pi OS is fully updated:</p>
+                <div class="highlight-box">
+                    <code>sudo apt update</code><br>
+                    <code>sudo apt upgrade -y</code>
+                </div>
+                <p>This process may take 5-10 minutes. Grab a coffee.</p>
+
+                <h2>Step 2: Install Docker Engine</h2>
+                <h3>Official Docker Installation Script</h3>
+                <p>
+                    Docker provides an official installation script optimized for Raspberry Pi. This is the recommended approach:
+                </p>
+                <div class="highlight-box">
+                    <code>curl -fsSL https://get.docker.com -o get-docker.sh</code><br>
+                    <code>sudo sh get-docker.sh</code>
+                </div>
+                <p>
+                    This script automatically:
+                </p>
+                <ul>
+                    <li>Installs Docker Engine and containerd</li>
+                    <li>Configures the ARM64 architecture properly</li>
+                    <li>Sets up the Docker daemon</li>
+                </ul>
+
+                <h3>Verify Docker Installation</h3>
+                <p>After installation completes, verify it's working:</p>
+                <div class="highlight-box">
+                    <code>docker --version</code><br>
+                    <code>docker run hello-world</code>
+                </div>
+                <p>
+                    You should see version information and a "Hello from Docker!" message. If it works, your Docker installation is successful.
+                </p>
+
+                <h2>Step 3: Install Docker Compose Plugin</h2>
+                <h3>The Modern Way: docker compose</h3>
+                <p>
+                    The Docker installation script includes Docker Compose as a plugin. No separate installation needed. Test it:
+                </p>
+                <div class="highlight-box">
+                    <code>docker compose version</code>
+                </div>
+                <p>
+                    You should see version v2.x.x. If you get "command not found," install it explicitly:
+                </p>
+                <div class="highlight-box">
+                    <code>sudo apt install docker-compose-plugin -y</code>
+                </div>
+                <p>
+                    <strong>Important:</strong> Use <code>docker compose</code> (with space), not <code>docker-compose</code> (with hyphen). The newer syntax is the standard going forward.
+                </p>
+
+                <h2>Step 4: Grant Docker Permissions to Your User</h2>
+                <h3>Avoid sudo for Every Docker Command</h3>
+                <p>
+                    Running Docker always with <code>sudo</code> is cumbersome. Add your user to the Docker group:
+                </p>
+                <div class="highlight-box">
+                    <code>sudo usermod -aG docker $USER</code><br>
+                    <code>newgrp docker</code>
+                </div>
+                <p>
+                    Log out and back in, or run <code>newgrp docker</code> to activate the group membership immediately.
+                </p>
+                <p>
+                    Test non-sudo Docker access:
+                </p>
+                <div class="highlight-box">
+                    <code>docker ps</code>
+                </div>
+                <p>
+                    If you see "CONTAINER ID", "IMAGE", etc. without errors, you're good.
+                </p>
+
+                <h2>Step 5: Prepare n8n Directory and Configuration</h2>
+                <h3>Create Directory Structure</h3>
+                <p>Create a dedicated directory for n8n and its data:</p>
+                <div class="highlight-box">
+                    <code>mkdir -p ~/n8n/n8n_data</code><br>
+                    <code>cd ~/n8n</code>
+                </div>
+
+                <h3>Create docker-compose.yml</h3>
+                <p>
+                    Create the Docker Compose configuration file. This tells Docker how to run n8n:
+                </p>
+                <div class="highlight-box">
+                    <code>nano docker-compose.yml</code>
+                </div>
+                <p>
+                    Copy and paste the following configuration:
+                </p>
+                
+                <div class="highlight-box">
+<code>version: '3'<br>
+services:<br>
+  n8n:<br>
+    image: n8nio/n8n<br>
+    restart: always<br>
+    ports:<br>
+      - "5678:5678"<br>
+    environment:<br>
+      - N8N_HOST=0.0.0.0<br>
+      - N8N_PORT=5678<br>
+      - N8N_SECURE_COOKIE=false<br>
+      - NODE_ENV=production<br>
+    volumes:<br>
+      - ./n8n_data:/home/node/.n8n<br>
+    networks:<br>
+      - n8n-network<br>
+<br>
+networks:<br>
+  n8n-network:<br>
+    driver: bridge</code></div>
+                <p>
+                    <strong>Key configuration details:</strong>
+                </p>
+                <ul>
+                    <li><strong>ports</strong> - Maps container port 5678 to host port 5678 on all interfaces (0.0.0.0)</li>
+                    <li><strong>N8N_HOST=0.0.0.0</strong> - Ensures n8n listens on all network interfaces, not just localhost</li>
+                    <li><strong>N8N_SECURE_COOKIE=false</strong> - Necessary for local network access without HTTPS</li>
+                    <li><strong>volumes</strong> - Stores n8n configuration and workflows on your Raspberry Pi (persistent)</li>
+                </ul>
+
+                <h3>Set Proper File Permissions</h3>
+                <p>
+                    The n8n container runs as user <code>node</code> (UID 1000). The data directory must have the correct permissions:
+                </p>
+                <div class="highlight-box">
+                    <code>sudo chown -R 1000:1000 ~/n8n/n8n_data</code><br>
+                    <code>chmod 755 ~/n8n/n8n_data</code>
+                </div>
+                <p>
+                    This step is <strong>critical</strong>. If permissions are wrong, n8n cannot write its configuration files and will crash with "EACCES: permission denied" errors.
+                </p>
+
+                <h2>Step 6: Launch n8n Container</h2>
+                <h3>Start n8n with Docker Compose</h3>
+                <p>
+                    From the ~/n8n directory, run:
+                </p>
+                <div class="highlight-box">
+                    <code>docker compose up -d</code>
+                </div>
+                <p>
+                    The <code>-d</code> flag runs it in the background (detached mode). Docker will:
+                </p>
+                <ul>
+                    <li>Download the n8n image (~800MB, may take 2-5 minutes on slower connections)</li>
+                    <li>Create and start the container</li>
+                    <li>Create the n8n_data directory structure</li>
+                </ul>
+
+                <h3>Verify Container is Running</h3>
+                <p>Check the status:</p>
+                <div class="highlight-box">
+                    <code>docker ps</code>
+                </div>
+                <p>
+                    You should see a row with:
+                </p>
+                <ul>
+                    <li><strong>IMAGE:</strong> n8nio/n8n</li>
+                    <li><strong>PORTS:</strong> 0.0.0.0:5678->5678/tcp</li>
+                    <li><strong>STATUS:</strong> Up X seconds (or minutes)</li>
+                </ul>
+
+                <h3>Check Container Logs</h3>
+                <p>
+                    View the startup logs to ensure n8n initialized correctly:
+                </p>
+                <div class="highlight-box">
+                    <code>docker logs -f n8n-n8n-1</code>
+                </div>
+                <p>
+                    Look for:
+                </p>
+                <ul>
+                    <li>"Migrations in progress" - n8n is setting up the database</li>
+                    <li>"n8n ready on ::, port 5678" - Success! n8n is running</li>
+                </ul>
+                <p>
+                    Press Ctrl+C to exit the logs.
+                </p>
+
+                <h2>Step 7: Access n8n on Your Local Network</h2>
+                <h3>Find Your Raspberry Pi's IP Address</h3>
+                <p>
+                    On the Raspberry Pi terminal, run:
+                </p>
+                <div class="highlight-box">
+                    <code>ip a</code>
+                </div>
+                <p>
+                    Look for the line like <code>inet 192.168.0.70/24</code> under your active interface (usually <code>wlan0</code> for Wi-Fi). In this example, the IP is <strong>192.168.0.70</strong>.
+                </p>
+
+                <h3>Open n8n in Your Browser</h3>
+                <p>
+                    On any device on your network (phone, laptop, etc.), open your browser and navigate to:
+                </p>
+                <div class="highlight-box">
+                    <code>http://192.168.0.70:5678</code>
+                </div>
+                <p>
+                    (Replace 192.168.0.70 with your actual Raspberry Pi IP)
+                </p>
+                <p>
+                    You should see the n8n setup wizard. Welcome to your personal workflow automation platform!
+                </p>
+
+                <h2>Step 8: Complete Initial n8n Setup</h2>
+                <h3>Create Your Admin User</h3>
+                <p>
+                    On first access, n8n prompts you to set up an admin user. Fill in:
+                </p>
+                <ul>
+                    <li><strong>Email:</strong> Your email (for login)</li>
+                    <li><strong>Password:</strong> Strong password (minimum 8 characters, ideally 12+)</li>
+                </ul>
+                <p>
+                    This is your master account. Treat it like your primary email password.
+                </p>
+
+                <h3>Explore the Dashboard</h3>
+                <p>
+                    After login, you'll see the n8n dashboard with:
+                </p>
+                <ul>
+                    <li><strong>Workflows</strong> - Create and manage automation sequences</li>
+                    <li><strong>Credentials</strong> - Connect to APIs and services (Gmail, Slack, Stripe, etc.)</li>
+                    <li><strong>Executions</strong> - View logs of workflow runs</li>
+                </ul>
+
+                <h2>Common Issues and Solutions</h2>
+                <h3>Issue: "Connection Refused" or Timeout</h3>
+                <p>
+                    <strong>Problem:</strong> You can't reach n8n from another device.
+                </p>
+                <p>
+                    <strong>Solutions:</strong>
+                </p>
+                <ul>
+                    <li>Verify the Raspberry Pi IP with <code>ip a</code> - use the correct address</li>
+                    <li>Check if both devices are on the same network (not guest network)</li>
+                    <li>Test connectivity: <code>ping 192.168.0.70</code> from another device</li>
+                    <li>Ensure port 5678 is open: <code>sudo netstat -tuln | grep 5678</code> (should show 0.0.0.0:5678)</li>
+                </ul>
+
+                <h3>Issue: "EACCES: permission denied" in Logs</h3>
+                <p>
+                    <strong>Problem:</strong> n8n crashes with permission errors.
+                </p>
+                <p>
+                    <strong>Solution:</strong>
+                </p>
+                <div class="highlight-box">
+                    <code>sudo chown -R 1000:1000 ~/n8n/n8n_data</code><br>
+                    <code>docker compose restart</code>
+                </div>
+
+                <h3>Issue: Container Keeps Restarting</h3>
+                <p>
+                    <strong>Problem:</strong> Docker container exits immediately after starting.
+                </p>
+                <p>
+                    <strong>Solution:</strong> Check logs for the actual error:
+                </p>
+                <div class="highlight-box">
+                    <code>docker logs n8n-n8n-1</code>
+                </div>
+                <p>
+                    Common causes:
+                </p>
+                <ul>
+                    <li>Insufficient disk space - clean up with <code>docker system prune</code></li>
+                    <li>Port 5678 already in use - change the port mapping in docker-compose.yml</li>
+                    <li>Memory constraints - Raspberry Pi running low on RAM</li>
+                </ul>
+
+                <h2>Next Steps: Hardening and Advanced Setup</h2>
+                <h3>Backup Your Workflows</h3>
+                <p>
+                    Your workflows and data are stored in <code>~/n8n/n8n_data</code>. Back this up regularly:
+                </p>
+                <div class="highlight-box">
+                    <code>tar -czf ~/n8n_backup_$(date +%Y%m%d).tar.gz ~/n8n/n8n_data</code>
+                </div>
+
+                <h3>Set Up Nginx Reverse Proxy (Optional)</h3>
+                <p>
+                    For HTTPS and domain name access from outside your network, consider setting up Nginx as a reverse proxy. This is beyond this guide's scope but highly recommended for security.
+                </p>
+
+                <h2>Comparison: Self-Hosted vs. Cloud Services</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Factor</th>
+                                <th>Self-Hosted n8n</th>
+                                <th>Zapier</th>
+                                <th>Make (Integromat)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Monthly Cost</strong></td>
+                                <td>~$3-5/month (electricity only)</td>
+                                <td>$19-990/month</td>
+                                <td>$10-600/month</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Initial Investment</strong></td>
+                                <td>$50 (Raspberry Pi)</td>
+                                <td>$0 (free tier limited)</td>
+                                <td>$0 (free tier limited)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Data Privacy</strong></td>
+                                <td>100% local, fully private</td>
+                                <td>Cloud-hosted, third-party access</td>
+                                <td>Cloud-hosted, third-party access</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Integration Count</strong></td>
+                                <td>400+ integrations</td>
+                                <td>5000+</td>
+                                <td>1000+</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Scalability</strong></td>
+                                <td>Limited by Raspberry Pi hardware</td>
+                                <td>Unlimited (pay-as-you-go)</td>
+                                <td>Unlimited (pay-as-you-go)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Best For</strong></td>
+                                <td>Personal automations, privacy-first workflows</td>
+                                <td>Large teams, complex workflows</td>
+                                <td>Mid-scale operations, flexibility</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Is Self-Hosted n8n Right for You?</h2>
+                <div class="highlight-box">
+                    <p><strong>Choose self-hosted n8n if:</strong></p>
+                    <ul>
+                        <li>You value privacy and want workflows to stay local</li>
+                        <li>You're running personal automations (not enterprise-scale)</li>
+                        <li>You want to eliminate recurring cloud subscription costs</li>
+                        <li>You prefer having complete control over your infrastructure</li>
+                        <li>You enjoy tinkering with technology and Linux</li>
+                    </ul>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>Stick with cloud services if:</strong></p>
+                    <ul>
+                        <li>You need 99.99% uptime guarantees and enterprise SLAs</li>
+                        <li>Your organization requires centralized provisioning and governance</li>
+                        <li>You need integration with 1000+ SaaS platforms immediately</li>
+                        <li>You prefer zero infrastructure maintenance and DevOps overhead</li>
+                        <li>You're scaling to multiple users and teams</li>
+                    </ul>
+                </div>
+
+                <h2>Cost Breakdown: Home Automation Infrastructure</h2>
+                <p>
+                    Let's be specific about the economics:
+                </p>
+                <ul>
+                    <li><strong>Raspberry Pi 3+:</strong> $50 (one-time)</li>
+                    <li><strong>MicroSD Card (64GB):</strong> $10-15 (one-time)</li>
+                    <li><strong>Power Supply:</strong> $15 (one-time, or reuse existing)</li>
+                    <li><strong>Electricity:</strong> ~$3-5 per month</li>
+                    <li><strong>Maintenance:</strong> 30-60 minutes setup, then minimal oversight</li>
+                </ul>
+                <p>
+                    <strong>Total first-year cost: ~$95-120</strong>
+                </p>
+                <p>
+                    Compare this to Zapier ($19-990/month) or Make ($10-600/month). Your Raspberry Pi pays for itself in weeks.
+                </p>
+
+                <h2>Real-World Examples: What You Can Build</h2>
+                <h3>Your Personal AI Agent Testing Ground</h3>
+                <p>
+                    With your own n8n instance, you're not limited to pre-built integrations. You have a private sandbox to experiment with AI agents and cutting-edge automation patterns. Here are some practical examples I'm building:
+                </p>
+
+                <h3>Example 1: Intelligent Meal Planner</h3>
+                <p>
+                    <strong>The Workflow:</strong> A workflow that connects to your smart fridge (or manual input), analyzes what's in your kitchen, and uses an LLM (GPT, Claude, etc.) to suggest recipes based on inventory.
+                </p>
+                <ul>
+                    <li>Connect to Google Sheets or a local database with your fridge inventory</li>
+                    <li>Pass ingredient list to an OpenAI or Anthropic API call</li>
+                    <li>Receive AI-generated meal suggestions with ingredients on hand</li>
+                    <li>Automatically create a shopping list for missing items</li>
+                    <li>Send the plan to your phone via Telegram or email</li>
+                </ul>
+                <p>
+                    <strong>Cost on Zapier/Make:</strong> ~$100-200/month (task pricing adds up fast with LLM API calls)
+                </p>
+                <p>
+                    <strong>Cost on your n8n + Raspberry Pi:</strong> ~$5/month (just OpenAI API usage, no platform overhead)
+                </p>
+
+                <h3>Example 2: AI-Powered Music Discovery</h3>
+                <p>
+                    <strong>The Workflow:</strong> Automatically discover niche bands matching your music taste and create playlists on Spotify.
+                </p>
+                <ul>
+                    <li>Fetch your Spotify listening history via API</li>
+                    <li>Analyze patterns (genres, artists, tempos) with an LLM</li>
+                    <li>Query music discovery APIs or Spotify's recommendations with AI-interpreted preferences</li>
+                    <li>Create a new playlist with discovered artists</li>
+                    <li>Run daily on a schedule, update playlist every Monday with fresh discoveries</li>
+                </ul>
+                <p>
+                    This would be painful on Zapier (due to API call limits) but trivial on self-hosted n8n.
+                </p>
+
+                <h3>Example 3: Multi-Cloud Storage Orchestration</h3>
+                <p>
+                    <strong>The Workflow:</strong> Keep your OneDrive, Google Drive, and Apple Cloud in sync automatically.
+                </p>
+                <ul>
+                    <li>Monitor OneDrive for new files in specific folders</li>
+                    <li>Automatically copy files to Google Drive and Apple Cloud</li>
+                    <li>Maintain a unified naming convention across all three services</li>
+                    <li>Send notifications on sync conflicts or failures</li>
+                    <li>Archive old files from all clouds simultaneously</li>
+                </ul>
+                <p>
+                    <strong>Why self-hosted is perfect:</strong> You're making dozens of API calls per sync cycle. Cloud platforms charge per execution; n8n on Raspberry Pi charges $0.
+                </p>
+
+                <h2>Summary</h2>
+                <p>
+                    Setting up n8n on Raspberry Pi 3+ is surprisingly straightforward:
+                </p>
+                <ul>
+                    <li>Install Docker in one command</li>
+                    <li>Configure a simple YAML file</li>
+                    <li>Run <code>docker compose up -d</code></li>
+                    <li>Access it immediately from your network</li>
+                </ul>
+                <p>
+                    You now have a <strong>powerful, self-hosted workflow automation engine</strong> running 24/7 on hardware that costs less than a fancy coffee machine. All your workflows stay private. All your data stays local. All your integrations remain under your control.
+                </p>
+                <p>
+                    <strong>Most importantly:</strong> You now have your own testing ground for AI agents and advanced automation patterns. No monthly subscription fees. No execution limits. No vendor restrictions. Just pure automation freedom.
+                </p>
+                <p>
+                    Whether you're building a meal planner that understands your fridge, crafting an AI DJ that discovers music matching your taste, or orchestrating sync operations across three cloud providers, your Raspberry Pi-based n8n is your private lab for automation innovation.
+                </p>
+                <p>
+                    <strong>Start small, think big.</strong> Begin with one workflow. Then scale to ten. Then build a full automation ecosystem right in your home.
+                </p>
+
+                <!-- LinkedIn CTA Section -->
+                <div class="linkedin-cta-section">
+                    <div class="linkedin-cta-content">
+                        <div class="linkedin-cta-header">
+                            <i class="fab fa-linkedin"></i>
+                            <h3>Continue the Conversation on LinkedIn</h3>
+                        </div>
+                        <p>Have you set up n8n before? What workflows are you automating? Share your experience and let's connect!</p>
+                        <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank" class="back-to-blog">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                        <p class="linkedin-cta-note">Join the conversation and meet digital professionals exploring automation, privacy, and self-hosted solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Article Footer -->
+                <div class="article-footer">
+                    <div class="article-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Jan Jędrzejak</h4>
+                            <p>Digital transformation specialist, product owner, and automation enthusiast. Passionate about self-hosting, workflow automation, and building cost-effective personal infrastructure. When cloud costs don't make sense, I build local solutions instead - and experiment with AI agents along the way.</p>
+                        </div>
+                    </div>
+                    <p>Have questions about n8n setup or home automation? <a href="mailto:jan.jedrzejak@gmail.com">Feel free to reach out</a>.</p>
+                    <a href="../blog.html" class="back-to-blog">← BACK TO BLOG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Call</h4>
+                <a href="tel:+48690661143">+48 690 661 143</a>
+            </div>
+            <div class="footer-section">
+                <h4>Write</h4>
+                <a href="mailto:jan.jedrzejak@gmail.com">jan.jedrzejak@gmail.com</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 by JJ</span>
+            <div class="footer-links">
+                <a href="privacy.html" title="Privacy Policy">Privacy Policy</a>
+                <a href="cookies-policy.html" title="Cookie Policy">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on menu items
+        const menuItems = mobileMenu.querySelectorAll('a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function () {
+                closeMenu();
+            });
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') closeMenu();
+        });
+
+        // Close menu function
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+
+        // Navigation scroll functionality
+        function scrollToSection(sectionId) {
+            closeMenu();
+            window.location.hash = sectionId;
+        }
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.3)';
+            } else {
+                nav.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Scroll progress indicator
+        const scrollProgress = document.getElementById('scroll-progress');
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            scrollProgress.style.width = (scrollTop / height) * 100 + '%';
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        // Check if user has saved preference
+        if (localStorage.getItem('darkMode') === 'enabled' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Event listener on button
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1325,15 +1325,10 @@
         }
 
         .article-content a {
-            color: #00a8e8;
+           /* color: #00a8e8; */
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
-        }
-
-        .article-content a:hover {
-            color: #0087b8;
-            text-decoration: underline;
         }
 
         .highlight-box {
@@ -1453,10 +1448,12 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
         }
-
+        .back-to-blog a {
+            color:#fff;
+        }
         .back-to-blog:hover {
             background-color: #0087b8;
-            transform: translateY(-2px);
+            color: #fff;
         }
 
         /* Responsive */
@@ -1799,6 +1796,7 @@
             margin-bottom: 0 !important;
             font-weight: 500;
             letter-spacing: 0.5px;
+            text-align: center;
         }
 
         /* Responsive */

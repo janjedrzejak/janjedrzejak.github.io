@@ -8,6 +8,10 @@
         .dark-mode-toggle {
             display: flex;
         }  
+
+        .dark-mode-toggle .linkedin-cta-button {
+            color:#00a8e8;
+        }
         .dark-mode-toggle-container {
             display: block;
             position: fixed;
@@ -43,6 +47,12 @@
             background-color: #1a1a1a;
             color: #e0e0e0;
         }
+
+        body.dark-mode a {
+            color: #64b5f6;
+        }
+
+        
 
         body.dark-mode nav {
             background-color: #242424;
