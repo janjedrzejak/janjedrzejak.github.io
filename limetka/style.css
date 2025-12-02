@@ -1,0 +1,179 @@
+/* --- IMPORTY I ZMIENNE --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+    --lime-primary: #C6FF00;
+    --lime-darker: #b2e600;
+    --lime-glow: rgba(198, 255, 0, 0.6);
+    --danger-color: #FF3D00; /* Kolor na koniec czasu */
+    --bg-dark: #121212;
+    --bg-surface: #1e1e1e;
+    --text-white: #ffffff;
+    --text-gray: #a0a0a0;
+}
+
+/* --- RESET I BAZA --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Inter', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+/* Klasa dodawana gdy czas się skończy */
+body.time-up {
+    background-color: #1a0000; /* Lekko czerwonawa czerń */
+}
+body.time-up .accent-text,
+body.time-up .progress-ring__circle {
+    color: var(--danger-color) !important;
+    stroke: var(--danger-color) !important;
+    filter: drop-shadow(0 0 15px rgba(255, 61, 0, 0.7)) !important;
+}
+
+/* --- HEADER --- */
+header {
+    padding: 20px 40px;
+    display: flex; justify-content: space-between; align-items: center; z-index: 10;
+}
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; }
+
+/* --- USUŃ LUB ZAKOMENTUJ STARY KOD --- */
+/*
+.logo-icon {
+    width: 24px; height: 24px; background: var(--lime-primary);
+    border-radius: 0 24px 24px 24px; box-shadow: 0 0 15px var(--lime-glow);
+}
+*/
+
+/* --- DODAJ NOWY KOD DLA SVG --- */
+.logo-svg {
+    width: 28px;  /* Nieco większa niż poprzednia */
+    height: 28px;
+    stroke: var(--lime-primary); /* Kolor linii pobrany ze zmiennej */
+    /* Używamy drop-shadow zamiast box-shadow, aby świeciły linie, a nie kwadrat wokół */
+    filter: drop-shadow(0 0 6px var(--lime-glow));
+    transition: all 0.5s ease;
+}
+
+/* Opcjonalny efekt po najechaniu na logo */
+.logo:hover .logo-svg {
+    transform: rotate(45deg); /* Obrót o 45 stopni */
+    filter: drop-shadow(0 0 10px var(--lime-glow)); /* Mocniejszy blask */
+    stroke: var(--lime-darker);
+}
+
+
+.fullscreen-btn {
+    background: none; border: 1px solid var(--text-gray); color: var(--text-gray);
+    padding: 8px 16px; border-radius: 20px; cursor: pointer; transition: all 0.3s ease; font-family: inherit;
+}
+.fullscreen-btn:hover { border-color: var(--lime-primary); color: var(--lime-primary); }
+
+/* --- MAIN CONTAINER --- */
+main {
+    flex: 1; display: flex; justify-content: center; align-items: center;
+    flex-direction: column; position: relative;
+}
+
+/* --- SEKCJA 1: SETUP (Widoczna na starcie) --- */
+#setup-container {
+    display: flex; /* Domyślnie widoczny */
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    z-index: 20;
+}
+
+.time-inputs { display: flex; align-items: center; gap: 20px; font-size: 5rem; font-weight: 900; }
+.time-input-group { display: flex; flex-direction: column; align-items: center; }
+
+/* Stylizacja pól input */
+input[type="number"] {
+    background: transparent; border: none; border-bottom: 4px solid var(--text-gray);
+    color: var(--lime-primary); font-size: 6rem; font-weight: 900;
+    text-align: center; width: 180px; font-family: 'Inter', sans-serif;
+    -moz-appearance: textfield; /* Ukrywa strzałki w Firefox */
+    transition: border-color 0.3s, text-shadow 0.3s;
+}
+/* Ukrywa strzałki w Chrome/Safari */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+input:focus {
+    outline: none; border-color: var(--lime-primary);
+    text-shadow: 0 0 20px var(--lime-glow);
+}
+.input-label { font-size: 1rem; color: var(--text-gray); margin-top: 10px; text-transform: uppercase; letter-spacing: 2px;}
+.time-separator { font-size: 5rem; color: var(--text-gray); margin-top: -40px;}
+
+.start-btn {
+    margin-top: 20px; padding: 20px 60px;
+    background: var(--lime-primary); color: var(--bg-dark);
+    border: none; border-radius: 50px; font-size: 1.5rem; font-weight: 700;
+    cursor: pointer; transition: all 0.3s ease; box-shadow: 0 0 20px var(--lime-glow);
+    display: flex; align-items: center; gap: 10px;
+}
+.start-btn:hover { background: var(--lime-darker); transform: scale(1.05); }
+
+
+/* --- SEKCJA 2: TIMER (Ukryta na starcie) --- */
+#timer-view-container {
+    display: none; /* Domyślnie ukryty */
+    position: relative; width: 500px; height: 500px;
+    justify-content: center; align-items: center;
+}
+
+/* SVG Ring Styles */
+.progress-ring { transform: rotate(-90deg); transform-origin: 50% 50%; }
+.progress-ring__background { stroke: var(--bg-surface); }
+.progress-ring__circle {
+    stroke: var(--lime-primary);
+    /* Ważne: transition musi być, żeby pasek płynnie się przesuwał co sekundę */
+    transition: stroke-dashoffset 1s linear, stroke 0.5s ease, filter 0.5s ease;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 10px var(--lime-glow));
+}
+
+/* Wyświetlacz cyfr w trybie odliczania */
+.time-display-large {
+    position: absolute; font-size: 8rem; font-weight: 900;
+    color: var(--lime-primary); font-variant-numeric: tabular-nums;
+    text-shadow: 0 0 30px var(--lime-glow); letter-spacing: -5px; z-index: 2;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+/* --- KONTROLKI (Pasek na dole) --- */
+.controls {
+    position: absolute; bottom: 50px;
+    background: var(--bg-surface); padding: 15px 30px; border-radius: 50px;
+    display: flex; gap: 20px;
+    opacity: 0; transform: translateY(20px); /* Ukryte */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 5;
+}
+/* Pokaż kontrolki tylko gdy jesteśmy w trybie "running" I najedziemy myszką */
+main.mode-running:hover .controls { opacity: 1; transform: translateY(0); }
+
+.ctrl-btn {
+    background: none; border: none; color: var(--text-white); font-size: 1.4rem;
+    cursor: pointer; padding: 0; border-radius: 50%; width: 50px; height: 50px;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+.ctrl-btn:hover { background: rgba(255,255,255,0.1); color: var(--lime-primary); }
+.ctrl-btn.primary { background: var(--lime-primary); color: var(--bg-dark); }
+.ctrl-btn.primary:hover { background: var(--lime-darker); box-shadow: 0 0 15px var(--lime-glow); }
+
+/* --- KLASY STANU APLIKACJI (JavaScript je przełącza) --- */
+/* Gdy tryb "running", ukryj setup, pokaż timer */
+main.mode-running #setup-container { display: none; }
+main.mode-running #timer-view-container { display: flex; }
+
+footer { text-align: center; padding: 20px; color: var(--text-gray); font-size: 0.8rem; }
+a { color: var(--text-gray); text-decoration: none; }

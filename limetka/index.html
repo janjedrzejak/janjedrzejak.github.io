@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Limetka</title>
+    <meta name="description" content="Limetka to minimalistyczny, neonowy timer na spotkania, prezentacje i warsztaty.">
+    <meta name="keywords" content="timer, licznik czasu, stoper, spotkania, timeboxing, productivity, limetka">
+    <meta name="author" content="Jan Jędrzejak">
+    <meta name="robots" content="index, follow">
+    
+    <meta name="theme-color" content="#121212">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://janjedrzejak.github.io/limetka/">
+    <meta property="og:title" content="Limetka - Odśwież swoje spotkania">
+    <meta property="og:description" content="Profesjonalny licznik czasu online. Czysty design, tryb pełnoekranowy i intuicyjna obsługa. Sprawdź teraz.">
+    <meta property="og:image" content="https://janjedrzejak.github.io/limetka/social-preview.jpg">
+    <meta property="og:locale" content="pl_PL">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Limetka - Nowoczesny Timer">
+    <meta name="twitter:description" content="Minimalistyczny licznik czasu na Twoje spotkania.">
+    <meta name="twitter:image" content="https://janjedrzejak.github.io/limetka/social-preview.png">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <div class="logo">
+        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 2v20"/>
+            <path d="M2 12h20"/>
+            <path d="m4.93 4.93 14.14 14.14"/>
+            <path d="m19.07 4.93-14.14 14.14"/>
+            <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+        <span>Limetka</span>
+    </div>
+    <button class="fullscreen-btn" onclick="toggleFullScreen()">Pełny ekran</button>
+</header>
+
+    <main id="main-app-container">
+        
+        <div id="setup-container">
+            <div class="time-inputs">
+                <div class="time-input-group">
+                    <input type="number" id="input-minutes" min="0" max="99" value="05" placeholder="MM">
+                    <span class="input-label">Minuty</span>
+                </div>
+                <span class="time-separator">:</span>
+                <div class="time-input-group">
+                    <input type="number" id="input-seconds" min="0" max="59" value="00" placeholder="SS">
+                    <span class="input-label">Sekundy</span>
+                </div>
+            </div>
+            <button class="start-btn" id="btn-start">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                START
+            </button>
+        </div>
+
+        <div id="timer-view-container">
+            <svg class="progress-ring" width="500" height="500" viewBox="0 0 500 500">
+                <circle class="progress-ring__background" stroke-width="12" fill="transparent" r="220" cx="250" cy="250"/>
+                <circle class="progress-ring__circle" stroke-width="12" fill="transparent" r="220" cx="250" cy="250"/>
+            </svg>
+            <div class="time-display-large accent-text" id="timer-display">05:00</div>
+        </div>
+
+        <div class="controls">
+            <button class="ctrl-btn" id="btn-reset" title="Resetuj czas">↺</button>
+            <button class="ctrl-btn primary" id="btn-pause-resume" title="Pauza / Wznów">❚❚</button>
+            <button class="ctrl-btn" id="btn-add-minute" title="Dodaj 1 minutę">+1m</button>
+            <button class="ctrl-btn" id="btn-stop" title="Zatrzymaj i wróć do ustawień">■</button>
+        </div>
+    </main>
+
+    <footer>
+        &copy; <a href="https://janjedrzejak.github.io">Limetka</a> 2025
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
