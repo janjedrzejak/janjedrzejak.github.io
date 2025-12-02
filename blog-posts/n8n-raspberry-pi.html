@@ -114,10 +114,51 @@
         <div class="breadcrumb">
             <a href="../index.html">HOME</a> > <a href="../blog.html">BLOG</a> > Self-Host n8n on Raspberry Pi 3+
         </div>
+        <style>
+.hero-banner {
 
+    background-image: 
+        linear-gradient(to bottom, rgba(100, 181, 246, 0.511) 40%, rgba(0,0,0,0.8) 80%, rgba(0,0,0,1) 100%),
+        url('img/n8n-raspberry-pi-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+    background-color: #1a1a1a;
+    display:block;
+    flex-direction: column; 
+    justify-content: flex-end; 
+    padding: 40px; 
+    box-sizing: border-box; 
+    color: white; 
+    text-align: left;
+    border-radius: 24px; 
+    overflow: hidden;
+}
+
+/* Opcjonalnie: poprawka dla ikonek, żeby miały odstęp */
+.hero-banner .article-meta span {
+     margin-right: 15px;
+}
+
+
+/* Dostosowanie dla urządzeń mobilnych (bez zmian) */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 40vh;
+        padding: 20px; /* Mniejszy padding na telefonach */
+    }
+    /* Na małych ekranach tytuł może być zbyt duży */
+    .hero-banner h1 {
+        font-size: 1.5em; /* Dostosuj wg uznania */
+    }
+}
+</style>
         <!-- Article Content -->
         <div class="article-container">
             <div class="article-header">
+              
                 <span class="article-category">Home Automation & Self-Hosting</span>
                 <h1>Self-Host n8n on Raspberry Pi 3+ Complete Setup Guide</h1>
                 <div class="article-meta">
@@ -125,6 +166,8 @@
                     <span><i class="far fa-user"></i> Jan Jędrzejak</span>
                     <span><i class="far fa-clock"></i> 22 min read</span>
                 </div>
+                  <div class="hero-banner">
+                    </div>
             </div>
 
             <div class="article-content">
