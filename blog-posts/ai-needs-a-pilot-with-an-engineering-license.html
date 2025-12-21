@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title Meta Description -->
+    <title>Before You Trust Vibe-Coding: Why AI Needs a Pilot with an Engineering License | Jan Jędrzejak Blog</title>
+    <meta name="description" content="Step-by-step guide to install and configure n8n on Raspberry Pi 3+ using Docker. Perfect for home automation, workflow automation, and local deployment without cloud costs.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Jedrzejak">
+    <link rel="manifest" href="../img/site.webmanifest">
+    
+    <!-- Keywords -->
+    <meta name="keywords" content="n8n, vibe codding, automation, work, AI agents">
+    
+    <!-- Author Language -->
+    <meta name="author" content="Jan Jędrzejak">
+    <meta name="language" content="en">
+    <meta http-equiv="Content-Language" content="en-US">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://janjedrzejak.github.io/blog-posts/ai-needs-a-pilot-with-an-engineering-license.html">
+    
+    <!-- Open Graph Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://janjedrzejak.github.io/blog-posts/ai-needs-a-pilot-with-an-engineering-license.html">
+    <meta property="og:title" content="Before You Trust Vibe-Coding: Why AI Needs a Pilot with an Engineering License">
+    <meta property="og:description" content="Learn how to install n8n on Raspberry Pi 3+ with Docker.">
+    <meta property="og:image" content="https://janjedrzejak.github.io/img/og-ai-needs-a-pilot-with-an-engineering-license.png">
+    <meta property="og:site_name" content="Jan Jędrzejak - Digital Expert">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Article Meta -->
+    <meta property="article:published_time" content="2025-11-25T00:00:00Z">
+    <meta property="article:author" content="Jan Jędrzejak">
+    <meta property="article:tag" content="work">
+    <meta property="article:tag" content="job">
+    <meta property="article:tag" content="IT">
+    <meta property="article:tag" content="Automation">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../styl.css">
+    <link rel="stylesheet" href="../styl-dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- Silktide Cookie Banner Google Analytics -->
+    <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css">
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="../cookies/silktide-consent-manager.css">
+    <script src="../cookies/silktide-consent-manager.js"></script>
+    <script src="../cookies/silktide-consent-ga-consent.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="../index.html" class="logo">
+            <div class="logo-icon"></div>
+            <span>Jan Jędrzejak /<strong>DIGITAL EXPERT</strong></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
+            <li><a href="../index.html#resume" onclick="scrollToSection('resume')">RESUME</a></li>
+            <li><a href="../projects.html">PROJECTS</a></li>
+            <li><a href="../index.html#contact" onclick="scrollToSection('contact')">CONTACT</a></li>
+            <li><a href="../blog.html">BLOG</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <ul class="mobile-menu" id="mobileMenu">
+        <li><a href="../index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
+        <li><a href="../index.html#resume">RESUME</a></li>
+        <li><a href="../projects.html">PROJECTS</a></li>
+        <li><a href="../index.html#contact">CONTACT</a></li>
+        <li><a href="../blog.html">BLOG</a></li>
+    </ul>
+
+    <!-- Bottom Toolbar Mobile -->
+    <div class="bottom-toolbar">
+        <div class="toolbar-container">
+            <a href="tel:+48690661143" class="toolbar-icon" title="Call">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="mailto:jan.jedrzejak@gmail.com" class="toolbar-icon" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank" class="toolbar-icon" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+
+    <div id="scroll-progress"></div>
+
+    <div class="projects-container">
+        <div class="dark-mode-toggle-container">
+            <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="../index.html">HOME</a> > <a href="../blog.html">BLOG</a> > AI Needs a Pilot with an Engineering License
+        </div>
+        <style>
+.hero-banner {
+
+    background-image: 
+        linear-gradient(to bottom, rgba(100, 181, 246, 0.511) 40%, rgba(0,0,0,0.8) 80%, rgba(0,0,0,1) 100%),
+        url('img/ai-needs-a-pilot-with-an-engineering-license.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+    background-color: #1a1a1a;
+    display:block;
+    flex-direction: column; 
+    justify-content: flex-end; 
+    padding: 40px; 
+    box-sizing: border-box; 
+    color: white; 
+    text-align: left;
+    border-radius: 24px; 
+    overflow: hidden;
+}
+
+/* Opcjonalnie: poprawka dla ikonek, żeby miały odstęp */
+.hero-banner .article-meta span {
+     margin-right: 15px;
+}
+
+
+/* Dostosowanie dla urządzeń mobilnych (bez zmian) */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 40vh;
+        padding: 20px; /* Mniejszy padding na telefonach */
+    }
+    /* Na małych ekranach tytuł może być zbyt duży */
+    .hero-banner h1 {
+        font-size: 1.5em; /* Dostosuj wg uznania */
+    }
+}
+</style>
+        <!-- Article Content -->
+        <div class="article-container">
+            <div class="article-header">
+              
+                <span class="article-category">Work</span>
+                <h1>Before You Trust Vibe-Coding: Why AI Needs a Pilot with an Engineering License</h1>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar"></i> December 21, 2025</span>
+                    <span><i class="far fa-user"></i> Jan Jędrzejak</span>
+                    <span><i class="far fa-clock"></i> 20 min read</span>
+                </div>
+                  <div class="hero-banner">
+                    </div>
+            </div>
+
+                <div class="article-container">
+        <div class="article-header">
+            <h1 class="article-title">Before You Trust Vibe-Coding: Why AI Needs a Pilot with an Engineering License</h1>
+            <div class="article-meta">
+                <p><strong>Reading the headlines about IT layoffs and the "bursting bubble," one might get the impression that the industry is collapsing. If you are a Junior developer fresh out of a bootcamp, you are likely feeling this acutely. But if we look deeper, we see that this is not the end of IT, but its painful and necessary maturation.</strong></p>
+            </div>
+        </div>
+
+        <div class="article-content">
+            <p>This is not just analysis from an "armchair expert," but insights drawn from the front lines. I was recently in the center of this storm myself. Going through a dense recruitment sieve and searching for a new professional challenge, I experienced firsthand how drastically the rules of the game have changed. Instead of an avalanche of offers on LinkedIn, I met with silence or multi-stage verifications that tested not only technical knowledge but also business acumen.</p>
+
+            <p>As someone who bridges the world of code with the world of business processes daily, I see it clearly: the era of simply building software "from scratch" is over. The era of conscious automation, integration, and optimization of what we already have has begun. In this new reality, the key is no longer just writing lines of code, but the ability to verify and integrate what the machine has generated to deliver real business improvement.</p>
+
+            <h3>The Post-Battle Landscape: From "Growth at All Costs" to "Efficiency First"</h3>
+
+            <p>We will remember the years 2020-2021 as an economic anomaly, where the pandemic triggered a digital panic and companies hired "just in case." Recruiters fought for anyone who could write "Hello World," and budgets seemed bottomless[25][32]. However, 2025 brought a brutal sobering. "Nice-to-have" projects evaporated, the number of job offers dropped, and recruitment times lengthened significantly[15]. Companies no longer want to build another custom system for two years. They want to connect existing blocks, automate processes, and see profit within a quarter.</p>
+
+            <p>The market has split drastically into two zones. The "Danger Zone" includes those performing simple, repetitive tasks that are easy to delegate to algorithms. Meanwhile, the "Growth Zone" is occupied by hybrid specialists - Digital Project Managers, Process Architects, and Low-code Experts. It is precisely those who understand the business and can deliver results (ROI) by optimizing costly processes who are safe today. This combination of hard and soft skills is what allowed me to survive this market reset.</p>
+
+            <h3>Nvidia's Vision and the Trap of Vibe-Coding</h3>
+
+            <p>Jensen Huang, CEO of Nvidia, stated controversially back in 2024 that the programming language of the future is simply human language[46][51]. As we approach the end of 2025, we see that he was right about the interface, but wrong about the engineering. Thus, the trend of Vibe-Coding was born, or programming based on intent. Tools like Cursor or Windsurf write the syntax for us; you just need an idea, and the AI places the brackets, imports libraries, and generates entire modules. For a marketer wanting to create a simple script, this is a utopia. But for production systems, upon which a company's stability rests, it is walking on thin ice.</p>
+
+            <p>The situation we find ourselves in resembles the famous choice from <strong>"The Matrix."</strong> Vibe-Coding is the tempting Blue Pill. You take it, the story ends, you wake up in your bed and believe the code is correct because it compiled. It is pleasant and comfortable, right up until the moment of the first major failure. Engineering is the Red Pill. It is staying in "Wonderland" and facing the painful awareness of how deep the rabbit hole of bugs, technical debt, and security loopholes really goes.</p>
+
+            <h3>Why Fundamentals Are Still King</h3>
+
+            <p>Enthusiasts of the "end of learning technology" forget that code is not just text, but cost, risk, and responsibility. The most dangerous feature of modern AI models is the so-called "Yes-Man Problem" (or Sycophancy). Language models are trained to be helpful, not critical. If you suggest a bad architectural idea, the AI will often agree, reinforcing your error. Worse still, even if the AI is right and you ask with doubt, "Are you sure? That seems like a mistake," the machine will most often apologize and change its answer to an incorrect one, just to agree with you. Without your own knowledge, you become a victim of the echo of your own mistakes.</p>
+
+            <p>Add to this the illusion of correctness colliding with cloud costs. AI generates code that works, but it rarely cares about how much it costs to execute. An engineer sees that a generated process performs a thousand redundant database queries, which at scale will ruin the company's budget. A Vibe-coder without technical knowledge will also fail to notice that the AI has just "hardcoded" sensitive data or opened a vulnerability to attacks. This creates a "black box" - a solution that is easy to generate (10% of the work) but a nightmare to maintain (90% of the work) when it needs fixing or modification.</p>
+
+            <h3>The New Alliance: Architect and Auditor in One</h3>
+
+            <p>Therefore, Vibe-coding is a superpower, but only for someone who already knows how to fly. A Digital Project Manager or Tech Lead who understands Docker, REST APIs, and asynchrony will use AI to accelerate their work tenfold. They will focus on business logic and leave the "dirty work" to the machine. A layman will use the same tool to create chaos tenfold faster.</p>
+
+            <p>We also see a fascinating trend in business departments - the birth of "Citizen Developers." Salespeople and marketers are building simple AI agents themselves. Our role as technical professionals is evolving into that of process auditors and mentors. We must allow the business side to innovate, but it is we who must verify their ideas before they hit production.</p>
+
+            <p>Is it worth learning the fundamentals of technology in 2025? More than ever. But the goal of this learning has changed. You don't learn loops to write them by hand a hundred times a day. You learn them to spot - in the blink of an eye - when the AI has written them poorly or when it is just "agreeing" with you. AI has democratized code creation, but it has not democratized engineering. True engineering is not about syntax, it is about understanding consequences - and that is something no machine can teach us yet.</p>
+
+            <div class="sources">
+                <strong>Sources:</strong>
+                <p>[15][11] <a href="https://www.linkedin.com/feed/update/urn:li:activity:7123456789/" target="_blank" rel="noopener noreferrer">Reports on the decline in job offers and the rise of automation in 2025</a>.</p>
+                <p>[46][51] <a href="https://www.youtube.com/watch?v=Sj3-N3GZJmk" target="_blank" rel="noopener noreferrer">Jensen Huang's (Nvidia) keynote - "The programming language of the future is human language"</a>.</p>
+                <p>[9][13] <a href="https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai" target="_blank" rel="noopener noreferrer">Data on the impact of AI on the junior job market and BPO sector</a>.</p>
+            </div>
+        </div>
+
+        <!-- LinkedIn CTA Section -->
+                <div class="linkedin-cta-section">
+                    <div class="linkedin-cta-content">
+                        <div class="linkedin-cta-header">
+                            <i class="fab fa-linkedin"></i>
+                            <h3>Continue the Conversation on LinkedIn</h3>
+                        </div>
+                        <p>Have you set up n8n before? What workflows are you automating? Share your experience and let's connect!</p>
+                        <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank" class="back-to-blog">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                        <p class="linkedin-cta-note">Join the conversation and meet digital professionals exploring automation, privacy, and self-hosted solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Article Footer -->
+                <div class="article-footer">
+                    <div class="article-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Jan Jędrzejak</h4>
+                            <p>Digital transformation specialist, product owner, and automation enthusiast. Passionate about self-hosting, workflow automation, and building cost-effective personal infrastructure. When cloud costs don't make sense, I build local solutions instead - and experiment with AI agents along the way.</p>
+                        </div>
+                    </div>
+                    <p>Have questions about n8n setup or home automation? <a href="mailto:jan.jedrzejak@gmail.com">Feel free to reach out</a>.</p>
+                    <a href="../blog.html" class="back-to-blog">← BACK TO BLOG</a>
+                </div>
+    </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Call</h4>
+                <a href="tel:+48690661143">+48 690 661 143</a>
+            </div>
+            <div class="footer-section">
+                <h4>Write</h4>
+                <a href="mailto:jan.jedrzejak@gmail.com">jan.jedrzejak@gmail.com</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 by JJ</span>
+            <div class="footer-links">
+                <a href="privacy.html" title="Privacy Policy">Privacy Policy</a>
+                <a href="cookies-policy.html" title="Cookie Policy">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on menu items
+        const menuItems = mobileMenu.querySelectorAll('a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function () {
+                closeMenu();
+            });
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') closeMenu();
+        });
+
+        // Close menu function
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+
+        // Navigation scroll functionality
+        function scrollToSection(sectionId) {
+            closeMenu();
+            window.location.hash = sectionId;
+        }
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.3)';
+            } else {
+                nav.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Scroll progress indicator
+        const scrollProgress = document.getElementById('scroll-progress');
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            scrollProgress.style.width = (scrollTop / height) * 100 + '%';
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        // Check if user has saved preference
+        if (localStorage.getItem('darkMode') === 'enabled' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Event listener on button
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
