@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SnapClip: Building the Clipboard Manager macOS Deserves</title>
+    <meta
+        content="SnapClip: Building the Clipboard Manager macOS Deserves"
+        name="description" />
+    <link href="../img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
+    <link href="../img/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+    <link href="../img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <meta content="Jedrzejak" name="apple-mobile-web-app-title" />
+    <link href="../img/site.webmanifest" rel="manifest" />
+    <meta
+        content="SnapClip, Clipboard Manager, macOS Deserves, Swift, lightweight"
+        name="keywords" />
+    <meta content="Jan Jędrzejak" name="author" />
+    <meta content="en" name="language" />
+    <meta content="en-US" http-equiv="Content-Language" />
+    <link href="https://janjedrzejak.github.io/blog-posts/snapclip.html" rel="canonical" />
+    <meta content="article" property="og:type" />
+    <meta content="https://janjedrzejak.github.io/blog-posts/snapclip.html" property="og:url" />
+    <meta content="Multi clipboard for MacOS" property="og:title" />
+    <meta
+        content="SnapClip: Building the Clipboard Manager macOS Deserves"
+        property="og:description" />
+    <meta content="https://janjedrzejak.github.io/blog-posts/img/snapclip.png" property="og:image" />
+    <meta content="Jan Jędrzejak - Digital Expert" property="og:site_name" />
+    <meta content="en_US" property="og:locale" />
+    <meta content="2025-11-26T00:00:00Z" property="article:published_time" />
+    <meta content="Jan Jędrzejak" property="article:author" />
+    <meta content="Technology" property="article:section" />
+    <meta content="MacOS development" property="article:tag" />
+    <meta content="Swift" property="article:tag" />
+    <meta content="Lightweight clipboard app" property="article:tag" />
+    <link href="../styl.css" rel="stylesheet" />
+    <link href="../styl-dark-mode.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+    <script async=""
+        src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css" rel="stylesheet" />
+    <link href="../cookies/silktide-consent-manager.css" id="silktide-consent-manager-css" rel="stylesheet" />
+    <script src="../cookies/silktide-consent-manager.js"></script>
+    <script src="../cookies/silktide-consent-ga-consent.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="../index.html">
+            <div class="logo-icon"></div>
+            <span>Jan Jędrzejak /<strong>DIGITAL EXPERT</strong></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
+            <li><a href="../index.html#resume" onclick="scrollToSection('resume')">RESUME</a></li>
+            <li><a href="../projects.html">PROJECTS</a></li>
+            <li><a href="../index.html#contact" onclick="scrollToSection('contact')">CONTACT</a></li>
+            <li><a href="../blog.html">BLOG</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <ul class="mobile-menu" id="mobileMenu">
+        <li><a href="../index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
+        <li><a href="../index.html#resume">RESUME</a></li>
+        <li><a href="../projects.html">PROJECTS</a></li>
+        <li><a href="../index.html#contact">CONTACT</a></li>
+        <li><a href="../blog.html">BLOG</a></li>
+    </ul>
+    <div class="bottom-toolbar">
+        <div class="toolbar-container">
+            <a class="toolbar-icon" href="tel:+48690661143" title="Call">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a class="toolbar-icon" href="mailto:jan.jedrzejak@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a class="toolbar-icon" href="https://www.linkedin.com/in/janjedrzejak" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+    <div id="scroll-progress"></div>
+    <div class="projects-container">
+        <div class="dark-mode-toggle-container">
+            <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="breadcrumb">
+            <a href="../index.html">HOME</a> &gt; <a href="../blog.html">BLOG</a> &gt; SnapClip: Building the Clipboard Manager macOS Deserves
+        </div>
+        <div class="container">
+            <div class="article-container">
+        <div class="article-header">
+            <span class="article-category">macOS &amp; Development</span>
+            <h1>SnapClip: Building the Clipboard Manager macOS Deserves</h1>
+            <div class="article-meta">
+                <span><i class="far fa-calendar"></i> December 31, 2025</span>
+                <span><i class="far fa-user"></i> Jan Jędrzejak</span>
+                <span><i class="far fa-clock"></i> 10 min read</span>
+            </div>
+        </div>
+        
+        <div class="article-content">
+            <h2>The Problem: Why I Built This</h2>
+            <p>When I switched from Windows to macOS three years ago, I felt like I'd been transported from modern technology back to the medieval era.</p>
+            <p>On Windows: Press <code>Win+V</code>, see your last 1000 clipboard items, click one, it pastes. Done.</p>
+            <p>On macOS: One clipboard slot. Copy something new? The previous item vanishes. Forever.</p>
+            <p>Sure, third-party solutions exist - ClipMenu, Pasty, Alfred. But they're all flawed:</p>
+            <ul>
+                <li>Heavy and RAM-hungry</li>
+                <li>Complicated to configure</li>
+                <li>Don't feel native to macOS</li>
+                <li>Many require subscriptions or have dark patterns</li>
+            </ul>
+            <p>I wanted something <strong>fast</strong>, <strong>lightweight</strong>, and <strong>native</strong> - something that feels like it belongs in macOS.</p>
+            <p>When no project appeared in the ecosystem, I started coding.</p>
+
+            <div class="image-row">
+                <div class="image-container">
+                    <img alt="SnapClip menu bar" src="img/menubar.png" title="Click to enlarge" />
+                    <div class="image-label">SnapClip in Menu Bar</div>
+                </div>
+                <div class="image-container">
+                    <img alt="Empty clipboard" src="img/blankapp.png" title="Click to enlarge" />
+                    <div class="image-label">Clean Start</div>
+                </div>
+            </div>
+
+            <h2>The Vision: Menu Bar, Not Dock</h2>
+            <p>SnapClip lives in the menu bar, not the Dock. This is intentional.</p>
+            <p>Menu bar apps are invisible until you need them. Zero visual clutter. But press <code>Alt+Cmd+/</code> and boom - your entire clipboard history.</p>
+            <p>Why this approach wins:</p>
+            <ul>
+                <li><strong>Zero visual noise</strong> - Menu bar apps stay invisible until invoked</li>
+                <li><strong>Always accessible</strong> - Global hotkey works everywhere: VS Code, Safari, Slack, Notes</li>
+                <li><strong>Feels native</strong> - SF Symbols, dark mode support, system-level integration</li>
+                <li><strong>Lightweight</strong> - No Electron, no bloat</li>
+            </ul>
+
+            <div class="image-row">
+                <div class="image-container">
+                    <img alt="Clipboard history" src="img/copiedvalues.png" title="Click to enlarge" />
+                    <div class="image-label">Auto-saved History</div>
+                </div>
+                <div class="image-container">
+                    <img alt="Pinned items" src="img/pinnedvalues.png" title="Click to enlarge" />
+                    <div class="image-label">Pinned Items (Teal)</div>
+                </div>
+            </div>
+
+            <h2>Building SnapClip: Technical Challenges</h2>
+            <h3>Challenge 1: Global Hotkeys on macOS</h3>
+            <p>Unlike Windows, macOS doesn't provide a simple system API for global hotkeys in modern Swift. The solution? <strong>Carbon Events</strong> - 90s API that still works like magic.</p>
+            <pre><code class="language-swift">var hotKeyRef: EventHotKeyRef = 0
+var gMyHotKeyID = EventHotKeyID(signature: OSType(utf8: "mapp"), id: 1)
+
+InstallEventHandler(GetEventDispatcherTarget(), 
+                   { (nextHandler, theEvent, userData) in
+    // Handle Alt+Cmd+/ globally
+    return noErr
+}, 1, &spec, nil, nil)</code></pre>
+            <p>It works everywhere - inside VS Code, Chrome, even fullscreen apps. No focus required.</p>
+
+            <h3>Challenge 2: Accessibility Permissions</h3>
+            <p>To monitor clipboard changes and respond to global hotkeys, macOS requires Accessibility permissions. Instead of failing silently, I implemented an elegant startup check:</p>
+            <pre><code class="language-swift">func checkAccessibilityPermissions() {
+    if !AXIsProcessTrusted() {
+        // Auto-prompt on first launch
+        // Direct link to System Settings
+        openSystemSettings()
+    }
+}</code></pre>
+            <p>Rather than silently failing, SnapClip tells users exactly what's needed and why.</p>
+
+            <h3>Challenge 3: Pin and Sorting Logic</h3>
+            <p>A key feature is <strong>pinning</strong> - keeping important clips at the top while maintaining chronological order for recent items:</p>
+            <pre><code class="language-swift">let pinnedItems = clipboardHistory.filter { $0.isPinned }
+let recentItems = clipboardHistory.filter { !$0.isPinned }
+                  .sorted { $0.timestamp > $1.timestamp }
+
+let displayOrder = pinnedItems + recentItems</code></pre>
+            <p>This simple logic provides powerful workflow control - pin API keys, error messages, code snippets, frequently-used responses.</p>
+
+            <div class="image-row">
+                <div class="image-container">
+                    <img alt="Multiple paste 1" src="img/multipasting01.png" title="Click to enlarge" />
+                    <div class="image-label">Step 1: Copy Multiple Items</div>
+                </div>
+                <div class="image-container">
+                    <img alt="Multiple paste 2" src="img/multipasting02.png" title="Click to enlarge" />
+                    <div class="image-label">Step 2: Access History</div>
+                </div>
+                <div class="image-container">
+                    <img alt="Multiple paste 3" src="img/multipasting03.png" title="Click to enlarge" />
+                    <div class="image-label">Step 3: Paste Instantly</div>
+                </div>
+            </div>
+
+            <h2>SnapClip in Action</h2>
+            <p>User scenario: You're copying text fragments from Wikipedia to paste into Notes.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Without SnapClip:</strong></p>
+                <ol>
+                    <li>Copy text 1</li>
+                    <li>Copy text 2</li>
+                    <li>Copy text 3</li>
+                    <li>"Wait, I needed text 1"</li>
+                    <li>Navigate back to Wikipedia</li>
+                    <li>Find text 1</li>
+                    <li>Copy again</li>
+                </ol>
+                <p><strong>With SnapClip:</strong></p>
+                <ol>
+                    <li>Copy text 1, 2, 3 (auto-saved)</li>
+                    <li>Press Alt+Cmd+/ to open history</li>
+                    <li>Click text 1</li>
+                    <li>Pasted to Notes</li>
+                    <li>Done. 5 seconds total.</li>
+                </ol>
+            </div>
+
+            <h2>Menu Bar Features</h2>
+            <p>Menu bar apps have minimal attack surface - only essentials:</p>
+            <ul>
+                <li><strong>Show History</strong> - Toggle the window</li>
+                <li><strong>Always on Top</strong> - Keep window visible</li>
+                <li><strong>Launch at Login</strong> - Auto-start with system</li>
+                <li><strong>Quit</strong> - Close SnapClip</li>
+            </ul>
+            <p>No subscriptions. No upsell. No "premium features". Just functionality you need.</p>
+
+            <h2>Why This Matters for macOS</h2>
+            <p>macOS prides itself on elegant, focused design. Yet clipboard management was left to third parties for over a decade.</p>
+            <p>SnapClip proves that native tools can be lightweight and elegant. No Electron. No subscriptions. No dark patterns.</p>
+            <p>Just Swift + AppKit + good design.</p>
+
+            <table class="stats-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Binary size</td>
+                    <td>~5 MB</td>
+                </tr>
+                <tr>
+                    <td>Memory usage</td>
+                    <td>&lt;50 MB</td>
+                </tr>
+                <tr>
+                    <td>macOS support</td>
+                    <td>12+ (Monterey+)</td>
+                </tr>
+                <tr>
+                    <td>External dependencies</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>License</td>
+                    <td>MIT</td>
+                </tr>
+            </table>
+
+            <h2>Open Source Matters</h2>
+            <p>I released SnapClip on GitHub (MIT License) because:</p>
+            <ul>
+                <li><strong>Transparency</strong> - Users can verify security (no cloud, no tracking)</li>
+                <li><strong>Trust</strong> - Source code is auditable</li>
+                <li><strong>Community</strong> - Developers can contribute improvements</li>
+                <li><strong>Longevity</strong> - If I stop maintaining it, others can fork it</li>
+            </ul>
+            <p>This is the opposite of subscription software that disappears when the company fails.</p>
+
+            <h2>Download SnapClip v1.0.0</h2>
+            <p>Production Ready Menu Bar Clipboard Manager</p>
+            <a class="cta-button" href="https://github.com/janjedrzejak/SnapClip/releases/tag/SnapClip-v1.0.0-Production-Ready" target="_blank">
+                Download SnapClip
+            </a>
+            
+            <div class="highlight-box">
+                <h3>Installation:</h3>
+                <ol>
+                    <li>Download <code>SnapClip.app</code></li>
+                    <li>Double-click to install</li>
+                    <li>Grant Accessibility permissions on first launch</li>
+                    <li>Press <code>Alt+Cmd+/</code> - ready!</li>
+                </ol>
+                <h3>Requirements:</h3>
+                <ul>
+                    <li>macOS 12+ (Monterey+)</li>
+                    <li>Accessibility permissions (auto-prompt)</li>
+                </ul>
+            </div>
+
+            <h2>Roadmap</h2>
+            <ul>
+                <li><strong>v1.1:</strong> Search and filtering</li>
+                <li><strong>v1.2:</strong> iCloud sync - synchronize clips across your Macs</li>
+                <li><strong>v2.0:</strong> Multiple workspaces and tabs</li>
+                <li><strong>Later:</strong> Custom hotkey configuration, keyboard-only navigation</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h3>About SnapClip</h3>
+                <p><strong>SnapClip</strong> is a lightweight, native menu bar clipboard history manager for macOS 12+. It monitors your clipboard, stores unlimited history, and provides instant access via global hotkey <code>Alt+Cmd+/</code>.</p>
+                <p>Features include pinning important clips (API keys, error messages, code snippets), chronological sorting, and zero tracking or cloud uploads. Everything stays local and private.</p>
+                <p style="font-size: 0.9em; margin-top: 15px; color: #666; border-top: 1px solid #ddd; padding-top: 10px;">
+                    <em>SnapClip is released under the MIT License and is available on GitHub at <strong>github.com/janjedrzejak/SnapClip</strong></em>
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>About the Development</h3>
+                <p><strong>Built with:</strong> Swift 5.7+, AppKit, Carbon Events API</p>
+                <p><strong>Development time:</strong> Several months focused on native APIs, minimal dependencies, and user-first design</p>
+                <p><strong>Key principles:</strong> Privacy-first (no cloud), lightweight (5MB binary), native feel (SF Symbols, dark mode), zero external dependencies</p>
+            </div>
+
+            <div class="linkedin-cta-section">
+                <div class="linkedin-cta-content">
+                    <div class="linkedin-cta-header">
+                        <i class="fab fa-linkedin"></i>
+                        <h3>Continue the Conversation on LinkedIn</h3>
+                    </div>
+                    <p>Interested in native macOS development, lightweight tools, or how to solve problems that Apple overlooks? Share your thoughts and let's discuss the future of macOS applications.</p>
+                    <a class="back-to-blog" href="https://www.linkedin.com/in/janjedrzejak" target="_blank">
+                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                    </a>
+                    <p class="linkedin-cta-note">Join the conversation with digital professionals exploring macOS development, software engineering, and open-source tools.</p>
+                </div>
+            </div>
+
+            <div class="article-footer">
+                <div class="article-author">
+                    <div class="author-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="author-info">
+                        <h4>Jan Jędrzejak</h4>
+                        <p>Software developer and digital project manager building macOS tools that respect your privacy and attention. Recently joined Holcim as Digital Project Manager while maintaining various open-source projects including SnapClip, FleetBook, and CLI utilities.</p>
+                    </div>
+                </div>
+                <p>Have thoughts on clipboard managers, macOS development, or native Swift applications? Curious about how to solve productivity gaps in macOS? <a href="mailto:jan.jedrzejak@gmail.com">Feel free to reach out</a>.</p>
+                <a class="back-to-blog" href="../blog.html">← BACK TO BLOG</a>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+    <div class="modal" id="imageModal">
+        <span class="close">×</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" />
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Call</h4>
+                <a href="tel:+48690661143">+48 690 661 143</a>
+            </div>
+            <div class="footer-section">
+                <h4>Write</h4>
+                <a href="mailto:jan.jedrzejak@gmail.com">jan.jedrzejak@gmail.com</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 by JJ</span>
+            <div class="footer-links">
+                <a href="privacy.html" title="Privacy Policy">Privacy Policy</a>
+                <a href="cookies-policy.html" title="Cookie Policy">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on menu items
+        const menuItems = mobileMenu.querySelectorAll('a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function () {
+                closeMenu();
+            });
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') closeMenu();
+        });
+
+        // Close menu function
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+
+        // Navigation scroll functionality
+        function scrollToSection(sectionId) {
+            closeMenu();
+            window.location.hash = sectionId;
+        }
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.3)';
+            } else {
+                nav.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Scroll progress indicator
+        const scrollProgress = document.getElementById('scroll-progress');
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            scrollProgress.style.width = (scrollTop / height) * 100 + '%';
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        // Check if user has saved preference
+        if (localStorage.getItem('darkMode') === 'enabled' || (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Event listener on button
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+
+        // --- MODAL LOGIC START ---
+        // Get the modal
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+        const closeBtn = document.getElementsByClassName("close")[0];
+
+        // Get all images inside .image-container
+        const images = document.querySelectorAll('.image-container img');
+
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+            });
+        });
+
+        // Close the modal
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // Restore scrolling
+        }
+
+        // Close when clicking outside the image
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+        // --- MODAL LOGIC END ---
+    </script>
+</body>
+
+</html>
