@@ -1,242 +1,372 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>AI as a Tool for Film Education, Not Photorealistic Documentation: A Critical Look at Backstage Reconstruction</title>
-<meta content="Critical examination of AI-generated backstage reconstructions of classic cinema, and the limitations of treating visual output as historical accuracy." name="description"/>
-<link href="../img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
-<link href="../img/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="../img/favicon.ico" rel="shortcut icon"/>
-<link href="../img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<meta content="Jedrzejak" name="apple-mobile-web-app-title"/>
-<link href="../img/site.webmanifest" rel="manifest"/>
-<meta content="Google Nano Banana Pro, Gemini 3, Generative AI, Andrzej Wajda, Popiół i diament, Ashes and Diamonds, Jerzy Wójcik, Cinematography, Spatial Reasoning, AI in Cinema" name="keywords"/>
-<meta content="Jan Jędrzejak" name="author"/>
-<meta content="en" name="language"/>
-<meta content="en-US" http-equiv="Content-Language"/>
-<link href="https://janjedrzejak.github.io/blog-posts/nano-banana-cinema.html" rel="canonical"/>
-<meta content="article" property="og:type"/>
-<meta content="https://janjedrzejak.github.io/blog-posts/nano-banana-cinema.html" property="og:url"/>
-<meta content="AI as a Tool for Film Education, Not Photorealistic Documentation" property="og:title"/>
-<meta content="Critical examination of AI film reconstruction: what looks convincing isn't always historically accurate." property="og:description"/>
-<meta content="https://janjedrzejak.github.io/blog-posts/img/Popiol-i-Diament-Bar-Gemini.jpg" property="og:image"/>
-<meta content="Jan Jędrzejak - Digital Expert" property="og:site_name"/>
-<meta content="en_US" property="og:locale"/>
-<meta content="2025-11-26T00:00:00Z" property="article:published_time"/>
-<meta content="Jan Jędrzejak" property="article:author"/>
-<meta content="Technology &amp; Cinema" property="article:section"/>
-<meta content="Artificial Intelligence" property="article:tag"/>
-<meta content="Generative AI" property="article:tag"/>
-<meta content="Andrzej Wajda" property="article:tag"/>
-<meta content="Cinematography" property="article:tag"/>
-<meta content="Film History" property="article:tag"/>
-<link href="../styl.css" rel="stylesheet"/>
-<link href="../styl-dark-mode.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"/>
-<script async="" src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
-<link href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css" rel="stylesheet"/>
-<link href="../cookies/silktide-consent-manager.css" id="silktide-consent-manager-css" rel="stylesheet"/>
-<script src="../cookies/silktide-consent-manager.js"></script>
-<script src="../cookies/silktide-consent-ga-consent.js"></script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AI as a Tool for Film Education, Not Photorealistic Documentation: A Critical Look at Backstage
+        Reconstruction</title>
+    <meta
+        content="Critical examination of AI-generated backstage reconstructions of classic cinema, and the limitations of treating visual output as historical accuracy."
+        name="description" />
+    <link href="../img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
+    <link href="../img/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+    <link href="../img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <meta content="Jedrzejak" name="apple-mobile-web-app-title" />
+    <link href="../img/site.webmanifest" rel="manifest" />
+    <meta
+        content="Google Nano Banana Pro, Gemini 3, Generative AI, Andrzej Wajda, Popiół i diament, Ashes and Diamonds, Jerzy Wójcik, Cinematography, Spatial Reasoning, AI in Cinema"
+        name="keywords" />
+    <meta content="Jan Jędrzejak" name="author" />
+    <meta content="en" name="language" />
+    <meta content="en-US" http-equiv="Content-Language" />
+    <link href="https://janjedrzejak.github.io/blog-posts/nano-banana-cinema.html" rel="canonical" />
+    <meta content="article" property="og:type" />
+    <meta content="https://janjedrzejak.github.io/blog-posts/nano-banana-cinema.html" property="og:url" />
+    <meta content="AI as a Tool for Film Education, Not Photorealistic Documentation" property="og:title" />
+    <meta
+        content="Critical examination of AI film reconstruction: what looks convincing isn't always historically accurate."
+        property="og:description" />
+    <meta content="https://janjedrzejak.github.io/blog-posts/img/Popiol-i-Diament-Bar-Gemini.jpg" property="og:image" />
+    <meta content="Jan Jędrzejak - Digital Expert" property="og:site_name" />
+    <meta content="en_US" property="og:locale" />
+    <meta content="2025-11-26T00:00:00Z" property="article:published_time" />
+    <meta content="Jan Jędrzejak" property="article:author" />
+    <meta content="Technology &amp; Cinema" property="article:section" />
+    <meta content="Artificial Intelligence" property="article:tag" />
+    <meta content="Generative AI" property="article:tag" />
+    <meta content="Andrzej Wajda" property="article:tag" />
+    <meta content="Cinematography" property="article:tag" />
+    <meta content="Film History" property="article:tag" />
+    <link href="../styl.css" rel="stylesheet" />
+    <link href="../styl-dark-mode.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet" />
+    <script async=""
+        src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css" rel="stylesheet" />
+    <link href="../cookies/silktide-consent-manager.css" id="silktide-consent-manager-css" rel="stylesheet" />
+    <script src="../cookies/silktide-consent-manager.js"></script>
+    <script src="../cookies/silktide-consent-ga-consent.js"></script>
 </head>
+
 <body>
-<nav>
-<a class="logo" href="../index.html">
-<div class="logo-icon"></div>
-<span>Jan Jędrzejak /<strong>DIGITAL EXPERT</strong></span>
-</a>
-<ul class="nav-links">
-<li><a href="../index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
-<li><a href="../index.html#resume" onclick="scrollToSection('resume')">RESUME</a></li>
-<li><a href="../projects.html">PROJECTS</a></li>
-<li><a href="../index.html#contact" onclick="scrollToSection('contact')">CONTACT</a></li>
-<li><a href="../blog.html">BLOG</a></li>
-</ul>
-<button class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</button>
-</nav>
-<ul class="mobile-menu" id="mobileMenu">
-<li><a href="../index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
-<li><a href="../index.html#resume">RESUME</a></li>
-<li><a href="../projects.html">PROJECTS</a></li>
-<li><a href="../index.html#contact">CONTACT</a></li>
-<li><a href="../blog.html">BLOG</a></li>
-</ul>
-<div class="bottom-toolbar">
-<div class="toolbar-container">
-<a class="toolbar-icon" href="tel:+48690661143" title="Call">
-<i class="fas fa-phone"></i>
-</a>
-<a class="toolbar-icon" href="mailto:jan.jedrzejak@gmail.com" title="Email">
-<i class="fas fa-envelope"></i>
-</a>
-<a class="toolbar-icon" href="https://www.linkedin.com/in/janjedrzejak" target="_blank" title="LinkedIn">
-<i class="fab fa-linkedin"></i>
-</a>
-</div>
-</div>
-<div id="scroll-progress"></div>
-<div class="projects-container">
-<div class="dark-mode-toggle-container">
-<button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
-<i class="fas fa-moon"></i>
-</button>
-</div>
-<div class="breadcrumb">
-<a href="../index.html">HOME</a> &gt; <a href="../blog.html">BLOG</a> &gt; Backstage Magic with Google Nano Banana Pro
+    <nav>
+        <a class="logo" href="../index.html">
+            <div class="logo-icon"></div>
+            <span>Jan Jędrzejak /<strong>DIGITAL EXPERT</strong></span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
+            <li><a href="../index.html#resume" onclick="scrollToSection('resume')">RESUME</a></li>
+            <li><a href="../projects.html">PROJECTS</a></li>
+            <li><a href="../index.html#contact" onclick="scrollToSection('contact')">CONTACT</a></li>
+            <li><a href="../blog.html">BLOG</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <ul class="mobile-menu" id="mobileMenu">
+        <li><a href="../index.html#about-me" onclick="scrollToSection('about-me')">ABOUT ME</a></li>
+        <li><a href="../index.html#resume">RESUME</a></li>
+        <li><a href="../projects.html">PROJECTS</a></li>
+        <li><a href="../index.html#contact">CONTACT</a></li>
+        <li><a href="../blog.html">BLOG</a></li>
+    </ul>
+    <div class="bottom-toolbar">
+        <div class="toolbar-container">
+            <a class="toolbar-icon" href="tel:+48690661143" title="Call">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a class="toolbar-icon" href="mailto:jan.jedrzejak@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a class="toolbar-icon" href="https://www.linkedin.com/in/janjedrzejak" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
         </div>
-<div class="container">
-<div class="article-container">
-<div class="article-header">
-<span class="article-category">Cinema &amp; AI Technology</span>
-<h1>AI as a Tool for Film Education, Not Photorealistic Documentation: A Critical Look at Backstage Reconstruction</h1>
-<div class="article-meta">
-<span><i class="far fa-calendar"></i> November 26, 2025</span>
-<span><i class="far fa-user"></i> Jan Jędrzejak</span>
-<span><i class="far fa-clock"></i> 18 min read</span>
-</div>
-</div>
-<div class="article-content">
-<h2>The Extraordinary Capability and Its Limits: Initial Promise vs. Professional Scrutiny</h2>
-<p>When Google released the Nano Banana Pro model, I was genuinely captivated by its capability to visualize backstage setups from Andrzej Wajda's 1958 masterpiece Popiół i diament (Ashes and Diamonds). By analyzing original film frames, captured by the legendary cinematographer Jerzy Wójcik and featuring Zbigniew Cybulski, the model promised to reconstruct what was happening outside the camera's frame.</p>
-<p>The interactions appeared effortless. A simple prompt, "Show me backstage of this scene please", seemed to unlock sophisticated spatial understanding. The visual results were undeniably impressive.</p>
-<p>However, after sharing this work on LinkedIn, I received thoughtful critical feedback from experienced cinematographers, filmmakers, and film industry professionals. Their insights were invaluable, revealing limitations that deserve serious examination. They pointed out that beneath the surface plausibility of these images lie fundamental problems about accuracy, historical authenticity, and the difference between what looks convincing and what is actually correct.</p>
+    </div>
+    <div id="scroll-progress"></div>
+    <div class="projects-container">
+        <div class="dark-mode-toggle-container">
+            <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="breadcrumb">
+            <a href="../index.html">HOME</a> &gt; <a href="../blog.html">BLOG</a> &gt; Backstage Magic with Google Nano
+            Banana Pro
+        </div>
+        <div class="container">
+            <div class="article-container">
+                <div class="article-header">
+                    <span class="article-category">Cinema &amp; AI Technology</span>
+                    <h1>AI as a Tool for Film Education, Not Photorealistic Documentation: A Critical Look at Backstage
+                        Reconstruction</h1>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> November 26, 2025</span>
+                        <span><i class="far fa-user"></i> Jan Jędrzejak</span>
+                        <span><i class="far fa-clock"></i> 18 min read</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h2>The Extraordinary Capability and Its Limits: Initial Promise vs. Professional Scrutiny</h2>
+                    <p>When Google released the Nano Banana Pro model, I was genuinely captivated by its capability to
+                        visualize backstage setups from Andrzej Wajda's 1958 masterpiece Popiół i diament (Ashes and
+                        Diamonds). By analyzing original film frames, captured by the legendary cinematographer Jerzy
+                        Wójcik and featuring Zbigniew Cybulski, the model promised to reconstruct what was happening
+                        outside the camera's frame.</p>
+                    <p>The interactions appeared effortless. A simple prompt, "Show me backstage of this scene please",
+                        seemed to unlock sophisticated spatial understanding. The visual results were undeniably
+                        impressive.</p>
+                    <p>However, after sharing this work on LinkedIn, I received thoughtful critical feedback from
+                        experienced cinematographers, filmmakers, and film industry professionals. Their insights were
+                        invaluable, revealing limitations that deserve serious examination. They pointed out that
+                        beneath the surface plausibility of these images lie fundamental problems about accuracy,
+                        historical authenticity, and the difference between what looks convincing and what is actually
+                        correct.</p>
 
-<div class="image-row">
-<div class="image-container">
-<img alt="Original scene bar" src="img/Popiol-i-Diament-Bar-Oryginal.jpg" title="Click to enlarge"/>
-<div class="image-label original">Original 1958 Frame</div>
-</div>
-<div class="image-container">
-<img alt="AI reconstructed backstage" src="img/Popiol-i-Diament-Bar-Gemini.jpg" title="Click to enlarge"/>
-<div class="image-label ai">Nano Banana Pro Reconstruction</div>
-</div>
-</div>
-<h2>The Core Problem: Anachronistic Elements and Technical Impossibilities</h2>
-<p>The most striking critique from film professionals concerned elements that appeared in the AI reconstructions: specifically, something resembling a modern greenscreen setup in what should be a 1958 backstage scene.</p>
+                    <div class="image-row">
+                        <div class="image-container">
+                            <img alt="Original scene bar" src="img/Popiol-i-Diament-Bar-Oryginal.jpg"
+                                title="Click to enlarge" />
+                            <div class="image-label original">Original 1958 Frame</div>
+                        </div>
+                        <div class="image-container">
+                            <img alt="AI reconstructed backstage" src="img/Popiol-i-Diament-Bar-Gemini.jpg"
+                                title="Click to enlarge" />
+                            <div class="image-label ai">Nano Banana Pro Reconstruction</div>
+                        </div>
+                    </div>
+                    <h2>The Core Problem: Anachronistic Elements and Technical Impossibilities</h2>
+                    <p>The most striking critique from film professionals concerned elements that appeared in the AI
+                        reconstructions: specifically, something resembling a modern greenscreen setup in what should be
+                        a 1958 backstage scene.</p>
 
-<p>This is fundamentally problematic. Chroma key technology, greenscreen as we know it, did not exist in 1958. Yet the AI proposed it as part of the likely setup. This reveals a critical failure mode: the model synthesizes outputs from statistical patterns in its training data, dominated by contemporary film production, and projects those solutions onto historical contexts where they were technologically impossible.</p><p>The AI isn't genuinely "reconstructing" 1950s filmmaking. It's pattern-matching based on what appears most frequently in its dataset, then dressing those patterns in period-appropriate language. When professionals familiar with the actual constraints of that era spotted the anachronism, it exposed something important: impressive visuals do not equal accurate reconstruction.</p><p>This should generalize to a broader concern: if a model can confidently hallucinate impossible technology for a specific historical moment, how reliable are the other technical details it proposes?</p>
-<p>The technology reveals the <strong>craftsmanship</strong> beneath the art. And in <em>Popiół i diament</em>, one of cinema's most visually sophisticated works, that craftsmanship is extraordinary. Wójcik's cinematography is a masterclass in visual storytelling, and now we have a tool that can help us understand the <em>workshop</em> where that mastery was practiced.</p>
-<div class="image-row">
-<div class="image-container">
-<img alt="Original scene with cross" src="img/Popiol-i-Diament-Krzyz-Oryginal.jpg" title="Click to enlarge"/>
-<div class="image-label original">Original 1958 Frame</div>
-</div>
-<div class="image-container">
-<img alt="AI backstage cross" src="img/Popiol-i-Diament-Krzyz-Gemini.jpg" title="Click to enlarge"/>
-<div class="image-label ai">Nano Banana Pro Reconstruction</div>
-</div>
-</div>
-<h2>The Lighting Problem: What Looks Good in Render ≠ What Photographs</h2>
-<p>The second critique was equally revealing. Film professionals noted that even if the proposed lighting arrangement appears logical and aesthetically coherent in an AI render, it may bear little resemblance to how the scene would actually appear in front of a camera.</p>
-<div class="highlight-box">
-<p><strong>This is AI not replacing human creativity, but augmenting human understanding.</strong> We can now study the filmmaking techniques of that era with a clarity that would have required access to production stills, behind-the-scenes photography, or interviews with surviving crew members.</p>
-</div>
-<p>Jerzy Wójcik was a master of light. He worked with specific equipment, film stocks, and optical constraints unique to 1958. A lighting arrangement that "looks right" in a digital render operates under fundamentally different physics than light behaving on actual film emulsion.</p><p>The AI's proposal does not account for:</p><ul><li><strong>Optical properties of 1950s lenses</strong>, their specific distortions, aberrations, and characteristic optical signatures</li><li><strong>Film stock sensitivity and response</strong>, how black-and-white emulsion of that era rendered light, shadow, and contrast</li><li><strong>Real-world light behavior</strong>, bounces, diffusion, edge falloff, and unexpected shadows that emerge when light interacts with actual geometry and materials</li><li><strong>The difference between synthetic rendering and photographic capture</strong>, a camera records reality differently than an algorithm renders it</li></ul><p>Cinematography is applied physics. A cinematographer thinks in terms of wavelengths, exposure latitude, dynamic range, and the precise way light registers on emulsion. Wójcik's genius lay partly in his deep intuition for these constraints and how to work within, and creatively against, them. An AI model, trained on digital renderers, possesses no genuine understanding of photographic reality.</p>
-<div class="image-row">
-<div class="image-container">
-<img alt="Original scene bar 2" loading="lazy" src="img/Popiol-i-Diament-Bar-Oryginal-2.png" title="Click to enlarge"/>
-<div class="image-label original">Original 1958 Frame</div>
-</div>
-<div class="image-container">
-<img alt="AI backstage bar" src="img/Popiol-i-Diament-Bar-Gemini.jpg" title="Click to enlarge"/>
-<div class="image-label ai">Nano Banana Pro Reconstruction</div>
-</div>
-</div>
-<h2>Reframing the Technology: From "Reconstruction" to "Interpretation"</h2>
-<p>This pushback forced me to reconsider what I was actually seeing. These images are not photorealistic reconstructions of the 1958 set. They should not be treated as definitive documentation.</p>
+                    <p>This is fundamentally problematic. Chroma key technology, greenscreen as we know it, did not
+                        exist in 1958. Yet the AI proposed it as part of the likely setup. This reveals a critical
+                        failure mode: the model synthesizes outputs from statistical patterns in its training data,
+                        dominated by contemporary film production, and projects those solutions onto historical contexts
+                        where they were technologically impossible.</p>
+                    <p>The AI isn't genuinely "reconstructing" 1950s filmmaking. It's pattern-matching based on what
+                        appears most frequently in its dataset, then dressing those patterns in period-appropriate
+                        language. When professionals familiar with the actual constraints of that era spotted the
+                        anachronism, it exposed something important: impressive visuals do not equal accurate
+                        reconstruction.</p>
+                    <p>This should generalize to a broader concern: if a model can confidently hallucinate impossible
+                        technology for a specific historical moment, how reliable are the other technical details it
+                        proposes?</p>
+                    <p>The technology reveals the <strong>craftsmanship</strong> beneath the art. And in <em>Popiół i
+                            diament</em>, one of cinema's most visually sophisticated works, that craftsmanship is
+                        extraordinary. Wójcik's cinematography is a masterclass in visual storytelling, and now we have
+                        a tool that can help us understand the <em>workshop</em> where that mastery was practiced.</p>
+                    <div class="image-row">
+                        <div class="image-container">
+                            <img alt="Original scene with cross" src="img/Popiol-i-Diament-Krzyz-Oryginal.jpg"
+                                title="Click to enlarge" />
+                            <div class="image-label original">Original 1958 Frame</div>
+                        </div>
+                        <div class="image-container">
+                            <img alt="AI backstage cross" src="img/Popiol-i-Diament-Krzyz-Gemini.jpg"
+                                title="Click to enlarge" />
+                            <div class="image-label ai">Nano Banana Pro Reconstruction</div>
+                        </div>
+                    </div>
+                    <h2>The Lighting Problem: What Looks Good in Render ≠ What Photographs</h2>
+                    <p>The second critique was equally revealing. Film professionals noted that even if the proposed
+                        lighting arrangement appears logical and aesthetically coherent in an AI render, it may bear
+                        little resemblance to how the scene would actually appear in front of a camera.</p>
+                    <div class="highlight-box">
+                        <p><strong>This is AI not replacing human creativity, but augmenting human
+                                understanding.</strong> We can now study the filmmaking techniques of that era with a
+                            clarity that would have required access to production stills, behind-the-scenes photography,
+                            or interviews with surviving crew members.</p>
+                    </div>
+                    <p>Jerzy Wójcik was a master of light. He worked with specific equipment, film stocks, and optical
+                        constraints unique to 1958. A lighting arrangement that "looks right" in a digital render
+                        operates under fundamentally different physics than light behaving on actual film emulsion.</p>
+                    <p>The AI's proposal does not account for:</p>
+                    <ul>
+                        <li><strong>Optical properties of 1950s lenses</strong>, their specific distortions,
+                            aberrations, and characteristic optical signatures</li>
+                        <li><strong>Film stock sensitivity and response</strong>, how black-and-white emulsion of that
+                            era rendered light, shadow, and contrast</li>
+                        <li><strong>Real-world light behavior</strong>, bounces, diffusion, edge falloff, and unexpected
+                            shadows that emerge when light interacts with actual geometry and materials</li>
+                        <li><strong>The difference between synthetic rendering and photographic capture</strong>, a
+                            camera records reality differently than an algorithm renders it</li>
+                    </ul>
+                    <p>Cinematography is applied physics. A cinematographer thinks in terms of wavelengths, exposure
+                        latitude, dynamic range, and the precise way light registers on emulsion. Wójcik's genius lay
+                        partly in his deep intuition for these constraints and how to work within, and creatively
+                        against, them. An AI model, trained on digital renderers, possesses no genuine understanding of
+                        photographic reality.</p>
+                    <div class="image-row">
+                        <div class="image-container">
+                            <img alt="Original scene bar 2" loading="lazy" src="img/Popiol-i-Diament-Bar-Oryginal-2.png"
+                                title="Click to enlarge" />
+                            <div class="image-label original">Original 1958 Frame</div>
+                        </div>
+                        <div class="image-container">
+                            <img alt="AI backstage bar" src="img/Popiol-i-Diament-Bar-Gemini.jpg"
+                                title="Click to enlarge" />
+                            <div class="image-label ai">Nano Banana Pro Reconstruction</div>
+                        </div>
+                    </div>
+                    <h2>Reframing the Technology: From "Reconstruction" to "Interpretation"</h2>
+                    <p>This pushback forced me to reconsider what I was actually seeing. These images are not
+                        photorealistic reconstructions of the 1958 set. They should not be treated as definitive
+                        documentation.</p>
 
-<p>Instead, they represent stylistically plausible interpretations of the era's filmmaking aesthetic. The AI captured something of the spirit of 1950s cinema: the dramatic contrasts of Wójcik's lighting, the careful camera positioning, the general topography of a studio set. That has real value.</p><p>But the technical specifics, precise equipment placement, exact light sources, actual photographic behavior, these are areas where the AI essentially invents. It fills gaps with statistically probable guesses dressed in period styling.</p><p>This distinction matters enormously.</p>
-<div class="image-row">
-<div class="image-container">
-<img alt="Original scene cross 2" src="img/Popiol-i-Diament-Krzyz-Gemini-2.jpg" title="Click to enlarge"/>
-<div class="image-label original">Nano Banana Pro Reconstruction</div>
-</div>
-</div>
-<h2>Where AI Actually Adds Value</h2><p>When understood within its real limitations, Nano Banana Pro serves several legitimate purposes:</p><p><strong>Educational tool for film students:</strong> The reconstructions help students visualize that cinema is a constructed, engineered medium. Seeing a backstage proposal encourages thinking about decisions, logistics, and planning. It teaches students to ask: "How was this made? What constraints were the filmmakers working within?"</p><p><strong>Inspiration for contemporary filmmakers:</strong> By studying Ashes and Diamonds through this interface, one can contemplate Wójcik's artistic choices and lessons applicable to modern work. The tool becomes a bridge for studying the masters, even if it doesn't perfectly reconstruct their literal methods.</p><p><strong>Complement to historical research:</strong> When behind-the-scenes photography from a 1958 production is scarce, AI-generated imagery can offer plausible context, a visual companion to period accounts, production notes, and crew interviews. But it should never be the primary historical source.</p><p><strong>What it is NOT:</strong> A definitive historical record. A precise engineering document. A reliable guide to specific technical choices. A replacement for expert cinematographic analysis.</p><p>The tool can inspire questions. It should not be mistaken for answers.</p>
+                    <p>Instead, they represent stylistically plausible interpretations of the era's filmmaking
+                        aesthetic. The AI captured something of the spirit of 1950s cinema: the dramatic contrasts of
+                        Wójcik's lighting, the careful camera positioning, the general topography of a studio set. That
+                        has real value.</p>
+                    <p>But the technical specifics, precise equipment placement, exact light sources, actual
+                        photographic behavior, these are areas where the AI essentially invents. It fills gaps with
+                        statistically probable guesses dressed in period styling.</p>
+                    <p>This distinction matters enormously.</p>
+                    <div class="image-row">
+                        <div class="image-container">
+                            <img alt="Original scene cross 2" src="img/Popiol-i-Diament-Krzyz-Gemini-2.jpg"
+                                title="Click to enlarge" />
+                            <div class="image-label original">Nano Banana Pro Reconstruction</div>
+                        </div>
+                    </div>
+                    <h2>Where AI Actually Adds Value</h2>
+                    <p>When understood within its real limitations, Nano Banana Pro serves several legitimate purposes:
+                    </p>
+                    <p><strong>Educational tool for film students:</strong> The reconstructions help students visualize
+                        that cinema is a constructed, engineered medium. Seeing a backstage proposal encourages thinking
+                        about decisions, logistics, and planning. It teaches students to ask: "How was this made? What
+                        constraints were the filmmakers working within?"</p>
+                    <p><strong>Inspiration for contemporary filmmakers:</strong> By studying Ashes and Diamonds through
+                        this interface, one can contemplate Wójcik's artistic choices and lessons applicable to modern
+                        work. The tool becomes a bridge for studying the masters, even if it doesn't perfectly
+                        reconstruct their literal methods.</p>
+                    <p><strong>Complement to historical research:</strong> When behind-the-scenes photography from a
+                        1958 production is scarce, AI-generated imagery can offer plausible context, a visual companion
+                        to period accounts, production notes, and crew interviews. But it should never be the primary
+                        historical source.</p>
+                    <p><strong>What it is NOT:</strong> A definitive historical record. A precise engineering document.
+                        A reliable guide to specific technical choices. A replacement for expert cinematographic
+                        analysis.</p>
+                    <p>The tool can inspire questions. It should not be mistaken for answers.</p>
 
 
 
-<h2>The Broader Lesson: AI Confidence as a Liability</h2><p>One of the most insidious aspects of advanced generative AI is its surface plausibility. These models generate outputs that look authoritative, detailed, and correct. For viewers without deep domain expertise, the visual polish and apparent attention to detail can be genuinely convincing.</p><p>But confidence in the render should not be confused with confidence in accuracy. The AI can generate a plausible-looking greenscreen proposal for a 1958 Polish film set with the same apparent certainty it would if that technology had actually existed. A non-expert observer might never spot the anachronism. A cinematographer recognizes it immediately.</p><p>This is why feedback from practitioners, people who actually work in film, is so valuable. They possess intuitive knowledge to sense when something is wrong, even when they can't immediately articulate why. Their skepticism isn't rejection of technology; it's expertise protecting the integrity of historical understanding.</p><p>I am grateful to the filmmakers and cinematographers who took time to engage critically with my initial enthusiasm. Their pushback didn't diminish my interest in AI as a tool for film education, it refined and deepened my understanding of what this technology actually offers and where its boundaries truly lie.</p>
+                    <h2>The Broader Lesson: AI Confidence as a Liability</h2>
+                    <p>One of the most insidious aspects of advanced generative AI is its surface plausibility. These
+                        models generate outputs that look authoritative, detailed, and correct. For viewers without deep
+                        domain expertise, the visual polish and apparent attention to detail can be genuinely
+                        convincing.</p>
+                    <p>But confidence in the render should not be confused with confidence in accuracy. The AI can
+                        generate a plausible-looking greenscreen proposal for a 1958 Polish film set with the same
+                        apparent certainty it would if that technology had actually existed. A non-expert observer might
+                        never spot the anachronism. A cinematographer recognizes it immediately.</p>
+                    <p>This is why feedback from practitioners, people who actually work in film, is so valuable. They
+                        possess intuitive knowledge to sense when something is wrong, even when they can't immediately
+                        articulate why. Their skepticism isn't rejection of technology; it's expertise protecting the
+                        integrity of historical understanding.</p>
+                    <p>I am grateful to the filmmakers and cinematographers who took time to engage critically with my
+                        initial enthusiasm. Their pushback didn't diminish my interest in AI as a tool for film
+                        education, it refined and deepened my understanding of what this technology actually offers and
+                        where its boundaries truly lie.</p>
 
 
 
-<div class="highlight-box">
-<h3>About the Film</h3>
-<p>Popiół i diament (Ashes and Diamonds, 1958), directed by Andrzej Wajda and photographed by Jerzy Wójcik, is considered one of the masterpieces of world cinema. Starring Zbigniew Cybulski, it explores Polish identity and political conflict in the aftermath of World War II. Its visual sophistication remains unmatched nearly 70 years later.</p>
-<p style="font-size: 0.9em; margin-top: 15px; color: #666; border-top: 1px solid #ddd; padding-top: 10px;">
-<em>Original film frames are the property of <strong>Studio Filmowe Kadr</strong> and are used here for critical analysis and educational purposes.</em>
-</p>
-</div>
-<div class="highlight-box">
-<h3>About the Technology</h3>
-<p><strong>Google Nano Banana Pro</strong> is the latest evolution in generative AI, powered by the <strong>Gemini 3</strong> model. Unlike previous iterations, it features a physics-aware reasoning engine capable of understanding complex spatial relationships and "planning" a scene before rendering it. This allows for the high-fidelity reconstruction of off-screen environments demonstrated in this article.</p>
-</div>
-<div class="linkedin-cta-section">
-<div class="linkedin-cta-content">
-<div class="linkedin-cta-header">
-<i class="fab fa-linkedin"></i>
-<h3>Continue the Conversation on LinkedIn</h3>
-</div>
-<p>Interested in how AI can support, and where it falls short in, our understanding of cinema history? I invite you to share your perspectives. Film professionals, cinematographers, and historians: your expertise is essential to ensuring we deploy these tools responsibly.</p>
-<a class="back-to-blog" href="https://www.linkedin.com/in/janjedrzejak" target="_blank">
-<i class="fab fa-linkedin"></i> Connect on LinkedIn
-                        </a>
-<p class="linkedin-cta-note">Join the conversation with digital professionals exploring AI, cinema, and the intersection of technology with creative fields.</p>
-</div>
-</div>
-<div class="article-footer">
-<div class="article-author">
-<div class="author-avatar">
-<i class="fas fa-user-circle"></i>
-</div>
-<div class="author-info">
-<h4>Jan Jędrzejak</h4>
-<p>Digital transformation specialist and product owner passionate about exploring the intersection of AI, technology, and creative fields. Interested in how automation, self-hosting solutions, and generative AI reshape our understanding of work, creativity, and cultural heritage.</p>
-</div>
-</div>
-<p>Have thoughts on AI and cinema? Curious about how technology can unlock new ways of learning from film history? <a href="mailto:jan.jedrzejak@gmail.com">Feel free to reach out</a>.</p>
-<a class="back-to-blog" href="../blog.html">← BACK TO BLOG</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="modal" id="imageModal">
-<span class="close">×</span>
-<div class="modal-content">
-<img id="modalImg" src=""/>
-</div>
-</div>
-<footer>
-<div class="footer-container">
-<div class="footer-section">
-<h4>Call</h4>
-<a href="tel:+48690661143">+48 690 661 143</a>
-</div>
-<div class="footer-section">
-<h4>Write</h4>
-<a href="mailto:jan.jedrzejak@gmail.com">jan.jedrzejak@gmail.com</a>
-</div>
-<div class="footer-section">
-<h4>Connect</h4>
-<a href="https://www.linkedin.com/in/janjedrzejak" target="_blank">LinkedIn</a>
-</div>
-</div>
-<div class="footer-bottom">
-<span>© 2025 by JJ</span>
-<div class="footer-links">
-<a href="privacy.html" title="Privacy Policy">Privacy Policy</a>
-<a href="cookies-policy.html" title="Cookie Policy">Cookie Policy</a>
-</div>
-</div>
-</footer>
-<script>
+                    <div class="highlight-box">
+                        <h3>About the Film</h3>
+                        <p>Popiół i diament (Ashes and Diamonds, 1958), directed by Andrzej Wajda and photographed by
+                            Jerzy Wójcik, is considered one of the masterpieces of world cinema. Starring Zbigniew
+                            Cybulski, it explores Polish identity and political conflict in the aftermath of World War
+                            II. Its visual sophistication remains unmatched nearly 70 years later.</p>
+                        <p
+                            style="font-size: 0.9em; margin-top: 15px; color: #666; border-top: 1px solid #ddd; padding-top: 10px;">
+                            <em>Original film frames are the property of <strong>Studio Filmowe Kadr</strong> and are
+                                used here for critical analysis and educational purposes.</em>
+                        </p>
+                    </div>
+                    <div class="highlight-box">
+                        <h3>About the Technology</h3>
+                        <p><strong>Google Nano Banana Pro</strong> is the latest evolution in generative AI, powered by
+                            the <strong>Gemini 3</strong> model. Unlike previous iterations, it features a physics-aware
+                            reasoning engine capable of understanding complex spatial relationships and "planning" a
+                            scene before rendering it. This allows for the high-fidelity reconstruction of off-screen
+                            environments demonstrated in this article.</p>
+                    </div>
+                    <div class="linkedin-cta-section">
+                        <div class="linkedin-cta-content">
+                            <div class="linkedin-cta-header">
+                                <i class="fab fa-linkedin"></i>
+                                <h3>Continue the Conversation on LinkedIn</h3>
+                            </div>
+                            <p>Interested in how AI can support, and where it falls short in, our understanding of
+                                cinema history? I invite you to share your perspectives. Film professionals,
+                                cinematographers, and historians: your expertise is essential to ensuring we deploy
+                                these tools responsibly.</p>
+                            <a class="back-to-blog" href="https://www.linkedin.com/in/janjedrzejak" target="_blank">
+                                <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                            </a>
+                            <p class="linkedin-cta-note">Join the conversation with digital professionals exploring AI,
+                                cinema, and the intersection of technology with creative fields.</p>
+                        </div>
+                    </div>
+                    <div class="article-footer">
+                        <div class="article-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Jan Jędrzejak</h4>
+                                <p>Digital transformation specialist and product owner passionate about exploring the
+                                    intersection of AI, technology, and creative fields. Interested in how automation,
+                                    self-hosting solutions, and generative AI reshape our understanding of work,
+                                    creativity, and cultural heritage.</p>
+                            </div>
+                        </div>
+                        <p>Have thoughts on AI and cinema? Curious about how technology can unlock new ways of learning
+                            from film history? <a href="mailto:jan.jedrzejak@gmail.com">Feel free to reach out</a>.</p>
+                        <a class="back-to-blog" href="../blog.html">← BACK TO BLOG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="imageModal">
+        <span class="close">×</span>
+        <div class="modal-content">
+            <img id="modalImg" src="" />
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Call</h4>
+                <a href="tel:+48690661143">+48 690 661 143</a>
+            </div>
+            <div class="footer-section">
+                <h4>Write</h4>
+                <a href="mailto:jan.jedrzejak@gmail.com">jan.jedrzejak@gmail.com</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 by JJ</span>
+            <div class="footer-links">
+                <a href="privacy.html" title="Privacy Policy">Privacy Policy</a>
+                <a href="cookies-policy.html" title="Cookie Policy">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script>
         // Mobile menu toggle
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
@@ -320,7 +450,7 @@
         const images = document.querySelectorAll('.image-container img');
 
         images.forEach(img => {
-            img.addEventListener('click', function() {
+            img.addEventListener('click', function () {
                 modal.style.display = "block";
                 modalImg.src = this.src;
                 document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
@@ -328,13 +458,13 @@
         });
 
         // Close the modal
-        closeBtn.onclick = function() {
+        closeBtn.onclick = function () {
             modal.style.display = "none";
             document.body.style.overflow = "auto"; // Restore scrolling
         }
 
         // Close when clicking outside the image
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
                 document.body.style.overflow = "auto";
@@ -343,4 +473,5 @@
         // --- MODAL LOGIC END ---
     </script>
 </body>
+
 </html>
