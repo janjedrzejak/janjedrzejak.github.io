@@ -1,65 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<!--  created with sitemap generator https://octopus.do  -->
+  <!-- Main Pages -->
+  <url>
+    <loc>https://janjedrzejak.github.io/</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://janjedrzejak.github.io/blog.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://janjedrzejak.github.io/projects.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://janjedrzejak.github.io/privacy.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://janjedrzejak.github.io/cookies-policy.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 
-    <url>
-        <loc>https://janjedrzejak.github.io</loc>
-        <lastmod>2025-12-08</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://janjedrzejak.github.io/projects</loc>
-        <lastmod>2025-12-08</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://janjedrzejak.github.io/blog</loc>
-        <lastmod>2025-12-08</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://janjedrzejak.github.io/index</loc>
-        <lastmod>2025-12-08</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://janjedrzejak.github.io/privacy</loc>
-        <lastmod>2025-12-08</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://janjedrzejak.github.io/cookies-policy</loc>
-        <lastmod>2025-12-08</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://janjedrzejak.github.io/blog-posts</loc>
-        <lastmod>2025-12-08</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://janjedrzejak.github.io/blog-posts/nano-banana-cinema</loc>
-        <lastmod>2025-12-08</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://janjedrzejak.github.io/blog-posts/n8n-raspberry-pi</loc>
-        <lastmod>2025-12-08</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://janjedrzejak.github.io/blog-posts/affinity-by-canva</loc>
-        <lastmod>2025-12-08</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://janjedrzejak.github.io/blog-posts/affinity-by-canva.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://janjedrzejak.github.io/blog-posts/ai-needs-a-pilot-with-an-engineering-license.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://janjedrzejak.github.io/blog-posts/n8n-raspberry-pi.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://janjedrzejak.github.io/blog-posts/nano-banana-cinema.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://janjedrzejak.github.io/blog-posts/snapclip.html</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Limetka Sub-project -->
+  <url>
+    <loc>https://janjedrzejak.github.io/limetka/</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

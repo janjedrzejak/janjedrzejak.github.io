@@ -1,3 +1,21 @@
-user-agent: *
-allow: /
-sitemap: https://janjedrzejak.github.io/sitemap.xml
+# robots.txt for janjedrzejak.github.io
+# Portfolio and Blog Site - Allow all indexation for SEO
+
+User-agent: *
+Allow: /
+Allow: /blog-posts/
+
+# Crawl delay to respect server resources
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://janjedrzejak.github.io/sitemap.xml
+
+# Specific rules for other search engines (optional)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
