@@ -2100,20 +2100,38 @@ code {
 }
 
 @media (max-width: 768px) {
+    .about {
+        padding: 80px 20px calc(100px + env(safe-area-inset-bottom));
+    }
+
+    .about-container {
+        flex-direction: column;
+        padding: 0;
+        gap: 30px;
+    }
+
+    .about-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
     .profile-image {
-        width: 280px;
-        height: 280px;
-        max-width: calc(100vw - 40px);
-        max-height: calc(100vw - 40px);
+        width: min(280px, calc(100vw - 40px));
+        height: min(280px, calc(100vw - 40px));
         margin: 0 auto;
     }
 }
 
 @media (max-width: 480px) {
+    .about {
+        padding: 60px 20px calc(120px + env(safe-area-inset-bottom));
+    }
+
     .profile-image {
-        width: 240px;
-        height: 240px;
-        max-width: calc(100vw - 32px);
-        max-height: calc(100vw - 32px);
+        width: min(240px, calc(100vw - 32px));
+        height: min(240px, calc(100vw - 32px));
     }
 }
+
