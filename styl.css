@@ -2098,3 +2098,22 @@ code {
     opacity: 0.95;
     transform: scale(1.02); /* Delikatne powiększenie przy najechaniu */
 }
+
+@media (max-width: 768px) {
+    .profile-image {
+        width: 280px;
+        height: 280px;
+        max-width: calc(100vw - 40px);
+        max-height: calc(100vw - 40px);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 240px;
+        height: 240px;
+        max-width: calc(100vw - 32px);
+        max-height: calc(100vw - 32px);
+    }
+}
