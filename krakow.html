@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kraków Live Transit</title>
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(.75rem,.7rem + .25vw,.875rem);
+      --text-sm: clamp(.875rem,.8rem + .35vw,1rem);
+      --text-base: clamp(1rem,.95rem + .25vw,1.125rem);
+      --text-lg: clamp(1.125rem,1rem + .75vw,1.5rem);
+      --text-xl: clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
+      --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem; --space-5:1.25rem; --space-6:1.5rem; --space-8:2rem; --space-10:2.5rem; --space-12:3rem;
+      --color-bg:#f7f6f2; --color-surface:#f9f8f5; --color-surface-2:#fbfbf9; --color-surface-offset:#f3f0ec; --color-border:#d4d1ca;
+      --color-text:#28251d; --color-text-muted:#6f6d67; --color-text-faint:#9f9c95; --color-text-inverse:#f9f8f4;
+      --color-primary:#01696f; --color-primary-hover:#0c4e54; --color-primary-highlight:#cedcd8; --color-success:#437a22; --color-error:#a12c7b; --color-warning:#964219;
+      --shadow-sm:0 1px 2px rgba(40,37,29,.06); --shadow-md:0 4px 12px rgba(40,37,29,.08); --shadow-lg:0 12px 32px rgba(40,37,29,.12);
+      --radius-sm:.375rem; --radius-md:.5rem; --radius-lg:.75rem; --radius-xl:1rem; --radius-full:9999px;
+      --transition:180ms cubic-bezier(.16,1,.3,1);
+      --font-body:'General Sans', system-ui, sans-serif;
+      --font-display:'General Sans', system-ui, sans-serif;
+      --header-h:76px;
+    }
+    [data-theme="dark"] {
+      --color-bg:#171614; --color-surface:#1c1b19; --color-surface-2:#201f1d; --color-surface-offset:#1d1c1a; --color-border:#393836;
+      --color-text:#e6e3dc; --color-text-muted:#b0aca5; --color-text-faint:#7d7973; --color-text-inverse:#171614;
+      --color-primary:#4f98a3; --color-primary-hover:#227f8b; --color-primary-highlight:#313b3b; --color-success:#6daa45; --color-error:#d163a7; --color-warning:#fdab43;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.2); --shadow-md:0 4px 12px rgba(0,0,0,.3); --shadow-lg:0 12px 32px rgba(0,0,0,.4);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+    body{min-height:100vh;font-family:var(--font-body);font-size:var(--text-base);background:var(--color-bg);color:var(--color-text);line-height:1.5}
+    button,input,select{font:inherit;color:inherit}
+    a{color:inherit}
+    button{cursor:pointer;border:none;background:none}
+    .app{display:grid;grid-template-columns:minmax(300px,380px) 1fr;min-height:100vh}
+    .sidebar{display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-5);background:linear-gradient(180deg,var(--color-surface),var(--color-surface-2));border-right:1px solid rgba(40,37,29,.12);position:relative;z-index:1000}
+    [data-theme="dark"] .sidebar{border-right-color:rgba(255,255,255,.08)}
+    .brand{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--space-3)}
+    .logo{display:flex;gap:var(--space-3);align-items:center}
+    .logo-mark{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--color-primary),color-mix(in oklab,var(--color-primary) 60%, white 40%));display:grid;place-items:center;color:white;box-shadow:var(--shadow-md);flex:0 0 auto}
+    .brand h1{font-size:var(--text-xl);line-height:1.05;letter-spacing:-.03em;font-weight:700}
+    .brand p{font-size:var(--text-sm);color:var(--color-text-muted);max-width:28ch}
+    .theme-btn{width:44px;height:44px;border-radius:50%;background:var(--color-surface-offset);border:1px solid rgba(40,37,29,.08);display:grid;place-items:center;transition:background var(--transition), transform var(--transition)}
+    [data-theme="dark"] .theme-btn{border-color:rgba(255,255,255,.08)}
+    .theme-btn:hover{background:var(--color-primary-highlight);transform:translateY(-1px)}
+    .panel{background:var(--color-surface);border:1px solid rgba(40,37,29,.08);border-radius:var(--radius-xl);padding:var(--space-4);box-shadow:var(--shadow-sm)}
+    [data-theme="dark"] .panel{border-color:rgba(255,255,255,.08)}
+    .panel h2{font-size:var(--text-lg);line-height:1.15;margin-bottom:var(--space-3)}
+    .controls{display:grid;gap:var(--space-3)}
+    .field{display:grid;gap:var(--space-2)}
+    .label-row{display:flex;align-items:center;justify-content:space-between;gap:var(--space-2)}
+    label,.hint{font-size:var(--text-sm);color:var(--color-text-muted)}
+    input,select{width:100%;padding:.85rem 1rem;background:var(--color-surface-2);border:1px solid rgba(40,37,29,.12);border-radius:var(--radius-lg);outline:none;transition:border-color var(--transition), box-shadow var(--transition), background var(--transition)}
+    [data-theme="dark"] input,[data-theme="dark"] select{border-color:rgba(255,255,255,.12)}
+    input:focus,select:focus{border-color:var(--color-primary);box-shadow:0 0 0 4px color-mix(in oklab,var(--color-primary) 18%, transparent)}
+    .switches,.chips,.legend{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+    .chip{display:inline-flex;align-items:center;gap:.45rem;border-radius:var(--radius-full);padding:.55rem .8rem;background:var(--color-surface-offset);font-size:var(--text-sm);border:1px solid rgba(40,37,29,.08)}
+    [data-theme="dark"] .chip{border-color:rgba(255,255,255,.08)}
+    .chip-dot{width:.72rem;height:.72rem;border-radius:50%}
+    .toggle{display:inline-flex;align-items:center;gap:.65rem;padding:.7rem .8rem;border-radius:var(--radius-lg);background:var(--color-surface-2);border:1px solid rgba(40,37,29,.08);font-size:var(--text-sm)}
+    [data-theme="dark"] .toggle{border-color:rgba(255,255,255,.08)}
+    .toggle input{width:1rem;height:1rem;accent-color:var(--color-primary)}
+    .actions{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.85rem 1rem;border-radius:var(--radius-lg);font-weight:600;min-height:44px;transition:transform var(--transition), background var(--transition), border-color var(--transition)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--color-primary);color:var(--color-text-inverse)}
+    .btn-primary:hover{background:var(--color-primary-hover)}
+    .btn-secondary{background:var(--color-surface-offset);border:1px solid rgba(40,37,29,.08)}
+    [data-theme="dark"] .btn-secondary{border-color:rgba(255,255,255,.08)}
+    .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3)}
+    .stat{padding:var(--space-3);border-radius:var(--radius-lg);background:var(--color-surface-2);border:1px solid rgba(40,37,29,.06)}
+    [data-theme="dark"] .stat{border-color:rgba(255,255,255,.06)}
+    .stat .value{font-size:var(--text-xl);font-weight:700;letter-spacing:-.03em}
+    .stat .label{font-size:var(--text-sm);color:var(--color-text-muted)}
+    .feed-note{font-size:var(--text-sm);color:var(--color-text-muted)}
+    .status{display:flex;gap:var(--space-2);align-items:flex-start;font-size:var(--text-sm);padding:var(--space-3);border-radius:var(--radius-lg);background:color-mix(in oklab,var(--color-primary) 8%, var(--color-surface));border:1px solid color-mix(in oklab,var(--color-primary) 18%, transparent)}
+    .status[data-level="error"]{background:color-mix(in oklab,var(--color-error) 10%, var(--color-surface));border-color:color-mix(in oklab,var(--color-error) 22%, transparent)}
+    .status-dot{width:.8rem;height:.8rem;border-radius:50%;background:var(--color-success);margin-top:.22rem;flex:0 0 auto}
+    .vehicle-list{display:grid;gap:var(--space-2);max-height:28vh;overflow:auto;padding-right:.2rem}
+    .vehicle-item{display:grid;gap:.18rem;padding:.8rem;border-radius:var(--radius-lg);background:var(--color-surface-2);border:1px solid rgba(40,37,29,.06);cursor:pointer;transition:transform var(--transition), border-color var(--transition), background var(--transition)}
+    [data-theme="dark"] .vehicle-item{border-color:rgba(255,255,255,.06)}
+    .vehicle-item:hover{transform:translateY(-1px);border-color:color-mix(in oklab,var(--color-primary) 35%, transparent)}
+    .vehicle-top{display:flex;justify-content:space-between;gap:var(--space-2);align-items:center}
+    .route-badge{display:inline-flex;align-items:center;justify-content:center;min-width:2.2rem;padding:.22rem .5rem;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:700;color:white}
+    .vehicle-meta{font-size:var(--text-sm);color:var(--color-text-muted)}
+    .vehicle-empty{font-size:var(--text-sm);color:var(--color-text-muted);padding:.4rem 0}
+    .map-wrap{position:relative;min-height:100vh}
+    #map{position:absolute;inset:0}
+    .map-toolbar{position:absolute;top:var(--space-5);right:var(--space-5);left:var(--space-5);display:flex;justify-content:flex-end;pointer-events:none;z-index:800}
+    .map-card{pointer-events:auto;background:color-mix(in oklab,var(--color-surface) 82%, transparent);backdrop-filter:blur(12px);border:1px solid rgba(40,37,29,.08);box-shadow:var(--shadow-md);border-radius:var(--radius-xl);padding:var(--space-3) var(--space-4);display:flex;gap:var(--space-4);align-items:center;flex-wrap:wrap}
+    [data-theme="dark"] .map-card{border-color:rgba(255,255,255,.08)}
+    .map-card strong{font-size:var(--text-sm)}
+    .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--color-surface);color:var(--color-text)}
+    .popup{display:grid;gap:.35rem;min-width:210px}
+    .popup-head{display:flex;justify-content:space-between;align-items:center;gap:.6rem}
+    .popup h3{font-size:1.05rem}
+    .popup p,.popup div{font-size:.95rem;color:var(--color-text-muted)}
+    .legend{margin-top:.4rem}
+    .footer-note{font-size:var(--text-xs);color:var(--color-text-faint)}
+    .hidden{display:none !important}
+    .skeleton{position:relative;overflow:hidden;background:var(--color-surface-offset)}
+    .skeleton::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:translateX(-100%);animation:shimmer 1.4s infinite}
+    @keyframes shimmer{100%{transform:translateX(100%)}}
+    .map-marker{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;border:2px solid rgba(255,255,255,.92);box-shadow:0 4px 12px rgba(0,0,0,.22);color:#fff;font-size:10px;font-weight:800}
+    .map-marker.bus{background:#2f7d32}
+    .map-marker.tram{background:#c66a00}
+    .leaflet-control-attribution{font-size:11px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media (max-width: 980px){
+      .app{grid-template-columns:1fr}
+      .sidebar{border-right:none;border-bottom:1px solid rgba(40,37,29,.08)}
+      [data-theme="dark"] .sidebar{border-bottom-color:rgba(255,255,255,.08)}
+      .map-wrap{min-height:62vh}
+      .vehicle-list{max-height:32vh}
+      .map-toolbar{top:auto;bottom:var(--space-4);left:var(--space-4);right:var(--space-4);justify-content:center}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+    }
+  </style>
+</head>
+<body>
+  <a href="#controls" class="sr-only">Przejdź do sterowania</a>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">
+          <div class="logo-mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-label="Logo Kraków Live Transit">
+              <path d="M4 16h16"/>
+              <path d="M7 16V8.8A2.8 2.8 0 0 1 9.8 6h4.4A2.8 2.8 0 0 1 17 8.8V16"/>
+              <path d="M9 20l1.5-4M15 20l-1.5-4"/>
+              <circle cx="9" cy="12.5" r=".8" fill="currentColor" stroke="none"/>
+              <circle cx="15" cy="12.5" r=".8" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <div>
+            <h1>Kraków Live Transit</h1>
+            <p>Mapa na żywo dla autobusów i tramwajów ZTP/MPK w Krakowie, bez backendu.</p>
+          </div>
+        </div>
+        <button class="theme-btn" type="button" data-theme-toggle aria-label="Przełącz motyw"></button>
+      </div>
+
+      <section class="panel" id="controls">
+        <h2>Filtry i źródło</h2>
+        <div class="controls">
+          <div class="field">
+            <label for="feedSelect">Źródło lokalizacji</label>
+            <select id="feedSelect">
+              <option value="gtfs-auto" selected>GTFS-RT ZTP (auto)</option>
+              <option value="gtfs-bus">GTFS-RT — autobusy</option>
+              <option value="gtfs-tram">GTFS-RT — tramwaje</option>
+              <option value="ttss-legacy">TTSS legacy — fallback</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="lineFilter">Linia</label>
+            <input id="lineFilter" type="text" placeholder="np. 4, 18, 194, 501" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="searchFilter">Szukaj pojazdu lub brygady</label>
+            <input id="searchFilter" type="text" placeholder="np. 123, PU..., brygada, trip id" autocomplete="off" />
+          </div>
+          <div class="switches">
+            <label class="toggle"><input type="checkbox" id="showBus" checked /> Autobusy</label>
+            <label class="toggle"><input type="checkbox" id="showTram" checked /> Tramwaje</label>
+            <label class="toggle"><input type="checkbox" id="followSelected" /> Śledź zaznaczony pojazd</label>
+          </div>
+          <div class="field">
+            <div class="label-row">
+              <label for="refreshRange">Odświeżanie</label>
+              <span class="hint"><span id="refreshValue">15</span> s</span>
+            </div>
+            <input id="refreshRange" type="range" min="5" max="60" step="5" value="15" />
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" id="refreshBtn" type="button">Odśwież teraz</button>
+            <button class="btn btn-secondary" id="fitBtn" type="button">Pokaż cały Kraków</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Stan danych</h2>
+        <div class="status" id="statusBox">
+          <span class="status-dot"></span>
+          <div>
+            <div id="statusText">Łączenie ze źródłem danych…</div>
+            <div class="feed-note" id="statusMeta">Po pierwszym pobraniu zobaczysz liczbę pojazdów i czas aktualizacji.</div>
+          </div>
+        </div>
+        <div class="stats" style="margin-top:1rem">
+          <div class="stat">
+            <div class="value" id="totalCount">—</div>
+            <div class="label">Wszystkie pojazdy</div>
+          </div>
+          <div class="stat">
+            <div class="value" id="visibleCount">—</div>
+            <div class="label">Po filtrach</div>
+          </div>
+          <div class="stat">
+            <div class="value" id="busCount">—</div>
+            <div class="label">Autobusy</div>
+          </div>
+          <div class="stat">
+            <div class="value" id="tramCount">—</div>
+            <div class="label">Tramwaje</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Legenda</h2>
+        <div class="legend">
+          <span class="chip"><span class="chip-dot" style="background:#2f7d32"></span> Autobus</span>
+          <span class="chip"><span class="chip-dot" style="background:#c66a00"></span> Tramwaj</span>
+          <span class="chip"><span class="chip-dot" style="background:var(--color-primary)"></span> Wybrany</span>
+        </div>
+        <p class="feed-note" style="margin-top:1rem">W trybie GTFS-RT aplikacja używa proxy publicznego do dekodowania protobuf po stronie klienta. Gdy to źródło nie odpowiada, możesz przełączyć się na TTSS legacy.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Najbliższa lista</h2>
+        <div class="vehicle-list" id="vehicleList" aria-live="polite"></div>
+        <p class="footer-note" style="margin-top:1rem">Tip: kliknij pojazd z listy albo marker na mapie, żeby przypiąć szczegóły.</p>
+      </section>
+    </aside>
+
+    <main class="map-wrap">
+      <div class="map-toolbar">
+        <div class="map-card">
+          <strong id="activeFeedLabel">Źródło: GTFS-RT ZTP</strong>
+          <span class="feed-note" id="lastUpdatedLabel">Ostatnia aktualizacja: —</span>
+        </div>
+      </div>
+      <div id="map" role="application" aria-label="Mapa pojazdów MPK Kraków"></div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/protobufjs/7.2.5/protobuf.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    const state = {
+      map: null,
+      markers: new Map(),
+      vehicles: [],
+      visible: [],
+      selectedId: null,
+      timer: null,
+      refreshSeconds: 15,
+      currentTheme: null,
+      routesIndex: new Map()
+    };
+
+    const FEEDS = {
+      'gtfs-auto': {
+        label: 'GTFS-RT ZTP (auto)',
+        loader: async () => {
+          const [bus, tram] = await Promise.allSettled([
+            fetchGtfsPositions('https://gtfs.ztp.krakow.pl/VehiclePositions_A.pb', 'bus'),
+            fetchGtfsPositions('https://gtfs.ztp.krakow.pl/VehiclePositions_T.pb', 'tram')
+          ]);
+          const vehicles = [];
+          if (bus.status === 'fulfilled') vehicles.push(...bus.value);
+          if (tram.status === 'fulfilled') vehicles.push(...tram.value);
+          if (!vehicles.length) throw new Error('Brak odpowiedzi z obu feedów GTFS-RT.');
+          return { vehicles, source: 'GTFS-RT ZTP (auto)' };
+        }
+      },
+      'gtfs-bus': {
+        label: 'GTFS-RT ZTP — autobusy',
+        loader: async () => ({ vehicles: await fetchGtfsPositions('https://gtfs.ztp.krakow.pl/VehiclePositions_A.pb', 'bus'), source: 'GTFS-RT ZTP — autobusy' })
+      },
+      'gtfs-tram': {
+        label: 'GTFS-RT ZTP — tramwaje',
+        loader: async () => ({ vehicles: await fetchGtfsPositions('https://gtfs.ztp.krakow.pl/VehiclePositions_T.pb', 'tram'), source: 'GTFS-RT ZTP — tramwaje' })
+      },
+      'ttss-legacy': {
+        label: 'TTSS legacy',
+        loader: async () => ({ vehicles: await fetchTtssVehicles(), source: 'TTSS legacy' })
+      }
+    };
+
+    const els = {
+      feedSelect: document.getElementById('feedSelect'),
+      lineFilter: document.getElementById('lineFilter'),
+      searchFilter: document.getElementById('searchFilter'),
+      showBus: document.getElementById('showBus'),
+      showTram: document.getElementById('showTram'),
+      followSelected: document.getElementById('followSelected'),
+      refreshRange: document.getElementById('refreshRange'),
+      refreshValue: document.getElementById('refreshValue'),
+      refreshBtn: document.getElementById('refreshBtn'),
+      fitBtn: document.getElementById('fitBtn'),
+      vehicleList: document.getElementById('vehicleList'),
+      totalCount: document.getElementById('totalCount'),
+      visibleCount: document.getElementById('visibleCount'),
+      busCount: document.getElementById('busCount'),
+      tramCount: document.getElementById('tramCount'),
+      statusBox: document.getElementById('statusBox'),
+      statusText: document.getElementById('statusText'),
+      statusMeta: document.getElementById('statusMeta'),
+      activeFeedLabel: document.getElementById('activeFeedLabel'),
+      lastUpdatedLabel: document.getElementById('lastUpdatedLabel'),
+      themeToggle: document.querySelector('[data-theme-toggle]')
+    };
+
+    const KRAKOW_BOUNDS = L.latLngBounds([[49.96, 19.74],[50.14, 20.14]]);
+
+    const VEHICLE_POSITIONS_PROTO = `
+      syntax = "proto2";
+      package transit_realtime;
+      message FeedMessage { required FeedHeader header = 1; repeated FeedEntity entity = 2; }
+      message FeedHeader { required string gtfs_realtime_version = 1; optional uint64 timestamp = 3; }
+      message FeedEntity { required string id = 1; optional VehiclePosition vehicle = 4; }
+      message TripDescriptor { optional string trip_id = 1; optional string route_id = 5; optional uint32 direction_id = 6; optional uint32 start_time = 2; optional string start_date = 3; optional uint32 schedule_relationship = 4; }
+      message VehicleDescriptor { optional string id = 1; optional string label = 2; optional string license_plate = 3; }
+      message Position { required float latitude = 1; required float longitude = 2; optional float bearing = 3; optional double odometer = 4; optional float speed = 5; }
+      message VehiclePosition {
+        optional TripDescriptor trip = 1;
+        optional Position position = 2;
+        optional uint32 current_stop_sequence = 3;
+        optional string stop_id = 7;
+        optional VehicleDescriptor vehicle = 8;
+        optional uint64 timestamp = 5;
+        optional uint32 occupancy_status = 9;
+      }
+    `;
+
+    const protoRoot = protobuf.parse(VEHICLE_POSITIONS_PROTO).root;
+    const FeedMessage = protoRoot.lookupType('transit_realtime.FeedMessage');
+
+    function setupTheme(){
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      state.currentTheme = prefersDark ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', state.currentTheme);
+      updateThemeButton();
+      els.themeToggle.addEventListener('click', () => {
+        state.currentTheme = state.currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', state.currentTheme);
+        updateThemeButton();
+      });
+    }
+
+    function updateThemeButton(){
+      const dark = state.currentTheme === 'dark';
+      els.themeToggle.innerHTML = dark
+        ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>'
+        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+      els.themeToggle.setAttribute('aria-label', dark ? 'Przełącz na jasny motyw' : 'Przełącz na ciemny motyw');
+    }
+
+    function initMap(){
+      state.map = L.map('map', { zoomControl: true, preferCanvas: true }).fitBounds(KRAKOW_BOUNDS);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap'
+      }).addTo(state.map);
+    }
+
+    function vehicleTypeFromRoute(route){
+      if (!route) return 'unknown';
+      return /^\d{1,2}$/.test(route.trim()) ? 'tram' : 'bus';
+    }
+
+    function normalizeVehicle(raw, fallbackType = 'unknown'){
+      const route = String(raw.route || raw.routeId || raw.name || '').trim();
+      const type = raw.type && raw.type !== 'unknown' ? raw.type : (fallbackType !== 'unknown' ? fallbackType : vehicleTypeFromRoute(route));
+      const id = String(raw.id || raw.vehicleId || raw.label || raw.tripId || `${type}-${route}-${raw.lat}-${raw.lon}`);
+      return {
+        id,
+        line: route || '—',
+        label: raw.label || raw.vehicleLabel || raw.licensePlate || id,
+        brigade: raw.brigade || raw.tripId || '',
+        lat: Number(raw.lat),
+        lon: Number(raw.lon),
+        bearing: Number.isFinite(raw.bearing) ? raw.bearing : null,
+        speed: Number.isFinite(raw.speed) ? raw.speed : null,
+        timestamp: raw.timestamp || null,
+        tripId: raw.tripId || '',
+        type,
+        source: raw.source || '',
+        delay: raw.delay ?? null
+      };
+    }
+
+    function createDivIcon(vehicle, selected = false){
+      const className = vehicle.type === 'tram' ? 'tram' : 'bus';
+      const bg = selected ? 'var(--color-primary)' : '';
+      return L.divIcon({
+        className: '',
+        html: `<div class="map-marker ${className}" style="${selected ? `background:${bg};` : ''}">${escapeHtml(vehicle.line).slice(0,3)}</div>`,
+        iconSize: [22,22],
+        iconAnchor: [11,11]
+      });
+    }
+
+    function popupHtml(vehicle){
+      const when = vehicle.timestamp ? formatTime(vehicle.timestamp) : 'brak czasu';
+      const kind = vehicle.type === 'tram' ? 'Tramwaj' : 'Autobus';
+      const speed = Number.isFinite(vehicle.speed) ? `${Math.round(vehicle.speed * 3.6)} km/h` : '—';
+      return `
+        <div class="popup">
+          <div class="popup-head">
+            <h3>${kind} ${escapeHtml(vehicle.line)}</h3>
+            <span class="route-badge" style="background:${vehicle.type === 'tram' ? '#c66a00' : '#2f7d32'}">${escapeHtml(vehicle.line)}</span>
+          </div>
+          <div>Pojazd: ${escapeHtml(vehicle.label || vehicle.id)}</div>
+          <div>Brygada/trip: ${escapeHtml(vehicle.brigade || vehicle.tripId || '—')}</div>
+          <div>Prędkość: ${speed}</div>
+          <div>Aktualizacja: ${when}</div>
+        </div>
+      `;
+    }
+
+    function renderMarkers(){
+      const keepIds = new Set();
+      for (const vehicle of state.visible){
+        keepIds.add(vehicle.id);
+        const selected = vehicle.id === state.selectedId;
+        let marker = state.markers.get(vehicle.id);
+        if (!marker){
+          marker = L.marker([vehicle.lat, vehicle.lon], { icon: createDivIcon(vehicle, selected), keyboard: true });
+          marker.on('click', () => selectVehicle(vehicle.id, true));
+          marker.addTo(state.map);
+          state.markers.set(vehicle.id, marker);
+        } else {
+          marker.setLatLng([vehicle.lat, vehicle.lon]);
+          marker.setIcon(createDivIcon(vehicle, selected));
+        }
+        marker.bindPopup(popupHtml(vehicle));
+      }
+      for (const [id, marker] of state.markers){
+        if (!keepIds.has(id)){
+          state.map.removeLayer(marker);
+          state.markers.delete(id);
+        }
+      }
+    }
+
+    function renderList(){
+      const list = state.visible.slice(0, 120);
+      if (!list.length){
+        els.vehicleList.innerHTML = '<div class="vehicle-empty">Brak pojazdów dla aktualnych filtrów.</div>';
+        return;
+      }
+      els.vehicleList.innerHTML = list.map(v => `
+        <button class="vehicle-item ${v.id === state.selectedId ? 'selected' : ''}" data-vehicle-id="${escapeAttr(v.id)}" type="button">
+          <div class="vehicle-top">
+            <span class="route-badge" style="background:${v.type === 'tram' ? '#c66a00' : '#2f7d32'}">${escapeHtml(v.line)}</span>
+            <span class="vehicle-meta">${v.type === 'tram' ? 'Tramwaj' : 'Autobus'}</span>
+          </div>
+          <strong>${escapeHtml(v.label || v.id)}</strong>
+          <div class="vehicle-meta">Brygada/trip: ${escapeHtml(v.brigade || v.tripId || '—')}</div>
+          <div class="vehicle-meta">Aktualizacja: ${escapeHtml(v.timestamp ? formatTime(v.timestamp) : '—')}</div>
+        </button>
+      `).join('');
+      [...els.vehicleList.querySelectorAll('[data-vehicle-id]')].forEach(btn => {
+        btn.addEventListener('click', () => selectVehicle(btn.dataset.vehicleId, true));
+      });
+    }
+
+    function updateStats(){
+      const buses = state.vehicles.filter(v => v.type === 'bus').length;
+      const trams = state.vehicles.filter(v => v.type === 'tram').length;
+      els.totalCount.textContent = String(state.vehicles.length);
+      els.visibleCount.textContent = String(state.visible.length);
+      els.busCount.textContent = String(buses);
+      els.tramCount.textContent = String(trams);
+    }
+
+    function applyFilters(){
+      const line = els.lineFilter.value.trim().toLowerCase();
+      const search = els.searchFilter.value.trim().toLowerCase();
+      const allowBus = els.showBus.checked;
+      const allowTram = els.showTram.checked;
+      state.visible = state.vehicles.filter(v => {
+        if (v.type === 'bus' && !allowBus) return false;
+        if (v.type === 'tram' && !allowTram) return false;
+        if (line && !String(v.line).toLowerCase().includes(line)) return false;
+        if (search) {
+          const hay = `${v.id} ${v.label} ${v.brigade} ${v.tripId} ${v.line}`.toLowerCase();
+          if (!hay.includes(search)) return false;
+        }
+        return Number.isFinite(v.lat) && Number.isFinite(v.lon);
+      });
+      renderMarkers();
+      renderList();
+      updateStats();
+      if (state.selectedId && !state.visible.some(v => v.id === state.selectedId)) {
+        state.selectedId = null;
+        renderMarkers();
+      }
+    }
+
+    function selectVehicle(id, pan = false){
+      state.selectedId = id;
+      renderMarkers();
+      renderList();
+      const vehicle = state.visible.find(v => v.id === id) || state.vehicles.find(v => v.id === id);
+      if (!vehicle) return;
+      const marker = state.markers.get(id);
+      if (marker) marker.openPopup();
+      if (pan || els.followSelected.checked) {
+        state.map.flyTo([vehicle.lat, vehicle.lon], Math.max(state.map.getZoom(), 15), { duration: .6 });
+      }
+    }
+
+    async function fetchGtfsPositions(feedUrl, type){
+      const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(feedUrl);
+      const response = await fetch(proxyUrl, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`Błąd GTFS-RT: ${response.status}`);
+      const buffer = await response.arrayBuffer();
+      const decoded = FeedMessage.decode(new Uint8Array(buffer));
+      const entities = decoded.entity || [];
+      return entities
+        .filter(entity => entity.vehicle && entity.vehicle.position)
+        .map(entity => {
+          const vehicle = entity.vehicle;
+          return normalizeVehicle({
+            id: entity.id || vehicle.vehicle?.id,
+            vehicleId: vehicle.vehicle?.id,
+            label: vehicle.vehicle?.label || vehicle.vehicle?.licensePlate,
+            licensePlate: vehicle.vehicle?.licensePlate,
+            routeId: vehicle.trip?.routeId,
+            tripId: vehicle.trip?.tripId,
+            lat: vehicle.position?.latitude,
+            lon: vehicle.position?.longitude,
+            bearing: vehicle.position?.bearing,
+            speed: vehicle.position?.speed,
+            timestamp: vehicle.timestamp ? Number(vehicle.timestamp) * 1000 : null,
+            type,
+            source: 'gtfs-rt'
+          }, type);
+        })
+        .filter(v => Number.isFinite(v.lat) && Number.isFinite(v.lon));
+    }
+
+    async function fetchTtssVehicles(){
+      const endpoints = [
+        'https://ttss.mpk.krakow.pl/internetservice/geoserviceDispatcher/services/vehicleinfo/vehicles',
+        'https://www.ttss.krakow.pl/internetservice/geoserviceDispatcher/services/vehicleinfo/vehicles'
+      ];
+      let payload = null;
+      for (const url of endpoints){
+        try {
+          const proxied = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url + '?positionType=CORRECTED');
+          const res = await fetch(proxied, { cache: 'no-store' });
+          if (!res.ok) continue;
+          payload = await res.json();
+          if (payload) break;
+        } catch (e) {}
+      }
+      if (!payload || !Array.isArray(payload.vehicles)) throw new Error('TTSS nie odpowiedział.');
+      return payload.vehicles.map(item => normalizeVehicle({
+        id: item.id,
+        label: item.name,
+        route: item.name,
+        brigade: item.tripId,
+        tripId: item.tripId,
+        lat: item.latitude,
+        lon: item.longitude,
+        bearing: item.angle,
+        timestamp: Date.now(),
+        type: vehicleTypeFromRoute(String(item.name || '')),
+        source: 'ttss'
+      })).filter(v => Number.isFinite(v.lat) && Number.isFinite(v.lon));
+    }
+
+    function updateStatus(ok, message, meta = ''){
+      els.statusBox.dataset.level = ok ? 'ok' : 'error';
+      els.statusText.textContent = message;
+      els.statusMeta.textContent = meta;
+      const dot = els.statusBox.querySelector('.status-dot');
+      dot.style.background = ok ? 'var(--color-success)' : 'var(--color-error)';
+    }
+
+    async function refreshData(){
+      const key = els.feedSelect.value;
+      const feed = FEEDS[key];
+      els.activeFeedLabel.textContent = `Źródło: ${feed.label}`;
+      updateStatus(true, 'Pobieranie danych…', 'To może potrwać 1–3 sekundy, zależnie od publicznego proxy.');
+      try {
+        const result = await feed.loader();
+        state.vehicles = result.vehicles.sort((a,b) => String(a.line).localeCompare(String(b.line), 'pl'));
+        applyFilters();
+        const now = new Date();
+        const last = now.toLocaleTimeString('pl-PL', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        els.lastUpdatedLabel.textContent = `Ostatnia aktualizacja: ${last}`;
+        updateStatus(true, `Załadowano ${state.vehicles.length} pojazdów.`, `Aktywne źródło: ${result.source}. Auto-odświeżanie co ${state.refreshSeconds} s.`);
+        if (state.selectedId && els.followSelected.checked) selectVehicle(state.selectedId, true);
+      } catch (error) {
+        updateStatus(false, 'Nie udało się pobrać danych.', error.message || 'Sprawdź połączenie, CORS proxy albo przełącz źródło na TTSS legacy.');
+      }
+    }
+
+    function scheduleRefresh(){
+      clearInterval(state.timer);
+      state.timer = setInterval(refreshData, state.refreshSeconds * 1000);
+    }
+
+    function bindEvents(){
+      ['input','change'].forEach(evt => {
+        els.lineFilter.addEventListener(evt, applyFilters);
+        els.searchFilter.addEventListener(evt, applyFilters);
+      });
+      els.showBus.addEventListener('change', applyFilters);
+      els.showTram.addEventListener('change', applyFilters);
+      els.feedSelect.addEventListener('change', refreshData);
+      els.refreshBtn.addEventListener('click', refreshData);
+      els.fitBtn.addEventListener('click', () => state.map.fitBounds(KRAKOW_BOUNDS, { padding: [20,20] }));
+      els.refreshRange.addEventListener('input', () => {
+        state.refreshSeconds = Number(els.refreshRange.value);
+        els.refreshValue.textContent = String(state.refreshSeconds);
+        scheduleRefresh();
+        updateStatus(true, 'Zmieniono interwał odświeżania.', `Nowe auto-odświeżanie: co ${state.refreshSeconds} s.`);
+      });
+    }
+
+    function formatTime(timestamp){
+      const date = new Date(timestamp);
+      if (Number.isNaN(date.getTime())) return '—';
+      return date.toLocaleTimeString('pl-PL', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    }
+
+    function escapeHtml(value){
+      return String(value ?? '').replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m]));
+    }
+    function escapeAttr(value){ return escapeHtml(value); }
+
+    setupTheme();
+    initMap();
+    bindEvents();
+    refreshData();
+    scheduleRefresh();
+  </script>
+</body>
+</html>
