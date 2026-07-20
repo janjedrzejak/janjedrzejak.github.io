@@ -1,1 +1,0 @@
-# janjedrzejak.github.io

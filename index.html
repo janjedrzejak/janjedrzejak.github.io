@@ -1,1340 +1,392 @@
-<!DOCTYPE html>
-<html lang="pl">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jan Jędrzejak – Digital Project Manager & Automation Expert</title>
-    <meta name="description" content="Digital Project Manager z Krakowa. Specjalizuję się w automatyzacji procesów (n8n, AI, Salesforce Experience Cloud, Power Apps, Power Automate) i integracjach w biznesie, produkcji i logistyce.">
-    <meta name="keywords" content="digital project manager, automation, AI, n8n, workflow automation, integration, digital transformation, Salesforce Experience Cloud, Power Apps, Power Automate, product owner, RAG, low-code">
-    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
-    <link rel="shortcut icon" href="/img/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Jedrzejak" />
-    <link rel="manifest" href="/img/site.webmanifest" />
-    <meta name="author" content="Jan Jędrzejak">
-    <meta name="language" content="en, pl">
-    <meta http-equiv="Content-Language" content="en-US, pl-PL">
-    <link rel="canonical" href="https://janjedrzejak.github.io">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://janjedrzejak.github.io">
-    <meta property="og:title" content="Jan Jędrzejak – Digital Project Manager & Automation Expert">
-    <meta property="og:description" content="Digital Project Manager specjalizujący się w automatyzacji procesów, integracjach, Salesforce Experience Cloud, Microsoft Power Apps i Power Automate.">
-    <meta property="og:image" content="https://janjedrzejak.github.io/img/og-image.jpg">
-    <meta property="og:image:width" content="500">
-    <meta property="og:image:height" content="500">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:site_name" content="Jan Jędrzejak - Digital Expert">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="pl_PL">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styl.css">
-    <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css">
-    <link rel="stylesheet" id="silktide-consent-manager-css" href="cookie/silktide-consent-manager.css">
-    <script src="cookie/silktide-consent-manager.js"></script>
-    <script src="cookie/silktide-consent-ga-consent.js"></script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jan Jędrzejak","jobTitle":"Digital Project Manager & Automation Expert","address":{"@type":"PostalAddress","addressLocality":"Kraków","addressCountry":"PL"},"url":"https://janjedrzejak.github.io","sameAs":["https://www.linkedin.com/in/janjedrzejak"]}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jan Jędrzejak — Digital Project Manager, Product Owner & Automation Expert</title>
+  <meta name="description" content="Portfolio of Jan Jędrzejak — Digital Project Manager and Product Owner specializing in workflow automation, AI, machine learning, system integrations and digital transformation.">
+  <meta name="keywords" content="digital project manager, product owner, automation, AI, machine learning, n8n, RAG, system integrations, digital transformation, Power Platform">
+  <meta name="author" content="Jan Jędrzejak">
+  <meta name="theme-color" content="#08110f">
+  <link rel="canonical" href="https://janjedrzejak.github.io/">
+  <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/img/site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://janjedrzejak.github.io/">
+  <meta property="og:title" content="Jan Jędrzejak — Digital Project Manager & Automation Expert">
+  <meta property="og:description" content="I turn complex business processes into connected, automated and measurable digital products.">
+  <meta property="og:image" content="https://janjedrzejak.github.io/img/og-image.jpg">
+  <meta property="og:site_name" content="Jan Jędrzejak — Digital Portfolio">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+
+  <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css">
+  <link rel="stylesheet" id="silktide-consent-manager-css" href="cookie/silktide-consent-manager.css">
+  <script src="cookie/silktide-consent-manager.js"></script>
+  <script src="cookie/silktide-consent-ga-consent.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jan Jędrzejak",
+    "jobTitle": "Digital Project Manager & Product Owner",
+    "url": "https://janjedrzejak.github.io/",
+    "image": "https://janjedrzejak.github.io/img/me.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kraków",
+      "addressCountry": "PL"
+    },
+    "knowsAbout": [
+      "Digital transformation",
+      "Workflow automation",
+      "Artificial intelligence",
+      "Machine learning",
+      "System integration",
+      "Product ownership",
+      "n8n",
+      "Microsoft Power Platform",
+      "Retrieval-Augmented Generation"
+    ],
+    "sameAs": ["https://www.linkedin.com/in/janjedrzejak"]
+  }
+  </script>
 </head>
 <body>
-    <div id="certificateModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeCertificateModal()">&times;</span>
-            <img id="certificateImage" src="" alt="Certificate">
-        </div>
-    </div>
-    <nav>
-        <div class="logo">
-            <div class="logo-icon"></div>
-            <a onclick="scrollToSection('hero')"><span>Jan Jędrzejak /</span><strong>DIGITAL EXPERT</strong></a>
-        </div>
-        <ul class="nav-links">
-            <li><a onclick="scrollToSection('about-me')">ABOUT ME</a></li>
-            <li><a onclick="scrollToSection('resume')">RESUME</a></li>
-            <li><a href="projects.html">PROJECTS</a></li>
-            <li><a onclick="scrollToSection('contact')">CONTACT</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-        </ul>
-        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-progress" aria-hidden="true"><span></span></div>
+  <div class="ambient ambient-one" data-parallax="0.08" aria-hidden="true"></div>
+  <div class="ambient ambient-two" data-parallax="-0.05" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <a class="brand magnetic" href="#top" aria-label="Jan Jędrzejak — homepage">
+      <span class="brand-mark" aria-hidden="true">JJ</span>
+      <span class="brand-copy">
+        <strong>Jan Jędrzejak</strong>
+        <small>Digital systems / human outcomes</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="blog.html">Notes</a>
     </nav>
-    <ul class="mobile-menu" id="mobileMenu">
-        <li><a onclick="scrollToSection('about-me')">ABOUT ME</a></li>
-        <li><a onclick="scrollToSection('resume')">RESUME</a></li>
-        <li><a href="projects.html">PROJECTS</a></li>
-        <li><a onclick="scrollToSection('contact')">CONTACT</a></li>
-        <li><a href="blog.html">BLOG</a></li>
-    </ul>
 
-    <!-- Bottom Toolbar - Mobile Only -->
-    <div class="bottom-toolbar">
-        <div class="toolbar-container">
-            <a href="tel:48690661143" class="toolbar-icon" title="Call">
-                <i class="fas fa-phone"></i>
-            </a>
-            <a href="mailto:jan.jedrzejak@gmail.com" class="toolbar-icon" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank" class="toolbar-icon" title="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <canvas id="webglCanvas"></canvas>
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Hello</h1>
-                <div class="hero-buttons">
-                    <a href="index.html#resume" class="btn btn-secondary" onclick="scrollToSection('resume')">RESUME</a>
-                    <a href="projects.html" class="btn btn-secondary" onclick="scrollToSection('projects')">PROJECTS</a>
-                </div>
-                <p class="hero-description">I craft innovative digital solutions that boost profits and cut costs by
-                    transforming businesses through technology. My expertise accelerates digital transformation,
-                    delivering measurable value and competitive advantage.</p>
-            </div>
-            <div class="hero-image"></div>
-
-            <!-- Down Arrow -->
-            <a class="down-arrow" onclick="scrollToSection('about-me')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" fill="currentColor"
-                    class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z" />
-                </svg>
-            </a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-me" id="about-me">
-
-    </section>
-    <section class="about" id="about">
-        <div class="about-container">
-            <div class="about-content">
-                <h2>About me</h2>
-                <p class="about-subtitle">My name is Jan Jędrzejak</p>
-                <p class="about-text">I am a results-oriented Digital Project Lead with strong expertise in workflow automation, AI implementation, and digital transformation in industrial technology. I excel in building production systems using n8n, Google Workspace, AppSheet, and Microsoft Power Platform, while delivering custom solutions through JavaScript, Python, SQL and non-SQL databases. I specialize in implementing RAG systems for document processing, designing workflow automation integrations, and creating fleet verification systems using QR codes, NFC, and APIs. I am highly adaptable to diverse technologies from vector databases to containerization with Docker, delivering effective solutions aligned with evolving business goals.</p>
-                <a href="https://www.linkedin.com/in/janjedrzejak" class="social-link" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <div><a href="contact" class="download-button" onclick="scrollToSection('contact')">Reach out</a></div>
-            </div>
-
-            <div class="about-image">
-                <div class="profile-image"><img src="img/me.jpg" alt="Jan Jędrzejak"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Get to Know Me Section -->
-    <section class="get-to-know" id="projects">
-        <div class="get-to-know-container">
-            <h2>Get to know me</h2>
-            <div class="divider"></div>
-            <p class="get-to-know-text">Explore my career highlights, key projects, and connect with me directly.</p>
-            <div class="tiles-container">
-                <div class="tile">
-                    <h3>Professional Summary</h3>
-                    <p>Product Owner with expertise in digital transformation, eCommerce platforms, and B2B solutions
-                        across European markets.</p>
-                </div>
-                <div class="tile">
-                    <h3>Projects</h3>
-                    <p>Led optimization of eCommerce platforms, CRM expansion, and digital content workflow management
-                        across multiple countries.</p>
-                </div>
-                <div class="tile">
-                    <h3>Contact</h3>
-                    <p>Let's collaborate on digital solutions and innovation. Reach out to discuss how I can support
-                        your business transformation goals.</p>
-                </div>
-                <div class="tile">
-                    <h3>Blog</h3>
-                    <p>My posts where I share my subjective observations on various topics. This is a space for personal
-                        insights and reflections, inviting you to explore thoughts from my perspective.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div class="resume-header-wrapper">
-                <h2>Resume</h2>
-                <a href="resJanJedrzejakCV.pdf" class="download-button">
-                    <i class="fas fa-download"></i> Download CV PDF
-                </a>
-            </div>
-
-            <!-- Work Experience -->
-            <div style="margin-top: 80px;">
-
-                <!-- Job 0: Holcim Polska -->
-                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2026 - Present</p>
-                        <h4 style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            Digital Project Manager</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">Holcim Polska</p>
-                    </div>
-                    <div style="flex: 1; min-width: 280px;">
-                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Leading digital initiatives and end-to-end project delivery to support business transformation across the organization.</li>
-                            <li style="margin-bottom: 16px;">Managing implementations and development of systems used in core business processes, aligning stakeholders, scope, priorities, and execution.</li>
-                            <li style="margin-bottom: 16px;">Designing and improving data flow architecture across complex business processes, with focus on reliability, transparency, and operational efficiency.</li>
-                            <li style="margin-bottom: 16px;">Coordinating integrations between systems and expanding data orchestration solutions to streamline information exchange and process automation.</li>
-                            <li style="margin-bottom: 16px;">Supporting solution design with awareness of GDPR and AI Act requirements in data-driven and AI-enabled initiatives.</li>
-                            <li style="margin-bottom: 16px;">Applying process improvement thinking, including Six Sigma foundations, to optimize workflows and strengthen delivery quality.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 1: Linde Gas Poland (kept) - Metrics Generalized -->
-                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2022 - Present</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            Digital Marketing Specialist & Product Owner</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">Linde Gas Poland</p>
-                    </div>
-                    <div style="flex: 1; min-width: 280px;">
-                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Managed digital content workflows on multiple platforms for
-                                enterprise-scale user base, enhancing engagement, platform adoption, and conversion
-                                rates through data-driven optimizations and CRO techniques.</li>
-                            <li style="margin-bottom: 16px;">Oversaw B2B e-commerce and corporate site optimization,
-                                achieving significant revenue growth and substantial increases in organic traffic.
-                                Delivered CMS platform adoption across multiple countries, enabling streamlined content
-                                management, localization, and international scaling.</li>
-                            <li style="margin-bottom: 16px;">Led Microsoft Power Platform adoption including Power
-                                Automate and Power Apps, automating diverse business processes and workflows, improving
-                                operational efficiency, reducing costs, and enhancing team productivity.</li>
-                            <li style="margin-bottom: 16px;">Applied business analysis best practices to gather
-                                requirements, map processes, and perform gap analysis. Expertise in backlog refinement,
-                                prioritization techniques such as MoSCoW, Weighted Shortest Job First (WSJF), and impact
-                                mapping to drive project success.</li>
-                            <li style="margin-bottom: 16px;">Delivered comprehensive training programs and meticulous
-                                documentation, significantly improving digital tool adoption and user competence across
-                                enterprise user groups.</li>
-                            <li style="margin-bottom: 16px;">Managed high volume of content update requests while
-                                maintaining strict SLA compliance and consistent brand standards, ensuring quality and
-                                timeliness.</li>
-                            <li style="margin-bottom: 16px;">Coordinated global stakeholder communications for complex
-                                multi-country projects, facilitating alignment, accelerating deployment timelines, and
-                                ensuring cross-regional collaboration.</li>
-                            <li style="margin-bottom: 16px;">Certified Six Sigma Yellow Belt, leveraging process
-                                improvement methodologies to optimize workflows and enhance project delivery.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 2: Linde Gas Poland (kept) - Metrics Generalized -->
-                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2018 - 2022</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            IS Field Support Specialist</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">Linde Gas Poland</p>
-                    </div>
-                    <div style="flex: 1; min-width: 280px;">
-                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Delivered and supported IT infrastructure projects for
-                                large-scale computer environments, ensuring smooth deployment and adoption</li>
-                            <li style="margin-bottom: 16px;">Managed incidents and service requests via ITILv4 ticketing
-                                systems, maintaining high SLA compliance</li>
-                            <li style="margin-bottom: 16px;">Provided support for Microsoft 365, SAP R/3, and other
-                                enterprise applications</li>
-                            <li style="margin-bottom: 16px;">Assisted in network troubleshooting and infrastructure
-                                maintenance with regional teams</li>
-                            <li style="margin-bottom: 16px;">Led migration of large-scale network infrastructure
-                                including switches, routers, and telephone systems</li>
-                            <li style="margin-bottom: 16px;">Coordinated office network upgrades and IT system
-                                migrations, ensuring timely delivery and minimal disruption</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 3: TVN Grupa Discovery (kept) -->
-                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2018 - 2018</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            Assistant Video Editor</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">TVN Grupa Discovery</p>
-                    </div>
-                    <div style="flex: 1; min-width: 280px;">
-                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Supported lead editor with daily editing tasks for
-                                production workflows, ensuring smooth post-production processes</li>
-                            <li style="margin-bottom: 16px;">Organized and managed media assets, including logging,
-                                selecting, and preparing material for editorial review</li>
-                            <li style="margin-bottom: 16px;">Created preliminary edits and assembly cuts based on
-                                director guidance, maintaining narrative coherence and pacing</li>
-                            <li style="margin-bottom: 16px;">Participated in production and editorial meetings to
-                                discuss progress, feedback, and creative decisions</li>
-                            <li style="margin-bottom: 16px;">Tracked post-production progress and managed schedules to
-                                ensure deadlines aligned with client requirements</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 4: TVP S.A. (kept) -->
-                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2016 - 2018</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            Camera Operator</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">TVP S.A. (Telewizja Polska)</p>
-                    </div>
-                    <div style="flex: 1; min-width: 280px;">
-                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Operated professional camera equipment to capture
-                                high-quality video footage for regional broadcast operations</li>
-                            <li style="margin-bottom: 16px;">Filmed news reports and events in diverse geographic
-                                locations, ensuring visual clarity and storytelling impact</li>
-                            <li style="margin-bottom: 16px;">Collaborated with reporters and production teams to deliver
-                                footage meeting editorial requirements and broadcast deadlines</li>
-                            <li style="margin-bottom: 16px;">Managed technical aspects of camera operation including
-                                framing, lighting, and audio capture in diverse environments</li>
-                            <li style="margin-bottom: 16px;">Followed broadcast standards and safety protocols while
-                                working in varied field conditions</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 5: Kino Polska TV (kept) - Program names kept since they're public -->
-                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2016 - 2018</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            Video Editor</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">Kino Polska TV S.A.</p>
-                    </div>
-                    <div style="flex: 1; min-width: 280px;">
-                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Filmed and edited video content for broadcast television
-                                programs including "Bliżej! Magazyn reporterów" on ZOOM TV, maintaining high-quality
-                                video and audio standards</li>
-                            <li style="margin-bottom: 16px;">Edited recorded materials to create coherent and engaging
-                                reports aligned with production requirements and program style</li>
-                            <li style="margin-bottom: 16px;">Collaborated with directors, producers, and post-production
-                                teams to ensure smooth production processes and creative vision realization</li>
-                            <li style="margin-bottom: 16px;">Selected appropriate shots, performed editing and color
-                                correction to enhance narrative impact and viewer engagement</li>
-                            <li style="margin-bottom: 16px;">Managed filming and editing equipment, ensuring efficient
-                                operation and adherence to quality standards and delivery deadlines</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 6: TV Proart (kept) - Events kept since they're public information -->
-                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2014 - 2018</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            Video Editor & Camera Operator</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">wlkp24.info TV Proart</p>
-                    </div>
-                    <div style="flex: 1; min-width: 280px;">
-                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Edited news materials, reports, and advertising spots for
-                                Telewizja Proart, maintaining high broadcast quality and audience engagement</li>
-                            <li style="margin-bottom: 16px;">Created graphics for television programs and internet
-                                platforms to enhance storytelling and visual impact</li>
-                            <li style="margin-bottom: 16px;">Collaborated effectively with journalists, producers, and
-                                marketing teams to ensure alignment with brand identity and production standards</li>
-                            <li style="margin-bottom: 16px;">Managed production schedules and technical aspects of
-                                editing and graphic design to deliver timely and polished content</li>
-                            <li style="margin-bottom: 16px;">Operated camera equipment during live broadcasts of major
-                                cultural, sports, and entertainment events including international sumo championships,
-                                European SEC Speedway Championships, and International Jazz Pianists Festival</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 7: Freelance (kept) -->
-                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2012 - 2014</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            Photojournalist</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">Freelance</p>
-                    </div>
-                    <div style="flex: 1; min-width: 280px;">
-                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Captured photographs documenting local events, community
-                                stories, and newsworthy situations</li>
-                            <li style="margin-bottom: 16px;">Attended press conferences, cultural events, and public
-                                gatherings to visually report community life</li>
-                            <li style="margin-bottom: 16px;">Edited and enhanced photographs using professional photo
-                                editing software while maintaining authenticity</li>
-                            <li style="margin-bottom: 16px;">Collaborated with reporters and editors to ensure visual
-                                materials complemented written stories</li>
-                            <li style="margin-bottom: 16px;">Prepared captions, descriptions, and metadata for
-                                publication; maintained photographic equipment and managed digital archives</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Job 8: ostrowwlkp.info (kept) -->
-                <div style="display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start; flex-wrap: wrap;">
-                    <div
-                        style="flex: 0 0 180px; background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p
-                            style="font-size: 12px; font-weight: 700; color: #00a8e8; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase;">
-                            2011 - 2012</p>
-                        <h4
-                            style="font-size: 14px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 15px;">
-                            Photojournalist</h4>
-                        <p style="font-size: 12px; color: #666; font-weight: 500;">Portal informacyjny ostrowwlkp.info
-                        </p>
-                    </div>
-                    <div style="flex: 1; min-width: 280px;">
-                        <ul style="list-style: none; color: #555; font-size: 14px; line-height: 1.9;">
-                            <li style="margin-bottom: 16px;">Captured photographs documenting local events, community
-                                stories, and newsworthy situations</li>
-                            <li style="margin-bottom: 16px;">Attended press conferences, cultural events, and public
-                                gatherings to visually report community life</li>
-                            <li style="margin-bottom: 16px;">Edited and enhanced photographs using professional photo
-                                editing software while maintaining authenticity</li>
-                            <li style="margin-bottom: 16px;">Collaborated with reporters and editors to ensure visual
-                                materials complemented written stories</li>
-                            <li style="margin-bottom: 16px;">Worked under tight deadlines adapting to unpredictable
-                                field conditions while upholding journalistic and ethical standards</li>
-                            <li style="margin-bottom: 16px;">Built and maintained relationships with local institutions,
-                                event organizers, and media outlets</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Education -->
-            <div style="margin-top: 80px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Education</h3>
-                <div style="display: grid; gap: 40px;">
-                    <div style="display: grid; grid-template-columns: 180px 1fr; gap: 30px; align-items: start;">
-                        <div style="font-size: 13px; color: #666;"><strong>2016 - 2018</strong></div>
-                        <div>
-                            <p style="font-size: 16px; font-weight: 600; color: #000; margin: 0 0 6px 0;">Master's
-                                Degree</p>
-                            <p style="font-size: 14px; color: #666; margin: 0 0 12px 0;"><strong>Społeczna Akademia
-                                    Nauk</strong> • Łódź, Poland</p>
-                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 8px 0;">
-                                <strong>Grade:</strong> Very good</p>
-                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 8px 0;">Computer
-                                graphics and internet technologies specialization.</p>
-                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0;"><strong>Diploma with
-                                    honours.</strong></p>
-                        </div>
-                    </div>
-                    <div style="display: grid; grid-template-columns: 180px 1fr; gap: 30px; align-items: start;">
-                        <div style="font-size: 13px; color: #666;"><strong>2012 - 2016</strong></div>
-                        <div>
-                            <p style="font-size: 16px; font-weight: 600; color: #000; margin: 0 0 6px 0;">Bachelor's
-                                Degree</p>
-                            <p style="font-size: 14px; color: #666; margin: 0 0 12px 0;"><strong>Społeczna Akademia
-                                    Nauk</strong> • Ostrów Wielkopolski, Poland</p>
-                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 8px 0;">
-                                <strong>Grade:</strong> Very good</p>
-                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0 0 8px 0;">Visualization
-                                and information management systems specialization.</p>
-                            <p style="font-size: 14px; color: #555; line-height: 1.6; margin: 0;"><strong>Award for
-                                    Master's Dissertation and diploma with honours.</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Awards -->
-            <div style="margin-top: 80px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Awards & Recognition
-                </h3>
-                <div style="display: grid; gap: 25px;">
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i
-                                class="fas fa-trophy" style="color: #ffc107; margin-right: 8px;"></i>Linde Leadership
-                            Award</p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde Gas Poland</p>
-                        <p style="font-size: 11px; color: #999;">Awarded 2024</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;"><i
-                                class="fas fa-trophy" style="color: #ffc107; margin-right: 8px;"></i>Linde Leadership
-                            Award</p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde Gas Poland</p>
-                        <p style="font-size: 11px; color: #999;">Awarded 2022</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Licenses & Certifications -->
-            <div style="margin-top: 80px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Licenses &
-                    Certifications</h3>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-
-                    <!-- Six Sigma Yellow Belt Professional - WITH LINK -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.scrumstudy.com/certification/verify?type=Six%20Sigma%20Yellow%20Belt%20Professional&number=1126494"
-                                target="_blank" style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Six Sigma
-                                Yellow Belt Professional
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Scrum Study</p>
-                        <p style="font-size: 11px; color: #999;">Issued Nov 2025</p>
-                    </div>
-
-                    
-                    <!-- Qdrant Essentials -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://train.qdrant.dev/certificate/QDRANT-9C2185F6" target="_blank" style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Qdrant Essentials
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Qdrant</p>
-                        <p style="font-size: 11px; color: #999; margin-bottom: 0;">Issued 2026 • Credential ID: QDRANT-9C2185F6</p>
-                    </div>
-
-                    <!-- n8n Level 2 -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>n8n Level 2
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">n8n</p>
-                        <p style="font-size: 11px; color: #999;">Issued 2026</p>
-                    </div>
-                    <!-- SCRUMstudy Scrum Master Certified - WITH LINK & IMAGE MODAL -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.scrumstudy.com" target="_blank"
-                                onclick="openCertificateModal(event, 'res/SCRUMstudy-Scrum-Mater-Certified.jpeg')"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>SCRUMstudy
-                                Scrum Master Certified (SMC)
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Scrum Study</p>
-                        <p style="font-size: 11px; color: #999;">Issued Jul 2024</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://cdn.umiejetnoscijutra.pl/certificates/bab93ef5-a75e-4a39-acaa-4075bfd35b0c" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Umiejętności Jutra AI 3.0
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Google & SGH</p>
-                        <p style="font-size: 11px; color: #999;">Issued Jul 2026</p>
-                    </div>
-                    <!-- IBM Agile Explorer - WITH LINK -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.credly.com/badges/08e4299b-c020-4862-b0f5-b11679bdc01e" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>IBM Agile Explorer
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">IBM</p>
-                        <p style="font-size: 11px; color: #999;">Issued Dec 2025</p>
-                    </div>
-
-                    <!-- n8n - WITH LINK -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://internal.users.n8n.cloud/webhook/course-level-1/verify?id=8c7cb02a8baa5a64029f2abad5fd819d&submit=Submit" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>n8n level 1 certification
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">n8n</p>
-                        <p style="font-size: 11px; color: #999;">Issued Dec 2025</p>
-                    </div>
-
-                    <!-- Digital Creator - WITH LINK -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.credly.com/badges/314b81f0-ec9c-4f71-9271-9ff2aa55a979" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Creator
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Dec 2023</p>
-                    </div>
-
-                    <!-- Digital Explorer Product Development - WITH LINK -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.credly.com/badges/b2681b12-445e-4457-8199-258843a8933b" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Explorer Product Development
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued May 2023</p>
-                    </div>
-
-                    <!-- 	Kanban Essentials with AI Certified - WITH LINK & IMAGE MODAL -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.kanbanstudy.com/" target="_blank"
-                                onclick="openCertificateModal(event, 'res/KanbanEssentialswithAICertified.jpg')"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Kanban Essentials with AI Certified
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Kanban Study</p>
-                        <p style="font-size: 11px; color: #999;">Issued Nov 2025</p>
-                    </div>
-
-                    <!-- Digital Enthusiast Scrum - WITH LINK -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.credly.com/badges/0e98cd30-a798-4418-ba2b-914936270d91" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Enthusiast Scrum
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Sep 2022</p>
-                    </div>
-
-                    <!-- Digital Enthusiast New Product Development - WITH LINK -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.credly.com/badges/36867792-9a9c-45a9-ab3b-329ae50c0be5" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Enthusiast New Product Development
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Feb 2023</p>
-                    </div>
-
-                    <!-- Digital Enthusiast - Lead in Digital I - WITH LINK -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.credly.com/badges/a65a55d5-edd6-44af-822c-5ac8ad205fa1" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Enthusiast - Lead in Digital I
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Aug 2023</p>
-                    </div>
-
-                    <!-- Power Automate Workshop (COGNITY) - MODAL ONLY -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="#"
-                                onclick="openCertificateModal(event, 'res/Introducing-to-Power-Automate-Workshop.jpeg')"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate"
-                                    style="color: #00a8e8; margin-right: 8px;"></i>Introducting to Power Automate
-                                Workshop
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">COGNITY</p>
-                        <p style="font-size: 11px; color: #999;">Issued Nov 2023</p>
-                    </div>
-
-                    <!-- Digital Enthusiast Digital Foundations - WITH LINK -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.credly.com/badges/e1d93d5b-e605-4f35-910d-eb753d565b70" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Enthusiast Digital Foundations
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Nov 2022</p>
-                    </div>
-
-                    <!-- Digital Enthusiast ChatGPT - WITH LINK -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.credly.com/badges/19be2e49-27fe-4c7d-a55e-0f8f9717ef55" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Digital
-                                Enthusiast ChatGPT
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Linde</p>
-                        <p style="font-size: 11px; color: #999;">Issued Jul 2023</p>
-                    </div>
-
-                    <!-- SQL Basic Certificate - WITH LINK -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="https://www.hackerrank.com/certificates/3a4e123ca642" target="_blank"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>SQL Basic
-                                Certificate
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">HackerRank</p>
-                        <p style="font-size: 11px; color: #999;">Issued Oct 2025</p>
-                    </div>
-
-                    <!-- Microsoft 365 Fundamentals - MODAL ONLY -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="#" onclick="openCertificateModal(event, 'res/Microsoft365Fundamentals.jpeg')"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft
-                                365 Fundamentals
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
-                        <p style="font-size: 11px; color: #999;">Issued Mar 2022</p>
-                    </div>
-
-                    <!-- Microsoft Security, Compliance, and Identity Fundamentals - MODAL ONLY -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="#"
-                                onclick="openCertificateModal(event, 'res/MicrosoftSecurityComplianceIdentityFundamentals.jpeg')"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft
-                                Security, Compliance, and Identity Fundamentals
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
-                        <p style="font-size: 11px; color: #999;">Issued Apr 2022</p>
-                    </div>
-
-                    <!-- Azure Fundamentals - MODAL ONLY -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="#" onclick="openCertificateModal(event, 'res/MicrosoftAzureFundamentals.jpeg')"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Microsoft
-                                Azure Fundamentals
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft</p>
-                        <p style="font-size: 11px; color: #999;">Issued Feb 2022</p>
-                    </div>
-
-                    <!-- Teams App and Solutions Workshop - MODAL ONLY -->
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 6px;">
-                            <a href="#" onclick="openCertificateModal(event, 'res/TeamsAppandSolutionWorkshop.jpeg')"
-                                style="text-decoration: none; color: #000; cursor: pointer;">
-                                <i class="fas fa-certificate" style="color: #00a8e8; margin-right: 8px;"></i>Teams App
-                                and Solutions Workshop
-                            </a>
-                        </p>
-                        <p style="font-size: 12px; color: #666; margin-bottom: 8px;">Microsoft & SUPREMO</p>
-                        <p style="font-size: 11px; color: #999;">Issued Oct 2021</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Skills -->
-    <div style="margin-top: 80px;">
-    <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Skills</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
-        <!-- Product Ownership & Strategy -->
-        <div style="background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-            <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">Product Ownership & Strategy</p>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Product Owner & Portfolio Management</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Backlog Refinement & User Story Development</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Stakeholder Management & Requirements Analysis</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Strategic Prioritization (MoSCoW, WSJF, Impact Mapping)</li>
-            </ul>
-        </div>
-
-        <!-- Business Process Digitalization -->
-        <div style="background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-            <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">Business Process Digitalization</p>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>End-to-End Process Automation & Optimization</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Sales & Lead Generation Workflow Automation</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>CRM Systems & Business Automation (Power Automate, Power Apps)</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Cost Optimization & ROI-Driven Automation</li>
-            </ul>
-        </div>
-
-        <!-- E-Commerce & Digital Platforms -->
-        <div style="background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-            <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">E-Commerce & Digital Platforms</p>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>B2B E-Commerce Platform Management & Scaling</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Conversion Rate Optimization & Revenue Growth</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Multi-Country Platform Localization & Adoption</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>SEO, Content Strategy & Digital Marketing</li>
-            </ul>
-        </div>
-
-        <!-- Project Management & Agile -->
-        <div style="background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-            <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">Project Management & Agile</p>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Agile & Scrum Methodology</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>JIRA, Azure DevOps & Project Tracking</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Global Multi-Country Project Coordination</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Six Sigma Yellow Belt - Process Improvement</li>
-            </ul>
-        </div>
-
-        <!-- Enterprise Systems & Platforms -->
-        <div style="background-color: #fff; padding: 25px; border: 1px solid #e5e5e5; border-radius: 4px;">
-            <p style="font-size: 13px; font-weight: 600; color: #000; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px;">Enterprise Systems & Platforms</p>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Power Platform (Power Automate, Power Apps)</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Salesforce Digital Experience</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>HCL WebSphere, Sitecore CMS, Azure Cloud</li>
-                <li style="font-size: 14px; color: #555; margin-bottom: 10px;"><i class="fas fa-check" style="color: #00a8e8; margin-right: 8px;"></i>Business Intelligence & Analytics</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
-
-            <!-- Languages -->
-            <div style="margin-top: 80px;">
-                <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 40px; color: #000;">Languages</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 12px;">Polish</p>
-                        <div
-                            style="width: 100%; height: 6px; background-color: #e5e5e5; border-radius: 3px; overflow: hidden;">
-                            <div style="width: 100%; height: 100%; background-color: #00a8e8;"></div>
-                        </div>
-                        <p style="font-size: 12px; color: #666; margin-top: 8px;">Native</p>
-                    </div>
-                    <div style="background-color: #fff; padding: 20px; border: 1px solid #e5e5e5; border-radius: 4px;">
-                        <p style="font-size: 14px; font-weight: 600; color: #000; margin-bottom: 12px;">English</p>
-                        <div
-                            style="width: 100%; height: 6px; background-color: #e5e5e5; border-radius: 3px; overflow: hidden;">
-                            <div style="width: 80%; height: 100%; background-color: #00a8e8;"></div>
-                        </div>
-                        <p style="font-size: 12px; color: #666; margin-top: 8px;">Proficient</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section" id="contact">
-        <div class="cta-container">
-            <h2>Ready to Transform Your Business?</h2>
-            <p>Let's collaborate on your digital transformation, automation, and eCommerce projects. I specialize in
-                building innovative solutions that drive growth and efficiency.</p>
-            <div class="cta-features">
-                <div class="cta-feature">
-                    <i class="fas fa-rocket"></i>
-                    <h4>Digital Transformation</h4>
-                    <p>End-to-end digital solutions to modernize your operations</p>
-                </div>
-                <div class="cta-feature">
-                    <i class="fas fa-cogs"></i>
-                    <h4>Process Automation</h4>
-                    <p>Streamline workflows and reduce costs through intelligent automation</p>
-                </div>
-                <div class="cta-feature">
-                    <i class="fas fa-shopping-cart"></i>
-                    <h4>eCommerce Excellence</h4>
-                    <p>Optimize platforms for maximum conversions and user experience</p>
-                </div>
-            </div>
-            <div class="cta-buttons">
-                <a href="mailto:jan.jedrzejak@gmail.com" class="btn-cta-primary">Get in Touch</a>
-                <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank" class="btn-cta-secondary">Connect on
-                    LinkedIn</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>Call</h4>
-                <a href="tel:48690661143">+48 690 661 143</a>
-            </div>
-            <div class="footer-section">
-                <h4>Write</h4>
-                <a href="mailto:jan.jedrzejak@gmail.com">jan.jedrzejak@gmail.com</a>
-            </div>
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <a href="https://www.linkedin.com/in/janjedrzejak" target="_blank">LinkedIn</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2026 by JJ</span>
-            <div class="footer-links">
-                <a href="privacy.html" title="Privacy Policy">Privacy Policy</a>
-                <a href="cookies-policy.html" title="Cookie Policy">Cookie Policy</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Certificate Modal Functions
-        function openCertificateModal(event, imagePath) {
-            event.preventDefault();
-            const modal = document.getElementById('certificateModal');
-            const img = document.getElementById('certificateImage');
-            img.src = imagePath;
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Zablokuj scroll
-        }
-
-        function closeCertificateModal() {
-            const modal = document.getElementById('certificateModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Przywróć scroll
-        }
-
-        // Close modal when clicking outside the image
-        window.onclick = function (event) {
-            const modal = document.getElementById('certificateModal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') {
-                closeCertificateModal();
-            }
-        });
-
-        // Smooth scroll behavior for links
-        document.querySelectorAll('a[href*="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href !== '') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                }
-            });
-        });
-
-        // Smooth scrolling navigation
-        function scrollToSection(sectionId) {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                closeMenu();
-            }
-        }
-
-        // Hamburger menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        });
-
-        // Close menu when pressing Escape
-        document.addEventListener('keydown', event => {
-            if (event.key === 'Escape') closeMenu();
-        });
-
-        // Close menu function
-        function closeMenu() {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.body.classList.remove('menu-open');
-        }
-
-        // Smooth scrolling for mobile menu items
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-
-        // WebGL Particle Sphere Animation
-        const canvas = document.getElementById('webglCanvas');
-        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-
-        if (!gl) {
-            console.error('WebGL not supported');
-        } else {
-            function resizeCanvas() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-                gl.viewport(0, 0, canvas.width, canvas.height);
-            }
-
-            resizeCanvas();
-            window.addEventListener('resize', resizeCanvas);
-
-            const vertexShaderSource = `
-                attribute vec3 position;
-                attribute vec3 color;
-                uniform mat4 projectionMatrix;
-                uniform mat4 modelViewMatrix;
-                varying vec3 vColor;
-                void main() {
-                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-                    gl_PointSize = 2.0;
-                    vColor = color;
-                }
-            `;
-
-            const fragmentShaderSource = `
-                precision mediump float;
-                varying vec3 vColor;
-                void main() {
-                    gl_FragColor = vec4(vColor, 0.8);
-                }
-            `;
-
-            function compileShader(source, type) {
-                const shader = gl.createShader(type);
-                gl.shaderSource(shader, source);
-                gl.compileShader(shader);
-
-                if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-                    console.error('Shader compile error: ', gl.getShaderInfoLog(shader));
-                    gl.deleteShader(shader);
-                    return null;
-                }
-                return shader;
-            }
-
-            const vertexShader = compileShader(vertexShaderSource, gl.VERTEX_SHADER);
-            const fragmentShader = compileShader(fragmentShaderSource, gl.FRAGMENT_SHADER);
-            const program = gl.createProgram();
-            gl.attachShader(program, vertexShader);
-            gl.attachShader(program, fragmentShader);
-            gl.linkProgram(program);
-
-            if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-                console.error('Program link error: ', gl.getProgramInfoLog(program));
-            }
-
-            gl.useProgram(program);
-
-            const particleCount = 3000;
-            const positions = [];
-            const colors = [];
-
-            for (let i = 0; i < particleCount; i++) {
-                const phi = Math.acos(-1 + (2 * i) / particleCount);
-                const theta = Math.sqrt(particleCount * Math.PI) * phi;
-
-                const x = Math.cos(theta) * Math.sin(phi);
-                const y = Math.sin(theta) * Math.sin(phi);
-                const z = Math.cos(phi);
-
-                positions.push(x * 2, y * 2, z * 2);
-
-                const t = i / particleCount;
-                colors.push(0 + t * 0.35, 0.8 - t * 0.5, 1.0 - t * 0.3);
-            }
-
-            function perspectiveMatrix(fov, aspect, near, far) {
-                const f = 1.0 / Math.tan(fov / 2);
-                const nf = 1 / (near - far);
-                return new Float32Array([
-                    f / aspect, 0, 0, 0,
-                    0, f, 0, 0,
-                    0, 0, (far + near) * nf, -1,
-                    0, 0, 2 * far * near * nf, 0
-                ]);
-            }
-
-            function rotationMatrix(x, y, z) {
-                const cos = Math.cos;
-                const sin = Math.sin;
-
-                const rx = new Float32Array([
-                    1, 0, 0, 0,
-                    0, cos(x), -sin(x), 0,
-                    0, sin(x), cos(x), 0,
-                    0, 0, 0, 1
-                ]);
-
-                const ry = new Float32Array([
-                    cos(y), 0, sin(y), 0,
-                    0, 1, 0, 0,
-                    -sin(y), 0, cos(y), 0,
-                    0, 0, 0, 1
-                ]);
-
-                const rz = new Float32Array([
-                    cos(z), -sin(z), 0, 0,
-                    sin(z), cos(z), 0, 0,
-                    0, 0, 1, 0,
-                    0, 0, 0, 1
-                ]);
-
-                const rxy = multiplyMatrices(ry, rx);
-                return multiplyMatrices(rz, rxy);
-            }
-
-            let time = 0;
-            let scrollZoom = -5;
-
-            gl.enable(gl.BLEND);
-            gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
-            gl.clearColor(0, 0, 0, 1);
-
-            window.addEventListener('scroll', () => {
-                const scrolled = window.scrollY;
-                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-                const scrollPercent = scrolled / maxScroll;
-                scrollZoom = -5 + scrollPercent * 10.5;
-            }, { passive: true });
-
-            const positionBuffer = gl.createBuffer();
-            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
-
-            const colorBuffer = gl.createBuffer();
-            gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
-
-            const positionLocation = gl.getAttribLocation(program, 'position');
-            const colorLocation = gl.getAttribLocation(program, 'color');
-            const projectionMatrixLocation = gl.getUniformLocation(program, 'projectionMatrix');
-            const modelViewMatrixLocation = gl.getUniformLocation(program, 'modelViewMatrix');
-
-            gl.enableVertexAttribArray(positionLocation);
-            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-            gl.vertexAttribPointer(positionLocation, 3, gl.FLOAT, false, 0, 0);
-
-            gl.enableVertexAttribArray(colorLocation);
-            gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-            gl.vertexAttribPointer(colorLocation, 3, gl.FLOAT, false, 0, 0);
-
-            function multiplyMatrices(a, b) {
-                const result = new Float32Array(16);
-                for (let i = 0; i < 4; i++) {
-                    for (let j = 0; j < 4; j++) {
-                        let sum = 0;
-                        for (let k = 0; k < 4; k++) {
-                            sum += a[i * 4 + k] * b[k * 4 + j];
-                        }
-                        result[i * 4 + j] = sum;
-                    }
-                }
-                return result;
-            }
-
-            function animate() {
-                gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-                time += 0.003;
-
-                const projMatrix = perspectiveMatrix(Math.PI / 3, canvas.width / canvas.height, 0.1, 100);
-                const modelViewMatrix = rotationMatrix(0, 0.3, time * 0.8);
-                const identity = new Float32Array([
-                    1, 0, 0, 0,
-                    0, 1, 0, 0,
-                    0, 0, 1, 0,
-                    0, 0, scrollZoom, 1
-                ]);
-                const modelView = multiplyMatrices(identity, modelViewMatrix);
-
-                gl.uniformMatrix4fv(projectionMatrixLocation, false, projMatrix);
-                gl.uniformMatrix4fv(modelViewMatrixLocation, false, modelView);
-                gl.drawArrays(gl.POINTS, 0, particleCount);
-
-                requestAnimationFrame(animate);
-            }
-
-            animate();
-        }
-
-        // Smooth scrolling hero content on scroll
-        window.addEventListener('scroll', function () {
-            const heroContent = document.querySelector('.hero-content');
-            const heroHeight = document.querySelector('.hero').offsetHeight;
-            const scrollPosition = window.scrollY;
-
-            if (scrollPosition > heroHeight * 0.3) {
-                heroContent.classList.add('scrolled');
-            } else {
-                heroContent.classList.remove('scrolled');
-            }
-        });
-
-
-    </script>
-
-   <!-- QR Widget Start -->
-<div id="qr-widget-root">
-  <button id="qr-widget-btn" aria-label="Pokaż kod QR" type="button">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="6" height="6" stroke="white" stroke-width="2"/><rect x="15" y="3" width="6" height="6" stroke="white" stroke-width="2"/><rect x="3" y="15" width="6" height="6" stroke="white" stroke-width="2"/><rect x="15" y="15" width="6" height="6" stroke="white" stroke-width="2"/><rect x="9" y="9" width="6" height="6" stroke="white" stroke-width="2"/></svg>
-  </button>
-  <div id="qr-widget-modal" style="display:none">
-    
-    <button id="qr-widget-close" aria-label="Zamknij" type="button">&#10005;</button>
-    <div id="qr-modal-content">
-      <img src="res/qr.png" alt="Kod QR do strony" />
-      <p style="color:#fff; font-size:0.8em;">Scan and open as mobile</p>
-    </div>
+    <a class="header-cta magnetic" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="sr-only">Open menu</span>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="#expertise">Expertise</a>
+      <a href="#work">Selected work</a>
+      <a href="#experience">Experience</a>
+      <a href="projects.html">All projects</a>
+      <a href="blog.html">Notes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p>Kraków, Poland · CET/CEST</p>
   </div>
-</div>
-<style>
-#qr-widget-root {
-  position: fixed;
-  bottom: 10px;
-  left: 24px;
-  z-index: 9999;
-}
 
- /* Responsive */
-        @media (max-width: 768px) {
-             #qr-widget-root, #silktide-cookie-icon, #qr-widget-btn {
-                bottom: 10px;
-                width: 45px;
-                height: 45px;
-            }
-            
-        }
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <canvas id="network-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
 
-#qr-widget-btn {
-  background: var(--color-primary, #000);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 56px;
-  height: 56px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-#qr-widget-btn:hover {
-  background: var(--color-primary-hover,#000);
-}
-#qr-widget-modal {
-  position: fixed;
-  bottom: 90px;
-  left: 24px;
-  background: var(--color-surface,#222);
-  border-radius: 18px;
-  box-shadow: 0 6px 32px rgba(0,0,0,0.25);
-  padding: 20px 24px;
-  max-width: 270px;
-  display: flex;
-  align-items: center;
-  /* domyślnie display: none zamiast hidden */
-}
-#qr-widget-modal[aria-hidden="true"] {
-  display: none !important;
-}
-#qr-widget-modal img {
-  width: 200px;
-  height: 200px;
-  display: block;
-}
-#qr-modal-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#qr-widget-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  color: white;
-  border: none;
-  font-size: 1.6em;
-  cursor: pointer;
-  z-index:99;
-}
-</style>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const btn = document.getElementById("qr-widget-btn");
-  const modal = document.getElementById("qr-widget-modal");
-  const closeBtn = document.getElementById("qr-widget-close");
+      <div class="hero-meta mono" data-reveal>
+        <span><i class="status-dot"></i> Open to meaningful digital challenges</span>
+        <span>50.0647° N / 19.9450° E</span>
+      </div>
 
-  // Widget jest domyślnie zamknięty
-  modal.setAttribute('aria-hidden', 'true');
-  modal.style.display = 'none';
+      <div class="hero-copy">
+        <p class="eyebrow mono" data-reveal>Digital Project Manager · Product Owner · Automation Expert</p>
+        <h1 id="hero-title" class="display-title" data-split>
+          I connect <span>people</span>,<br>
+          processes and <em>technology.</em>
+        </h1>
+        <div class="hero-bottom">
+          <p class="hero-lede" data-reveal>
+            I turn complex business processes into connected, automated and measurable digital products — from discovery and product strategy to integrations, AI-enabled workflows and adoption at scale.
+          </p>
+          <div class="hero-actions" data-reveal>
+            <a class="button button-primary magnetic" href="projects.html">Explore projects <span aria-hidden="true">↗</span></a>
+            <a class="button button-ghost magnetic" href="resJanJedrzejakCV.pdf">Download résumé <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </div>
 
-  btn.addEventListener("click", function(e) {
-    modal.setAttribute('aria-hidden', 'false');
-    modal.style.display = 'flex';
-  });
-  closeBtn.addEventListener("click", function(e) {
-    modal.setAttribute('aria-hidden', 'true');
-    modal.style.display = 'none';
-  });
-  window.addEventListener("keydown", function(e) {
-    if (modal.getAttribute('aria-hidden') !== 'true' && (e.key === "Escape" || e.key === "Esc")) {
-      modal.setAttribute('aria-hidden', 'true');
-      modal.style.display = 'none';
-    }
-  });
-  modal.addEventListener("click", function(e) {
-    if (e.target === modal) {
-      modal.setAttribute('aria-hidden', 'true');
-      modal.style.display = 'none';
-    }
-  });
-});
-</script>
-<!-- QR Widget End -->
+      <div class="hero-orbit" aria-hidden="true" data-parallax="0.12">
+        <div class="orbit-ring ring-one"></div>
+        <div class="orbit-ring ring-two"></div>
+        <div class="orbit-label mono">ORCHESTRATE / AUTOMATE / SCALE</div>
+      </div>
 
+      <a class="scroll-cue mono" href="#signal" aria-label="Scroll to introduction">
+        <span>Scroll to decode</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <section class="signal-strip" id="signal" aria-label="Core disciplines">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>PRODUCT OWNERSHIP</span><i>◆</i><span>WORKFLOW AUTOMATION</span><i>◆</i><span>AI & MACHINE LEARNING</span><i>◆</i><span>SYSTEM INTEGRATION</span><i>◆</i><span>DIGITAL TRANSFORMATION</span><i>◆</i>
+          <span>PRODUCT OWNERSHIP</span><i>◆</i><span>WORKFLOW AUTOMATION</span><i>◆</i><span>AI & MACHINE LEARNING</span><i>◆</i><span>SYSTEM INTEGRATION</span><i>◆</i><span>DIGITAL TRANSFORMATION</span><i>◆</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro section-shell" aria-labelledby="intro-title">
+      <div class="section-index mono" data-reveal>01 / PROFILE</div>
+      <div class="intro-layout">
+        <h2 id="intro-title" class="section-title" data-reveal>
+          Strategy without delivery is a deck.<br>
+          Delivery without strategy is noise.
+        </h2>
+        <div class="intro-copy" data-reveal>
+          <p>I operate between business, product and technology. My role is to make the problem clear, align the right people and build a delivery system that converts intent into measurable change.</p>
+          <p>My background spans enterprise IT, B2B eCommerce, product ownership, process automation and AI solutions. It helps me see both the architecture and the adoption challenge — because a solution creates value only when people actually use it.</p>
+          <a class="text-link" href="https://www.linkedin.com/in/janjedrzejak" target="_blank" rel="noreferrer">View my LinkedIn profile <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="operating-system" data-reveal>
+        <div class="os-status mono">
+          <span>OPERATING MODEL</span>
+          <span>STATUS: ACTIVE</span>
+        </div>
+        <div class="os-grid">
+          <article>
+            <span class="mono">INPUT / 01</span>
+            <h3>Business problem</h3>
+            <p>Objectives, constraints, users, risk and value hypotheses.</p>
+          </article>
+          <article>
+            <span class="mono">SYSTEM / 02</span>
+            <h3>Product & process</h3>
+            <p>Discovery, prioritization, workflow design and delivery orchestration.</p>
+          </article>
+          <article>
+            <span class="mono">OUTPUT / 03</span>
+            <h3>Adopted solution</h3>
+            <p>Integrated technology, measurable outcomes and a path to scale.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="expertise section-shell" id="expertise" aria-labelledby="expertise-title">
+      <div class="section-index mono" data-reveal>02 / EXPERTISE</div>
+      <div class="section-heading-row">
+        <h2 id="expertise-title" class="section-title" data-reveal>From fragmented workflows<br>to a connected operating system.</h2>
+        <p data-reveal>I combine product thinking with practical technical fluency. The goal is not more tools — it is better flow, better decisions and less friction.</p>
+      </div>
+
+      <div class="capability-list">
+        <article class="capability" data-tilt data-reveal>
+          <div class="capability-number mono">001</div>
+          <div>
+            <h3>Digital products & transformation</h3>
+            <p>Product vision, roadmaps, discovery, stakeholder alignment, backlog management and end-to-end delivery for enterprise digital initiatives.</p>
+          </div>
+          <div class="capability-tags mono"><span>Product ownership</span><span>Agile delivery</span><span>Change adoption</span></div>
+          <div class="capability-glyph" aria-hidden="true"><span></span><span></span><span></span></div>
+        </article>
+
+        <article class="capability" data-tilt data-reveal>
+          <div class="capability-number mono">002</div>
+          <div>
+            <h3>Automation & orchestration</h3>
+            <p>Designing reliable workflows that remove repetitive work, connect teams and create transparent data flows across business systems.</p>
+          </div>
+          <div class="capability-tags mono"><span>n8n</span><span>Power Automate</span><span>AppSheet</span></div>
+          <div class="capability-glyph glyph-flow" aria-hidden="true"><span></span><span></span><span></span></div>
+        </article>
+
+        <article class="capability" data-tilt data-reveal>
+          <div class="capability-number mono">003</div>
+          <div>
+            <h3>AI & machine learning</h3>
+            <p>Turning data and documents into decision support through RAG systems, vector search, prediction workflows and responsible AI implementation.</p>
+          </div>
+          <div class="capability-tags mono"><span>RAG</span><span>Vector databases</span><span>ML workflows</span></div>
+          <div class="capability-glyph glyph-ai" aria-hidden="true"><span></span><span></span><span></span></div>
+        </article>
+
+        <article class="capability" data-tilt data-reveal>
+          <div class="capability-number mono">004</div>
+          <div>
+            <h3>Systems & integrations</h3>
+            <p>API-led integrations, data orchestration and solution architecture that make information move reliably between platforms and people.</p>
+          </div>
+          <div class="capability-tags mono"><span>REST APIs</span><span>JavaScript / Python</span><span>SQL / NoSQL</span></div>
+          <div class="capability-glyph glyph-api" aria-hidden="true"><span></span><span></span><span></span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="work section-shell" id="work" aria-labelledby="work-title">
+      <div class="section-index mono" data-reveal>03 / SELECTED WORK</div>
+      <div class="section-heading-row">
+        <h2 id="work-title" class="section-title" data-reveal>Systems designed around<br>real operational pressure.</h2>
+        <a class="text-link" href="projects.html" data-reveal>View all projects <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="project-stage">
+        <article class="project-card project-featured" data-project data-reveal>
+          <div class="project-visual visual-rag" aria-hidden="true">
+            <div class="visual-grid"></div>
+            <div class="rag-core">RAG</div>
+            <span class="node node-a">DOCS</span><span class="node node-b">SEARCH</span><span class="node node-c">LLM</span><span class="node node-d">ANSWER</span>
+          </div>
+          <div class="project-copy">
+            <div class="project-topline mono"><span>AI / KNOWLEDGE SYSTEM</span><span>01</span></div>
+            <h3>Company RAG Agent</h3>
+            <p>A retrieval-augmented knowledge assistant designed to improve access to internal information, strengthen answer relevance and reduce the friction of navigating distributed documentation.</p>
+            <ul class="project-tags mono"><li>Information retrieval</li><li>Vector search</li><li>Automation</li></ul>
+          </div>
+        </article>
+
+        <article class="project-card" data-project data-reveal>
+          <div class="project-visual visual-ml" aria-hidden="true">
+            <div class="chart-line"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="forecast-label mono">PREDICT / LEARN / ADAPT</div>
+          </div>
+          <div class="project-copy">
+            <div class="project-topline mono"><span>ML / DECISION SUPPORT</span><span>02</span></div>
+            <h3>Machine Learning Prediction Platform</h3>
+            <p>A prediction environment supporting data-driven decisions across R&D, marketing and product development — from model inputs to usable business insight.</p>
+            <ul class="project-tags mono"><li>Machine learning</li><li>Data products</li><li>UX</li></ul>
+          </div>
+        </article>
+
+        <article class="project-card" data-project data-reveal>
+          <div class="project-visual visual-flow" aria-hidden="true">
+            <div class="flow-column"><span>CRM</span><span>FORM</span><span>ERP</span></div>
+            <div class="flow-lines"><i></i><i></i><i></i></div>
+            <div class="flow-column output"><span>REPORT</span><span>ALERT</span><span>ACTION</span></div>
+          </div>
+          <div class="project-copy">
+            <div class="project-topline mono"><span>AUTOMATION / INTEGRATION</span><span>03</span></div>
+            <h3>Enterprise Process Automation</h3>
+            <p>Connected workflows that move data between systems, automate repetitive operations and make exceptions visible before they become business problems.</p>
+            <ul class="project-tags mono"><li>n8n</li><li>Power Platform</li><li>APIs</li></ul>
+          </div>
+        </article>
+
+        <article class="project-card" data-project data-reveal>
+          <div class="project-visual visual-commerce" aria-hidden="true">
+            <div class="commerce-window"><span></span><span></span><span></span><div><i></i><i></i><i></i></div></div>
+            <div class="commerce-cursor">↗</div>
+          </div>
+          <div class="project-copy">
+            <div class="project-topline mono"><span>PRODUCT / B2B ECOMMERCE</span><span>04</span></div>
+            <h3>B2B Platform Optimization</h3>
+            <p>Customer journey and platform improvements focused on adoption, conversion, content operations and scalable experiences across multiple markets.</p>
+            <ul class="project-tags mono"><li>B2B eCommerce</li><li>CRO</li><li>Multi-country</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="method section-shell" aria-labelledby="method-title">
+      <div class="section-index mono" data-reveal>04 / METHOD</div>
+      <div class="method-sticky">
+        <div class="method-intro">
+          <h2 id="method-title" class="section-title" data-reveal>Clarity first.<br>Then momentum.</h2>
+          <p data-reveal>My delivery approach keeps strategy, architecture and adoption in the same conversation.</p>
+        </div>
+        <div class="method-steps">
+          <article data-step data-reveal><span class="mono">01</span><h3>Frame</h3><p>Clarify the outcome, user need, constraints, assumptions and decision rights.</p></article>
+          <article data-step data-reveal><span class="mono">02</span><h3>Map</h3><p>Visualize the current process, systems, handoffs, data and sources of friction.</p></article>
+          <article data-step data-reveal><span class="mono">03</span><h3>Prioritize</h3><p>Choose the smallest valuable path using impact, effort, risk and learning potential.</p></article>
+          <article data-step data-reveal><span class="mono">04</span><h3>Build & connect</h3><p>Deliver iteratively, integrate responsibly and keep operational reliability visible.</p></article>
+          <article data-step data-reveal><span class="mono">05</span><h3>Adopt & improve</h3><p>Measure use, remove adoption barriers and evolve the product from real feedback.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section-shell" id="experience" aria-labelledby="experience-title">
+      <div class="section-index mono" data-reveal>05 / EXPERIENCE</div>
+      <div class="section-heading-row">
+        <h2 id="experience-title" class="section-title" data-reveal>Built from the field up.</h2>
+        <a class="button button-ghost magnetic" href="resJanJedrzejakCV.pdf" data-reveal>Full résumé <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item is-current" data-reveal>
+          <div class="timeline-date mono">2026 — NOW</div>
+          <div class="timeline-role"><h3>Digital Project Manager</h3><p>Holcim Polska</p></div>
+          <div class="timeline-summary"><p>Leading digital initiatives and system implementations across core business processes, with focus on data flow architecture, integrations, automation and responsible AI-enabled solutions.</p></div>
+        </article>
+        <article class="timeline-item" data-reveal>
+          <div class="timeline-date mono">2022 — 2026</div>
+          <div class="timeline-role"><h3>Digital Marketing Specialist & Product Owner</h3><p>Linde Gas Poland</p></div>
+          <div class="timeline-summary"><p>Owned B2B digital platforms, multi-country content operations and automation adoption, combining product management, CRO, stakeholder alignment and enterprise-scale delivery.</p></div>
+        </article>
+        <article class="timeline-item" data-reveal>
+          <div class="timeline-date mono">2018 — 2022</div>
+          <div class="timeline-role"><h3>IS Field Support Specialist</h3><p>Linde Gas Poland</p></div>
+          <div class="timeline-summary"><p>Delivered infrastructure projects, enterprise application support and technology migrations — building the operational foundation behind later product and transformation work.</p></div>
+        </article>
+        <article class="timeline-item" data-reveal>
+          <div class="timeline-date mono">2011 — 2018</div>
+          <div class="timeline-role"><h3>Visual storyteller & media professional</h3><p>TV, broadcast and digital media</p></div>
+          <div class="timeline-summary"><p>Worked across video, camera and photojournalism. This experience still shapes how I communicate complexity, design narratives and create stakeholder alignment.</p></div>
+        </article>
+      </div>
+
+      <div class="credentials" data-reveal>
+        <div class="credentials-head"><span class="mono">SELECTED CREDENTIALS</span><span class="mono">CONTINUOUS LEARNING / ACTIVE</span></div>
+        <div class="credential-grid">
+          <span>Six Sigma Yellow Belt</span><span>Scrum Master Certified</span><span>n8n Level 1 & 2</span><span>Qdrant Essentials</span><span>IBM Agile Explorer</span><span>Google & SGH — AI</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-shell" id="contact" aria-labelledby="contact-title">
+      <div class="contact-grid">
+        <div>
+          <div class="section-index mono" data-reveal>06 / CONTACT</div>
+          <p class="eyebrow mono" data-reveal>Have a process that should work better?</p>
+          <h2 id="contact-title" class="contact-title" data-split>Let’s turn friction<br>into flow.</h2>
+        </div>
+        <div class="contact-panel" data-reveal>
+          <p>I am interested in digital initiatives where product thinking, automation and systems integration can create a meaningful operational advantage.</p>
+          <a class="contact-link magnetic" href="mailto:jan.jedrzejak@gmail.com"><span>Email</span><strong>jan.jedrzejak@gmail.com</strong><i aria-hidden="true">↗</i></a>
+          <a class="contact-link magnetic" href="https://www.linkedin.com/in/janjedrzejak" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>/in/janjedrzejak</strong><i aria-hidden="true">↗</i></a>
+          <a class="contact-link magnetic" href="tel:+48690661143"><span>Phone</span><strong>+48 690 661 143</strong><i aria-hidden="true">↗</i></a>
+        </div>
+      </div>
+      <div class="contact-orbit" aria-hidden="true" data-parallax="0.08"><span>LET’S BUILD SOMETHING USEFUL • </span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>Jan Jędrzejak</strong><span class="mono">Digital Project Manager / Product Owner</span></div>
+    <div class="footer-links"><a href="projects.html">Projects</a><a href="blog.html">Notes</a><a href="privacy.html">Privacy</a><a href="cookies-policy.html">Cookies</a></div>
+    <div class="mono">© <span id="current-year">2026</span> · KRAKÓW / POLAND</div>
+  </footer>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <script src="home.js" defer></script>
 </body>
 </html>
