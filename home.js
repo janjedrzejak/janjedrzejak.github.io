@@ -128,7 +128,9 @@
   "footer.projects": "Projekty",
   "footer.privacy": "Prywatność",
   "footer.cookies": "Pliki cookie",
-  "footer.location": "KRAKÓW / POLSKA"
+  "footer.location": "KRAKÓW / POLSKA",
+  "language.label": "Język",
+  "language.selector": "Wybór języka"
 };
 
   const plainTranslationElements = [...document.querySelectorAll("[data-i18n]")];
@@ -330,17 +332,16 @@
     });
   }
 
-  let initialLanguage = "en";
-  try {
-    const savedLanguage = localStorage.getItem("portfolio-language");
-    initialLanguage = savedLanguage === "pl" || savedLanguage === "en"
-      ? savedLanguage
-      : (navigator.language || "").toLowerCase().startsWith("pl") ? "pl" : "en";
-  } catch (error) {
-    initialLanguage = (navigator.language || "").toLowerCase().startsWith("pl") ? "pl" : "en";
-  }
 
-  applyLanguage(initialLanguage);
+let initialLanguage = "en";
+try {
+  const savedLanguage = localStorage.getItem("portfolio-language");
+  initialLanguage = savedLanguage === "pl" || savedLanguage === "en" ? savedLanguage : "en";
+} catch (error) {
+  initialLanguage = "en";
+}
+
+applyLanguage(initialLanguage);
   document.querySelectorAll("[data-split]").forEach(splitText);
   splitTextReady = true;
 

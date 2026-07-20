@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Integration is an ownership problem before it is an API problem — Jan Jędrzejak</title>
+<meta name="description" content="Most integration friction begins in definitions, ownership and exception handling — long before the first endpoint is connected."/>
+<meta name="author" content="Jan Jędrzejak"/>
+<meta name="theme-color" content="#07100e"/>
+<link rel="canonical" href="https://janjedrzejak.github.io/blog-posts/system-integration.html"/>
+<link href="../img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<link href="../img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../img/site.webmanifest" rel="manifest"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Integration is an ownership problem before it is an API problem — Jan Jędrzejak"/>
+<meta property="og:description" content="Most integration friction begins in definitions, ownership and exception handling — long before the first endpoint is connected."/>
+<meta property="og:url" content="https://janjedrzejak.github.io/blog-posts/system-integration.html"/>
+<meta property="og:image" content="https://janjedrzejak.github.io/img/og-image.jpg"/>
+<meta property="og:locale" content="en_US"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../home.css" rel="stylesheet"/>
+<link href="../pages.css" rel="stylesheet"/>
+<script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css" rel="stylesheet"/>
+<link href="../cookie/silktide-consent-manager.css" id="silktide-consent-manager-css" rel="stylesheet"/>
+<script src="../cookie/silktide-consent-manager.js"></script>
+<script src="../cookie/silktide-consent-ga-consent.js"></script>
+
+</head>
+<body data-title-en="Integration is an ownership problem before it is an API problem — Jan Jędrzejak" data-title-pl="Integracja jest problemem odpowiedzialności, zanim stanie się problemem API — Jan Jędrzejak" data-description-en="Most integration friction begins in definitions, ownership and exception handling — long before the first endpoint is connected." data-description-pl="Większość tarcia integracyjnego zaczyna się od definicji, odpowiedzialności i obsługi wyjątków — zanim zostanie połączony pierwszy endpoint.">
+
+<a class="skip-link" href="#main" data-en="Skip to content" data-pl="Przejdź do treści">Skip to content</a>
+<div aria-hidden="true" class="page-progress"><span></span></div>
+<div aria-hidden="true" class="ambient ambient-one"></div><div aria-hidden="true" class="ambient ambient-two"></div><div aria-hidden="true" class="noise"></div>
+<header class="site-header" data-header>
+  <a class="brand" href="../index.html#top" aria-label="Jan Jędrzejak — homepage">
+    <span class="brand-mark" aria-hidden="true">JJ</span><span class="brand-copy"><strong>Jan Jędrzejak</strong><small data-en="Digital systems / human outcomes" data-pl="Systemy cyfrowe / ludzkie rezultaty">Digital systems / human outcomes</small></span>
+  </a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a href="../index.html#expertise" data-en="Expertise" data-pl="Kompetencje">Expertise</a>
+    <a href="../projects.html" data-en="Projects" data-pl="Projekty">Projects</a>
+    <a class="active" href="../blog.html" data-en="Notes" data-pl="Notatki">Notes</a>
+    <a href="../index.html#experience" data-en="Experience" data-pl="Doświadczenie">Experience</a>
+  </nav>
+  <div class="header-actions"><a class="header-cta" href="../index.html#contact" data-en-html="Start a conversation <span aria-hidden='true'>↗</span>" data-pl-html="Porozmawiajmy <span aria-hidden='true'>↗</span>">Start a conversation <span aria-hidden="true">↗</span></a></div>
+  <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only" data-menu-label>Open menu</span><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true"><nav aria-label="Mobile navigation">
+  <a href="../index.html#expertise" data-en="Expertise" data-pl="Kompetencje">Expertise</a><a href="../projects.html" data-en="All projects" data-pl="Wszystkie projekty">All projects</a><a href="../blog.html" data-en="Notes" data-pl="Notatki">Notes</a><a href="../index.html#experience" data-en="Experience" data-pl="Doświadczenie">Experience</a><a href="../index.html#contact" data-en="Contact" data-pl="Kontakt">Contact</a>
+</nav><div class="mobile-menu-footer"><p data-en="Kraków, Poland · CET/CEST" data-pl="Kraków, Polska · CET/CEST">Kraków, Poland · CET/CEST</p></div></div>
+<main class="subpage-main" id="main"><article class="article-shell"><a class="back-home" href="../blog.html" data-en="← Back to notes" data-pl="← Wróć do notatek">← Back to notes</a><header class="article-header" data-reveal><div class="subpage-kicker mono" data-en="INTEGRATION / ARCHITECTURE" data-pl="INTEGRACJE / ARCHITEKTURA">INTEGRATION / ARCHITECTURE</div><h1 data-en="Integration is an ownership problem before it is an API problem" data-pl="Integracja jest problemem odpowiedzialności, zanim stanie się problemem API">Integration is an ownership problem before it is an API problem</h1><div class="article-meta mono"><span>12 JUN 2026</span><span>9 MIN</span><span>JAN JĘDRZEJAK</span></div></header><div class="article-content"><p class="lead" data-en="Teams often describe integration as a technical connection between system A and system B. In practice, most failures start earlier: nobody owns the shared definition, the exception or the moment when data becomes authoritative." data-pl="Zespoły często opisują integrację jako techniczne połączenie systemu A z systemem B. W praktyce większość porażek zaczyna się wcześniej: nikt nie odpowiada za wspólną definicję, wyjątek ani moment, w którym dane stają się wiążące.">Teams often describe integration as a technical connection.</p><h2 data-en="An endpoint cannot resolve semantic conflict" data-pl="Endpoint nie rozwiąże konfliktu semantycznego">An endpoint cannot resolve semantic conflict</h2><p data-en="Two systems can exchange a field named status while assigning it different business meaning. Integration design begins with shared language, not payload mapping." data-pl="Dwa systemy mogą wymieniać pole o nazwie status, przypisując mu inne znaczenie biznesowe. Projektowanie integracji zaczyna się od wspólnego języka, nie od mapowania payloadu.">Two systems can exchange a field named status.</p><h2 data-en="Every handoff needs an owner" data-pl="Każde przekazanie potrzebuje właściciela">Every handoff needs an owner</h2><p data-en="Who corrects an invalid record? Which system wins when values conflict? Who decides whether a delayed message can be replayed? These are product and operational decisions encoded in architecture." data-pl="Kto poprawia nieprawidłowy rekord? Który system wygrywa przy konflikcie wartości? Kto decyduje, czy opóźnioną wiadomość można odtworzyć? To decyzje produktowe i operacyjne zapisane w architekturze.">Who corrects an invalid record?</p><div class="article-callout"><strong data-en="Architecture question" data-pl="Pytanie architektoniczne">Architecture question</strong><p data-en="Do not ask only ‘Can these systems connect?’ Ask ‘Can the organization operate the connection when reality becomes messy?’" data-pl="Nie pytaj wyłącznie: „Czy te systemy można połączyć?”. Zapytaj: „Czy organizacja potrafi obsługiwać to połączenie, gdy rzeczywistość stanie się nieuporządkowana?”.">Do not ask only whether systems can connect.</p></div><h2 data-en="Observability is part of the product" data-pl="Obserwowalność jest częścią produktu">Observability is part of the product</h2><p data-en="A durable integration exposes volume, latency, failures and ownership. The people operating the process should understand what happened without reading developer logs." data-pl="Trwała integracja ujawnia wolumen, opóźnienia, błędy i odpowiedzialność. Osoby obsługujące proces powinny rozumieć, co się wydarzyło, bez czytania logów deweloperskich.">A durable integration exposes volume, latency and failures.</p><h2 data-en="The API is the final expression" data-pl="API jest końcowym wyrazem">The API is the final expression</h2><p data-en="Once definitions, ownership and exception rules are clear, implementation becomes easier. The technical interface then expresses an agreed operating model instead of trying to invent one." data-pl="Gdy definicje, odpowiedzialność i reguły wyjątków są jasne, implementacja staje się łatwiejsza. Interfejs techniczny wyraża wtedy uzgodniony model działania, zamiast próbować go wymyślać.">Once definitions and ownership are clear, implementation becomes easier.</p></div><nav class="article-nav"><a class="back-home" href="../blog.html" data-en="← All notes" data-pl="← Wszystkie notatki">← All notes</a><a class="back-home" href="../index.html#contact" data-en="Discuss this idea ↗" data-pl="Porozmawiajmy o tym ↗">Discuss this idea ↗</a></nav></article></main>
+<footer class="site-footer"><div><strong>Jan Jędrzejak</strong><span class="mono">Digital Project Manager / Product Owner</span></div><div class="footer-links"><a href="../projects.html" data-en="Projects" data-pl="Projekty">Projects</a><a href="../blog.html" data-en="Notes" data-pl="Notatki">Notes</a><a href="../privacy.html" data-en="Privacy" data-pl="Prywatność">Privacy</a><a href="../cookies-policy.html" data-en="Cookies" data-pl="Pliki cookie">Cookies</a></div><div class="mono">© <span data-current-year>2026</span> · <span data-en="KRAKÓW / POLAND" data-pl="KRAKÓW / POLSKA">KRAKÓW / POLAND</span></div></footer>
+<aside class="language-dock" aria-label="Language selector" data-en-aria="Language selector" data-pl-aria="Wybór języka"><span class="language-dock-label mono" data-en="Language" data-pl="Język">Language</span><button aria-label="Switch language to Polish" class="language-toggle language-toggle-dock" data-language-toggle type="button"><span class="language-current">EN</span><span aria-hidden="true" class="language-divider">/</span><span class="language-next">PL</span></button></aside>
+<div aria-hidden="true" class="cursor-dot"></div><div aria-hidden="true" class="cursor-ring"></div><script defer src="../pages.js"></script>
+
+</body>
+</html>
