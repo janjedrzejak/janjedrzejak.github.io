@@ -1,0 +1,120 @@
+name: Apply mobile animation fix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/mobile-animation-fix.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Add touch and scroll animation support
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          js_path = Path('home.js')
+          js = js_path.read_text(encoding='utf-8')
+          marker = '  // Pointer-reactive background and custom cursor.'
+          block = '''  // Mobile interaction layer: translate desktop hover effects into scroll and touch feedback.
+  const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+  if (coarsePointer && !prefersReducedMotion.matches) {
+    body.classList.add("has-mobile-motion");
+
+    const mobileMotionItems = [
+      ...document.querySelectorAll(".profile-portrait, .os-grid article, .capability, [data-project]")
+    ];
+
+    if ("IntersectionObserver" in window) {
+      const mobileMotionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-mobile-active", entry.isIntersecting);
+        });
+      }, { threshold: 0.35, rootMargin: "-8% 0px -12%" });
+
+      mobileMotionItems.forEach((item) => mobileMotionObserver.observe(item));
+    }
+
+    document.querySelectorAll("a, button, .capability, [data-project], .os-grid article").forEach((element) => {
+      element.addEventListener("touchstart", () => element.classList.add("is-touching"), { passive: true });
+      const clearTouch = () => element.classList.remove("is-touching");
+      element.addEventListener("touchend", clearTouch, { passive: true });
+      element.addEventListener("touchcancel", clearTouch, { passive: true });
+    });
+  }
+
+'''
+          if block.strip() not in js:
+              if marker not in js:
+                  raise SystemExit('home.js marker not found')
+              js = js.replace(marker, block + marker)
+              js_path.write_text(js, encoding='utf-8')
+
+          css_path = Path('home.css')
+          css = css_path.read_text(encoding='utf-8')
+          css_marker = '@media (prefers-reduced-motion: reduce) {'
+          css_block = '''/* Touch devices receive scroll-activated equivalents of desktop hover animations. */
+@media (hover: none) and (pointer: coarse) {
+  .has-mobile-motion .profile-portrait img,
+  .has-mobile-motion .os-grid article::after,
+  .has-mobile-motion .capability,
+  .has-mobile-motion .capability-glyph,
+  .has-mobile-motion [data-project] .project-visual {
+    transition-duration: .65s;
+    transition-timing-function: var(--ease);
+  }
+
+  .has-mobile-motion .profile-portrait.is-mobile-active img { transform: scale(1.035); filter: saturate(1) contrast(1.02); }
+  .has-mobile-motion .os-grid article.is-mobile-active::after { transform: scale(1.7); border-color: rgba(184,255,92,.35); }
+  .has-mobile-motion .capability.is-mobile-active { background: linear-gradient(90deg, rgba(184,255,92,.045), transparent); transform: translateY(-3px); }
+  .has-mobile-motion .capability.is-mobile-active .capability-glyph { transform: rotate(120deg); border-color: var(--acid); }
+  .has-mobile-motion [data-project].is-mobile-active .project-visual { transform: translateY(-4px) scale(.995); }
+  .has-mobile-motion .is-touching { transform: scale(.985) !important; }
+
+  [data-reveal] { transform: translateY(24px); transition-duration: .7s; }
+  [data-split] .word > span { transition-duration: .78s; }
+  [data-split].is-visible .word > span { transition-delay: calc(var(--word-index) * 38ms); }
+
+  .hero-orbit { animation: mobile-orbit-drift 7s ease-in-out infinite alternate; }
+  .ambient-one { animation: mobile-ambient-one 10s ease-in-out infinite alternate; }
+  .ambient-two { animation: mobile-ambient-two 12s ease-in-out infinite alternate; }
+
+  @keyframes mobile-orbit-drift {
+    to { transform: translate3d(-10px, -14px, 0) scale(1.025); }
+  }
+  @keyframes mobile-ambient-one {
+    to { transform: translate3d(-22px, 18px, 0) scale(1.06); }
+  }
+  @keyframes mobile-ambient-two {
+    to { transform: translate3d(20px, -16px, 0) scale(1.04); }
+  }
+}
+
+'''
+          if css_block.strip() not in css:
+              if css_marker not in css:
+                  raise SystemExit('home.css marker not found')
+              css = css.replace(css_marker, css_block + css_marker)
+              css_path.write_text(css, encoding='utf-8')
+          PY
+
+      - name: Remove temporary workflow
+        run: rm .github/workflows/mobile-animation-fix.yml
+
+      - name: Commit mobile animation support
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add home.js home.css .github/workflows/mobile-animation-fix.yml
+          git commit -m "Fix animations on mobile devices"
+          git push origin main
