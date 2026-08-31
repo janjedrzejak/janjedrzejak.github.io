@@ -1,0 +1,350 @@
+{
+  "version": "2026-08-31",
+  "source": "https://janjedrzejak.github.io/",
+  "profile": {
+    "name": "Jan Jędrzejak",
+    "role": "Digital Project Manager / Product Owner",
+    "location": "Kraków, Poland",
+    "summary": "Operates between business, product and technology, turning complex business processes into connected, automated and measurable digital products.",
+    "focus": [
+      "Digital transformation",
+      "Workflow automation",
+      "Artificial intelligence",
+      "Machine learning",
+      "System integration",
+      "Product ownership",
+      "Agile project management",
+      "Six Sigma",
+      "n8n",
+      "Microsoft Power Platform",
+      "Retrieval-Augmented Generation"
+    ],
+    "links": {
+      "portfolio": "https://janjedrzejak.github.io/",
+      "projects": "https://janjedrzejak.github.io/projects.html",
+      "blog": "https://janjedrzejak.github.io/blog.html",
+      "linkedin": "https://www.linkedin.com/in/janjedrzejak",
+      "credly": "https://www.credly.com/users/jan-jedrzejak",
+      "cv": "https://janjedrzejak.github.io/resJanJedrzejakCV.pdf"
+    }
+  },
+  "expertise": [
+    {
+      "name": "Digital products & transformation",
+      "details": "Product vision, roadmaps, discovery, stakeholder alignment, backlog management and end-to-end delivery for enterprise digital initiatives."
+    },
+    {
+      "name": "Automation & orchestration",
+      "details": "Reliable workflows that remove repetitive work, connect teams and create transparent data flows across business systems.",
+      "technologies": [
+        "n8n",
+        "Power Automate",
+        "AppSheet"
+      ]
+    },
+    {
+      "name": "AI & machine learning",
+      "details": "Decision support through RAG systems, vector search, prediction workflows and responsible AI implementation.",
+      "technologies": [
+        "RAG",
+        "Vector databases",
+        "ML workflows"
+      ]
+    },
+    {
+      "name": "Systems & integrations",
+      "details": "API-led integrations, data orchestration and solution architecture for reliable information flow.",
+      "technologies": [
+        "REST APIs",
+        "JavaScript",
+        "Python",
+        "SQL",
+        "NoSQL"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "period": "2026 — NOW",
+      "role": "Digital Project Manager",
+      "company": "Holcim Polska",
+      "summary": "Leading digital initiatives and system implementations across core business processes, with focus on data flow architecture, integrations, automation and responsible AI-enabled solutions."
+    },
+    {
+      "period": "2022 — 2026",
+      "role": "Digital Marketing Specialist & Product Owner",
+      "company": "Linde Gas Poland",
+      "summary": "Owned B2B digital platforms, multi-country content operations and automation adoption, combining product management, CRO, stakeholder alignment and enterprise-scale delivery."
+    },
+    {
+      "period": "2018 — 2022",
+      "role": "IS Field Support Specialist",
+      "company": "Linde Gas Poland",
+      "summary": "Delivered infrastructure projects, enterprise application support and technology migrations."
+    },
+    {
+      "period": "2011 — 2018",
+      "role": "Visual storyteller & media professional",
+      "company": "TV, broadcast and digital media",
+      "summary": "Worked across video, camera and photojournalism, shaping communication, narrative design and stakeholder alignment skills."
+    }
+  ],
+  "projects": [
+    {
+      "id": "company-rag-agent",
+      "name": "Company RAG Agent",
+      "category": [
+        "AI",
+        "Knowledge"
+      ],
+      "summary": "Retrieval-augmented assistant that turns distributed internal documentation into relevant, traceable answers and a more usable knowledge experience.",
+      "technologies": [
+        "Vector search",
+        "Qdrant",
+        "LLM orchestration"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    },
+    {
+      "id": "ml-prediction-platform",
+      "name": "Machine Learning Prediction Platform",
+      "category": [
+        "ML",
+        "Decision support"
+      ],
+      "summary": "Prediction environment connecting data preparation, model outputs and business-facing interfaces for R&D, marketing and product decisions.",
+      "technologies": [
+        "Machine learning",
+        "Data products",
+        "UX"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    },
+    {
+      "id": "ai-sales-reporting",
+      "name": "AI-powered Sales Reporting",
+      "category": [
+        "AI",
+        "Sales operations"
+      ],
+      "summary": "Automated analysis and narrative reporting connected with enterprise sales data to surface performance signals and make recurring reporting faster.",
+      "technologies": [
+        "Salesforce",
+        "NLP",
+        "Reporting"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    },
+    {
+      "id": "enterprise-process-automation",
+      "name": "Enterprise Process Automation",
+      "category": [
+        "Automation",
+        "Integration"
+      ],
+      "summary": "Reliable workflows moving data between forms, CRM, ERP and collaboration tools while reducing repetitive operations and exposing exceptions.",
+      "technologies": [
+        "n8n",
+        "Power Platform",
+        "APIs"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    },
+    {
+      "id": "b2b-platform-optimization",
+      "name": "B2B Platform Optimization",
+      "category": [
+        "Product",
+        "B2B eCommerce"
+      ],
+      "summary": "Customer journey, content operations and CRO improvements supporting adoption, conversion and scalable digital service across markets.",
+      "technologies": [
+        "eCommerce",
+        "CRO",
+        "Product ownership"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    },
+    {
+      "id": "multi-country-cms",
+      "name": "Multi-country CMS Platform",
+      "category": [
+        "Platform",
+        "Multi-country"
+      ],
+      "summary": "Localized content operating model and platform rollout enabling consistent governance, faster publishing and scalable market adoption.",
+      "technologies": [
+        "Localization",
+        "Governance",
+        "Adoption"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    },
+    {
+      "id": "digital-ordering-workflows",
+      "name": "Digital Ordering Workflows",
+      "category": [
+        "Automation",
+        "Customer service"
+      ],
+      "summary": "Online ordering journeys replacing fragmented email and phone processes with structured forms, confirmations and visible order history.",
+      "technologies": [
+        "B2B portal",
+        "Workflow",
+        "Adoption"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    },
+    {
+      "id": "fleet-verification",
+      "name": "Fleet Verification System",
+      "category": [
+        "Integration",
+        "Field operations"
+      ],
+      "summary": "Field-oriented verification solution combining QR codes, NFC and APIs to improve asset identification, data quality and process traceability.",
+      "technologies": [
+        "QR",
+        "NFC",
+        "APIs",
+        "Data quality"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    },
+    {
+      "id": "connected-data-flow",
+      "name": "Connected Data Flow Architecture",
+      "category": [
+        "Data",
+        "Orchestration"
+      ],
+      "summary": "Mapping and improving how operational data moves across systems, teams and decision points with reliability and ownership made explicit.",
+      "technologies": [
+        "Data flows",
+        "Architecture",
+        "Observability"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    },
+    {
+      "id": "crm-expansion",
+      "name": "CRM Expansion & Adoption",
+      "category": [
+        "Product",
+        "CRM"
+      ],
+      "summary": "Product-led expansion of CRM capabilities supported by requirements discovery, backlog prioritization, stakeholder alignment and user enablement.",
+      "technologies": [
+        "Backlog",
+        "Stakeholders",
+        "Enablement"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    },
+    {
+      "id": "power-apps",
+      "name": "Business Applications with Power Apps",
+      "category": [
+        "Low-code",
+        "Operations"
+      ],
+      "summary": "Focused internal applications translating manual checks and fragmented spreadsheets into guided, auditable operational workflows.",
+      "technologies": [
+        "Power Apps",
+        "Dataverse",
+        "UX"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    },
+    {
+      "id": "adoption-program",
+      "name": "Digital Tool Adoption Program",
+      "category": [
+        "Transformation",
+        "Enablement"
+      ],
+      "summary": "Training, documentation and communication designed as part of delivery to help teams use new systems consistently.",
+      "technologies": [
+        "Training",
+        "Documentation",
+        "Change"
+      ],
+      "url": "https://janjedrzejak.github.io/projects.html"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Six Sigma Yellow Belt Professional",
+      "issuer": "Scrum Study"
+    },
+    {
+      "name": "SCRUMstudy Scrum Master Certified (SMC)",
+      "issuer": "SCRUMstudy"
+    },
+    {
+      "name": "Agile Explorer",
+      "issuer": "IBM SkillsBuild"
+    },
+    {
+      "name": "Generative AI Overview for Project Managers",
+      "issuer": "Project Management Institute"
+    }
+  ],
+  "articles": [
+    {
+      "title": "AI will not replace project management. It will expose weak project systems.",
+      "date": "2026-07-18",
+      "topics": [
+        "AI",
+        "Project management",
+        "Operating model"
+      ],
+      "url": "https://janjedrzejak.github.io/blog-posts/ai-project-management.html"
+    },
+    {
+      "title": "Why automation projects fail after the demo",
+      "date": "2026-07-02",
+      "topics": [
+        "Automation",
+        "Operations"
+      ],
+      "url": "https://janjedrzejak.github.io/blog-posts/automation-failures.html"
+    },
+    {
+      "title": "Integration is an ownership problem before it is an API problem",
+      "date": "2026-06-12",
+      "topics": [
+        "Integration",
+        "Architecture",
+        "Ownership"
+      ],
+      "url": "https://janjedrzejak.github.io/blog-posts/system-integration.html"
+    },
+    {
+      "title": "SnapClip: Building the Clipboard Manager macOS Deserves",
+      "date": "2025-12-31",
+      "topics": [
+        "macOS",
+        "Development",
+        "Product design"
+      ],
+      "url": "https://janjedrzejak.github.io/blog-posts/snapclip.html"
+    },
+    {
+      "title": "Self-Host n8n on Raspberry Pi 3+ Complete Setup Guide",
+      "date": "2025-11-25",
+      "topics": [
+        "n8n",
+        "Raspberry Pi",
+        "Docker",
+        "Self-hosting"
+      ],
+      "url": "https://janjedrzejak.github.io/blog-posts/n8n-raspberry-pi.html"
+    }
+  ],
+  "contact": {
+    "email": "jan.jedrzejak@gmail.com",
+    "phone": "+48 690 661 143",
+    "linkedin": "https://www.linkedin.com/in/janjedrzejak"
+  }
+}
