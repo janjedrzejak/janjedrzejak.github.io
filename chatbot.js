@@ -242,8 +242,10 @@
   function openChat() {
     panel.hidden = false;
     panel.setAttribute("aria-hidden", "false");
+    panel.setAttribute("aria-modal", window.matchMedia("(max-width: 540px)").matches ? "true" : "false");
     launcher.setAttribute("aria-expanded", "true");
     root.classList.add("is-open");
+    document.documentElement.classList.add("portfolio-chat-is-open");
     requestAnimationFrame(() => input.focus({ preventScroll: true }));
     track("chat_open");
   }
@@ -251,8 +253,10 @@
   function closeChat() {
     panel.hidden = true;
     panel.setAttribute("aria-hidden", "true");
+    panel.setAttribute("aria-modal", "false");
     launcher.setAttribute("aria-expanded", "false");
     root.classList.remove("is-open");
+    document.documentElement.classList.remove("portfolio-chat-is-open");
     launcher.focus({ preventScroll: true });
   }
 
