@@ -19,6 +19,13 @@ The redesign references existing repository assets:
 ## Language
 English is the default language on a first visit. A user-selected EN/PL preference is saved in `localStorage` as `portfolio-language` and shared across all pages.
 
+## AI portfolio guide
+The site-wide AI guide is implemented in `chatbot.js` and `chatbot.css`. It follows the page language, keeps conversation state only in memory and sends bounded requests to a server-side API.
+
+The Groq API key must remain a server-side secret. Never add it to this repository, frontend JavaScript, HTML, GitHub Actions variables exposed to builds or browser storage. The public endpoint URL is configured as `CHAT_API_URL` in `chatbot.js`.
+
+When the provider, hosting or data flow changes, review `privacy.html` and `cookies-policy.html`.
+
 ## Portrait
 The profile frame uses the source aspect ratio `632 / 640`; the image is not stretched. `object-fit: cover` may crop minimally when responsive constraints require it.
 
