@@ -16,11 +16,61 @@
 
   let enabled = false;
   let configured = false;
+  let webVitalsStarted = false;
+  let notFoundSent = false;
   const scrollSent = new Set();
 
   function send(name, params) {
     if (!enabled) return;
     gtag("event", name, params || {});
+  }
+
+  function reportWebVital(metric) {
+    const value = metric.name === "CLS"
+      ? Number(metric.value.toFixed(4))
+      : Math.round(metric.value);
+
+    send("web_vital", {
+      metric_name: metric.name,
+      metric_value: value,
+      metric_rating: metric.rating || "unknown",
+      navigation_type: metric.navigationType || "navigate"
+    });
+  }
+
+  function startWebVitals() {
+    if (webVitalsStarted) return;
+    webVitalsStarted = true;
+
+    function register() {
+      if (!window.webVitals) return;
+      window.webVitals.onCLS(reportWebVital);
+      window.webVitals.onINP(reportWebVital);
+      window.webVitals.onLCP(reportWebVital);
+    }
+
+    if (window.webVitals) {
+      register();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/npm/web-vitals@6.2.1/dist/web-vitals.iife.js";
+    script.async = true;
+    script.dataset.analyticsDependency = "web-vitals";
+    script.onload = register;
+    document.head.appendChild(script);
+  }
+
+  function report404IfNeeded() {
+    if (notFoundSent) return;
+    const marker = document.querySelector('meta[name="page-type"][content="404"]');
+    if (!marker) return;
+
+    notFoundSent = true;
+    send("page_not_found", {
+      error_type: "404"
+    });
   }
 
   function enableAnalytics() {
@@ -40,6 +90,9 @@
       });
       configured = true;
     }
+
+    startWebVitals();
+    report404IfNeeded();
   }
 
   function disableAnalytics() {
