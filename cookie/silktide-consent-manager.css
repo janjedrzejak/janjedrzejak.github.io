@@ -888,3 +888,269 @@ Animation - backdrop click feedback
     left: 14px;
   }
 }
+
+
+/* ================================================================
+   Premium compact consent surface
+   Inspired by the site's language dock / utility controls
+================================================================ */
+#stcm-banner {
+  right: clamp(14px, 2vw, 28px);
+  bottom: clamp(14px, 2vw, 28px);
+  width: min(470px, calc(100% - 28px));
+  padding: 17px 18px 15px;
+  border-radius: 22px;
+  border-color: rgba(212, 241, 228, .13);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(112, 231, 255, .055), transparent 12rem),
+    rgba(7, 16, 14, .82);
+  box-shadow:
+    0 18px 60px rgba(0, 0, 0, .34),
+    inset 0 1px 0 rgba(255, 255, 255, .022);
+  backdrop-filter: blur(18px) saturate(125%);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+}
+
+#stcm-banner::before {
+  content: "PRIVACY  /  ANALYTICS";
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 10px;
+  padding-left: 12px;
+  color: #66736d;
+  font: 500 .53rem/1 "DM Mono", monospace;
+  letter-spacing: .12em;
+}
+
+#stcm-banner::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 18px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #b8ff5c;
+  box-shadow: 0 0 12px rgba(184, 255, 92, .55);
+}
+
+#stcm-banner p {
+  max-width: 405px;
+  margin: 0;
+  color: #9aa9a2;
+  font-size: .79rem;
+  line-height: 1.6;
+  letter-spacing: -.01em;
+}
+
+#stcm-banner .stcm-actions {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+#stcm-banner .stcm-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+#stcm-banner .stcm-accept-all,
+#stcm-banner .stcm-reject-all {
+  width: auto;
+  min-height: 34px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: .56rem;
+  letter-spacing: .055em;
+  white-space: nowrap;
+}
+
+#stcm-banner .stcm-accept-all {
+  color: #07100e;
+  background: #b8ff5c;
+  border-color: #b8ff5c;
+}
+
+#stcm-banner .stcm-accept-all:hover {
+  color: #07100e;
+  background: #d2ff97;
+  border-color: #d2ff97;
+}
+
+#stcm-banner .stcm-reject-all {
+  color: #9aa9a2;
+  background: rgba(255, 255, 255, .018);
+  border-color: rgba(212, 241, 228, .14);
+}
+
+#stcm-banner .stcm-reject-all:hover {
+  color: #e8f3ee;
+  background: rgba(255, 255, 255, .04);
+  border-color: rgba(212, 241, 228, .25);
+  box-shadow: none;
+}
+
+#stcm-banner .stcm-preferences-button {
+  min-height: 30px;
+  padding: 6px 0;
+  font-size: .53rem;
+  letter-spacing: .075em;
+  color: #66736d;
+}
+
+#stcm-banner .stcm-preferences-button:hover,
+#stcm-banner .stcm-preferences-button span:hover {
+  color: #b8ff5c;
+}
+
+#stcm-banner a.stcm-logo {
+  width: 28px;
+  height: 28px;
+  margin-left: 0;
+  opacity: .28;
+  transition: opacity .2s, transform .2s;
+}
+
+#stcm-banner a.stcm-logo:hover {
+  opacity: .7;
+  transform: translateY(-1px);
+}
+
+#stcm-banner a.stcm-logo svg {
+  width: 15px;
+  height: 16px;
+}
+
+/* Preferences stay calm and editorial rather than "cookie-tool" looking. */
+#stcm-modal {
+  width: min(620px, calc(100% - 28px));
+  padding: 24px 24px 22px;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(112, 231, 255, .055), transparent 16rem),
+    rgba(7, 16, 14, .94);
+}
+
+#stcm-modal::before {
+  margin-bottom: 12px;
+  font-size: .53rem;
+  letter-spacing: .12em;
+}
+
+#stcm-modal header {
+  padding-bottom: 14px;
+}
+
+#stcm-modal h1 {
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+}
+
+#stcm-modal section {
+  margin-top: 16px;
+}
+
+#stcm-modal p {
+  font-size: .82rem;
+  line-height: 1.65;
+}
+
+#stcm-modal fieldset {
+  padding: 14px 0;
+}
+
+#stcm-modal legend {
+  margin-bottom: 6px;
+  font-size: .64rem;
+}
+
+#stcm-modal footer {
+  gap: 10px;
+  padding-top: 16px;
+  margin-top: 4px;
+}
+
+#stcm-modal footer .stcm-button {
+  min-height: 36px;
+  padding: 8px 13px;
+  font-size: .56rem;
+}
+
+#stcm-icon {
+  bottom: 18px;
+  left: 18px;
+  width: 42px;
+  height: 42px;
+  border-color: rgba(212, 241, 228, .13);
+  background: rgba(7, 16, 14, .68);
+}
+
+#stcm-icon::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #b8ff5c;
+  box-shadow: 0 0 9px rgba(184, 255, 92, .55);
+}
+
+#stcm-icon svg {
+  width: 23px;
+  height: 23px;
+  opacity: .86;
+}
+
+@media (max-width: 599px) {
+  #stcm-banner {
+    right: 10px;
+    bottom: 10px;
+    width: calc(100% - 20px);
+    padding: 16px 16px 14px;
+    border-radius: 18px;
+  }
+
+  #stcm-banner::after {
+    left: 16px;
+    top: 19px;
+  }
+
+  #stcm-banner p {
+    max-width: none;
+    font-size: .77rem;
+  }
+
+  #stcm-banner .stcm-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  #stcm-banner .stcm-accept-all,
+  #stcm-banner .stcm-reject-all {
+    width: 100%;
+  }
+
+  #stcm-banner .stcm-actions-row {
+    grid-column: 1 / -1;
+    justify-content: space-between;
+  }
+
+  #stcm-modal {
+    width: calc(100% - 16px);
+    max-height: calc(100vh - 16px);
+    padding: 20px 17px;
+    border-radius: 18px;
+  }
+
+  #stcm-icon {
+    bottom: 12px;
+    left: 12px;
+  }
+}
