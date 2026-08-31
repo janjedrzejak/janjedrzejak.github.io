@@ -1,0 +1,12 @@
+name = "ask-jan"
+main = "ask-jan-worker.js"
+compatibility_date = "2026-08-31"
+
+[vars]
+ALLOWED_ORIGIN = "https://janjedrzejak.github.io"
+KNOWLEDGE_URL = "https://janjedrzejak.github.io/ai/portfolio-knowledge.json"
+MODEL = "openai/gpt-oss-20b"
+
+# Secrets (do not commit values):
+# wrangler secret put GROQ_API_KEY
+# wrangler secret put TURNSTILE_SECRET
