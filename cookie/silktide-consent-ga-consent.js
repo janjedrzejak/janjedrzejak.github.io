@@ -150,8 +150,8 @@
         id: "analytics",
         label: pl ? "Analityczne" : "Analytics",
         description: pl
-          ? "Google Analytics 4 mierzy wizyty, źródła ruchu i interakcje z portfolio."
-          : "Google Analytics 4 measures visits, traffic sources and portfolio interactions.",
+          ? "Google Analytics 4 mierzy wizyty, źródła ruchu, interakcje oraz techniczną wydajność portfolio."
+          : "Google Analytics 4 measures visits, traffic sources, interactions and technical performance.",
         defaultValue: false,
         gtag: "analytics_storage",
         scripts: [{
