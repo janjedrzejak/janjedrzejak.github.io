@@ -63,7 +63,7 @@
   const pl = language === "pl";
 
   window.silktideConsentManager.init({
-    backdrop: { show: true },
+    backdrop: { show: false },
     prompt: { position: "bottomRight" },
     icon: { position: "bottomLeft" },
     text: {
