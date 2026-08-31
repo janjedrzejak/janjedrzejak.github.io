@@ -25,6 +25,9 @@
     gtag("event", name, params || {});
   }
 
+  window.portfolioAnalytics = window.portfolioAnalytics || {};
+  window.portfolioAnalytics.track = send;
+
   function reportWebVital(metric) {
     const value = metric.name === "CLS"
       ? Number(metric.value.toFixed(4))
