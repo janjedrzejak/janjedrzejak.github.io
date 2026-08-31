@@ -587,3 +587,304 @@ Animation - backdrop click feedback
     50% { opacity: 0.85; }
   }
 }
+
+
+/* ================================================================
+   Jan Jędrzejak portfolio theme
+   Matches home.css visual language
+================================================================ */
+#stcm-wrapper {
+  --boxShadow: 0 24px 80px rgba(0, 0, 0, .42);
+  --fontFamily: "Manrope", system-ui, sans-serif;
+  --primaryColor: #b8ff5c;
+  --backgroundColor: #07100e;
+  --textColor: #e8f3ee;
+  --backdropBackgroundColor: rgba(2, 8, 7, .68);
+  --backdropBackgroundBlur: 12px;
+  --iconColor: rgba(7, 16, 14, .82);
+  --iconBackgroundColor: #b8ff5c;
+}
+
+#stcm-banner,
+#stcm-modal {
+  border: 1px solid rgba(212, 241, 228, .16);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(112, 231, 255, .08), transparent 18rem),
+    rgba(7, 16, 14, .92);
+  box-shadow:
+    0 28px 90px rgba(0, 0, 0, .46),
+    inset 0 1px 0 rgba(255, 255, 255, .025);
+  backdrop-filter: blur(20px) saturate(125%);
+  -webkit-backdrop-filter: blur(20px) saturate(125%);
+}
+
+#stcm-banner {
+  width: min(520px, calc(100% - 32px));
+  padding: 26px;
+  border-radius: 18px;
+}
+
+#stcm-banner::before,
+#stcm-modal::before {
+  content: "PRIVACY / ANALYTICS";
+  display: block;
+  margin-bottom: 14px;
+  color: #66736d;
+  font: 500 .62rem/1 "DM Mono", monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+#stcm-banner p,
+#stcm-modal p {
+  color: #9aa9a2;
+  font-size: .91rem;
+  line-height: 1.7;
+}
+
+#stcm-banner .stcm-actions {
+  gap: 12px;
+  margin-top: 22px;
+}
+
+#stcm-wrapper .stcm-button {
+  min-height: 44px;
+  padding: 10px 17px;
+  border: 1px solid #b8ff5c;
+  border-radius: 999px;
+  font: 600 .68rem/1 "DM Mono", monospace;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  transition:
+    transform .25s cubic-bezier(.2, .75, .25, 1),
+    background .25s,
+    color .25s,
+    border-color .25s,
+    box-shadow .25s;
+}
+
+#stcm-wrapper .stcm-button-primary {
+  color: #07100e;
+  background: #b8ff5c;
+}
+
+#stcm-wrapper .stcm-button-primary:hover {
+  color: #07100e;
+  background: #d2ff97;
+  border-color: #d2ff97;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(184, 255, 92, .12);
+}
+
+#stcm-wrapper .stcm-button-secondary {
+  color: #e8f3ee;
+  background: rgba(255, 255, 255, .025);
+  border-color: rgba(212, 241, 228, .22);
+}
+
+#stcm-wrapper .stcm-button-secondary:hover {
+  color: #b8ff5c;
+  background: rgba(184, 255, 92, .055);
+  border-color: rgba(184, 255, 92, .38);
+  transform: translateY(-2px);
+}
+
+#stcm-banner .stcm-preferences-button {
+  padding: 10px 2px;
+  color: #9aa9a2;
+  font: 500 .66rem/1 "DM Mono", monospace;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  transition: color .2s;
+}
+
+#stcm-banner .stcm-preferences-button:hover,
+#stcm-banner .stcm-preferences-button span:hover {
+  color: #b8ff5c;
+}
+
+#stcm-modal {
+  width: min(720px, calc(100% - 32px));
+  max-height: calc(100vh - 40px);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+#stcm-modal header {
+  padding-bottom: 18px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(212, 241, 228, .12);
+}
+
+#stcm-modal h1 {
+  color: #e8f3ee;
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
+
+#stcm-modal .stcm-modal-close {
+  border: 1px solid rgba(212, 241, 228, .16);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .025);
+  transition: background .2s, border-color .2s, transform .2s;
+}
+
+#stcm-modal .stcm-modal-close:hover {
+  background: rgba(184, 255, 92, .08);
+  border-color: rgba(184, 255, 92, .32);
+  transform: rotate(5deg);
+}
+
+#stcm-modal .stcm-modal-close svg {
+  fill: #b8ff5c;
+}
+
+#stcm-modal fieldset {
+  padding: 18px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(212, 241, 228, .1);
+}
+
+#stcm-modal fieldset:last-of-type {
+  border-bottom: 0;
+}
+
+#stcm-modal legend {
+  margin-bottom: 8px;
+  color: #e8f3ee;
+  font: 600 .74rem/1.3 "DM Mono", monospace;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+#stcm-modal .stcm-toggle {
+  width: 62px;
+  height: 30px;
+}
+
+#stcm-modal .stcm-toggle-track {
+  width: 62px;
+  height: 30px;
+  border: 1px solid rgba(212, 241, 228, .18);
+  background: #0b1714;
+}
+
+#stcm-modal .stcm-toggle-thumb {
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background: #9aa9a2;
+}
+
+#stcm-modal .stcm-toggle input:checked + .stcm-toggle-track {
+  border-color: #b8ff5c;
+  background: rgba(184, 255, 92, .18);
+}
+
+#stcm-modal .stcm-toggle input:checked ~ .stcm-toggle-thumb {
+  left: calc(100% - 27px);
+  background: #b8ff5c;
+}
+
+#stcm-modal .stcm-toggle-off,
+#stcm-modal .stcm-toggle-on {
+  display: none;
+}
+
+#stcm-modal .stcm-toggle input:disabled + .stcm-toggle-track {
+  opacity: .45;
+  filter: none;
+}
+
+#stcm-modal footer {
+  padding-top: 20px;
+  margin-top: 8px;
+  border-top: 1px solid rgba(212, 241, 228, .12);
+}
+
+#stcm-modal footer a.stcm-credit-link {
+  color: #66736d;
+  font: 500 .58rem/1.3 "DM Mono", monospace;
+  letter-spacing: .04em;
+}
+
+#stcm-icon {
+  bottom: 18px;
+  left: 18px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(184, 255, 92, .28);
+  background: rgba(7, 16, 14, .78);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, .28);
+  backdrop-filter: blur(16px) saturate(125%);
+  -webkit-backdrop-filter: blur(16px) saturate(125%);
+  transition:
+    transform .25s cubic-bezier(.2, .75, .25, 1),
+    background .25s,
+    border-color .25s;
+}
+
+#stcm-icon:hover {
+  transform: translateY(-2px) rotate(5deg);
+  background: rgba(184, 255, 92, .12);
+  border-color: rgba(184, 255, 92, .55);
+}
+
+#stcm-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: #b8ff5c;
+}
+
+#stcm-backdrop {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+#stcm-wrapper a:focus,
+#stcm-wrapper #stcm-banner button:focus,
+#stcm-wrapper #stcm-modal button:focus,
+#stcm-wrapper #stcm-icon:focus {
+  box-shadow:
+    0 0 0 2px #07100e,
+    0 0 0 4px #b8ff5c;
+}
+
+@media (max-width: 599px) {
+  #stcm-banner {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100% - 24px);
+    max-width: none;
+    padding: 22px 20px;
+    border-radius: 16px;
+  }
+
+  #stcm-banner .stcm-actions-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  #stcm-wrapper .stcm-button {
+    width: 100%;
+  }
+
+  #stcm-modal {
+    width: calc(100% - 20px);
+    max-height: calc(100vh - 20px);
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  #stcm-modal .stcm-consent-row {
+    gap: 16px;
+  }
+
+  #stcm-icon {
+    bottom: 14px;
+    left: 14px;
+  }
+}
