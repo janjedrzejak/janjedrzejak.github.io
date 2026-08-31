@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>404 — Page not found | Jan Jędrzejak</title>
+<meta name="description" content="The requested page could not be found."/>
+<meta name="robots" content="noindex,follow"/>
+<meta name="page-type" content="404"/>
+<meta name="theme-color" content="#07100e"/>
+<link href="/img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="/home.css" rel="stylesheet"/>
+<link href="/cookie/silktide-consent-manager.css" rel="stylesheet"/>
+<script src="/cookie/silktide-consent-manager.js"></script>
+<script src="/cookie/silktide-consent-ga-consent.js"></script>
+<style>
+  .not-found-shell {
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: clamp(24px, 6vw, 80px);
+  }
+  .not-found-card {
+    width: min(860px, 100%);
+    padding: clamp(28px, 5vw, 58px);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(112,231,255,.06), transparent 24rem),
+      rgba(11,23,20,.66);
+    box-shadow: 0 28px 90px rgba(0,0,0,.28);
+    backdrop-filter: blur(18px) saturate(125%);
+  }
+  .not-found-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dim);
+    font: 500 .62rem/1 "DM Mono", monospace;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+  .not-found-kicker::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--acid);
+    box-shadow: 0 0 12px rgba(184,255,92,.55);
+  }
+  .not-found-code {
+    margin: 22px 0 8px;
+    color: var(--acid);
+    font: 500 clamp(4.5rem, 15vw, 10rem)/.9 "DM Mono", monospace;
+    letter-spacing: -.08em;
+  }
+  .not-found-card h1 {
+    max-width: 720px;
+    margin: 0;
+    color: var(--ink);
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -.055em;
+  }
+  .not-found-card p {
+    max-width: 620px;
+    margin: 20px 0 0;
+    color: var(--muted);
+    font-size: clamp(.95rem, 2vw, 1.08rem);
+    line-height: 1.7;
+  }
+  .not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  .not-found-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 16px;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    color: var(--ink);
+    font: 600 .64rem/1 "DM Mono", monospace;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    transition: transform .25s var(--ease), border-color .25s, color .25s, background .25s;
+  }
+  .not-found-actions a:first-child {
+    color: var(--bg);
+    background: var(--acid);
+    border-color: var(--acid);
+  }
+  .not-found-actions a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(184,255,92,.5);
+    color: var(--acid);
+  }
+  .not-found-actions a:first-child:hover {
+    color: var(--bg);
+    background: #d2ff97;
+  }
+</style>
+</head>
+<body>
+<main class="not-found-shell">
+  <section class="not-found-card" aria-labelledby="not-found-title">
+    <div class="not-found-kicker">Navigation / error</div>
+    <div class="not-found-code" aria-hidden="true">404</div>
+    <h1 id="not-found-title">This route does not exist.</h1>
+    <p>The page may have moved, the link may be outdated, or the address may contain a typo. You can return to the portfolio or continue browsing projects and notes.</p>
+    <div class="not-found-actions">
+      <a href="/">Back home</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/blog.html">Notes</a>
+    </div>
+  </section>
+</main>
+</body>
+</html>
