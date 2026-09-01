@@ -171,15 +171,15 @@
 
   const pageMeta = {
     en: {
-      title: "Jan Jędrzejak — Digital Project Manager, Product Owner & Automation Expert",
+      title: "Jan Jędrzejak | Digital Project Manager, Product Owner & Automation Expert",
       description: "Portfolio of Jan Jędrzejak — Digital Project Manager and Product Owner specializing in workflow automation, AI, machine learning, system integrations and digital transformation.",
-      ogTitle: "Jan Jędrzejak — Digital Project Manager & Automation Expert",
+      ogTitle: "Jan Jędrzejak | Digital Project Manager & Automation Expert",
       ogDescription: "I turn complex business processes into connected, automated and measurable digital products."
     },
     pl: {
-      title: "Jan Jędrzejak — Digital Project Manager, Product Owner i ekspert automatyzacji",
+      title: "Jan Jędrzejak | Digital Project Manager, Product Owner i ekspert automatyzacji",
       description: "Portfolio Jana Jędrzejaka — Digital Project Managera i Product Ownera specjalizującego się w automatyzacji procesów, AI, machine learning, integracjach systemów i transformacji cyfrowej.",
-      ogTitle: "Jan Jędrzejak — Digital Project Manager i ekspert automatyzacji",
+      ogTitle: "Jan Jędrzejak | Digital Project Manager i ekspert automatyzacji",
       ogDescription: "Przekształcam złożone procesy biznesowe w połączone, zautomatyzowane i mierzalne produkty cyfrowe."
     }
   };
