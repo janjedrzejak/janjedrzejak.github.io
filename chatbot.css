@@ -9,10 +9,11 @@
   --chat-acid: #b8ff5c;
   --chat-cyan: #70e7ff;
   --chat-danger: #ff9a7a;
+  --chat-bottom-gap: clamp(4.9rem, 7.2vw, 6.1rem);
   position: fixed;
   z-index: 310;
   right: clamp(1rem, 2.2vw, 2rem);
-  bottom: clamp(4.9rem, 7.2vw, 6.1rem);
+  bottom: var(--chat-bottom-gap);
   color: var(--chat-ink);
   font-family: "Manrope", system-ui, sans-serif;
 }
@@ -73,7 +74,8 @@
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto auto;
   width: min(400px, calc(100vw - 2rem));
-  height: min(640px, calc(100svh - 7.5rem));
+  height: min(640px, calc(100vh - var(--chat-bottom-gap) - 1rem));
+  height: min(640px, calc(100dvh - var(--chat-bottom-gap) - 1rem));
   overflow: hidden;
   border: 1px solid var(--chat-line-strong);
   border-radius: 24px;
@@ -89,6 +91,8 @@
 }
 
 .portfolio-chat__header {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: .8rem;
@@ -195,23 +199,22 @@
 .portfolio-chat__message--user .portfolio-chat__bubble a { color: #07100e; }
 
 .portfolio-chat__suggestions {
-  display: flex;
-  gap: .45rem;
-  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .5rem;
   padding: 0 1rem .8rem;
-  scrollbar-width: none;
 }
-.portfolio-chat__suggestions::-webkit-scrollbar { display: none; }
 .portfolio-chat__suggestion {
-  flex: 0 0 auto;
-  max-width: 210px;
-  padding: .58rem .7rem;
+  width: 100%;
+  min-height: 48px;
+  padding: .62rem .7rem;
   border: 1px solid var(--chat-line);
-  border-radius: 999px;
+  border-radius: 14px;
   color: var(--chat-muted);
   background: rgba(255, 255, 255, .025);
   font: 500 .56rem "DM Mono", monospace;
   line-height: 1.35;
+  text-align: left;
   cursor: pointer;
   transition: color .2s, border-color .2s, background .2s;
 }
@@ -334,12 +337,26 @@
   }
   .portfolio-chat__header { padding: calc(.85rem + env(safe-area-inset-top)) .85rem .85rem; }
   .portfolio-chat__messages { padding: .85rem; }
-  .portfolio-chat__suggestions { padding-right: .85rem; padding-left: .85rem; }
+  .portfolio-chat__suggestions {
+    display: flex;
+    gap: .45rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-right: .85rem;
+    padding-left: .85rem;
+    scrollbar-width: none;
+  }
+  .portfolio-chat__suggestions::-webkit-scrollbar { display: none; }
+  .portfolio-chat__suggestion {
+    flex: 0 0 auto;
+    width: auto;
+    min-height: 0;
+    max-width: 210px;
+    padding: .58rem .7rem;
+    border-radius: 999px;
+    text-align: center;
+  }
   .portfolio-chat__composer { padding: .75rem .85rem calc(.8rem + env(safe-area-inset-bottom)); }
-}
-
-@media (max-height: 620px) and (min-width: 541px) {
-  .portfolio-chat__panel { height: calc(100svh - 2rem); }
 }
 
 @media (prefers-reduced-motion: reduce) {
