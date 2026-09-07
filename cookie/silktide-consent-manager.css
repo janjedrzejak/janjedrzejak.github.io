@@ -1154,3 +1154,13 @@ Animation - backdrop click feedback
     left: 12px;
   }
 }
+
+/* Align with the language selector and chat without covering footer content. */
+@media (max-width: 820px) {
+  #stcm-icon {
+    left: var(--mobile-utility-left, 16px);
+    bottom: calc(var(--mobile-utility-bottom, 12px) + 4px);
+    width: 44px;
+    height: 44px;
+  }
+}

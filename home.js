@@ -275,6 +275,7 @@
   const header = document.querySelector("[data-header]");
   const progress = document.querySelector(".page-progress span");
   const parallaxItems = [...document.querySelectorAll("[data-parallax]")];
+  const mobileLayout = window.matchMedia("(max-width: 820px), (pointer: coarse)");
   let scrollY = window.scrollY;
   let ticking = false;
 
@@ -284,12 +285,15 @@
     if (progress) progress.style.transform = `scaleX(${ratio})`;
     if (header) header.classList.toggle("is-scrolled", scrollY > 24);
 
-    if (!prefersReducedMotion.matches) {
-      parallaxItems.forEach((item) => {
+    parallaxItems.forEach((item) => {
+      if (!prefersReducedMotion.matches && !mobileLayout.matches) {
         const speed = Number(item.dataset.parallax || 0);
         item.style.transform = `translate3d(0, ${scrollY * speed}px, 0)`;
-      });
-    }
+      } else {
+        // Remove only the inline parallax override, preserving CSS reveal/rotation.
+        item.style.removeProperty("transform");
+      }
+    });
     ticking = false;
   }
 
@@ -300,6 +304,8 @@
       requestAnimationFrame(updateScrollUI);
     }
   }, { passive: true });
+  mobileLayout.addEventListener("change", updateScrollUI);
+  prefersReducedMotion.addEventListener("change", updateScrollUI);
   updateScrollUI();
 
   // Accessible mobile menu.
