@@ -12,7 +12,7 @@
 
   const cssLink = document.createElement("link");
   cssLink.rel = "stylesheet";
-  cssLink.href = new URL("chatbot.css", siteRoot).href;
+  cssLink.href = new URL("chatbot.css?v=20260907-footer2", siteRoot).href;
   document.head.appendChild(cssLink);
 
   const copy = {
