@@ -21,11 +21,15 @@
 }
 
 * { box-sizing: border-box; }
-/* Keep page overflow on the root, and stop elastic scrolling past the footer. */
+/* Clip horizontal decoration without creating a second vertical scroll container. */
 html { scroll-behavior: smooth; background: var(--bg); overflow-x: hidden; overscroll-behavior-y: none; }
+@supports (overflow: clip) {
+  html { overflow-x: clip; }
+  body { overflow-x: clip; }
+}
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: min(320px, 100%);
   color: var(--ink);
   background:
     radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(112, 231, 255, .055), transparent 24rem),
@@ -33,7 +37,18 @@ body {
   font-family: "Manrope", system-ui, sans-serif;
   line-height: 1.5;
 }
+/* Keep transformed descendants inside the natural content + footer boundary.
+   Fixed menus, consent and chat stay outside this paint containment. */
+.page-shell { display: flow-root; overflow: clip; contain: paint; }
 html:has(body.menu-open), body.menu-open { overflow: hidden; }
+html.page-scroll-locked { height: 100%; overflow: hidden; overscroll-behavior: none; }
+html.page-scroll-locked body {
+  position: fixed;
+  top: var(--locked-scroll-y, 0px);
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
 ::selection { color: #07100e; background: var(--acid); }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -615,7 +630,7 @@ body.cursor-active .cursor-ring { width: 54px; height: 54px; border-color: var(-
   .site-footer {
     grid-template-columns: minmax(0, 1fr);
     gap: 1rem;
-    padding: 2rem var(--mobile-utility-right) calc(var(--mobile-utility-bottom) + 76px) var(--mobile-utility-left);
+    padding: 2rem var(--mobile-utility-right) calc(var(--mobile-utility-bottom) + 64px) var(--mobile-utility-left);
   }
   .site-footer > div:first-child { gap: .35rem; }
   .site-footer strong { font-size: 1rem; }
