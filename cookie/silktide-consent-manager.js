@@ -1414,6 +1414,10 @@ class SilktideConsentManager {
   }
 
   preventBodyScroll() {
+    if (window.portfolioScroll) {
+      window.portfolioScroll.lock('consent');
+      return;
+    }
     document.body.style.overflow = 'hidden';
     // Prevent iOS Safari scrolling
     document.body.style.position = 'fixed';
@@ -1421,6 +1425,10 @@ class SilktideConsentManager {
   }
 
   allowBodyScroll() {
+    if (window.portfolioScroll) {
+      window.portfolioScroll.unlock('consent');
+      return;
+    }
     document.body.style.overflow = '';
     document.body.style.position = '';
     document.body.style.width = '';

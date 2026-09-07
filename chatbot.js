@@ -12,7 +12,7 @@
 
   const cssLink = document.createElement("link");
   cssLink.rel = "stylesheet";
-  cssLink.href = new URL("chatbot.css?v=20260907-footer2", siteRoot).href;
+  cssLink.href = new URL("chatbot.css?v=20260908-scroll", siteRoot).href;
   document.head.appendChild(cssLink);
 
   const copy = {
@@ -239,24 +239,50 @@
     sendButton.disabled = isBusy || !input.value.trim();
   }
 
+  const mobileChat = window.matchMedia("(max-width: 540px)");
+
+  function syncChatViewport() {
+    const mobileOpen = root.classList.contains("is-open") && mobileChat.matches;
+    panel.setAttribute("aria-modal", String(mobileOpen));
+    if (mobileOpen) {
+      window.portfolioScroll?.lock("chat");
+      // The visual viewport also accounts for the iOS keyboard and browser bars.
+      const viewport = window.visualViewport;
+      panel.style.setProperty("--chat-viewport-height", `${viewport?.height ?? window.innerHeight}px`);
+      panel.style.setProperty("--chat-viewport-top", `${viewport?.offsetTop ?? 0}px`);
+    } else {
+      window.portfolioScroll?.unlock("chat");
+      panel.style.removeProperty("--chat-viewport-height");
+      panel.style.removeProperty("--chat-viewport-top");
+    }
+  }
+  mobileChat.addEventListener("change", syncChatViewport);
+  window.addEventListener("resize", syncChatViewport);
+  window.visualViewport?.addEventListener("resize", syncChatViewport);
+  window.visualViewport?.addEventListener("scroll", syncChatViewport);
+
   function openChat() {
     panel.hidden = false;
     panel.setAttribute("aria-hidden", "false");
     panel.setAttribute("aria-modal", window.matchMedia("(max-width: 540px)").matches ? "true" : "false");
     launcher.setAttribute("aria-expanded", "true");
     root.classList.add("is-open");
+    syncChatViewport();
     document.documentElement.classList.add("portfolio-chat-is-open");
     requestAnimationFrame(() => input.focus({ preventScroll: true }));
     track("chat_open");
   }
 
   function closeChat() {
+    // Dismiss the keyboard before returning to the saved document position.
+    input.blur();
     panel.hidden = true;
     panel.setAttribute("aria-hidden", "true");
     panel.setAttribute("aria-modal", "false");
     launcher.setAttribute("aria-expanded", "false");
     root.classList.remove("is-open");
     document.documentElement.classList.remove("portfolio-chat-is-open");
+    syncChatViewport();
     launcher.focus({ preventScroll: true });
   }
 

@@ -70,7 +70,7 @@
 .legal-toc { position:sticky; top:110px; align-self:start; display:grid; gap:.8rem; }
 .legal-toc a { color:var(--dim); font:500 .55rem "DM Mono",monospace; text-transform:uppercase; letter-spacing:.06em; }
 .legal-toc a:hover { color:var(--acid); }
-.legal-content { max-width:880px; }
+.legal-content { min-width:0; max-width:880px; overflow-wrap:anywhere; }
 .legal-intro { padding:2rem; border:1px solid var(--line); background:rgba(112,231,255,.035); color:var(--muted); }
 .legal-section { padding:4rem 0; border-bottom:1px solid var(--line); }
 .legal-section h2 { margin:0 0 1.4rem; font-size:clamp(2rem,4vw,3.8rem); line-height:1; letter-spacing:-.045em; }

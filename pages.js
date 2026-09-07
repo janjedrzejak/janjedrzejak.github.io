@@ -54,10 +54,12 @@
 
   function setMenu(open) {
     if (!menuButton || !mobileMenu) return;
+    if (open) window.portfolioScroll?.lock("menu");
     menuButton.setAttribute("aria-expanded", String(open));
     mobileMenu.setAttribute("aria-hidden", String(!open));
     mobileMenu.classList.toggle("is-open", open);
     body.classList.toggle("menu-open", open);
+    if (!open) window.portfolioScroll?.unlock("menu");
     updateMenuLabel();
   }
 

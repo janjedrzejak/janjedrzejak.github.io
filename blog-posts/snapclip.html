@@ -31,12 +31,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../home.css?v=20260907-footer2" rel="stylesheet"/>
-<link href="../pages.css" rel="stylesheet"/>
+<link href="../home.css?v=20260908-scroll" rel="stylesheet"/>
+<link href="../pages.css?v=20260908-scroll" rel="stylesheet"/>
 <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
 <link href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css" rel="stylesheet"/>
 <link href="../cookie/silktide-consent-manager.css?v=20260907-footer2" id="silktide-consent-manager-css" rel="stylesheet"/>
-<script src="../cookie/silktide-consent-manager.js"></script>
+<script src="../cookie/silktide-consent-manager.js?v=20260908-scroll"></script>
 <script src="../cookie/silktide-consent-ga-consent.js"></script>
 
 <script type="application/ld+json">
@@ -63,6 +63,7 @@
   "isPartOf": { "@id": "https://janjedrzejak.github.io/blog.html#blog" }
 }
 </script>
+<script src="../layout.js?v=20260908-scroll"></script>
 </head>
 <body data-title-en="SnapClip: Building the Clipboard Manager macOS Deserves — Jan Jędrzejak" data-title-pl="SnapClip: menedżer schowka, na jaki zasługuje macOS — Jan Jędrzejak" data-description-en="Why I designed a native, lightweight clipboard workflow and what Carbon Events, accessibility permissions and product restraint taught me." data-description-pl="Dlaczego zaprojektowałem natywny, lekki workflow schowka i czego nauczyły mnie Carbon Events, uprawnienia dostępności oraz produktowa powściągliwość.">
 
@@ -85,6 +86,7 @@
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true"><nav aria-label="Mobile navigation">
   <a href="../index.html#expertise" data-en="Expertise" data-pl="Kompetencje">Expertise</a><a href="../projects.html" data-en="All projects" data-pl="Wszystkie projekty">All projects</a><a href="../blog.html" data-en="Notes" data-pl="Notatki">Notes</a><a href="../index.html#experience" data-en="Experience" data-pl="Doświadczenie">Experience</a><a href="../index.html#contact" data-en="Contact" data-pl="Kontakt">Contact</a>
 </nav><div class="mobile-menu-footer"><p data-en="Kraków, Poland · CET/CEST" data-pl="Kraków, Polska · CET/CEST">Kraków, Poland · CET/CEST</p></div></div>
+<div class="page-shell">
 <main class="subpage-main" id="main"><article class="article-shell"><a class="back-home" href="../blog.html" data-en="← Back to notes" data-pl="← Wróć do notatek">← Back to notes</a><header class="article-header" data-reveal><div class="subpage-kicker mono" data-en="MACOS / DEVELOPMENT" data-pl="MACOS / PROGRAMOWANIE">MACOS / DEVELOPMENT</div><h1 data-en="SnapClip: Building the Clipboard Manager macOS Deserves" data-pl="SnapClip: menedżer schowka, na jaki zasługuje macOS">SnapClip: Building the Clipboard Manager macOS Deserves</h1><div class="article-meta mono"><span>31 DEC 2025</span><span>10 MIN</span><span>JAN JĘDRZEJAK</span></div></header><div class="article-content">
 <p class="lead" data-en="SnapClip began with a tiny frustration: macOS gives you one clipboard slot. Copy something new and the previous item disappears. I wanted a tool that felt native, stayed out of the way and solved that problem without becoming another subscription-heavy productivity suite." data-pl="SnapClip zaczął się od drobnej frustracji: macOS daje jedno miejsce w schowku. Kopiujesz coś nowego, a poprzednia zawartość znika. Chciałem narzędzia natywnego, niewidocznego do chwili użycia i rozwiązującego problem bez kolejnego abonamentowego kombajnu produktywności.">SnapClip began with a tiny frustration: macOS gives you one clipboard slot.</p>
 <h2 data-en="The product constraint: menu bar, not Dock" data-pl="Ograniczenie produktowe: pasek menu, nie Dock">The product constraint: menu bar, not Dock</h2><p data-en="The decision to live in the menu bar shaped the whole product. The application is invisible until a global shortcut opens the history. That reduces visual noise and makes the workflow available inside any application." data-pl="Decyzja o umieszczeniu aplikacji w pasku menu ukształtowała cały produkt. Aplikacja pozostaje niewidoczna, dopóki globalny skrót nie otworzy historii. Ogranicza to wizualny szum i udostępnia workflow w każdej aplikacji.">The decision to live in the menu bar shaped the whole product.</p>
@@ -96,8 +98,9 @@ RegisterEventHotKey(keyCode, modifiers, id, target, 0, &amp;hotKeyRef)</code></p
 <h2 data-en="What the project reinforced" data-pl="Co potwierdził ten projekt">What the project reinforced</h2><ul><li data-en="Native technology can still be the lightest route to a polished experience." data-pl="Technologia natywna nadal może być najlżejszą drogą do dopracowanego doświadczenia.">Native technology can still be the lightest route.</li><li data-en="Permissions, onboarding and failure states are product surfaces." data-pl="Uprawnienia, onboarding i stany błędów są powierzchniami produktu.">Permissions, onboarding and failure states are product surfaces.</li><li data-en="Restraint is a feature: the best utility often does fewer things exceptionally well." data-pl="Powściągliwość jest funkcją: najlepsze narzędzie często robi mniej rzeczy, ale wyjątkowo dobrze.">Restraint is a feature.</li></ul>
 </div><nav class="article-nav"><a class="back-home" href="../blog.html" data-en="← All notes" data-pl="← Wszystkie notatki">← All notes</a><a class="back-home" href="../index.html#contact" data-en="Discuss this idea ↗" data-pl="Porozmawiajmy o tym ↗">Discuss this idea ↗</a></nav></article></main>
 <footer class="site-footer"><div><strong>Jan Jędrzejak</strong><span class="mono">Digital Project Manager / Product Owner</span></div><div class="footer-links"><a href="../projects.html" data-en="Projects" data-pl="Projekty">Projects</a><a href="../blog.html" data-en="Notes" data-pl="Notatki">Notes</a><a href="../privacy.html" data-en="Privacy" data-pl="Prywatność">Privacy</a><a href="../cookies-policy.html" data-en="Cookies" data-pl="Pliki cookie">Cookies</a></div><div class="mono">© <span data-current-year>2026</span> · <span data-en="KRAKÓW / POLAND" data-pl="KRAKÓW / POLSKA">KRAKÓW / POLAND</span></div></footer>
+</div>
 <aside class="language-dock" aria-label="Language selector" data-en-aria="Language selector" data-pl-aria="Wybór języka"><span class="language-dock-label mono" data-en="Language" data-pl="Język">Language</span><button aria-label="Switch language to Polish" class="language-toggle language-toggle-dock" data-language-toggle type="button"><span class="language-current">EN</span><span aria-hidden="true" class="language-divider">/</span><span class="language-next">PL</span></button></aside>
-<div aria-hidden="true" class="cursor-dot"></div><div aria-hidden="true" class="cursor-ring"></div><script defer src="../pages.js"></script><script defer src="../chatbot.js?v=20260907-footer2"></script>
+<div aria-hidden="true" class="cursor-dot"></div><div aria-hidden="true" class="cursor-ring"></div><script defer src="../pages.js?v=20260908-scroll"></script><script defer src="../chatbot.js?v=20260908-scroll"></script>
 
 </body>
 </html>
