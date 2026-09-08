@@ -4,6 +4,7 @@ from pathlib import Path
 from urllib.parse import urljoin, urlsplit, unquote
 from collections import Counter
 import json
+import hashlib
 from lxml import etree, html
 from build_site import OUT, ORIGIN, PAGES, ARTICLES, url_for
 
@@ -14,6 +15,8 @@ def validate():
     titles = []
     descriptions = []
     expected_urls = set()
+    chat_css = OUT / "chatbot.css"
+    chat_css_version = hashlib.sha256(chat_css.read_bytes()).hexdigest()[:10] if chat_css.is_file() else None
 
     def check(condition, message):
         if not condition:
@@ -24,6 +27,13 @@ def validate():
         ids = doc.xpath('//*[@id]/@id')
         check(len(ids) == len(set(ids)), f"{path}: duplicate IDs")
         check(not doc.xpath('//*[@data-en or @data-pl or @data-i18n]'), f"{path}: untranslated content")
+        if any(urlsplit(src).path == "/chatbot.js" for src in doc.xpath('//script[@src]/@src')):
+            chat_links = doc.xpath('//head/link[@id="portfolio-chat-styles"]')
+            check(len(chat_links) == 1, f"{path}: expected one chat stylesheet in head")
+            check(chat_css_version is not None, f"{path}: missing chat stylesheet asset")
+            if len(chat_links) == 1 and chat_css_version is not None:
+                check(chat_links[0].get("rel") == "stylesheet", f"{path}: chat link is not a stylesheet")
+                check(chat_links[0].get("href") == "/chatbot.css?v=" + chat_css_version, f"{path}: stale or invalid chat stylesheet URL")
         for element in doc.xpath('//*[@href or @src]'):
             for attr in ("href", "src"):
                 value = element.get(attr)

@@ -629,8 +629,9 @@ body.cursor-active .cursor-ring { width: 54px; height: 54px; border-color: var(-
   .contact-orbit { right: 0; bottom: 0; width: min(100%, 28rem); animation: none; }
   .site-footer {
     grid-template-columns: minmax(0, 1fr);
-    gap: 1rem;
-    padding: 2rem var(--mobile-utility-right) calc(var(--mobile-utility-bottom) + 64px) var(--mobile-utility-left);
+    gap: .5rem;
+    /* Reserve 52px for the chat button plus 4px above the fixed utility row. */
+    padding: 1.25rem var(--mobile-utility-right) calc(var(--mobile-utility-bottom) + 56px) var(--mobile-utility-left);
   }
   .site-footer > div:first-child { gap: .35rem; }
   .site-footer strong { font-size: 1rem; }

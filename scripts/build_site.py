@@ -33,6 +33,25 @@ def set_text(element, text):
     element.text = text
 
 
+def add_chat_styles(doc):
+    # The widget is created by JavaScript, but its CSS must load with the page
+    # and change URL whenever its contents change, including on utility pages.
+    if any(urlsplit(element.get("src")).path == "/chatbot.js" for element in doc.xpath('//script[@src]')):
+        if not doc.xpath('//*[@id="portfolio-chat-styles"]'):
+            etree.SubElement(doc.find("head"), "link", id="portfolio-chat-styles", rel="stylesheet", href="/chatbot.css")
+
+
+def version_local_assets(doc):
+    for element in doc.xpath('//link[@href] | //script[@src]'):
+        attr = "src" if element.tag == "script" else "href"
+        value = element.get(attr)
+        parts = urlsplit(value)
+        local = ROOT / parts.path.lstrip("/")
+        if value.startswith("/") and not parts.netloc and local.suffix in (".js", ".css") and local.is_file():
+            version = hashlib.sha256(local.read_bytes()).hexdigest()[:10]
+            element.set(attr, parts.path + "?v=" + version)
+
+
 def url_for(path, language):
     path = "" if path == "index.html" else path
     return ORIGIN + ("/pl/" if language == "pl" else "/") + path
@@ -236,14 +255,8 @@ def build_page(path, language):
     for element in doc.xpath('//script[@src]'):
         if element.get("src", "").startswith("/"):
             element.set("defer", "defer")
-    for element in doc.xpath('//link[@href] | //script[@src]'):
-        attr = "src" if element.tag == "script" else "href"
-        value = element.get(attr)
-        parts = urlsplit(value)
-        local = ROOT / parts.path.lstrip("/")
-        if value.startswith("/") and local.suffix in (".js", ".css") and local.is_file():
-            version = hashlib.sha256(local.read_bytes()).hexdigest()[:10]
-            element.set(attr, parts.path + "?v=" + version)
+    add_chat_styles(doc)
+    version_local_assets(doc)
     noscript = etree.SubElement(doc.find("head"), "noscript")
     etree.SubElement(noscript, "style").text = "[data-reveal]{opacity:1!important;transform:none!important}.cursor-dot,.cursor-ring,.page-progress{display:none!important}"
 
@@ -317,6 +330,8 @@ def build():
             for attr in ("href", "src"):
                 if attr in element.attrib:
                     element.set(attr, rewrite_url(element.get(attr), name, "en", element.tag == "a"))
+        add_chat_styles(doc)
+        version_local_assets(doc)
         (OUT / name).write_text(html.tostring(doc, encoding="unicode", doctype="<!DOCTYPE html>"))
     (OUT / ".nojekyll").touch()
     sitemap = etree.Element("urlset", nsmap={None: "http://www.sitemaps.org/schemas/sitemap/0.9"})

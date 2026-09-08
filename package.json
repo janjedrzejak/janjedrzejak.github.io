@@ -1,0 +1,7 @@
+{
+  "name": "portfolio-layout-preview",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite" },
+  "devDependencies": { "vite": "8.2.2" }
+}

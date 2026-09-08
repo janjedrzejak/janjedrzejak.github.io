@@ -10,10 +10,15 @@
 
   if (document.querySelector("[data-portfolio-chat]")) return;
 
-  const cssLink = document.createElement("link");
-  cssLink.rel = "stylesheet";
-  cssLink.href = new URL("chatbot.css?v=20260908-scroll", siteRoot).href;
-  document.head.appendChild(cssLink);
+  // Published pages load the content-versioned stylesheet from the document head.
+  // Keep a fallback for opening an unbuilt authoring page directly.
+  if (!document.getElementById("portfolio-chat-styles")) {
+    const cssLink = document.createElement("link");
+    cssLink.id = "portfolio-chat-styles";
+    cssLink.rel = "stylesheet";
+    cssLink.href = new URL("chatbot.css?v=20260908-scroll", siteRoot).href;
+    document.head.appendChild(cssLink);
+  }
 
   const copy = {
     en: {

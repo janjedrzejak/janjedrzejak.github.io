@@ -14,6 +14,12 @@ The existing English URLs are preserved. Polish equivalents use `/pl/`. Edit bil
 
 See [SEO.md](SEO.md) for implementation details, validation scope and measurement guidance.
 
+## Responsive regression preview
+
+Build `_site/` first, then run `npm ci` and `npm run dev`. Vite is a development-only preview; GitHub Pages still publishes the Python build without a Node dependency. The preview-only `/__qa?width=390&height=844&path=/pl/` route embeds the built page in a same-origin viewport. It is not included in the published site. Rebuild after source changes.
+
+Check 320, 390 and 430 CSS-pixel widths, both languages, and menu, cookie settings and chat open/close cycles at the footer. Compare `document.scrollingElement.scrollHeight` with `.site-footer.getBoundingClientRect().bottom + window.scrollY` (within 2 px), and check horizontal overflow and link visibility. Use `.site-footer`, since the cookie modal also contains a `footer`. Iframe testing covers responsive layout; test touch gestures and software-keyboard behavior separately on real mobile browsers.
+
 ## AI portfolio guide
 The site-wide AI guide is implemented in `chatbot.js` and `chatbot.css`. It follows the page language, keeps conversation state only in memory and sends bounded requests to a server-side API.
 
