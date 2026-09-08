@@ -1,0 +1,49 @@
+{
+  "index.html": {
+    "modified": "2026-09-08",
+    "en": {"title": "Jan Jędrzejak | n8n Automation, AI & Digital Projects", "description": "Jan Jędrzejak, Digital Project Manager and Product Owner in Kraków. Explore n8n automation, AI, API integrations, projects and practical guides."},
+    "pl": {"title": "Jan Jędrzejak | Automatyzacja n8n, AI i integracje API", "description": "Jan Jędrzejak, Digital Project Manager i Product Owner z Krakowa. Automatyzacja procesów w n8n, AI i integracje API. Poznaj projekty i praktyczne poradniki."}
+  },
+  "projects.html": {
+    "modified": "2026-09-08",
+    "en": {"title": "AI, n8n Automation & Integration Projects | Jan Jędrzejak", "description": "Explore Jan Jędrzejak's work in AI assistants, n8n automation, API integrations and B2B products: challenges, system design and delivery focus.", "h1": "AI, automation and integration projects."},
+    "pl": {"title": "Projekty AI, n8n i integracji systemów | Jan Jędrzejak", "description": "Projekty Jana Jędrzejaka: asystenci AI, automatyzacja n8n, integracje API i produkty B2B. Poznaj problemy biznesowe, podejście i architekturę rozwiązań.", "h1": "Projekty AI, automatyzacji i integracji."}
+  },
+  "blog.html": {
+    "modified": "2026-09-08",
+    "en": {"title": "n8n, AI & API Integration Guides | Jan Jędrzejak", "description": "Practical notes on n8n, Raspberry Pi self-hosting, process automation, API integration and AI in project management, by Jan Jędrzejak.", "h1": "Notes on n8n, AI and integrations."},
+    "pl": {"title": "Poradniki n8n, AI i integracji API | Jan Jędrzejak", "description": "Praktyczne poradniki Jana Jędrzejaka: n8n na Raspberry Pi, automatyzacja procesów, integracje API i AI w zarządzaniu projektami.", "h1": "Notatki o n8n, AI i integracjach."}
+  },
+  "blog-posts/automation-failures.html": {
+    "modified": "2026-09-08",
+    "en": {"title": "Why Automation Projects Fail: 5 Gaps | Jan Jędrzejak", "description": "Five reasons workflow automation fails after a successful demo. Check exception handling, data definitions, ownership, adoption and operational metrics."},
+    "pl": {"title": "Dlaczego automatyzacja zawodzi? 5 przyczyn | Jan Jędrzejak", "description": "Pięć przyczyn nieudanych automatyzacji: obsługa błędów, definicje danych, właściciel procesu, adopcja i pomiar. Checklista przed wdrożeniem workflow."}
+  },
+  "blog-posts/ai-project-management.html": {
+    "modified": "2026-09-08",
+    "en": {"title": "AI in Project Management: Uses & Limits | Jan Jędrzejak", "description": "Where AI helps project managers: status drafts, risk analysis and decision preparation. Practical checks for sources, ownership and human review.", "h1": "AI in project management: useful tasks and real limits"},
+    "pl": {"title": "AI w zarządzaniu projektami: zastosowania | Jan Jędrzejak", "description": "Jak wykorzystać AI w zarządzaniu projektami? Statusy, analiza ryzyk i przygotowanie decyzji, z kontrolą źródeł, odpowiedzialności i jakości wyników.", "h1": "AI w zarządzaniu projektami: zastosowania i ograniczenia"}
+  },
+  "blog-posts/system-integration.html": {
+    "modified": "2026-09-08",
+    "en": {"title": "API Integration Checklist for Business Systems | Jan Jędrzejak", "description": "Plan a reliable API integration: source of truth, data mapping, ownership, retries and monitoring. Questions to resolve before connecting business systems.", "h1": "API integration: data, ownership and a delivery checklist"},
+    "pl": {"title": "Integracja systemów przez API: checklista | Jan Jędrzejak", "description": "Jak zaplanować integrację systemów przez API? Źródło prawdy, mapowanie danych, odpowiedzialność, ponawianie żądań i monitoring. Praktyczna checklista.", "h1": "Integracja systemów przez API: dane, odpowiedzialność i checklista"}
+  },
+  "blog-posts/n8n-raspberry-pi.html": {
+    "modified": "2026-09-08",
+    "en": {"title": "n8n on Raspberry Pi: Docker Setup & Limits | Jan Jędrzejak", "description": "Run n8n on a Raspberry Pi with Docker Compose and persistent storage. Understand Pi 3 B+ memory limits, local access, backups and upgrade checks.", "h1": "n8n on Raspberry Pi: Docker setup and hardware limits"},
+    "pl": {"title": "n8n na Raspberry Pi: Docker i konfiguracja | Jan Jędrzejak", "description": "Jak uruchomić n8n na Raspberry Pi z Docker Compose? Konfiguracja, trwałe dane, dostęp lokalny, backup i ograniczenia pamięci Raspberry Pi 3 B+.", "h1": "n8n na Raspberry Pi: instalacja Docker i ograniczenia sprzętu"}
+  },
+  "blog-posts/snapclip.html": {
+    "modified": "2026-09-08",
+    "en": {"title": "SnapClip: a macOS Clipboard Manager | Jan Jędrzejak", "description": "How Jan Jędrzejak designed SnapClip, a macOS clipboard manager: menu bar access, keyboard shortcuts, clipboard history and pinned snippets."},
+    "pl": {"title": "SnapClip: menedżer schowka na macOS | Jan Jędrzejak", "description": "Jak powstał SnapClip, menedżer schowka na macOS? Historia kopiowania, przypięte fragmenty, skróty klawiszowe i projektowanie aplikacji w pasku menu."}
+  },
+  "blog-posts/n8n-professional-certificate.html": {
+    "modified": "2026-09-08",
+    "en": {"title": "n8n Professional Certificate & Practice | Jan Jędrzejak", "description": "Jan Jędrzejak's n8n Professional Certificate: three Academy courses, API integrations, AI workflows and the move from Power Automate to n8n."},
+    "pl": {"title": "n8n Professional Certificate i praktyka | Jan Jędrzejak", "description": "n8n Professional Certificate Jana Jędrzejaka: trzy kursy Academy, integracje API, automatyzacje AI i przejście z Power Automate na n8n."}
+  },
+  "privacy.html": {"en": {}, "pl": {}},
+  "cookies-policy.html": {"en": {}, "pl": {}}
+}

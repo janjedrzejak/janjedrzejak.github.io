@@ -91,7 +91,7 @@
           </label>
           <button class="portfolio-chat__send" type="submit" disabled>${iconSend}<span class="portfolio-chat__sr-only" data-chat-copy="send"></span></button>
         </form>
-        <p class="portfolio-chat__notice"><span data-chat-copy="notice"></span> <a href="${new URL("privacy.html", siteRoot).href}" data-chat-copy="privacy"></a>.</p>
+        <p class="portfolio-chat__notice"><span data-chat-copy="notice"></span> <a href="${new URL(document.documentElement.lang === "pl" ? "pl/privacy.html" : "privacy.html", siteRoot).href}" data-chat-copy="privacy"></a>.</p>
       </div>
     </div>`;
   document.body.appendChild(root);

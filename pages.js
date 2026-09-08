@@ -3,47 +3,13 @@
   const doc = document.documentElement;
   const body = document.body;
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const translatable = [...document.querySelectorAll("[data-en][data-pl]")];
-  const rich = [...document.querySelectorAll("[data-en-html][data-pl-html]")];
-  const aria = [...document.querySelectorAll("[data-en-aria][data-pl-aria]")];
-  const toggles = [...document.querySelectorAll("[data-language-toggle]")];
   const menuButton = document.querySelector(".menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
-  let language = "en";
-
+  const language = doc.lang === "pl" ? "pl" : "en";
   const labels = {
-    en: { switch: "Switch language to Polish", open: "Open menu", close: "Close menu" },
-    pl: { switch: "Zmień język na angielski", open: "Otwórz menu", close: "Zamknij menu" }
+    en: { open: "Open menu", close: "Close menu" },
+    pl: { open: "Otwórz menu", close: "Zamknij menu" }
   };
-
-  function applyLanguage(next) {
-    language = next === "pl" ? "pl" : "en";
-    doc.lang = language;
-    body.dataset.language = language;
-    translatable.forEach(el => { el.textContent = el.dataset[language]; });
-    rich.forEach(el => { el.innerHTML = el.dataset[`${language}Html`]; });
-    aria.forEach(el => { el.setAttribute("aria-label", el.dataset[`${language}Aria`]); });
-    const title = language === "pl" ? body.dataset.titlePl : body.dataset.titleEn;
-    const description = language === "pl" ? body.dataset.descriptionPl : body.dataset.descriptionEn;
-    if (title) document.title = title;
-    const meta = document.querySelector('meta[name="description"]');
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    const ogLocale = document.querySelector('meta[property="og:locale"]');
-    if (meta && description) meta.content = description;
-    if (ogTitle && title) ogTitle.content = title;
-    if (ogDescription && description) ogDescription.content = description;
-    if (ogLocale) ogLocale.content = language === "pl" ? "pl_PL" : "en_US";
-    toggles.forEach(button => {
-      button.querySelector(".language-current").textContent = language.toUpperCase();
-      button.querySelector(".language-next").textContent = language === "pl" ? "EN" : "PL";
-      button.setAttribute("aria-label", labels[language].switch);
-      button.title = labels[language].switch;
-    });
-    updateMenuLabel();
-    try { localStorage.setItem("portfolio-language", language); } catch (_) {}
-    document.dispatchEvent(new CustomEvent("portfolio:language", { detail: { language } }));
-  }
 
   function updateMenuLabel() {
     const label = document.querySelector("[data-menu-label]");
@@ -63,13 +29,7 @@
     updateMenuLabel();
   }
 
-  let initial = "en";
-  try {
-    const saved = localStorage.getItem("portfolio-language");
-    initial = saved === "pl" || saved === "en" ? saved : "en";
-  } catch (_) { initial = "en"; }
-  applyLanguage(initial);
-  toggles.forEach(button => button.addEventListener("click", () => applyLanguage(language === "en" ? "pl" : "en")));
+  updateMenuLabel();
   menuButton?.addEventListener("click", () => setMenu(menuButton.getAttribute("aria-expanded") !== "true"));
   mobileMenu?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => setMenu(false)));
   document.addEventListener("keydown", event => { if (event.key === "Escape") setMenu(false); });

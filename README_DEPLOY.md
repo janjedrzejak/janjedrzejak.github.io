@@ -1,23 +1,18 @@
 # Jan Jędrzejak — portfolio redesign
 
-## Files to deploy
-Copy the package contents into the root of `janjedrzejak/janjedrzejak.github.io`.
+## Build and publish
 
-Core files:
-- `index.html`, `home.css`, `home.js`
-- `projects.html`, `blog.html`, `privacy.html`, `cookies-policy.html`
-- `pages.css`, `pages.js`
-- `blog-posts/*.html`
-- `img/favicon.svg`, PNG/ICO variants and `site.webmanifest`
+GitHub Actions renders the root HTML sources into `_site/`, validates local links and SEO, then publishes that directory to GitHub Pages. Do not upload the root sources directly.
 
-The redesign references existing repository assets:
-- `img/me.jpg` — portrait (source dimensions 632 × 640)
-- `img/og-image.jpg`
-- `resJanJedrzejakCV.pdf`
-- `cookie/` consent-manager assets
+```sh
+python -m pip install -r scripts/requirements.txt
+python scripts/build_site.py
+python scripts/validate_site.py
+```
 
-## Language
-English is the default language on a first visit. A user-selected EN/PL preference is saved in `localStorage` as `portfolio-language` and shared across all pages.
+The existing English URLs are preserved. Polish equivalents use `/pl/`. Edit bilingual data attributes in the root HTML files, home translations in `scripts/home-pl.json`, and page metadata in `scripts/seo-pages.json`. The language selector is a normal link to the equivalent translated URL; internal links preserve that language. No localStorage language preference overrides the URL.
+
+See [SEO.md](SEO.md) for implementation details, validation scope and measurement guidance.
 
 ## AI portfolio guide
 The site-wide AI guide is implemented in `chatbot.js` and `chatbot.css`. It follows the page language, keeps conversation state only in memory and sends bounded requests to a server-side API.
@@ -27,10 +22,8 @@ The Groq API key must remain a server-side secret. Never add it to this reposito
 When the provider, hosting or data flow changes, review `privacy.html` and `cookies-policy.html`.
 
 ## Portrait
-The profile frame uses the source aspect ratio `632 / 640`; the image is not stretched. `object-fit: cover` may crop minimally when responsive constraints require it.
+
+The page uses `img/me.webp`, a compressed version of the existing 1760 × 2432 portrait. Its composition and dimensions are unchanged. The original JPG remains available at its previous URL.
 
 ## Legal review
 The privacy and cookie pages reflect the current static portfolio configuration. Review them before publication and whenever hosting, analytics, forms, embedded media or other providers change.
-
-## GitHub permissions
-The connected GitHub integration previously returned `403 Resource not accessible by integration`. Grant **Contents: Read and write** to allow automated branch creation, commit and pull request publication.

@@ -111,6 +111,30 @@
   text-align: left;
   vertical-align: top;
 }
+
+.breadcrumbs { width: min(calc(100% - 3rem), var(--max)); margin: 1.5rem auto 0; color: var(--muted); font-size: .875rem; line-height: 1.6; }
+.breadcrumbs ol { display: flex; flex-wrap: wrap; gap: .4rem .75rem; list-style: none; padding: 0; }
+.breadcrumbs li + li::before { content: "/"; margin-right: .75rem; opacity: .5; }
+.breadcrumbs a, .article-toc a, .related-notes a { text-decoration: underline; text-underline-offset: .2em; }
+.breadcrumbs a:hover, .article-toc a:hover, .related-notes a:hover { color: var(--acid); }
+.answer-summary { padding: 1.3rem 1.5rem; border-left: 3px solid var(--acid); background: rgba(184,255,92,.035); }
+.article-toc { margin: 2rem 0 3rem; padding: 1.4rem; border: 1px solid var(--line); border-radius: 12px; }
+.article-toc > p { font-weight: 700; margin: 0 0 .8rem; color: var(--ink); }
+.article-toc ol { margin: 0; padding-left: 1.4rem; }
+.article-toc li { font-size: 1rem; line-height: 1.7; margin-block: .35rem; }
+.article-content h2, .article-content h3 { scroll-margin-top: 7rem; }
+.article-content pre { max-width: 100%; overflow-x: auto; font-size: .875rem; line-height: 1.7; white-space: pre; }
+.article-content p, .article-content li { overflow-wrap: anywhere; }
+.related-notes { margin-top: 3rem; padding: 2rem 0; border-top: 1px solid var(--line); }
+.related-notes h2 { font-size: 1.4rem; line-height: 1.4; margin-bottom: 1rem; }
+.related-notes li { font-size: 1rem; line-height: 1.7; margin-block: .6rem; }
+.article-meta { line-height: 1.65; font-size: .875rem; color: var(--muted); }
+.article-meta a { text-decoration: underline; text-underline-offset: .2em; }
+.subpage-title { max-width: 22ch; font-size: clamp(2.8rem, 7vw, 7rem); line-height: 1; letter-spacing: -.05em; }
+.article-header h1 { max-width: 22ch; font-size: clamp(2.5rem, 5.5vw, 5.8rem); line-height: 1.05; letter-spacing: -.045em; overflow-wrap: anywhere; }
+.article-shell { padding-block: clamp(3rem, 6vw, 6rem); }
+.article-content { margin-top: 3rem; }
+@media (max-width: 640px) { .breadcrumbs { width: calc(100% - 2rem); font-size: .875rem; } }
 .article-table-wrap th:last-child,
 .article-table-wrap td:last-child {
   border-right: 0;

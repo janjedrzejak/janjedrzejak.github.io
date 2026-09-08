@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SnapClip: Building the Clipboard Manager macOS Deserves — Jan Jędrzejak</title>
-<meta name="description" content="Why I designed a native, lightweight clipboard workflow and what Carbon Events, accessibility permissions and product restraint taught me."/>
-<meta name="author" content="Jan Jędrzejak"/>
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
-<meta name="theme-color" content="#07100e"/>
-<link rel="canonical" href="https://janjedrzejak.github.io/blog-posts/snapclip.html"/>
-<link href="../img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
-<link href="../img/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="../img/favicon.ico" rel="shortcut icon"/>
-<link href="../img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="../img/site.webmanifest" rel="manifest"/>
-<meta property="og:type" content="article"/>
-<meta property="og:title" content="SnapClip: Building the Clipboard Manager macOS Deserves — Jan Jędrzejak"/>
-<meta property="og:description" content="Why I designed a native, lightweight clipboard workflow and what Carbon Events, accessibility permissions and product restraint taught me."/>
-<meta property="og:url" content="https://janjedrzejak.github.io/blog-posts/snapclip.html"/>
-<meta property="og:image" content="https://janjedrzejak.github.io/img/og-image.jpg"/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:site_name" content="Jan Jędrzejak — Digital Portfolio"/>
-<meta property="article:published_time" content="2025-12-31"/>
-<meta property="article:author" content="https://janjedrzejak.github.io/"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="SnapClip: Building the Clipboard Manager macOS Deserves — Jan Jędrzejak"/>
-<meta name="twitter:description" content="Why I designed a native, lightweight clipboard workflow and what Carbon Events, accessibility permissions and product restraint taught me."/>
-<meta name="twitter:image" content="https://janjedrzejak.github.io/img/og-image.jpg"/>
-<meta name="twitter:image:alt" content="SnapClip: Building the Clipboard Manager macOS Deserves"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../home.css?v=20260908-scroll" rel="stylesheet"/>
-<link href="../pages.css?v=20260908-scroll" rel="stylesheet"/>
+<meta name="description" content="Why I designed a native, lightweight clipboard workflow and what Carbon Events, accessibility permissions and product restraint taught me.">
+<meta name="author" content="Jan Jędrzejak">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="theme-color" content="#07100e">
+<link rel="canonical" href="https://janjedrzejak.github.io/blog-posts/snapclip.html">
+<link href="../img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="../img/favicon.svg" rel="icon" type="image/svg+xml">
+<link href="../img/favicon.ico" rel="shortcut icon">
+<link href="../img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../img/site.webmanifest" rel="manifest">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SnapClip: Building the Clipboard Manager macOS Deserves — Jan Jędrzejak">
+<meta property="og:description" content="Why I designed a native, lightweight clipboard workflow and what Carbon Events, accessibility permissions and product restraint taught me.">
+<meta property="og:url" content="https://janjedrzejak.github.io/blog-posts/snapclip.html">
+<meta property="og:image" content="https://janjedrzejak.github.io/img/og-image.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Jan Jędrzejak — Digital Portfolio">
+<meta property="article:published_time" content="2025-12-31">
+<meta property="article:author" content="https://janjedrzejak.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SnapClip: Building the Clipboard Manager macOS Deserves — Jan Jędrzejak">
+<meta name="twitter:description" content="Why I designed a native, lightweight clipboard workflow and what Carbon Events, accessibility permissions and product restraint taught me.">
+<meta name="twitter:image" content="https://janjedrzejak.github.io/img/og-image.jpg">
+<meta name="twitter:image:alt" content="SnapClip: Building the Clipboard Manager macOS Deserves">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="../home.css?v=20260908-scroll" rel="stylesheet">
+<link href="../pages.css?v=20260908-scroll" rel="stylesheet">
 <script async src="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.umd.js"></script>
-<link href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css" rel="stylesheet"/>
-<link href="../cookie/silktide-consent-manager.css?v=20260907-footer2" id="silktide-consent-manager-css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/silktide/cookie-consent@latest/dist/cookieconsent.css" rel="stylesheet">
+<link href="../cookie/silktide-consent-manager.css?v=20260907-footer2" id="silktide-consent-manager-css" rel="stylesheet">
 <script src="../cookie/silktide-consent-manager.js?v=20260908-scroll"></script>
 <script src="../cookie/silktide-consent-ga-consent.js"></script>
 
@@ -80,7 +80,7 @@
     <a class="active" href="../blog.html" data-en="Notes" data-pl="Notatki">Notes</a>
     <a href="../index.html#experience" data-en="Experience" data-pl="Doświadczenie">Experience</a>
   </nav>
-  <div class="header-actions"><a class="header-cta" href="../index.html#contact" data-en-html="Start a conversation <span aria-hidden='true'>↗</span>" data-pl-html="Porozmawiajmy <span aria-hidden='true'>↗</span>">Start a conversation <span aria-hidden="true">↗</span></a></div>
+  <div class="header-actions"><a class="header-cta" href="../index.html#contact" data-en-html="Start a conversation &lt;span aria-hidden='true'&gt;↗&lt;/span&gt;" data-pl-html="Porozmawiajmy &lt;span aria-hidden='true'&gt;↗&lt;/span&gt;">Start a conversation <span aria-hidden="true">↗</span></a></div>
   <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only" data-menu-label>Open menu</span><span></span><span></span></button>
 </header>
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true"><nav aria-label="Mobile navigation">
@@ -88,7 +88,7 @@
 </nav><div class="mobile-menu-footer"><p data-en="Kraków, Poland · CET/CEST" data-pl="Kraków, Polska · CET/CEST">Kraków, Poland · CET/CEST</p></div></div>
 <div class="page-shell">
 <main class="subpage-main" id="main"><article class="article-shell"><a class="back-home" href="../blog.html" data-en="← Back to notes" data-pl="← Wróć do notatek">← Back to notes</a><header class="article-header" data-reveal><div class="subpage-kicker mono" data-en="MACOS / DEVELOPMENT" data-pl="MACOS / PROGRAMOWANIE">MACOS / DEVELOPMENT</div><h1 data-en="SnapClip: Building the Clipboard Manager macOS Deserves" data-pl="SnapClip: menedżer schowka, na jaki zasługuje macOS">SnapClip: Building the Clipboard Manager macOS Deserves</h1><div class="article-meta mono"><span>31 DEC 2025</span><span>10 MIN</span><span>JAN JĘDRZEJAK</span></div></header><div class="article-content">
-<p class="lead" data-en="SnapClip began with a tiny frustration: macOS gives you one clipboard slot. Copy something new and the previous item disappears. I wanted a tool that felt native, stayed out of the way and solved that problem without becoming another subscription-heavy productivity suite." data-pl="SnapClip zaczął się od drobnej frustracji: macOS daje jedno miejsce w schowku. Kopiujesz coś nowego, a poprzednia zawartość znika. Chciałem narzędzia natywnego, niewidocznego do chwili użycia i rozwiązującego problem bez kolejnego abonamentowego kombajnu produktywności.">SnapClip began with a tiny frustration: macOS gives you one clipboard slot.</p>
+<p class="lead" data-en="SnapClip began with a small frustration in my Mac workflow: copying something new replaced the item I wanted to keep. I designed a menu bar utility for clipboard history and pinned snippets, accessible through a keyboard shortcut." data-pl="SnapClip powstał z niewielkiej frustracji podczas pracy na Macu: skopiowanie nowej rzeczy zastępowało fragment, który chciałem zachować. Zaprojektowałem aplikację w pasku menu z historią schowka, przypiętymi fragmentami i dostępem przez skrót klawiszowy.">SnapClip began with a small frustration in my Mac workflow: copying something new replaced the item I wanted to keep. I designed a menu bar utility for clipboard history and pinned snippets, accessible through a keyboard shortcut.</p>
 <h2 data-en="The product constraint: menu bar, not Dock" data-pl="Ograniczenie produktowe: pasek menu, nie Dock">The product constraint: menu bar, not Dock</h2><p data-en="The decision to live in the menu bar shaped the whole product. The application is invisible until a global shortcut opens the history. That reduces visual noise and makes the workflow available inside any application." data-pl="Decyzja o umieszczeniu aplikacji w pasku menu ukształtowała cały produkt. Aplikacja pozostaje niewidoczna, dopóki globalny skrót nie otworzy historii. Ogranicza to wizualny szum i udostępnia workflow w każdej aplikacji.">The decision to live in the menu bar shaped the whole product.</p>
 <div class="article-callout"><strong data-en="Design rule" data-pl="Zasada projektowa">Design rule</strong><p data-en="A utility should require less attention than the problem it removes." data-pl="Narzędzie użytkowe powinno wymagać mniej uwagi niż problem, który usuwa.">A utility should require less attention than the problem it removes.</p></div>
 <h2 data-en="Global shortcuts and old APIs" data-pl="Globalne skróty i stare API">Global shortcuts and old APIs</h2><p data-en="Modern Swift does not offer a simple universal hotkey API. Carbon Events — an older framework — remains a dependable way to register a shortcut that works in VS Code, Safari, Slack and fullscreen applications." data-pl="Współczesny Swift nie oferuje prostego, uniwersalnego API globalnych skrótów. Carbon Events — starszy framework — pozostaje niezawodnym sposobem rejestracji skrótu działającego w VS Code, Safari, Slacku i aplikacjach pełnoekranowych.">Modern Swift does not offer a simple universal hotkey API.</p><pre><code>let id = EventHotKeyID(signature: OSType(utf8: "snap"), id: 1)

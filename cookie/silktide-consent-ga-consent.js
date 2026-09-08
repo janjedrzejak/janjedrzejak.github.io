@@ -105,13 +105,7 @@
     });
   }
 
-  let language = "en";
-  try {
-    language = localStorage.getItem("portfolio-language") || document.documentElement.lang || "en";
-  } catch (e) {
-    language = document.documentElement.lang || "en";
-  }
-  language = language.toLowerCase().startsWith("pl") ? "pl" : "en";
+  const language = document.documentElement.lang.toLowerCase().startsWith("pl") ? "pl" : "en";
 
   const pl = language === "pl";
 

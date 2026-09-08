@@ -696,3 +696,21 @@ body.cursor-active .cursor-ring { width: 54px; height: 54px; border-color: var(-
   #network-canvas { opacity: .28; }
   .cursor-dot, .cursor-ring { display: none; }
 }
+
+/* Crawlable guides and readable answers reuse the portfolio's existing colors. */
+.knowledge-section { padding-block: clamp(3.5rem, 7vw, 7rem); }
+.knowledge-section > h2, .profile-questions > h2 { max-width: 24ch; font-size: clamp(1.8rem, 3.7vw, 3.1rem); line-height: 1.15; letter-spacing: -.04em; }
+.knowledge-section p { color: var(--muted); font-size: 1rem; line-height: 1.75; max-width: 72ch; }
+.knowledge-section > p { margin-block: 1.5rem 2rem; }
+.guide-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.guide-card { display: block; padding: 1.6rem; border: 1px solid var(--line); border-radius: 14px; background: rgba(184,255,92,.025); }
+.guide-card h3 { font-size: 1.15rem; line-height: 1.45; color: var(--ink); }
+.guide-card p { margin-top: .8rem; }
+.guide-card:hover { border-color: var(--acid); }
+.profile-questions { margin-top: 4rem; max-width: 800px; }
+.profile-questions h3 { margin: 2rem 0 .7rem; font-size: 1.1rem; }
+.profile-questions > a { display: inline-block; margin-top: 1rem; text-decoration: underline; text-underline-offset: .2em; color: var(--acid); }
+.language-toggle { text-decoration: none; }
+.display-title { max-width: 17ch; line-height: .98; letter-spacing: -.055em; overflow-wrap: anywhere; }
+@media (max-width: 540px) { .display-title { font-size: clamp(2.5rem, 10.8vw, 3.7rem); } .hero-lede { font-size: 1rem; } }
+@media (max-width: 720px) { .guide-grid { grid-template-columns: 1fr; } }
