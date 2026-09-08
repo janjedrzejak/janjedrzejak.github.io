@@ -24,6 +24,8 @@ Edit the root English HTML sources and their bilingual `data-en`/`data-pl` attri
 
 The publication workflow builds and validates before uploading `_site/`. Validation checks all 24 HTML pages: local assets, internal links and fragments, one H1, unique titles/descriptions, canonical URLs, language alternates, structured data, visible dates, complete article bodies, no-JavaScript visibility rules and sitemap coverage. The NFC utility page and error page remain `noindex`. A sitemap entry means that a URL is available for indexing; it does not mean Google has indexed it.
 
+Post-deployment verification returned HTTP 200, matching titles and correct canonical URLs for all 22 sitemap entries. A nonexistent route returned HTTP 404. Public browser checks confirmed PL/EN navigation, opening and closing the Polish chatbot, its localized privacy link and navigation into the Polish Raspberry Pi guide. Desktop page layouts were inspected; a local mobile browser preview was unavailable. No field Core Web Vitals score is claimed. The obsolete, invalid one-off mobile patch workflow was removed so it no longer reports an unrelated failure on repository updates.
+
 ## Search topics and measurement
 
 | Topic / intent | Primary Polish page |

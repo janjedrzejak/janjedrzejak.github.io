@@ -171,6 +171,9 @@ def build_page(path, language):
     set_text(doc.find("head/title"), title)
     if "h1" in config:
         set_text(doc.xpath('//h1')[0], config["h1"])
+    # Keep the article title visible on first paint rather than waiting for a reveal animation.
+    for header in doc.xpath('//header[contains(concat(" ",normalize-space(@class)," ")," article-header ")]'):
+        header.attrib.pop("data-reveal", None)
     if path == "blog.html":
         for card in doc.xpath('//a[contains(concat(" ",normalize-space(@class)," ")," blog-card ")]'):
             target = card.get("href")
