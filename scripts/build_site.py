@@ -168,7 +168,8 @@ def add_article_navigation(doc, path, language, published, modified):
         "blog-posts/snapclip.html": ["system-integration", "automation-failures"],
         "blog-posts/automation-failures.html": ["system-integration", "n8n-raspberry-pi"],
         "blog-posts/system-integration.html": ["automation-failures", "ai-project-management"],
-        "blog-posts/ai-project-management.html": ["system-integration", "automation-failures"]
+        "blog-posts/ai-project-management.html": ["system-integration", "automation-failures"],
+        "blog-posts/ai-guitar-presets.html": ["ai-project-management", "snapclip"]
     }
     ul = etree.SubElement(related, "ul")
     for slug in groups[path]:
@@ -314,7 +315,7 @@ def build():
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir()
-    for name in ("img", "cookie", "res"):
+    for name in ("img", "cookie", "res", "downloads"):
         shutil.copytree(ROOT / name, OUT / name, ignore=shutil.ignore_patterns(".DS_Store"))
     for pattern in ("*.css", "*.js", "*.pdf", "robots.txt"):
         for source in ROOT.glob(pattern):
