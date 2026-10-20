@@ -120,12 +120,12 @@
     "modified": "2026-10-20",
     "en": {
       "title": "AI, a Guitar & 58 Tones | Jan Jędrzejak",
-      "description": "How I used AI and Yamaha THR10II to create 58 guitar presets for six artists — an after-work experiment in sound, creativity and new possibilities.",
+      "description": "AI-generated Yamaha THR10II guitar presets in native .thrl6p format, ready for THR Remote: 58 tones, six artists and a fun experiment beyond TONEX or Quad Cortex.",
       "h1": "AI, a guitar and 58 tones: an experiment after hours"
     },
     "pl": {
       "title": "AI, gitara i 58 brzmień | Jan Jędrzejak",
-      "description": "Jak dzięki AI i Yamaha THR10II przygotowałem 58 presetów dla sześciu wykonawców. Eksperyment po pracy i spojrzenie na nowe możliwości sztucznej inteligencji.",
+      "description": "58 presetów dla Yamaha THR10II w formacie .thrl6p do THR Remote. AI, gitara po pracy i eksperyment z brzmieniem — bez udawania TONEX czy Quad Cortex.",
       "h1": "AI, gitara i 58 brzmień. Eksperyment po godzinach"
     }
   }
