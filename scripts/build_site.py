@@ -169,7 +169,8 @@ def add_article_navigation(doc, path, language, published, modified):
         "blog-posts/automation-failures.html": ["system-integration", "n8n-raspberry-pi"],
         "blog-posts/system-integration.html": ["automation-failures", "ai-project-management"],
         "blog-posts/ai-project-management.html": ["system-integration", "automation-failures"],
-        "blog-posts/ai-guitar-presets.html": ["ai-project-management", "snapclip"]
+        "blog-posts/ai-guitar-presets.html": ["ai-project-management", "snapclip"],
+        "blog-posts/gdybym-mogl-wybrac-niebieska-pigulke.html": ["ai-project-management", "automation-failures"]
     }
     ul = etree.SubElement(related, "ul")
     for slug in groups[path]:

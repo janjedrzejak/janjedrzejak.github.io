@@ -128,5 +128,18 @@
       "description": "58 presetów dla Yamaha THR10II w formacie .thrl6p do THR Remote. AI, gitara po pracy i eksperyment z brzmieniem — bez udawania TONEX czy Quad Cortex.",
       "h1": "AI, gitara i 58 brzmień. Eksperyment po godzinach"
     }
+  },
+  "blog-posts/gdybym-mogl-wybrac-niebieska-pigulke.html": {
+    "modified": "2026-11-01",
+    "en": {
+      "title": "If I Could Take the Blue Pill | Jan Jędrzejak",
+      "description": "What if generative AI never entered our daily lives? An essay about thinking, free time, creativity and the price of constant acceleration.",
+      "h1": "If I Could Take the Blue Pill"
+    },
+    "pl": {
+      "title": "Gdybym mógł wybrać niebieską pigułkę | Jan Jędrzejak",
+      "description": "Czy świat bez generatywnej AI byłby spokojniejszy? Felieton o myśleniu, wolnym czasie, twórczości i cenie nieustannego przyspieszenia.",
+      "h1": "Gdybym mógł wybrać niebieską pigułkę"
+    }
   }
 }
