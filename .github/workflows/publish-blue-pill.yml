@@ -1,0 +1,90 @@
+
+name: Publish Blue Pill article
+
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-blue-pill.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  register-article:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Add article to blog
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+
+          slug = 'blog-posts/gdybym-mogl-wybrac-niebieska-pigulke.html'
+          assert Path(slug).is_file(), 'Brak HTML felietonu w blog-posts/'
+
+          seo_file = Path('scripts/seo-pages.json')
+          seo = json.loads(seo_file.read_text(encoding='utf-8'))
+          seo[slug] = {
+              'modified': '2026-11-01',
+              'en': {
+                  'title': 'If I Could Take the Blue Pill | Jan Jędrzejak',
+                  'description': 'What if generative AI never entered our daily lives? An essay about thinking, free time, creativity and the price of constant acceleration.',
+                  'h1': 'If I Could Take the Blue Pill'
+              },
+              'pl': {
+                  'title': 'Gdybym mógł wybrać niebieską pigułkę | Jan Jędrzejak',
+                  'description': 'Czy świat bez generatywnej AI byłby spokojniejszy? Felieton o myśleniu, wolnym czasie, twórczości i cenie nieustannego przyspieszenia.',
+                  'h1': 'Gdybym mógł wybrać niebieską pigułkę'
+              }
+          }
+          seo_file.write_text(json.dumps(seo, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          blog_file = Path('blog.html')
+          blog = blog_file.read_text(encoding='utf-8')
+          if f'href="{slug}"' not in blog:
+              marker = '<div class="blog-grid">'
+              assert marker in blog, 'Brak sekcji blog-grid'
+              card = '''
+          <a class="blog-card" href="blog-posts/gdybym-mogl-wybrac-niebieska-pigulke.html" data-reveal>
+          <div class="blog-card-art" aria-hidden="true"><span>AI?</span></div>
+          <div class="blog-card-copy"><div class="blog-meta mono"><span data-en="AI / SOCIETY / ESSAY" data-pl="AI / SPOŁECZEŃSTWO / FELIETON">AI / SOCIETY / ESSAY</span><time datetime="2026-11-01">01 NOV 2026</time></div>
+          <h2 data-en="If I Could Take the Blue Pill" data-pl="Gdybym mógł wybrać niebieską pigułkę">If I Could Take the Blue Pill</h2>
+          <p data-en="Would we really want a world without generative AI? A reflection on time, thinking and the cost of always doing more." data-pl="Czy naprawdę chcielibyśmy świata bez generatywnej AI? Felieton o czasie, myśleniu i cenie nieustannego przyspieszenia.">Would we really want a world without generative AI?</p>
+          <span class="blog-read mono" data-en="Read article ↗" data-pl="Czytaj artykuł ↗">Read article ↗</span></div></a>
+          '''
+              blog_file.write_text(blog.replace(marker, marker + '\n' + card, 1), encoding='utf-8')
+
+          build_file = Path('scripts/build_site.py')
+          build = build_file.read_text(encoding='utf-8')
+          if f'"{slug}":' not in build:
+              old = '"blog-posts/ai-guitar-presets.html": ["ai-project-management", "snapclip"]'
+              new = old + ',\n        "' + slug + '": ["ai-project-management", "automation-failures"]'
+              assert old in build, 'Nie znaleziono słownika powiązanych artykułów'
+              build_file.write_text(build.replace(old, new, 1), encoding='utf-8')
+          PY
+
+      - name: Build and validate
+        run: |
+          python -m pip install -r scripts/requirements.txt
+          python scripts/build_site.py
+          python scripts/validate_site.py
+
+      - name: Commit changes and deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add blog.html scripts/seo-pages.json scripts/build_site.py
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish Blue Pill essay'
+            git push origin HEAD:main
+          fi
+          gh workflow run static.yml --ref main
