@@ -24,7 +24,7 @@
     }
   },
   "blog.html": {
-    "modified": "2026-10-20",
+    "modified": "2026-11-07",
     "en": {
       "title": "n8n, AI & API Integration Guides | Jan Jędrzejak",
       "description": "Practical notes on n8n, Raspberry Pi self-hosting, process automation, API integration and AI in project management, by Jan Jędrzejak.",
@@ -151,6 +151,19 @@
     "pl": {
       "title": "WebMCP Lab | Narzędzia agentów AI | Jan Jędrzejak",
       "description": "Interaktywny playground WebMCP: lista narzędzi, schematy JSON, wywołania agentów i diagnostyka wyników."
+    }
+  },
+  "blog-posts/webmcp-portfolio-experiment.html": {
+    "modified": "2026-11-07",
+    "en": {
+      "title": "WebMCP on My Website: AI Agent Experiment | Jan Jędrzejak",
+      "description": "How I tested WebMCP on my portfolio after Google Cloud Summit. A real AI Guide, JavaScript examples, MCP vs WebMCP and prompt injection safety.",
+      "h1": "WebMCP on my site. From a counter to the AI Guide"
+    },
+    "pl": {
+      "title": "WebMCP na mojej stronie: eksperyment AI | Jan Jędrzejak",
+      "description": "Jak po Google Cloud Summit przetestowałem WebMCP na własnym portfolio. AI Guide, kod JavaScript, różnice MCP i WebMCP oraz ochrona przed prompt injection.",
+      "h1": "WebMCP na mojej stronie. Od licznika do AI Guide"
     }
   }
 }
