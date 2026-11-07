@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07110f">
+  <meta name="description" content="Interactive WebMCP playground: discover browser agent tools, inspect schemas, run tool calls and debug results.">
+  <title>WebMCP Lab | Jan Jędrzejak</title>
+  <link rel="canonical" href="https://janjedrzejak.github.io/webmcp-lab.html">
+  <link rel="icon" href="/img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/webmcp-lab.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="glow" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="/"><span class="monogram">JJ</span><span><strong>Jan Jędrzejak</strong><small>Digital systems / human outcomes</small></span></a>
+  <nav aria-label="Page navigation"><a href="/">Portfolio</a><a href="/projects.html">Projects</a><a href="/blog.html">Notes</a><span class="active">WebMCP Lab</span></nav>
+  <a class="back" href="/">← Back to portfolio</a>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="eyebrow"><span class="pulse"></span> INTERACTIVE EXPERIMENT / BROWSER-NATIVE TOOLS</div>
+    <h1>Make the web<br><em>agent-ready.</em></h1>
+    <p class="lead">A live playground for the Web Model Context Protocol. Discover tools, inspect JSON schemas, invoke them through the browser and see exactly what happened.</p>
+    <div class="chips"><span>WebMCP / Imperative API</span><span>document.modelContext</span><span>Client-side only</span><span>No API keys</span></div>
+  </section>
+  <div class="notice" id="notice" role="status"><span class="notice-dot"></span><div><strong id="status-title">Checking browser support…</strong><p id="status-description">Verifying document.modelContext and registered tools.</p></div><button id="refresh" type="button">↻ Refresh</button></div>
+  <section class="stats" aria-label="Playground diagnostics"><article><small>API STATUS</small><strong id="api-status">Checking</strong></article><article><small>REGISTERED TOOLS</small><strong id="tool-count">—</strong></article><article><small>SUCCESSFUL CALLS</small><strong id="call-count">0</strong></article><article><small>RUN MODE</small><strong id="run-mode">—</strong></article></section>
+  <div class="section-heading"><div><span class="kicker">01 / TOOL EXPLORER</span><h2>Discover. Configure. Execute.</h2></div><p>These tools are also exposed to compatible browser agents when WebMCP is available.</p></div>
+  <section class="workspace" aria-label="WebMCP tool explorer">
+    <div class="tools panel"><div class="panel-heading"><h3>Available tools</h3><span id="tool-counter">0 tools</span></div><div class="tool-list" id="tool-list" role="listbox" aria-label="Choose a tool"></div><p class="panel-foot">Only this page registers these experimental tools; no third-party backend is called.</p></div>
+    <div class="editor panel"><div class="panel-heading"><div><span class="kicker">SELECTED TOOL</span><h3 id="selected-title">Select a tool</h3></div><span id="selected-type" class="tag">READ ONLY</span></div><p id="selected-description" class="tool-desc">Select a tool on the left to see its schema and call it.</p><div class="field-head"><label for="arguments">Input arguments <span>(JSON)</span></label><button class="text-button" id="reset-input" type="button">Reset input</button></div><textarea id="arguments" spellcheck="false" rows="8" aria-label="Tool arguments JSON">{}</textarea><details class="schema-details"><summary>View input schema</summary><pre id="schema">{}</pre></details><div class="actions"><button id="run" class="primary" type="button">▶ Execute tool</button><span id="execution-hint">Waiting for selection</span></div></div>
+    <div class="results panel"><div class="panel-heading"><h3>Execution result</h3><button id="copy-result" class="text-button" type="button">Copy JSON</button></div><div class="result-status" id="result-status">NO EXECUTION YET</div><pre id="result" aria-live="polite">{
+  "message": "Run a tool to see its output."
+}</pre><div class="panel-heading history-heading"><h3>Call history</h3><button id="clear-history" class="text-button" type="button">Clear</button></div><ol id="history" class="history"><li class="muted">No calls yet</li></ol></div>
+  </section>
+  <section class="demo-section"><div class="section-heading"><div><span class="kicker">02 / LIVE STATE</span><h2>See tools affect the page.</h2></div><p>The counter and theme are local to this browser tab. No data is sent to a server.</p></div><div class="demo-grid"><article class="state-card"><small>COUNTER STATE</small><div class="counter" id="counter">0</div><p>Call <code>increment_counter</code> or <code>reset_counter</code> to update this number.</p><button class="secondary" id="counter-button" type="button">Increment manually</button></article><article class="state-card"><small>VISUAL STATE</small><div class="theme-preview" id="theme-preview"><span class="preview-orbit"></span><strong id="theme-label">Forest mode</strong></div><p>Call <code>set_accent_theme</code> to change the accent of the playground.</p><button class="secondary" id="theme-button" type="button">Toggle manually</button></article><article class="state-card"><small>PROFILE SEARCH</small><div class="search-preview" id="search-preview"><span>Try searching the project catalogue</span><strong id="search-label">No search yet</strong></div><p><code>search_projects</code> queries a small, public demo catalogue of portfolio topics.</p><button class="secondary" id="search-button" type="button">Search AI projects</button></article></div></section>
+  <section class="guide"><div><span class="kicker">03 / GET STARTED</span><h2>Test with Chrome</h2><p>Enable WebMCP in a supporting Chrome build, open this page, and inspect the tools in DevTools or a compatible browser agent. If the API is unavailable, the playground explicitly switches to simulated execution.</p></div><div class="steps"><div><b>01</b><span>Enable the WebMCP feature in your Chrome build / origin trial as required.</span></div><div><b>02</b><span>Reload the page and confirm <code>API STATUS: Available</code>.</span></div><div><b>03</b><span>Select <code>increment_counter</code>, set <code>{"amount": 3}</code>, and execute.</span></div><div><b>04</b><span>Inspect <code>document.modelContext.getTools()</code> in the DevTools console.</span></div><a href="https://developer.chrome.com/docs/ai/webmcp/imperative-api" target="_blank" rel="noopener noreferrer">Official Chrome WebMCP documentation ↗</a></div></section>
+</main>
+<footer><span>Jan Jędrzejak <span class="foot-dim">/ WebMCP Lab</span></span><span>Built for experimentation · <a href="/">Back to portfolio ↗</a></span></footer>
+<script src="/webmcp-lab.js" defer></script>
+</body>
+</html>

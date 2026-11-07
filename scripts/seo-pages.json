@@ -141,5 +141,16 @@
       "description": "Czy świat bez generatywnej AI byłby spokojniejszy? Felieton o myśleniu, wolnym czasie, twórczości i cenie nieustannego przyspieszenia.",
       "h1": "Gdybym mógł wybrać niebieską pigułkę"
     }
+  },
+  "webmcp-lab.html": {
+    "modified": "2026-11-07",
+    "en": {
+      "title": "WebMCP Lab | Interactive AI Agent Tools | Jan Jędrzejak",
+      "description": "Try WebMCP browser-native agent tools: discover tools, inspect JSON schemas, execute calls and debug results."
+    },
+    "pl": {
+      "title": "WebMCP Lab | Narzędzia agentów AI | Jan Jędrzejak",
+      "description": "Interaktywny playground WebMCP: lista narzędzi, schematy JSON, wywołania agentów i diagnostyka wyników."
+    }
   }
 }
