@@ -180,6 +180,15 @@ def add_article_navigation(doc, path, language, published, modified):
     content.addnext(related)
 
 
+def inject_sitewide_webmcp(doc):
+    """Load the shared WebMCP tools on all built site pages except the isolated Lab."""
+    from lxml import etree
+    if doc.xpath('//script[@src="/webmcp-site.js"]'):
+        return
+    script = etree.SubElement(doc.find("body"), "script", src="/webmcp-site.js")
+    script.set("defer", "defer")
+
+
 def build_page(path, language):
     doc = html.document_fromstring((ROOT / path).read_text())
     body = doc.find("body")
@@ -257,6 +266,8 @@ def build_page(path, language):
     for element in doc.xpath('//script[@src]'):
         if element.get("src", "").startswith("/"):
             element.set("defer", "defer")
+    if path != "webmcp-lab.html":
+        inject_sitewide_webmcp(doc)
     add_chat_styles(doc)
     version_local_assets(doc)
     noscript = etree.SubElement(doc.find("head"), "noscript")
@@ -332,6 +343,7 @@ def build():
             for attr in ("href", "src"):
                 if attr in element.attrib:
                     element.set(attr, rewrite_url(element.get(attr), name, "en", element.tag == "a"))
+        inject_sitewide_webmcp(doc)
         add_chat_styles(doc)
         version_local_assets(doc)
         (OUT / name).write_text(html.tostring(doc, encoding="unicode", doctype="<!DOCTYPE html>"))
