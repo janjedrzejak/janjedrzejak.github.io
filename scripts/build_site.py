@@ -132,6 +132,11 @@ def localize(doc, path, language):
         for key in list(element.attrib):
             if key.startswith(("data-en", "data-pl", "data-title-", "data-description-", "data-i18n")):
                 del element.attrib[key]
+    # Authoring files can hold separate EN/PL content blocks. Only one belongs
+    # in each published language page, its reading time, TOC and SEO index.
+    for section in doc.xpath('//*[contains(concat(" ",normalize-space(@class)," ")," article-lang--en ") or contains(concat(" ",normalize-space(@class)," ")," article-lang--pl ")]'):
+        if "article-lang--" + language not in section.get("class", "").split():
+            section.getparent().remove(section)
 
 
 def add_article_navigation(doc, path, language, published, modified):
@@ -170,7 +175,8 @@ def add_article_navigation(doc, path, language, published, modified):
         "blog-posts/system-integration.html": ["automation-failures", "ai-project-management"],
         "blog-posts/ai-project-management.html": ["system-integration", "automation-failures"],
         "blog-posts/ai-guitar-presets.html": ["ai-project-management", "snapclip"],
-        "blog-posts/gdybym-mogl-wybrac-niebieska-pigulke.html": ["ai-project-management", "automation-failures"]
+        "blog-posts/gdybym-mogl-wybrac-niebieska-pigulke.html": ["ai-project-management", "automation-failures"],
+        "blog-posts/webmcp-portfolio-experiment.html": ["ai-project-management", "system-integration"]
     }
     ul = etree.SubElement(related, "ul")
     for slug in groups[path]:
