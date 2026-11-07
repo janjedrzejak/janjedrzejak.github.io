@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebMCP on my site. From a counter to the AI Guide | Jan Jędrzejak</title>
+<meta name="description" content="From Google Cloud Summit to my own WebMCP experiment: AI Guide, JavaScript examples, MCP vs WebMCP and prompt injection security.">
+<meta name="author" content="Jan Jędrzejak">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="theme-color" content="#07100e">
+<link rel="canonical" href="https://janjedrzejak.github.io/blog-posts/webmcp-portfolio-experiment.html">
+<link href="../img/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="../img/favicon.ico" rel="shortcut icon">
+<link href="../img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="../img/site.webmanifest" rel="manifest">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WebMCP on my site. From a counter to the AI Guide | Jan Jędrzejak">
+<meta property="og:description" content="From Google Cloud Summit to my own WebMCP experiment: AI Guide, JavaScript examples, MCP vs WebMCP and prompt injection security.">
+<meta property="og:url" content="https://janjedrzejak.github.io/blog-posts/webmcp-portfolio-experiment.html">
+<meta property="og:image" content="https://janjedrzejak.github.io/img/og-image.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Jan Jędrzejak - Digital Portfolio">
+<meta property="article:published_time" content="2026-11-07">
+<meta property="article:author" content="https://janjedrzejak.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WebMCP on my site. From a counter to the AI Guide | Jan Jędrzejak">
+<meta name="twitter:description" content="From Google Cloud Summit to my own WebMCP experiment: AI Guide, JavaScript examples, MCP vs WebMCP and prompt injection security.">
+<meta name="twitter:image" content="https://janjedrzejak.github.io/img/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="../home.css?v=20260908-scroll" rel="stylesheet">
+<link href="../pages.css?v=20260908-scroll" rel="stylesheet">
+<link href="../cookie/silktide-consent-manager.css?v=20260907-footer2" id="silktide-consent-manager-css" rel="stylesheet">
+<script src="../cookie/silktide-consent-manager.js?v=20260908-scroll"></script>
+<script src="../cookie/silktide-consent-ga-consent.js"></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https://janjedrzejak.github.io/blog-posts/webmcp-portfolio-experiment.html#article",
+  "url": "https://janjedrzejak.github.io/blog-posts/webmcp-portfolio-experiment.html",
+  "mainEntityOfPage": "https://janjedrzejak.github.io/blog-posts/webmcp-portfolio-experiment.html",
+  "headline": "WebMCP na mojej stronie. Od licznika do AI Guide",
+  "description": "WebMCP od Google Cloud Summit po moje portfolio: działający AI Guide, przykłady JavaScript, MCP vs WebMCP i bezpieczeństwo prompt injection.",
+  "image": "https://janjedrzejak.github.io/img/og-image.jpg",
+  "datePublished": "2026-11-07",
+  "dateModified": "2026-11-07",
+  "articleSection": "Technology / Web / AI",
+  "inLanguage": [
+    "en",
+    "pl"
+  ],
+  "author": {
+    "@type": "Person",
+    "@id": "https://janjedrzejak.github.io/#person",
+    "name": "Jan Jędrzejak",
+    "url": "https://janjedrzejak.github.io/"
+  },
+  "publisher": {
+    "@id": "https://janjedrzejak.github.io/#person"
+  },
+  "isPartOf": {
+    "@id": "https://janjedrzejak.github.io/blog.html#blog"
+  }
+}</script>
+<script src="../layout.js?v=20260908-scroll"></script>
+<style>
+html:not([lang="pl"]) .article-lang--pl {display:none}
+html[lang="pl"] .article-lang--en {display:none}
+.article-content pre { white-space:pre; overflow:auto; }
+.article-content pre code { white-space:inherit; }
+.article-content h2 { scroll-margin-top:6rem; }
+</style>
+<script>
+(function(){try{const q=new URLSearchParams(location.search).get("lang");const saved=localStorage.getItem("jj:blog-language");document.documentElement.lang=(q==="pl"||q==="en")?q:((saved==="pl"||saved==="en")?saved:((navigator.language||"").toLowerCase().startsWith("pl")?"pl":"en"));}catch(e){document.documentElement.lang="en";}})();
+</script>
+</head>
+<body data-title-en="WebMCP on my site. From a counter to the AI Guide | Jan Jędrzejak" data-title-pl="WebMCP na mojej stronie. Od licznika do AI Guide | Jan Jędrzejak"
+  data-description-en="From Google Cloud Summit to my own WebMCP experiment: AI Guide, JavaScript examples, MCP vs WebMCP and prompt injection security." data-description-pl="WebMCP od Google Cloud Summit po moje portfolio: działający AI Guide, przykłady JavaScript, MCP vs WebMCP i bezpieczeństwo prompt injection.">
+<a class="skip-link" href="#main" data-en="Skip to content" data-pl="Przejdź do treści">Skip to content</a>
+<div aria-hidden="true" class="page-progress"><span></span></div>
+<div aria-hidden="true" class="ambient ambient-one"></div><div aria-hidden="true" class="ambient ambient-two"></div><div aria-hidden="true" class="noise"></div>
+<header class="site-header" data-header>
+  <a class="brand" href="../index.html#top" aria-label="Jan Jędrzejak - homepage">
+    <span class="brand-mark" aria-hidden="true">JJ</span>
+    <span class="brand-copy"><strong>Jan Jędrzejak</strong><small data-en="Digital systems / human outcomes" data-pl="Systemy cyfrowe / ludzkie rezultaty">Digital systems / human outcomes</small></span>
+  </a>
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a href="../index.html#expertise" data-en="Expertise" data-pl="Kompetencje">Expertise</a>
+    <a href="../projects.html" data-en="Projects" data-pl="Projekty">Projects</a>
+    <a class="active" href="../blog.html" data-en="Notes" data-pl="Notatki">Notes</a>
+    <a href="../index.html#experience" data-en="Experience" data-pl="Doświadczenie">Experience</a>
+  </nav>
+  <div class="header-actions"><a class="header-cta" href="../index.html#contact" data-en="Start a conversation" data-pl="Porozmawiajmy">Start a conversation</a></div>
+  <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"><span class="sr-only" data-menu-label>Open menu</span><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true"><nav aria-label="Mobile navigation">
+  <a href="../index.html#expertise" data-en="Expertise" data-pl="Kompetencje">Expertise</a>
+  <a href="../projects.html" data-en="All projects" data-pl="Wszystkie projekty">All projects</a>
+  <a href="../blog.html" data-en="Notes" data-pl="Notatki">Notes</a>
+  <a href="../index.html#experience" data-en="Experience" data-pl="Doświadczenie">Experience</a>
+  <a href="../index.html#contact" data-en="Contact" data-pl="Kontakt">Contact</a>
+</nav><div class="mobile-menu-footer"><p data-en="Kraków, Poland" data-pl="Kraków, Polska">Kraków, Poland</p></div></div>
+<div class="page-shell">
+<main class="subpage-main" id="main">
+<article class="article-shell">
+<a class="back-home" href="../blog.html" data-en="← Back to notes" data-pl="← Wróć do notatek">← Back to notes</a>
+<header class="article-header">
+<div class="subpage-kicker mono" data-en="AI / WEB" data-pl="AI / WEB">AI / WEB</div>
+<h1 data-en="WebMCP on my site. From a counter to the AI Guide" data-pl="WebMCP na mojej stronie. Od licznika do AI Guide">WebMCP on my site. From a counter to the AI Guide</h1>
+<div class="article-meta mono"><time datetime="2026-11-07">2026-11-07</time><span>JAN JĘDRZEJAK</span></div>
+</header>
+<div class="article-content article-lang--en" lang="en">
+<p>I first heard about WebMCP at Google Cloud Summit Poland 2026, at PGE Narodowy in Warsaw. One fairly ordinary question stuck with me after the event. Could I type “Show AI projects” on a website and actually see the list update a moment later? <a href="https://cloudonair.withgoogle.com/events/google-cloud-summit-poland-2026" target="_blank" rel="noopener noreferrer">Google Cloud Summit Poland 2026</a></p>
+<p>I used my own portfolio to find out. It already had a project catalogue, filters, Polish and English versions, and a chat widget that could answer questions about the site. Everything I needed for a first test was already there. I just had to connect the conversation to the things the site could do. <a href="https://janjedrzejak.github.io/" target="_blank" rel="noopener noreferrer">My portfolio</a></p>
+<h2>Letting the page say what it can do</h2>
+<p>An agent working through a regular website interface can look for a button much as a person would. It reads labels, looks through menus, and tries to work out what to click. On my site, it would have to find the projects page, locate the filters, and realise that “AI projects” means the one labelled “AI / ML”. That’s doable. On another site, the same filter might be tucked away in a dropdown.</p>
+<p>WebMCP is a proposed web standard that lets a site expose specific functions in the open tab. Each tool has a name, a description, and a definition of the inputs it accepts. A site can offer a tool that applies a project filter and list the categories it accepts. A compatible agent can call it with the category <code>ai</code>. The page handles the details of applying the filter. Mine uses the same button a visitor can click by hand. <a href="https://developer.chrome.com/docs/ai/webmcp" target="_blank" rel="noopener noreferrer">Chrome’s WebMCP documentation</a> · <a href="https://github.com/janjedrzejak/janjedrzejak.github.io/blob/main/webmcp-site.js" target="_blank" rel="noopener noreferrer">Portfolio tool code</a></p>
+<p>What I like about this is that I can test the tool separately from the conversation. I can give it a specific value and see what the page does. Then I can ask whether the agent would pick the same function after reading an ordinary sentence.</p>
+<h2>The MCP in the name can be confusing</h2>
+<p>There is one distinction worth making here, because the name is slightly misleading. <strong>MCP and WebMCP are not the same thing</strong>, even though both let agents use tools. The original <em>Model Context Protocol</em> connects an agent to services, data and workflows, usually through an MCP server. An agent can query a database or start a backend process without visiting a website at all. MCP uses JSON-RPC messages and transports such as <code>stdio</code> and HTTP.</p>
+<p><strong>WebMCP</strong>, or <em>Web Model Context Protocol</em>, is a proposed browser API inspired by MCP, rather than “MCP running in JavaScript”. A tool runs in the context of an open page and its current user session. The browser makes that tool available to an agent that supports WebMCP. Close the tab and those page tools disappear. For now, WebMCP exposes tools, not the resources and prompts available in MCP. A page tool can still call a backend API, of course; that doesn&#39;t turn it into an MCP server.</p>
+<p>For my experiment, the difference is fairly tangible. Asking to see AI projects doesn&#39;t contact a separate MCP server that manages my portfolio. It calls functionality already present on the website and I can see the result in the interface. The names sound related because the ideas are related, but the integration points are different. <a href="https://developer.chrome.com/docs/ai/webmcp/compare-mcp" target="_blank" rel="noopener noreferrer">Chrome&#39;s MCP versus WebMCP comparison</a></p>
+<h2>I started with a counter</h2>
+<p>Before hooking up the chat, I built a separate WebMCP Playground. I could look through the tools, inspect the arguments they take, run a call, and see what came back. I added a simple counter, a way to change the accent colour, and a search tool for a small catalogue of sample projects. The counter was ideal. Send <code>{&quot;amount&quot;: 3}</code> and watch zero turn into three. It’s hard to confuse that with a polite message saying everything went fine.</p>
+<p>In Chrome with the experimental API available, the Playground shows <strong>Native</strong> mode. In a test, calling <code>increment_counter</code> through WebMCP moved the counter from zero to three. If the necessary API is unavailable, the Playground switches to <strong>Simulation</strong> and runs the functions locally. You can still play with the counter and inspect the inputs. The mode label tells you how the call ran. <a href="https://janjedrzejak.github.io/webmcp-lab.html" target="_blank" rel="noopener noreferrer">WebMCP Playground</a></p>
+<p>To try it yourself, select <code>increment_counter</code> in the panel and run it with the default value of <code>3</code>. The panel shows a history beside the result, and you can expand the input schema below the arguments field. For local testing, Chrome’s documentation points to the <code>chrome://flags/#enable-webmcp-testing</code> flag. Once you’ve enabled it and restarted Chrome, check that the panel says <strong>Native</strong>. <a href="https://developer.chrome.com/docs/ai/webmcp" target="_blank" rel="noopener noreferrer">Chrome’s testing instructions</a></p>
+<h2>A little JavaScript behind the scenes</h2>
+<p>I didn&#39;t need to build a second interface for the agent. With WebMCP&#39;s <em>Imperative API</em>, the page registers a tool using <code>document.modelContext.registerTool()</code>. Here&#39;s a shortened version based on my <code>webmcp-site.js</code>. The idea is the same as in the live portfolio: the agent supplies a category and the page clicks its existing filter button.</p>
+<pre><code class="language-js">if (&#39;modelContext&#39; in document) {
+  document.modelContext.registerTool({
+    name: &#39;portfolio_filter_projects&#39;,
+    description: &#39;Apply the project category filter.&#39;,
+    inputSchema: {
+      type: &#39;object&#39;,
+      properties: {
+        category: { type: &#39;string&#39;, enum: [&#39;all&#39;, &#39;ai&#39;, &#39;automation&#39;, &#39;integration&#39;, &#39;product&#39;, &#39;commerce&#39;, &#39;data&#39;] }
+      },
+      required: [&#39;category&#39;],
+      additionalProperties: false
+    },
+    annotations: { readOnlyHint: false },
+    execute: async ({ category }) =&gt; {
+      const button = [...document.querySelectorAll(&#39;.filter-chip[data-filter]&#39;)]
+        .find(el =&gt; el.dataset.filter === category);
+      if (!button) throw new Error(&#39;Filter not found&#39;);
+      button.click();
+      return JSON.stringify({ success: true, category });
+    }
+  });
+}</code></pre>
+<p>The important bit isn&#39;t <code>click()</code>. It&#39;s the contract: a name, description, <code>inputSchema</code>, and <code>execute</code>. The <code>enum</code> defines the categories the agent is expected to supply, and the code still checks that the filter exists. The full version also returns the number and names of visible projects. I only register this tool where the filter buttons exist. My AI Guide has a separate allowlist of permitted actions and can call the same implementations directly when the experimental API isn&#39;t available. <a href="https://github.com/janjedrzejak/janjedrzejak.github.io/blob/main/webmcp-site.js" target="_blank" rel="noopener noreferrer">My `webmcp-site.js`</a> · <a href="https://developer.chrome.com/docs/ai/webmcp/imperative-api" target="_blank" rel="noopener noreferrer">Imperative API documentation</a></p>
+<h2>From the Playground to the AI Guide</h2>
+<p>I then added tools to the portfolio and connected them to the existing AI Guide. On the English site, you can open the chat and type <strong>“Show AI projects”</strong>. In a test, the Guide opened the projects page, activated the “AI / ML” filter, and left three cards visible. <strong>“Open the contact section”</strong> took me to the contact section. In both cases, the result was right there on the page, outside the chat window. <a href="https://janjedrzejak.github.io/" target="_blank" rel="noopener noreferrer">Portfolio with the AI Guide</a></p>
+<p>Switching languages turned out to be more interesting. <strong>“Switch the site to Polish”</strong> opened the Polish site. The Polish equivalent, <strong>“Przełącz stronę na polski”</strong>, got a text reply while the interface stayed in English. The code revealed a tiny detail with a visible effect. After the text was normalised, the word <em>przełącz</em> still contained <code>ł</code>, but the rule that spots commands expected a plain <code>l</code>. In a separate test, calling the tool directly through WebMCP switched the site back to English. That left me with two separate questions. Does the function work? And does the Guide know when to use it? <a href="https://github.com/janjedrzejak/janjedrzejak.github.io/blob/main/webmcp-agent-bridge.js" target="_blank" rel="noopener noreferrer">Command handling code</a></p>
+<p>Recognising commands is part of the code I added to the site. The AI Guide first checks whether a message looks like a request to do something. If it does, the Guide asks the model for a plan. When it gets no valid plan back, it tries to match the request with a few simple rules. The code checks the chosen function and its arguments against an allowlist. When a request takes the visitor to a different page, it can also remember the remaining steps across the page load.</p>
+<p>WebMCP makes the tools available to a compatible agent in the browser. The built-in Guide can also call the same JavaScript functions directly when the browser lacks the necessary API. A change on the page tells me that the command took effect. To verify native WebMCP, I call the tool separately or check the mode in the Playground. <a href="https://github.com/janjedrzejak/janjedrzejak.github.io/blob/main/chatbot.js" target="_blank" rel="noopener noreferrer">AI Guide code</a> · <a href="https://github.com/janjedrzejak/janjedrzejak.github.io/blob/main/webmcp-agent-bridge.js" target="_blank" rel="noopener noreferrer">Integration code</a></p>
+<p>Filters also made it clear that the current page matters. The filtering tool is available on the page that actually has the filters. In the chat, I can simply ask for AI projects. My code handles the order so the filter has somewhere to run.</p>
+<h2>The playlist that switched off the lights</h2>
+<p>Another demo from the Summit stuck with me, and it was less harmless than a project filter. There was a smart-home control page with a playlist containing a song called “Lights off”. An agent was meant to work with the music list but took text it encountered as an instruction to switch off the living-room lights. Chrome Developers describe a similar simulated demonstration: malicious instructions embedded in playlist metadata caused an unprotected agent to call a tool that controlled the lights. <a href="https://www.youtube.com/watch?v=YCOy5uGJnQA" target="_blank" rel="noopener noreferrer">Chrome Developers&#39; WebMCP security demo</a> · <a href="https://developer.chrome.com/docs/agents/security" target="_blank" rel="noopener noreferrer">Agent security guidance</a></p>
+<p>There&#39;s an important distinction. The title “Lights off” should not, by itself, be a command. The problem starts when <strong>data</strong> — a track description, comment, search result, or tool response — pretends to be an instruction to the agent. That&#39;s <em>indirect prompt injection</em>. The person asked the agent to do one thing; someone else planted text in the material it would read, trying to make it do something else. Once an agent has tools that can change physical devices, this is more than an odd chat response.</p>
+<p>I remembered something from the demo sounding like “restricted”. I couldn&#39;t find a <code>restricted</code> switch in the current WebMCP API that would magically block this. What the documentation does provide is <strong><code>untrustedContentHint</code></strong>, alongside a defensive technique called <em>spotlighting</em>. The first is a tool annotation saying its output may contain third-party or otherwise untrusted text. The second is something the agent implements: separating that text from instructions, for example by explicitly marking it as data that should be read but not obeyed.</p>
+<p>For a hypothetical tool that reads a playlist, the declaration could look like this (this is an illustrative security example, not code deployed in my portfolio):</p>
+<pre><code class="language-js">await document.modelContext.registerTool({
+  name: &#39;get_playlist&#39;,
+  description: &#39;Read tracks from a playlist.&#39;,
+  inputSchema: { type: &#39;object&#39;, properties: {}, additionalProperties: false },
+  annotations: {
+    readOnlyHint: true,
+    untrustedContentHint: true
+  },
+  execute: async () =&gt; JSON.stringify(await loadPlaylist())
+});</code></pre>
+<p><code>readOnlyHint</code> says that fetching the playlist doesn&#39;t change anything. <code>untrustedContentHint</code> warns that returned song titles and descriptions aren&#39;t authorized to issue new commands. These are <strong>signals, not automatic safeguards</strong>: the client must handle them, and the app still needs real permission checks and input validation. For high-consequence actions such as unlocking a door, <code>consequentialHint: true</code> signals that the browser or agent should obtain user confirmation. Trusted-origin restrictions, access control, and independent checks on whether a requested action actually came from the user matter just as much. <a href="https://developer.chrome.com/docs/ai/webmcp/secure-tools" target="_blank" rel="noopener noreferrer">WebMCP tool security</a> · <a href="https://developer.chrome.com/docs/agents/security" target="_blank" rel="noopener noreferrer">Security guidance for agent developers</a></p>
+<p>The stakes on my portfolio are rather smaller: an agent can change the language or a project filter. That&#39;s part of why it was a good place to start. If I were exposing tools for submitting forms, buying things, or controlling devices, permission boundaries and user confirmation would have to be part of the design from day one.</p>
+<h2>Where else might this be handy?</h2>
+<p>If the language switch is within reach, clicking it is quicker. Things get more interesting when a request involves several steps. I can ask for AI projects and land straight in the relevant part of the catalogue. In a larger app, I can imagine opening a report with a particular date range or jumping to the right form with a few fields filled in for review. Before that form goes anywhere, I’d want to see a summary and decide whether to submit it myself.</p>
+<p>WebMCP is still evolving, and native calls depend on browser support. On my site, I’d start by improving how the Guide handles a few Polish commands and seeing when a conversation really does save some digging through menus. After that, I’d like to try it on something slightly more complicated than a portfolio. The counter, at least, has made it to three. <a href="https://developer.chrome.com/docs/ai/webmcp" target="_blank" rel="noopener noreferrer">WebMCP status and testing in Chrome</a></p>
+</div>
+<div class="article-content article-lang--pl" lang="pl">
+<p>Na Google Cloud Summit Poland 2026, na PGE Narodowym w Warszawie, usłyszałem o WebMCP. Po konferencji zostało mi w głowie całkiem przyziemne pytanie. Czy da się napisać na stronie „pokaż projekty AI” i po chwili rzeczywiście zobaczyć przefiltrowaną listę? <a href="https://cloudonair.withgoogle.com/events/google-cloud-summit-poland-2026" target="_blank" rel="noopener noreferrer">Google Cloud Summit Poland 2026</a></p>
+<p>Do eksperymentu wziąłem własne portfolio. Były na nim już projekty, filtry, polska i angielska wersja strony oraz czat, który odpowiadał na pytania o zawartość. Wszystko, czego potrzebowałem do pierwszej próby, już tam było. Trzeba było tylko jakoś połączyć rozmowę z tym, co strona umiała zrobić. <a href="https://janjedrzejak.github.io/" target="_blank" rel="noopener noreferrer">Moje portfolio</a></p>
+<h2>Strona podpowiada, co potrafi</h2>
+<p>Jeśli agent obsługuje stronę przez zwykły interfejs, może szukać przycisku tak jak człowiek. Czyta etykiety, rozgląda się po menu i próbuje ustalić, co kliknąć. Na stronie z projektami musiałby najpierw znaleźć właściwą podstronę, potem odszukać filtry i skojarzyć „projekty AI” z etykietą „AI / ML”. Na mojej stronie dałoby się to zrobić. Na innej ten sam filtr mógłby być schowany w rozwijanym menu.</p>
+<p>WebMCP to rozwijana propozycja standardu, dzięki któremu strona może sama udostępnić konkretne funkcje w otwartej karcie. Każde narzędzie ma nazwę, opis i określone dane wejściowe. Strona może więc wystawić funkcję „ustaw filtr projektów” i wymienić kategorie, które ta funkcja przyjmuje. Zgodny agent może wywołać ją z kategorią <code>ai</code>. To strona decyduje, jak ustawić filtr. U mnie korzysta z tego samego przycisku, który można nacisnąć ręcznie. <a href="https://developer.chrome.com/docs/ai/webmcp?hl=pl" target="_blank" rel="noopener noreferrer">Dokumentacja WebMCP w Chrome</a> · <a href="https://github.com/janjedrzejak/janjedrzejak.github.io/blob/main/webmcp-site.js" target="_blank" rel="noopener noreferrer">Kod narzędzi portfolio</a></p>
+<p>W praktyce ważne jest dla mnie to, że narzędzie daje się sprawdzić w oderwaniu od rozmowy. Mogę podać mu konkretną wartość i zobaczyć, jak zareaguje strona. Dopiero potem dokładam pytanie, czy agent wybrałby tę samą funkcję po przeczytaniu zwykłego zdania.</p>
+<h2>MCP w nazwie trochę miesza</h2>
+<p>W tym miejscu warto wyjaśnić jedną rzecz, bo sama nazwa może prowadzić na manowce. <strong>MCP i WebMCP nie są tym samym</strong>, choć oba pozwalają agentom korzystać z narzędzi. Kiedy słyszę „MCP”, myślę o <em>Model Context Protocol</em>: kliencie, serwerze, połączeniu z usługą i narzędziach dostarczanych zwykle przez backend. Agent może na przykład odpytać bazę albo uruchomić proces za pośrednictwem serwera MCP, nie otwierając w ogóle strony internetowej. W grę wchodzą komunikaty JSON-RPC oraz transporty takie jak <code>stdio</code> i HTTP.</p>
+<p><strong>WebMCP</strong> to z kolei <em>Web Model Context Protocol</em> — propozycja API przeglądarkowego inspirowana MCP, a nie „MCP uruchomione w JavaScripcie”. Kod narzędzia działa w kontekście otwartej strony i jej aktualnej sesji. Przeglądarka udostępnia opis funkcji agentowi, który potrafi z WebMCP korzystać. Gdy zamknę kartę, narzędzia tej strony przestają być dostępne. Na razie WebMCP udostępnia narzędzia, bez odpowiedników zasobów i promptów znanych z MCP. Sama funkcja strony może oczywiście komunikować się z backendem, ale WebMCP nie tworzy z tego backendowego serwera MCP.</p>
+<p>Dla mojego eksperymentu różnica jest prosta: gdy proszę o pokazanie projektów AI, nie łączę się z osobnym serwerem MCP, który zarządza portfolio. Korzystam z funkcji samej strony, a jej efekt widzę od razu w interfejsie. Nazwy są podobne, ale to dwa różne miejsca, w których agent dostaje możliwość działania. <a href="https://developer.chrome.com/docs/ai/webmcp/compare-mcp" target="_blank" rel="noopener noreferrer">Porównanie MCP i WebMCP w dokumentacji Chrome</a></p>
+<h2>Najpierw licznik</h2>
+<p>Zanim podłączyłem czat, zrobiłem osobny WebMCP Playground. Mogłem w nim podejrzeć listę narzędzi, sprawdzić, jakie argumenty przyjmują, uruchomić wybrane wywołanie i zobaczyć odpowiedź. Dodałem prosty licznik, zmianę koloru akcentu i wyszukiwanie w małym katalogu przykładowych projektów. Licznik był idealny. Jeśli wysyłam <code>{&quot;amount&quot;: 3}</code> i zero zmienia się w trójkę, mam wynik, który trudno pomylić z uprzejmym zapewnieniem, że „wszystko się udało”.</p>
+<p>W Chrome z włączoną obsługą eksperymentalnego API Playground pokazuje tryb <strong>Native</strong>. W takim teście licznik faktycznie zmienił się z zera na trzy po wywołaniu <code>increment_counter</code> przez WebMCP. Gdy potrzebne API jest niedostępne, panel przechodzi w tryb <strong>Simulation</strong> i uruchamia funkcje lokalnie. Nadal można pobawić się licznikiem i obejrzeć argumenty, a etykieta trybu mówi, którą ścieżką poszło wywołanie. <a href="https://janjedrzejak.github.io/webmcp-lab.html" target="_blank" rel="noopener noreferrer">WebMCP Playground</a></p>
+<p>Jeśli ktoś chce powtórzyć próbę, w panelu wystarczy wybrać <code>increment_counter</code> i uruchomić go z domyślną wartością <code>3</code>. Obok wyniku jest historia wywołań, a pod polem z argumentami można rozwinąć opis dozwolonych danych. Do lokalnych testów dokumentacja Chrome wskazuje flagę <code>chrome://flags/#enable-webmcp-testing</code>. Po jej włączeniu i ponownym uruchomieniu przeglądarki warto zerknąć, czy panel pokazuje <strong>Native</strong>. <a href="https://developer.chrome.com/docs/ai/webmcp?hl=pl" target="_blank" rel="noopener noreferrer">Instrukcja testowania w Chrome</a></p>
+<h2>Jak to wygląda pod spodem?</h2>
+<p>WebMCP nie wymaga pisania drugiego interfejsu dla agenta. W wariancie <em>Imperative API</em> strona rejestruje narzędzie przez <code>document.modelContext.registerTool()</code>. Poniżej uproszczony fragment oparty na moim <code>webmcp-site.js</code>. To ta sama idea co w działającym portfolio: agent podaje kategorię, a skrypt naciska istniejący przycisk filtra.</p>
+<pre><code class="language-js">if (&#39;modelContext&#39; in document) {
+  document.modelContext.registerTool({
+    name: &#39;portfolio_filter_projects&#39;,
+    description: &#39;Apply the project category filter.&#39;,
+    inputSchema: {
+      type: &#39;object&#39;,
+      properties: {
+        category: { type: &#39;string&#39;, enum: [&#39;all&#39;, &#39;ai&#39;, &#39;automation&#39;, &#39;integration&#39;, &#39;product&#39;, &#39;commerce&#39;, &#39;data&#39;] }
+      },
+      required: [&#39;category&#39;],
+      additionalProperties: false
+    },
+    annotations: { readOnlyHint: false },
+    execute: async ({ category }) =&gt; {
+      const button = [...document.querySelectorAll(&#39;.filter-chip[data-filter]&#39;)]
+        .find(el =&gt; el.dataset.filter === category);
+      if (!button) throw new Error(&#39;Filter not found&#39;);
+      button.click();
+      return JSON.stringify({ success: true, category });
+    }
+  });
+}</code></pre>
+<p>Najważniejsze nie jest tutaj <code>click()</code>, tylko kontrakt: nazwa, opis, <code>inputSchema</code> i <code>execute</code>. <code>enum</code> ogranicza wartości, które agent powinien podać, a sam kod dodatkowo sprawdza, czy dany filtr istnieje. W pełnej wersji narzędzie zwraca także liczbę widocznych projektów i ich nazwy. Rejestruję je tylko na podstronie, na której są przyciski filtrów. Mój AI Guide ma ponadto własny, jawny zestaw dozwolonych wywołań i może korzystać z tych samych implementacji także wtedy, gdy eksperymentalne API nie jest dostępne. <a href="https://github.com/janjedrzejak/janjedrzejak.github.io/blob/main/webmcp-site.js" target="_blank" rel="noopener noreferrer">Kod `webmcp-site.js`</a> · <a href="https://developer.chrome.com/docs/ai/webmcp/imperative-api" target="_blank" rel="noopener noreferrer">Imperative API</a></p>
+<h2>Od Playgroundu do AI Guide</h2>
+<p>Potem dodałem narzędzia do portfolio i połączyłem je z istniejącym AI Guide. W angielskiej wersji strony można otworzyć czat i wpisać <strong>„Show AI projects”</strong>. W teście Guide przeszedł na podstronę projektów, zaznaczył filtr „AI / ML” i na liście zostały trzy karty. <strong>„Open the contact section”</strong> otworzyło sekcję kontaktu. W obu przypadkach efekt było widać na stronie, poza oknem rozmowy. <a href="https://janjedrzejak.github.io/" target="_blank" rel="noopener noreferrer">Portfolio z AI Guide</a></p>
+<p>Zmiana języka przyniosła ciekawszy wynik. <strong>„Switch the site to Polish”</strong> otworzyło polską wersję. Przy <strong>„Przełącz stronę na polski”</strong> czat odpowiadał tekstem, a interfejs zostawał po angielsku. W kodzie wyszła drobnostka z konkretnym skutkiem. Po uproszczeniu tekstu w słowie „przełącz” wciąż zostawało <code>ł</code>, a reguła rozpoznająca polecenia szukała zapisu z <code>l</code>. W osobnej próbie bezpośrednie wywołanie narzędzia przez WebMCP przełączyło stronę z powrotem na angielski. To pomogło rozdzielić dwa pytania. Czy funkcja działa? I czy Guide rozpoznaje, kiedy jej użyć? <a href="https://github.com/janjedrzejak/janjedrzejak.github.io/blob/main/webmcp-agent-bridge.js" target="_blank" rel="noopener noreferrer">Kod rozpoznawania poleceń</a></p>
+<p>Rozpoznawanie poleceń to część, którą dopisałem po stronie portfolio. AI Guide najpierw sprawdza, czy wiadomość wygląda na prośbę o działanie. Jeśli tak, prosi model o plan. Gdy nie dostanie poprawnego planu, próbuje dopasować polecenie za pomocą prostych reguł. Kod sprawdza też, czy wybrana funkcja i jej argumenty mieszczą się na liście dozwolonych. Przy przejściu między podstronami potrafi też zapamiętać kolejne kroki na czas przeładowania.</p>
+<p>WebMCP odpowiada tu za udostępnianie narzędzi zgodnemu agentowi w przeglądarce. Wbudowany Guide ma też ścieżkę, która wywołuje te same funkcje bezpośrednio w JavaScripcie, gdy przeglądarka nie udostępnia potrzebnego API. Dlatego sama zmiana widoku mówi mi, że zadziałało polecenie. Żeby sprawdzić natywne WebMCP, wywołuję narzędzie osobno albo patrzę na tryb pracy w Playgroundzie. <a href="https://github.com/janjedrzejak/janjedrzejak.github.io/blob/main/chatbot.js" target="_blank" rel="noopener noreferrer">Kod AI Guide</a> · <a href="https://github.com/janjedrzejak/janjedrzejak.github.io/blob/main/webmcp-agent-bridge.js" target="_blank" rel="noopener noreferrer">Kod integracji</a></p>
+<p>Przy filtrach szybko wyszło też, że znaczenie ma miejsce wywołania. Narzędzie do filtrowania jest dostępne na podstronie, na której rzeczywiście są filtry. W rozmowie proszę po prostu o projekty AI. To mój kod pilnuje kolejności, żeby filtr miał gdzie zadziałać.</p>
+<h2>Playlista, która wyłącza światło</h2>
+<p>Na Summit zapamiętałem jeszcze jeden pokaz, dużo mniej niewinny niż filtrowanie kart. Była strona do sterowania inteligentnym domem, a na niej playlista z utworem „Lights off”. Agent miał pracować z listą piosenek, ale z treści, którą odczytał, wyciągnął polecenie wyłączenia światła w salonie. W materiałach Chrome Developers jest opisany podobny demonstrator: złośliwa instrukcja została ukryta w metadanych playlisty, a agent w symulacji potraktował ją jak polecenie i użył narzędzia do sterowania oświetleniem. <a href="https://www.youtube.com/watch?v=YCOy5uGJnQA" target="_blank" rel="noopener noreferrer">Pokaz bezpieczeństwa WebMCP – Chrome Developers</a> · <a href="https://developer.chrome.com/docs/agents/security" target="_blank" rel="noopener noreferrer">Dokumentacja o atakach na agentów</a></p>
+<p>Warto tu rozróżnić dwie rzeczy. Sam tytuł „Lights off” nie powinien być rozkazem. Ryzyko pojawia się, kiedy tekst <strong>pochodzący z danych</strong> — opisu piosenki, komentarza, wyniku wyszukiwania albo odpowiedzi narzędzia — udaje instrukcję dla agenta. To właśnie <em>indirect prompt injection</em>. Użytkownik prosił o jedną rzecz, a ktoś umieścił wewnątrz odczytywanych danych próbę nakłonienia modelu do zrobienia czegoś innego. W połączeniu z narzędziami, które naprawdę zmieniają stan urządzeń, przestaje to być wyłącznie dziwna odpowiedź na czacie.</p>
+<p>Pamiętałem z pokazu słowo brzmiące jak „restricted”. W aktualnym API nie znalazłem jednak przełącznika <code>restricted</code>, który sam blokowałby taki atak. Są za to <strong><code>untrustedContentHint</code></strong> i technika nazywana <em>spotlighting</em>. Pierwsza rzecz jest adnotacją przy narzędziu: informuje agenta, że wynik może zawierać obcą, niezaufaną treść. Druga dotyczy sposobu, w jaki sam agent odseparowuje takie dane od instrukcji, np. wyraźnie je oznacza i stosuje zasadę „czytaj jako dane, nie wykonuj jako polecenia”.</p>
+<p>Przy hipotetycznym narzędziu odczytującym playlistę wyglądałoby to tak (to przykład bezpieczeństwa, a nie funkcja mojego portfolio):</p>
+<pre><code class="language-js">await document.modelContext.registerTool({
+  name: &#39;get_playlist&#39;,
+  description: &#39;Read tracks from a playlist.&#39;,
+  inputSchema: { type: &#39;object&#39;, properties: {}, additionalProperties: false },
+  annotations: {
+    readOnlyHint: true,
+    untrustedContentHint: true
+  },
+  execute: async () =&gt; JSON.stringify(await loadPlaylist())
+});</code></pre>
+<p><code>readOnlyHint</code> mówi, że samo pobranie playlisty niczego nie zmienia. <code>untrustedContentHint</code> ostrzega, że zwrócone tytuły i opisy nie mają prawa wydawać nowych poleceń. To <strong>wskazówki, nie automatyczna blokada</strong>: klient musi je uwzględnić, a aplikacja musi pilnować uprawnień i walidować żądania. Dla działań o poważnych konsekwencjach, jak otwieranie zamka, istnieje <code>consequentialHint: true</code>, który sygnalizuje potrzebę potwierdzenia przez użytkownika. Do tego dochodzą ograniczenia do zaufanych domen, kontrola dostępu i osobne reguły, które nie pozwolą wykonać operacji tylko dlatego, że tak napisano w cudzym tekście. <a href="https://developer.chrome.com/docs/ai/webmcp/secure-tools" target="_blank" rel="noopener noreferrer">Bezpieczeństwo narzędzi WebMCP</a> · <a href="https://developer.chrome.com/docs/agents/security" target="_blank" rel="noopener noreferrer">Zalecenia dla twórców agentów</a></p>
+<p>W moim portfolio stawka jest niewielka: agent może przełączyć język albo filtr. I właśnie na takim przykładzie wygodnie mi było zacząć. Gdybym miał wystawiać narzędzia do wysyłania formularzy, zakupów czy sterowania urządzeniami, granice uprawnień i potwierdzanie działań byłyby częścią rozwiązania od początku, a nie dodatkiem na końcu.</p>
+<h2>Gdzie przydałoby się to jeszcze?</h2>
+<p>Do zmiany języka na portfolio szybciej użyję przełącznika, jeśli mam go pod ręką. Ciekawiej robi się przy poleceniach, które składają się z kilku kroków. Mogę poprosić o projekty AI i od razu zobaczyć odpowiednią część katalogu. W większej aplikacji podobnie wyobrażam sobie otwarcie raportu z wybranym zakresem dat albo przejście do odpowiedniego formularza i uzupełnienie kilku pól do sprawdzenia. Przy wysłaniu formularza chciałbym już zobaczyć podsumowanie i sam zdecydować, czy go zatwierdzam.</p>
+<p>WebMCP wciąż się zmienia, a natywne wywołania zależą od obsługi w przeglądarce. Na własnej stronie zacząłbym teraz od dopracowania kilku polskich poleceń i sprawdzenia, w których sytuacjach rozmowa rzeczywiście oszczędza szukania po menu. Później chętnie spróbuję na czymś odrobinę trudniejszym od portfolio. Licznik, przynajmniej na razie, doliczył do trzech. <a href="https://developer.chrome.com/docs/ai/webmcp?hl=pl" target="_blank" rel="noopener noreferrer">Status i warunki testowania w Chrome</a></p>
+</div>
+<aside class="article-callout" aria-label="WebMCP resources"><p data-en="References and live examples" data-pl="Źródła i działające przykłady">References and live examples</p><ul><li><a href="https://developer.chrome.com/docs/ai/webmcp" target="_blank" rel="noopener noreferrer">Chrome Developers — WebMCP</a></li><li><a href="https://github.com/janjedrzejak/janjedrzejak.github.io/blob/main/webmcp-site.js" target="_blank" rel="noopener noreferrer">GitHub — webmcp-site.js</a></li><li><a href="https://janjedrzejak.github.io/webmcp-lab.html">WebMCP Playground</a></li></ul></aside>
+<nav class="article-nav">
+<a class="back-home" href="../blog.html" data-en="← All notes" data-pl="← Wszystkie notatki">← All notes</a>
+<a class="back-home" href="../index.html#contact" data-en="Discuss this idea" data-pl="Porozmawiajmy o tym">Discuss this idea</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer"><div><strong>Jan Jędrzejak</strong><span class="mono">Digital Project Manager / Product Owner</span></div>
+<div class="footer-links"><a href="../projects.html" data-en="Projects" data-pl="Projekty">Projects</a><a href="../blog.html" data-en="Notes" data-pl="Notatki">Notes</a><a href="../privacy.html" data-en="Privacy" data-pl="Prywatność">Privacy</a><a href="../cookies-policy.html" data-en="Cookies" data-pl="Pliki cookie">Cookies</a></div>
+<div class="mono">© <span data-current-year>2026</span> · <span data-en="KRAKÓW / POLAND" data-pl="KRAKÓW / POLSKA">KRAKÓW / POLAND</span></div></footer>
+</div>
+<aside class="language-dock" aria-label="Language selector" data-en-aria="Language selector" data-pl-aria="Wybór języka"><span class="language-dock-label mono" data-en="Language" data-pl="Język">Language</span><button aria-label="Switch language to Polish" class="language-toggle language-toggle-dock" data-language-toggle type="button"><span class="language-current">EN</span><span aria-hidden="true" class="language-divider">/</span><span class="language-next">PL</span></button></aside>
+<div aria-hidden="true" class="cursor-dot"></div><div aria-hidden="true" class="cursor-ring"></div>
+<script defer src="../pages.js?v=20260908-scroll"></script><script defer src="../chatbot.js?v=20260908-scroll"></script>
+<script>
+(function(){
+  "use strict";
+  const doc=document.documentElement;
+  function apply(lang,persist){
+    lang=lang==="pl"?"pl":"en";
+    doc.lang=lang;
+    document.querySelectorAll("[data-en], [data-pl]").forEach(el=>{
+      const value=el.getAttribute("data-"+lang);
+      if(value!==null)el.textContent=value;
+    });
+    document.querySelectorAll("[data-en-html], [data-pl-html]").forEach(el=>{
+      const value=el.getAttribute("data-"+lang+"-html");
+      if(value!==null)el.innerHTML=value;
+    });
+    document.querySelectorAll("[data-en-aria], [data-pl-aria]").forEach(el=>{
+      const value=el.getAttribute("data-"+lang+"-aria");
+      if(value!==null)el.setAttribute("aria-label",value);
+    });
+    document.querySelectorAll("[data-language-toggle]").forEach(el=>{
+      el.setAttribute("aria-label",lang==="pl"?"Switch language to English":"Przełącz język na polski");
+      const current=el.querySelector(".language-current"),next=el.querySelector(".language-next");
+      if(current)current.textContent=lang.toUpperCase();
+      if(next)next.textContent=(lang==="pl"?"EN":"PL");
+    });
+    document.title=document.body.getAttribute("data-title-"+lang)||document.title;
+    const desc=document.querySelector('meta[name="description"]');
+    if(desc)desc.setAttribute("content",document.body.getAttribute("data-description-"+lang)||"");
+    const ogLocale=document.querySelector('meta[property="og:locale"]');
+    if(ogLocale)ogLocale.content=lang==="pl"?"pl_PL":"en_US";
+    if(persist){try{localStorage.setItem("jj:blog-language",lang)}catch(e){}}
+  }
+  document.querySelectorAll("[data-language-toggle]").forEach(el=>el.addEventListener("click",()=>apply(doc.lang==="pl"?"en":"pl",true)));
+  apply(doc.lang,false);
+})();
+</script>
+</body>
+</html>
