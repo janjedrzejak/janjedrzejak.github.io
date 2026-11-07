@@ -2,7 +2,17 @@
 (() => {
   'use strict';
   const ctx = document.modelContext;
-  if (!ctx || typeof ctx.registerTool !== 'function') return;
+  // The in-page AI Guide uses the same tool implementations even if the
+  // browser does not expose experimental WebMCP.
+  const implementations = new Map();
+  window.portfolioWebMcpTools = Object.freeze({
+    getTools: () => [...implementations.keys()],
+    runTool: async (name, args = {}) => {
+      const definition = implementations.get(name);
+      if (!definition) throw new Error(`Unknown tool on this page: ${name}`);
+      return definition.execute(args);
+    }
+  });
   const origin = location.origin;
   const path = location.pathname;
   const isPolish = path.startsWith('/pl/');
@@ -18,9 +28,14 @@
   });
   const categories = ['all','ai','automation','integration','product','commerce','data'];
   const format = value => JSON.stringify(value);
-  const register = async (spec) => ctx.registerTool({
-    ...spec, execute: async (args) => format(await spec.execute(args || {}))
-  });
+  const register = async (spec) => {
+    implementations.set(spec.name, spec);
+    if (ctx && typeof ctx.registerTool === 'function') {
+      await ctx.registerTool({
+        ...spec, execute: async (args) => format(await spec.execute(args || {}))
+      });
+    }
+  };
   const currentPage = () => path.replace(/^\/pl\//, '/').replace(/^\//, '') || 'index.html';
   const goto = (relative, hash = '') => {
     const url = new URL(relative + hash, origin);
