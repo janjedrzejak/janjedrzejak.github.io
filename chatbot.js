@@ -309,6 +309,18 @@
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
     try {
+      // Use the same on-page WebMCP tools as the browser extension.
+      // Ordinary questions continue through the existing chat backend.
+      const actionAgent = window.portfolioWebMcpAgent;
+      if (actionAgent?.isActionRequest(question)) {
+        const action = await actionAgent.handle({ question, locale:language, apiUrl:CHAT_API_URL, history });
+        if (action?.handled) {
+          typing.remove();
+          addMessage("assistant", action.answer);
+          track("chat_webmcp_action");
+          return;
+        }
+      }
       const response = await fetch(CHAT_API_URL, {
         method: "POST",
         mode: "cors",
@@ -377,6 +389,17 @@
     const next = document.documentElement.lang?.toLowerCase().startsWith("pl") ? "pl" : "en";
     if (next !== language) applyCopy(next);
   }).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+
+  // After page navigation, complete pending agent actions and display their result.
+  window.addEventListener("portfolio:agent-result", (event) => {
+    const detail = event.detail;
+    if (!detail || typeof detail.message !== "string") return;
+    if (!hasStarted) { hasStarted = true; renderSuggestions(); }
+    if (panel.hidden) openChat();
+    if (detail.question) addMessage("user", detail.question);
+    addMessage("assistant", detail.message);
+    track("chat_webmcp_action");
+  });
 
   applyCopy(language);
   resizeInput();
