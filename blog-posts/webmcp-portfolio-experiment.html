@@ -71,9 +71,6 @@ html[lang="pl"] .article-lang--en {display:none}
 .article-content pre code { white-space:inherit; }
 .article-content h2 { scroll-margin-top:6rem; }
 </style>
-<script>
-(function(){try{const q=new URLSearchParams(location.search).get("lang");const saved=localStorage.getItem("jj:blog-language");document.documentElement.lang=(q==="pl"||q==="en")?q:((saved==="pl"||saved==="en")?saved:((navigator.language||"").toLowerCase().startsWith("pl")?"pl":"en"));}catch(e){document.documentElement.lang="en";}})();
-</script>
 </head>
 <body data-title-en="WebMCP on my site. From a counter to the AI Guide | Jan Jędrzejak" data-title-pl="WebMCP na mojej stronie. Od licznika do AI Guide | Jan Jędrzejak"
   data-description-en="From Google Cloud Summit to my own WebMCP experiment: AI Guide, JavaScript examples, MCP vs WebMCP and prompt injection security." data-description-pl="WebMCP od Google Cloud Summit po moje portfolio: działający AI Guide, przykłady JavaScript, MCP vs WebMCP i bezpieczeństwo prompt injection.">
@@ -258,41 +255,5 @@ html[lang="pl"] .article-lang--en {display:none}
 <aside class="language-dock" aria-label="Language selector" data-en-aria="Language selector" data-pl-aria="Wybór języka"><span class="language-dock-label mono" data-en="Language" data-pl="Język">Language</span><button aria-label="Switch language to Polish" class="language-toggle language-toggle-dock" data-language-toggle type="button"><span class="language-current">EN</span><span aria-hidden="true" class="language-divider">/</span><span class="language-next">PL</span></button></aside>
 <div aria-hidden="true" class="cursor-dot"></div><div aria-hidden="true" class="cursor-ring"></div>
 <script defer src="../pages.js?v=20260908-scroll"></script><script defer src="../chatbot.js?v=20260908-scroll"></script>
-<script>
-(function(){
-  "use strict";
-  const doc=document.documentElement;
-  function apply(lang,persist){
-    lang=lang==="pl"?"pl":"en";
-    doc.lang=lang;
-    document.querySelectorAll("[data-en], [data-pl]").forEach(el=>{
-      const value=el.getAttribute("data-"+lang);
-      if(value!==null)el.textContent=value;
-    });
-    document.querySelectorAll("[data-en-html], [data-pl-html]").forEach(el=>{
-      const value=el.getAttribute("data-"+lang+"-html");
-      if(value!==null)el.innerHTML=value;
-    });
-    document.querySelectorAll("[data-en-aria], [data-pl-aria]").forEach(el=>{
-      const value=el.getAttribute("data-"+lang+"-aria");
-      if(value!==null)el.setAttribute("aria-label",value);
-    });
-    document.querySelectorAll("[data-language-toggle]").forEach(el=>{
-      el.setAttribute("aria-label",lang==="pl"?"Switch language to English":"Przełącz język na polski");
-      const current=el.querySelector(".language-current"),next=el.querySelector(".language-next");
-      if(current)current.textContent=lang.toUpperCase();
-      if(next)next.textContent=(lang==="pl"?"EN":"PL");
-    });
-    document.title=document.body.getAttribute("data-title-"+lang)||document.title;
-    const desc=document.querySelector('meta[name="description"]');
-    if(desc)desc.setAttribute("content",document.body.getAttribute("data-description-"+lang)||"");
-    const ogLocale=document.querySelector('meta[property="og:locale"]');
-    if(ogLocale)ogLocale.content=lang==="pl"?"pl_PL":"en_US";
-    if(persist){try{localStorage.setItem("jj:blog-language",lang)}catch(e){}}
-  }
-  document.querySelectorAll("[data-language-toggle]").forEach(el=>el.addEventListener("click",()=>apply(doc.lang==="pl"?"en":"pl",true)));
-  apply(doc.lang,false);
-})();
-</script>
 </body>
 </html>
