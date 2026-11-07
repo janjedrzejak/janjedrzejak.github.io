@@ -187,6 +187,10 @@ def inject_sitewide_webmcp(doc):
         return
     script = etree.SubElement(doc.find("body"), "script", src="/webmcp-site.js")
     script.set("defer", "defer")
+    # Load the AI Guide action bridge after the shared site-wide tools.
+    if not doc.xpath('//script[@src="/webmcp-agent-bridge.js"]'):
+        bridge = etree.SubElement(doc.find("body"), "script", src="/webmcp-agent-bridge.js")
+        bridge.set("defer", "defer")
 
 
 def build_page(path, language):
