@@ -208,9 +208,9 @@ function raster(){
      if(Math.abs(gX)>Math.abs(gY)*1.95)ch='|';
      else if(Math.abs(gY)>Math.abs(gX)*1.95)ch='-';
      else ch=gX*gY>0?'\\':'/';
-   }else if(c>77){
-     const ramp=' .:-+=*#%@';
-     const level=clamp(Math.floor((c-44)/190*(ramp.length-1)),2,ramp.length-1);
+   }else if(c>49){
+     const ramp=' .,:;-=+*#%@';
+     const level=clamp(Math.floor((c-35)/175*(ramp.length-1)),1,ramp.length-1);
      ch=ramp[level];
    }else if(max>82&&edge>12){ch='.'}else continue;
    if(ch===' '||!ch)continue;
