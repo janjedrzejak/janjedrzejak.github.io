@@ -43,6 +43,11 @@ jobs:
         run: python scripts/build_site.py
       - name: Validate SEO and local links
         run: python scripts/validate_site.py
+      - name: Include standalone ASCII demo
+        run: |
+          test -f wiedzmin-ascii/index.html
+          mkdir -p _site/wiedzmin-ascii
+          cp wiedzmin-ascii/index.html _site/wiedzmin-ascii/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
