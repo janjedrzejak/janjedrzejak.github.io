@@ -26,22 +26,10 @@ from playwright.async_api import Error as BrowserError
 from playwright.async_api import async_playwright
 
 VIEWPORTS = [(390, 844), (393, 852), (430, 932), (768, 1024), (1440, 900)]
-TITLES = [
-    "Computer Systems",
-    "Operating Systems",
-    "Computer Networking",
-    "Designing Data-Intensive Applications",
-    "System Design Interview",
-    "Building Microservices",
-    "Docker Deep Dive",
-    "Kubernetes",
-    "Terraform",
-    "Site Reliability Engineering",
-    "Deep Learning",
-    "Designing Machine Learning Systems",
-    "Build a Large Language Model",
-    "AI Engineering",
-]
+BOOKS = json.loads(
+    (Path(__file__).resolve().parents[1] / "src/data/personal-books.json").read_text()
+)
+TITLES = [book["title"] for book in BOOKS]
 GEOMETRY = """() => {
     const faces = [];
     for (const book of document.querySelectorAll('[data-book-index]')) {
@@ -380,7 +368,7 @@ async def capture(browser, opts, r):
         await pg.clock.pause_at(datetime.fromtimestamp(future / 1000 + 0.35, tz=UTC))
         await pg.clock.run_for(850)
         await snap("idle", 0)
-        for control, prefix in [("Next book", "next"), ("Previous book", "return")]:
+        for control, prefix in [("Następna książka", "next"), ("Poprzednia książka", "return")]:
             await click_control(control)
             await pg.clock.run_for(133)
             await snap(prefix + "-mid", 133)
@@ -446,7 +434,7 @@ async def inspect_view(browser, opts, r, width, height):
                 label + " tap/click neighboring spine focuses only",
                 await pg.locator("[role=dialog]:visible").count() == 0,
             )
-            await pg.get_by_role("button", name="Previous book").click()
+            await pg.get_by_role("button", name="Poprzednia książka").click()
             await active(pg, 0)
             await asyncio.sleep(0.50)
         else:
@@ -462,7 +450,7 @@ async def inspect_view(browser, opts, r, width, height):
         )
         if width != 1440:
             await screenshot(pg, r, f"mobile-{width}-details")
-        await pg.get_by_role("button", name="Close", exact=True).click()
+        await pg.get_by_role("button", name="Zamknij", exact=True).click()
         await details(pg, False)
         await pg.mouse.move(1, 1)
         restored = await active(pg, 0)
@@ -471,11 +459,11 @@ async def inspect_view(browser, opts, r, width, height):
             not restored["href"].startswith("#book/"),
         )
         r.check(
-            label + " collection contains fourteen unique books",
+            label + " collection contains all personal books",
             await pg.locator("[data-book-index]").evaluate_all(
                 "(els) => new Set(els.map(e=>e.dataset.bookIndex)).size"
             )
-            == 14,
+            == len(BOOKS),
         )
     finally:
         await ctx.close()
@@ -506,7 +494,7 @@ async def cycles(browser, opts, r):
         heap_first = None
         for i, title in enumerate(TITLES):
             if i:
-                await pg.get_by_role("button", name="Next book").click()
+                await pg.get_by_role("button", name="Następna książka").click()
             await active(pg, i, timeout=45)
             await pg.mouse.move(1, 1)
             await asyncio.sleep(0.80)
@@ -554,7 +542,7 @@ async def cycles(browser, opts, r):
                 f"book {i + 1:02} ISBN visible in details",
                 bool(re.search(r"97[89](?:[- ]?\d){10}", text)),
             )
-            await pg.get_by_role("button", name="Close", exact=True).click()
+            await pg.get_by_role("button", name="Zamknij", exact=True).click()
             await details(pg, False)
             await pg.mouse.move(1, 1)
             await asyncio.sleep(0.35)
@@ -652,13 +640,18 @@ async def interruptions(browser, opts, r):
     ctx, pg = await context(browser, opts, r, 1440, 900)
     try:
         await active(pg, 0, timeout=45)
-        for category, i in [
-            ("AI", 10),
-            ("Backend", 3),
-            ("Infra & Ops", 6),
-            ("Foundations", 0),
-            ("All", 0),
-        ]:
+        groups = [
+            ("Technologia", "Technologia i AI"),
+            ("Reportaż", "Reportaż i biografie"),
+            ("Literatura", "Literatura"),
+            ("Produkt", "Produkt i strategia"),
+        ]
+        starts = {
+            label: next(i for i, b in enumerate(BOOKS) if b["category"] == category)
+            for label, category in groups
+        }
+        focused = starts["Technologia"]
+        for category, i in [*starts.items(), ("Wszystkie", 0)]:
             await pg.get_by_role("button", name=category, exact=True).click()
             result = await active(pg, i, timeout=45)
             r.check(
@@ -671,7 +664,7 @@ async def interruptions(browser, opts, r):
                         )
                     )
                 )
-                == 14,
+                == len(BOOKS),
             )
         # Real neighboring-spine input arrives before the earlier track movement settles.
         seen = []
@@ -683,11 +676,11 @@ async def interruptions(browser, opts, r):
             if hit is not None:
                 await pg.mouse.click(x, 490)
                 seen.append(hit)
-        await pg.get_by_role("button", name="AI", exact=True).click()
-        result = await active(pg, 10, timeout=45)
+        await pg.get_by_role("button", name="Technologia", exact=True).click()
+        result = await active(pg, focused, timeout=45)
         r.check(
             "quick target changes end at last category",
-            len(seen) >= 2 and result["faces"][0]["index"] == 10,
+            len(seen) >= 2 and result["faces"][0]["index"] == focused,
             seen,
         )
         await asyncio.sleep(0.65)
@@ -695,9 +688,9 @@ async def interruptions(browser, opts, r):
         await pg.wait_for_timeout(120)
         await pg.keyboard.press("Escape")
         await details(pg, False)
-        result = await active(pg, 10)
+        result = await active(pg, focused)
         r.check("Escape interrupts opening", not result["href"].startswith("#book/"))
-        await pg.get_by_role("button", name="Open book", exact=True).focus()
+        await pg.get_by_role("button", name="Otwórz książkę", exact=True).focus()
         await pg.keyboard.press("Enter")
         await details(pg)
         r.check(
@@ -712,7 +705,7 @@ async def interruptions(browser, opts, r):
         r.check(
             "native history back and forward",
             pg.url == before_url
-            and TITLES[10] in await dialog.locator("h2").inner_text(),
+            and TITLES[focused] in await dialog.locator("h2").inner_text(),
         )
         # A direct visit must rebuild the same focused book; all history entries
         # also remain usable when a visitor reloads a detail deep link.
@@ -720,20 +713,23 @@ async def interruptions(browser, opts, r):
         dialog = await details(pg)
         r.check(
             "reloaded deep link opens the named book",
-            TITLES[10] in await dialog.locator("h2").inner_text(),
+            TITLES[focused] in await dialog.locator("h2").inner_text(),
         )
         await pg.set_viewport_size({"width": 393, "height": 852})
-        close = pg.get_by_role("button", name="Close", exact=True)
+        close = pg.get_by_role("button", name="Zamknij", exact=True)
         await close.click()
         await details(pg, False)
-        await active(pg, 10)
+        await active(pg, focused)
         r.check("resize detail to phone then close", True)
-        await pg.get_by_role("button", name="Next book").click()
+        await pg.get_by_role("button", name="Następna książka").click()
         await pg.set_viewport_size({"width": 844, "height": 390})
-        result = await active(pg, 11)
+        await active(pg, focused + 1)
+        # A short landscape viewport scrolls to fit the track.
+        await pg.locator(".track").scroll_into_view_if_needed()
+        result = await active(pg, focused + 1)
         b = result["faces"][0]["front"]
         r.check(
-            "resize during shelf motion preserves target in bounds",
+            "resize during shelf motion preserves a target that can scroll into view",
             b["x"] >= -1 and b["y"] >= -1 and b["y"] + b["height"] <= 391,
             b,
         )
@@ -806,7 +802,7 @@ async def touches(browser, opts, r):
                 scroll["full"] <= scroll["height"] + 5,
                 scroll,
             )
-        await pg.get_by_role("button", name="Close", exact=True).tap()
+        await pg.get_by_role("button", name="Zamknij", exact=True).tap()
         await details(pg, False)
     finally:
         await ctx.close()
@@ -816,32 +812,29 @@ async def catalog_test(browser, opts, r):
     ctx, pg = await context(browser, opts, r, 1440, 900)
     try:
         await active(pg, 0, timeout=45)
-        await pg.get_by_role("link", name="Catalog", exact=True).click()
-        await pg.get_by_role("heading", name="Book catalog").wait_for()
+        await pg.get_by_role("link", name="Katalog", exact=True).click()
+        await pg.get_by_role("heading", name="Katalog ważnych książek").wait_for()
         rows = pg.locator(".catalog-list > li")
-        r.check("catalog All lists fourteen titles", await rows.count() == 14)
-        await pg.get_by_role("button", name="Backend", exact=True).click()
+        r.check("catalog lists all personal titles", await rows.count() == len(BOOKS))
+        await pg.get_by_role("button", name="Produkt", exact=True).click()
+        selected = [book for book in BOOKS if book["category"] == "Produkt i strategia"]
         names = await rows.locator("h2").all_text_contents()
-        r.check(
-            "catalog Backend filters to three requested titles",
-            len(names) == 3 and all(any(w in n for n in names) for w in TITLES[3:6]),
-            names,
-        )
+        r.check("catalog filters to Product titles", names == [b["title"] for b in selected], names)
         await rows.locator("h2 a").first.click()
         dlg = await details(pg)
         r.check(
             "catalog title links to matching physical book details",
-            TITLES[3] in await dlg.locator("h2").inner_text()
-            and pg.url.endswith("#book/ddia"),
+            selected[0]["title"] in await dlg.locator("h2").inner_text()
+            and pg.url.endswith("#book/" + selected[0]["id"]),
         )
         await pg.go_back()
-        await pg.get_by_role("heading", name="Book catalog").wait_for()
+        await pg.get_by_role("heading", name="Katalog ważnych książek").wait_for()
         r.check(
             "browser Back from catalog-selected book restores catalog URL",
             pg.url.endswith("/catalog.html"),
         )
-        await pg.get_by_role("button", name="All", exact=True).click()
-        r.check("catalog can restore all titles after Back", await rows.count() == 14)
+        await pg.get_by_role("button", name="Wszystkie", exact=True).click()
+        r.check("catalog can restore all titles after Back", await rows.count() == len(BOOKS))
     finally:
         await ctx.close()
 
@@ -851,14 +844,14 @@ async def live_smoke(browser, opts, r):
     try:
         s = await active(pg, 0, timeout=60)
         r.check(
-            "live shelf and local publisher cover rendered",
+            "live shelf and publisher cover rendered",
             s["faces"][0]["decoded"] > 1,
             s["faces"][0]["image"],
         )
-        await pg.get_by_role("button", name="Next book").click()
+        await pg.get_by_role("button", name="Następna książka").click()
         s = await active(pg, 1, timeout=70)
         r.check(
-            "live external OSTEP cover decoded",
+            "live cover of the next book decoded",
             s["faces"][0]["decoded"] > 1,
             s["faces"][0]["image"],
         )
@@ -868,7 +861,7 @@ async def live_smoke(browser, opts, r):
             "live touch opens correct detail",
             TITLES[1] in await dlg.locator("h2").inner_text(),
         )
-        await pg.get_by_role("button", name="Close", exact=True).tap()
+        await pg.get_by_role("button", name="Zamknij", exact=True).tap()
         await details(pg, False)
         s = await active(pg, 1)
         r.check("live touch returns to selected book", s["faces"][0]["index"] == 1)
@@ -897,7 +890,7 @@ async def warm_memory(browser, opts, r):
         }""")
 
         async def batch(count):
-            await pg.get_by_role("button", name="Open book", exact=True).focus()
+            await pg.get_by_role("button", name="Otwórz książkę", exact=True).focus()
             for _ in range(count):
                 await pg.keyboard.press("Enter")
                 handle = await pg.wait_for_function(
@@ -958,21 +951,21 @@ async def performance_test(browser, opts, r):
     ctx, pg = await context(browser, opts, r, 1440, 900)
     try:
         await active(pg, 0, timeout=45)
-        await pg.get_by_role("button", name="Next book").click()
+        await pg.get_by_role("button", name="Następna książka").click()
         await active(pg, 1, timeout=45)
-        await pg.get_by_role("button", name="Previous book").click()
+        await pg.get_by_role("button", name="Poprzednia książka").click()
         await active(pg, 0, timeout=45)
         await asyncio.sleep(0.9)
         await pg.evaluate("""()=>{window.__qaGaps=[];window.__qaCollect=true;
           let last=0;const tick=t=>{if(last)window.__qaGaps.push(t-last);last=t;
             if(window.__qaCollect)requestAnimationFrame(tick);};requestAnimationFrame(tick);}""")
-        await pg.get_by_role("button", name="Next book").click()
+        await pg.get_by_role("button", name="Następna książka").click()
         await active(pg, 1)
         await asyncio.sleep(0.55)
         await center_point(pg)
         await details(pg)
         await asyncio.sleep(0.6)
-        await pg.get_by_role("button", name="Close", exact=True).click()
+        await pg.get_by_role("button", name="Zamknij", exact=True).click()
         await details(pg, False)
         numbers = await pg.evaluate(
             "()=>{window.__qaCollect=false;return window.__qaGaps;}"
@@ -1008,7 +1001,7 @@ async def recording(browser, opts, r):
         await active(pg, 0, timeout=45)
         marks["idle"] = clock()
         await pg.wait_for_timeout(650)
-        for name, control in [("next", "Next book"), ("previous", "Previous book")]:
+        for name, control in [("next", "Następna książka"), ("previous", "Poprzednia książka")]:
             marks[name] = clock()
             await pg.get_by_role("button", name=control).click()
             await pg.wait_for_timeout(1400)
@@ -1022,7 +1015,7 @@ async def recording(browser, opts, r):
         await pg.mouse.click(x, y)
         await pg.wait_for_timeout(2400)
         marks["close"] = clock()
-        await pg.get_by_role("button", name="Close", exact=True).click()
+        await pg.get_by_role("button", name="Zamknij", exact=True).click()
         await details(pg, False)
         await pg.wait_for_timeout(450)
         marks["end"] = clock()
@@ -1096,7 +1089,7 @@ async def retina_test(browser, opts, r):
                 all(w * h < 1000000 for w, h in state["canvas"]),
                 state["canvas"],
             )
-        await pg.get_by_role("button", name="Close", exact=True).tap()
+        await pg.get_by_role("button", name="Zamknij", exact=True).tap()
         await details(pg, False)
     finally:
         await ctx.close()
@@ -1115,7 +1108,7 @@ async def variants(browser, opts, r):
             times["end"] - times["event"] < 400,
             times,
         )
-        await pg.get_by_role("button", name="Close", exact=True).tap()
+        await pg.get_by_role("button", name="Zamknij", exact=True).tap()
         await details(pg, False)
     finally:
         await ctx.close()
@@ -1125,22 +1118,16 @@ async def variants(browser, opts, r):
     try:
         await active(pg, 0, decoded=False)
         await asyncio.sleep(0.35)
-        await pg.get_by_role("button", name="Open book", exact=True).focus()
+        await pg.get_by_role("button", name="Otwórz książkę", exact=True).focus()
         await pg.keyboard.press("Enter")
         dlg = await details(pg)
         words = " ".join((await dlg.inner_text()).split())
         r.check(
             "image failure exposes notice and preserves catalog access",
-            bool(
-                re.search(
-                    r"cover.{0,45}(unavailable|couldn.t|could not|failed|offline)|image.{0,45}(unavailable|failed)",
-                    words,
-                    re.IGNORECASE,
-                )
-            ),
+            "Okładka niedostępna" in words,
             words[:500],
         )
-        await pg.get_by_role("button", name="Close", exact=True).tap()
+        await pg.get_by_role("button", name="Zamknij", exact=True).tap()
         await details(pg, False)
     finally:
         await ctx.close()

@@ -1,12 +1,12 @@
 # Browser acceptance tests
 
-Build and serve the project. Run the tests against the resulting origin from a separate terminal. The tests target the engineering collection. They drive real browser engines and take screenshots from those engines.
+Build and serve the project. Run the tests against the resulting origin from a separate terminal. The tests read the personal collection from the book data file. They drive real browser engines and take screenshots from those engines.
 
 ```sh
 python -m pip install playwright pillow
 python -m playwright install chromium webkit
-python qa/browser_qa.py 'http://localhost:4173/?shelf=engineering' --out qa/output
-python qa/browser_qa.py 'http://localhost:4173/?shelf=engineering' --browser webkit --out qa/output
+python qa/browser_qa.py http://localhost:4173/ --out qa/output
+python qa/browser_qa.py http://localhost:4173/ --browser webkit --out qa/output
 ```
 
 Use `--executable` to select an existing compatible headless browser. An optional `--system-fetch` mode uses the operating system’s TLS-validating HTTPS transport on managed runners whose browser lacks upstream proxy configuration. The normal mode uses the native browser network. The failure scenario deliberately aborts image requests in an isolated context. The other scenarios request real assets.
@@ -31,5 +31,5 @@ The `memory` suite measures two warm batches of fourteen open/close cycles of th
 Some WPE WebKit snapshot APIs omit accelerated CSS 3D layers. The following test captures the browser compositor video, extracts the settled shelf and details frames at every viewport, and verifies that the central artwork actually painted. FFmpeg and FFprobe must be on PATH.
 
 ```sh
-python qa/composited_webkit.py 'http://localhost:4173/?shelf=engineering' --out qa/output/composited
+python qa/composited_webkit.py http://localhost:4173/ --out qa/output/composited
 ```

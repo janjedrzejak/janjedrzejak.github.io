@@ -1,14 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { useState } from "react";
-import {
-  bookHref,
-  books,
-  categories,
-  numberLabel,
-  otherLabel,
-  shelfQuery,
-  technicalShelf,
-} from "./data/catalog";
+import { bookHref, books, categories, numberLabel } from "./data/catalog";
 import { Cover } from "./components/Cover";
 import "./styles/layout.css";
 import "./styles/book.css";
@@ -21,22 +13,10 @@ function Catalog() {
   return (
     <main className="catalog">
       <div className="catalog-heading">
-        <h1>
-          {technicalShelf
-            ? "Katalog półki inżynierskiej"
-            : "Katalog ważnych książek"}
-        </h1>
+        <h1>Katalog ważnych książek</h1>
         <nav className="library-nav" aria-label="Nawigacja katalogu">
-          <a className="collection-link" href={"./" + shelfQuery}>
+          <a className="collection-link" href="./">
             Półka
-          </a>
-          <a
-            className="collection-link"
-            href={
-              "./catalog.html" + (technicalShelf ? "" : "?shelf=engineering")
-            }
-          >
-            {otherLabel}
           </a>
         </nav>
       </div>
@@ -102,7 +82,7 @@ function Catalog() {
           </li>
         ))}
       </ol>
-      <a className="collection-link" href={"./" + shelfQuery}>
+      <a className="collection-link" href="./">
         Wróć na półkę
       </a>
     </main>

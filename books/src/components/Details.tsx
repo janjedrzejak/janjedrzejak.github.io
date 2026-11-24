@@ -1,10 +1,5 @@
 import type { CSSProperties } from "react";
-import {
-  numberLabel,
-  shelfTitle,
-  technicalShelf,
-  type Book,
-} from "../data/catalog";
+import { numberLabel, shelfTitle, type Book } from "../data/catalog";
 import { Cover } from "./Cover";
 
 export function Details({
@@ -29,8 +24,7 @@ export function Details({
       <article className="book-description">
         <div className="rise-line">
           <p data-rise className="stage-label">
-            {numberLabel(book.number)} ·{" "}
-            {technicalShelf ? book.stage : book.category}
+            {numberLabel(book.number)} · {book.category}
           </p>
         </div>
         <div className="rise-line">

@@ -1,16 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import {
-  books,
-  categories,
-  numberLabel,
-  otherLabel,
-  otherShelf,
-  readingMap,
-  shelfQuery,
-  shelfTitle,
-  technicalShelf,
-} from "../data/catalog";
+import { books, categories, numberLabel, shelfTitle } from "../data/catalog";
 import { BookModel } from "../geometry/BookModel";
 import { ShelfController } from "../animation/ShelfController";
 import { Details } from "./Details";
@@ -94,11 +84,8 @@ export function Shelf() {
           <div className="heading-row">
             <h1>{shelfTitle}</h1>
             <nav className="library-nav" aria-label="Nawigacja półki">
-              <a className="collection-link" href={"./catalog.html" + shelfQuery}>
+              <a className="collection-link" href="./catalog.html">
                 Katalog
-              </a>
-              <a className="collection-link" href={otherShelf}>
-                {otherLabel}
               </a>
             </nav>
           </div>
@@ -160,16 +147,6 @@ export function Shelf() {
                 <Arrow next />
               </button>
             </div>
-            {technicalShelf && (
-              <a
-                className="collection-link"
-                href={readingMap}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Mapa lektur
-              </a>
-            )}
           </section>
         </main>
       </div>

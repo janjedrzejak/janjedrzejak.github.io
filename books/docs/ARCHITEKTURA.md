@@ -4,14 +4,14 @@ Półka to aplikacja statyczna. React tworzy interfejs i stabilne elementy sceny
 
 | Obszar | Pliki | Odpowiedzialność |
 |---|---|---|
-| Katalog | src/data/personal-books.json, src/data/books.json, src/data/catalog.ts | Metadane, źródła, proporcje, wygląd grzbietów i nazwy kategorii |
+| Katalog | src/data/personal-books.json, src/data/catalog.ts | Metadane, źródła, proporcje, wygląd grzbietów i nazwy kategorii |
 | Scena | src/geometry/BookModel.tsx, ShelfScene.ts, pose.ts | Sześć powierzchni, układ cykliczny, projekcja, światło i odległość od środka |
 | Materiały | src/styles/book.css, src/components/Cover.tsx | Przód z prawdziwą teksturą, oprawa tylna, trzy krawędzie stron, adnotacja awarii |
 | Ruch | src/animation/ShelfController.ts | Jedno źródło pozycji, celu, zaznaczenia, fazy i głównej pętli animacji |
 | Wejście | src/interaction/bindInputs.ts | Wskaźnik, dotyk, kierunek gestu, kółko, klawiatura, Escape i pułapka fokusu |
 | Szczegóły | src/components/Details.tsx, src/animation/DetailMotion.ts | Maska od aktualnego rzutu okładki, animacja tekstu, informacje o wydaniu i przypisanie źródeł |
 | Odsłonięcie ilustracji | Ink.ts, ink.worker.ts, inkField.ts | Siedem pól, mapa czasów dotarcia maski, ograniczenie rozdzielczości i zwalnianie buforów |
-| Układ | src/components/Shelf.tsx, Header.tsx, src/styles | Responsywna scena, pasek kategorii z licznikiem, stały przycisk Open book, tryb kolorystyka portfolio |
+| Układ | src/components/Shelf.tsx, src/styles, ../scripts/build_site.py | Responsywna scena, pasek kategorii z licznikiem, przycisk otwierania książki i wspólna nawigacja portfolio |
 | Indeks wydań | catalog.html, src/catalog-page.tsx, scripts/catalog.mjs | Dostęp do wszystkich książek, rzeczywiste filtrowanie i generowanie zestawienia źródeł |
 
 ## Przejścia i przerwania

@@ -7,7 +7,7 @@ import tempfile
 import time
 from pathlib import Path
 
-from browser_qa import VIEWPORTS, Results, active, center_point, context, details
+from browser_qa import BOOKS, VIEWPORTS, Results, active, center_point, context, details
 from PIL import Image
 from playwright.async_api import async_playwright
 
@@ -15,23 +15,27 @@ from playwright.async_api import async_playwright
 async def test(browser, opts, report, directory, width, height):
     ctx, page = await context(browser, opts, report, width, height, video_dir=directory)
     video = page.video
-    scene = await active(page, 0, timeout=45)
+    book_id = "mapowanie-historyjek-uzytkownika"
+    index = next(i for i, book in enumerate(BOOKS) if book["id"] == book_id)
+    for _ in range(index):
+        await page.get_by_role("button", name="Następna książka").click()
+    scene = await active(page, index, timeout=45)
     await page.wait_for_function(
-        """()=>{const candidates=[...document.querySelectorAll('[data-book-id="csapp"] .cover-front')];
+        """id=>{const candidates=[...document.querySelectorAll(`[data-book-id="${id}"] .cover-front`)];
       const selected=candidates.filter(f=>getComputedStyle(f).visibility!=='hidden').sort((a,b)=>
         Math.abs(a.getBoundingClientRect().x+a.getBoundingClientRect().width/2-innerWidth/2)
         -Math.abs(b.getBoundingClientRect().x+b.getBoundingClientRect().width/2-innerWidth/2))[0];
       const img=selected?.querySelector('img');
       return img?.dataset.status==='loaded' && img.naturalWidth>1 && selected.style.backgroundImage.includes(img.currentSrc);
     }""",
+        arg=book_id,
         timeout=60000,
     )
-    loaded = await page.evaluate("""async()=>{await Promise.all(
-      [...document.querySelectorAll('[data-book-id="csapp"] .cover-front img[src]')].map(img=>img.decode()));
-      await document.fonts.load('40px "Instrument Serif"');
+    loaded = await page.evaluate("""async id=>{await Promise.all(
+      [...document.querySelectorAll(`[data-book-id="${id}"] .cover-front img[src]`)].map(img=>img.decode()));
       await document.fonts.ready;
       return {msFromNavigation:Math.round(performance.now()),fontState:document.fonts.status,
-        cover:getComputedStyle(document.querySelector('h1')).fontFamily};}""")
+        cover:getComputedStyle(document.querySelector('h1')).fontFamily};}""", book_id)
     # Do not derive a visually ready frame from response headers alone. Allow
     # the video-producing compositor to present its full-resolution layers.
     await page.wait_for_timeout(3000)
@@ -100,26 +104,17 @@ async def test(browser, opts, report, directory, width, height):
             colorful = sum(
                 count for count, rgb in palette if max(rgb) - min(rgb) > 32
             ) / sum(count for count, rgb in palette)
-            tests = {
-                "orange": lambda r, g, b: r > 135 and r > g + 19 and g > b + 14,
-                "green": lambda r, g, b: g > 100 and g > r + 10 and g > b + 10,
-                "violet": lambda r, g, b: b > 90 and b > g + 14 and r > g + 5,
-                "cyan": lambda r, g, b: b > 105 and g > 100 and min(g, b) > r + 15,
-            }
-            fractions = {
-                k: sum(count for count, rgb in palette if f(*rgb))
-                / (crop.width * crop.height)
-                for k, f in tests.items()
-            }
+            magenta = sum(
+                count for count, (red, green, blue) in palette
+                if red > 130 and red > green + 40 and blue > green + 25
+            ) / (crop.width * crop.height)
             report.check(
-                f"{width}x{height} composited pixels paint CSAPP cover",
-                len(palette) > 256 and min(fractions.values()) > 0.003,
+                f"{width}x{height} composited pixels paint the Patton cover",
+                len(palette) > 256 and magenta > 0.12,
                 {
                     "saturatedFraction": round(colorful, 3),
-                    "artworkColorFractions": {
-                        k: round(v, 3) for k, v in fractions.items()
-                    },
-                    "sampleRegion": "central artwork of the verified CSAPP cover",
+                    "magentaFraction": round(magenta, 3),
+                    "sampleRegion": "central artwork of the verified Patton cover",
                     "readiness": loaded,
                     "timestampSeconds": round(ts, 2),
                 },
