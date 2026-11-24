@@ -1,6 +1,6 @@
 # Wydania i źródła okładek
 
-ISBN odnosi się do podanego wydania drukowanego. Okładki pochodzą z serwisów wydawców i dystrybutorów.
+ISBN odnosi się do podanego wydania drukowanego. Źródła okładek podano przy każdym wydaniu.
 
 ## Półka ważnych dla mnie książek
 
@@ -25,6 +25,7 @@ ISBN odnosi się do podanego wydania drukowanego. Okładki pochodzą z serwisów
 | 17 | Ubik | Philip K. Dick | Wydanie IV poprawione, dodruk 2025 | 2025 | 9788383380056 |
 | 18 | Rok 1984 | George Orwell | Wydanie z opracowaniem, miękka oprawa | 2025 | 9788375179309 |
 | 19 | Nowy wspaniały świat | Aldous Huxley | Wydanie 12, miękka oprawa | 2019 | 9788328708303 |
+| 20 | Błękitna kropka — Człowiek i jego przyszłość w kosmosie | Carl Sagan | Oprawa twarda | 2020 | 9788382020564 |
 
 ### Profesjonalny właściciel produktu
 
@@ -219,6 +220,16 @@ Republika świata Huxleya utrwala porządek społeczny poprzez warunkowanie, roz
 - Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora. Okładka polskiego wydania podanego w katalogu.
 - Wyświetlany adres. https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/nowy-wspanialy-swiat-104052/104052/d5ef9dcdea4f6b92efd1f3a1ebcd7b21.jpeg
 
+### Błękitna kropka
+
+Carl Sagan opowiada o eksploracji Układu Słonecznego i zastanawia się, co perspektywa kosmiczna zmienia w naszym myśleniu o Ziemi oraz przyszłości ludzkości.
+
+- Zysk i S-ka · Oprawa twarda · ISBN 9788382020564.
+- [Opis książki](https://sklep.zysk.com.pl/blekitna-kropka-5593.html) · [Źródło wydania](https://sklep.zysk.com.pl/blekitna-kropka-5593.html)
+- Zysk i S-ka · 349 × 512 px. [Grafika](https://sklep.zysk.com.pl/media/products/509797b675b9fbef1f6bd16d2d1b3380/images/thumbnail/big_blekitna-kropka-1400.png?lm=1762414499) · [Źródło i uznanie](https://sklep.zysk.com.pl/blekitna-kropka-5593.html)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://sklep.zysk.com.pl/media/products/509797b675b9fbef1f6bd16d2d1b3380/images/thumbnail/big_blekitna-kropka-1400.png?lm=1762414499
+
 
 ## Muzyka
 
@@ -300,6 +311,8 @@ Reportaż o norweskiej scenie blackmetalowej, jej ideologiach i przestępstwach,
 | 2 | Zawód fotograf | Chris Niedenthal | Wydanie rozszerzone | 2020 | 9788366500907 |
 | 3 | Chłopki — Opowieść o naszych babkach | Joanna Kuciel-Frydryszak | Wydanie polskie, druk | 2023 | 9788367859134 |
 | 4 | Archipelag GUŁag — Tomy 1–3 | Aleksander Sołżenicyn | Wydanie w trzech tomach | 2026 | 9788383385365 |
+| 5 | Testament dzieci Hirosimy | red. Arata Osada | Pierwsze wydanie polskie | 1976 | — |
+| 6 | Ludzie — Krótka historia o tym, jak spieprzyliśmy wszystko | Tom Phillips | Oprawa twarda | 2021 | 9788382157659 |
 
 ### Cybulski
 
@@ -343,6 +356,27 @@ Reportaż o pracy, rodzinie i codziennych wyborach kobiet na polskiej wsi w pier
 - Grafika wydawcy przedstawia komplet trzech tomów.
 - Wyświetlany adres. https://www.rebis.com.pl/hpeciai/06f801ed106ef3987a4e0329619913b0/pol_pl_Archipelag-GULag-Tomy-1-3-10577_1_1.jpg
 
+### Testament dzieci Hirosimy
+
+Wspomnienia osób, które jako dzieci przeżyły zrzucenie bomby atomowej na Hiroszimę. Zbiór zainicjowany przez Aratę Osadę oddaje głos młodym świadkom katastrofy.
+
+- Książka i Wiedza · Pierwsze wydanie polskie.
+- [Opis książki](https://lubimyczytac.pl/ksiazka/66348/testament-dzieci-hirosimy) · [Źródło wydania](https://w.bibliotece.pl/1446430/Testament%2Bdzieci%2BHirosimy)
+- Lubimy Czytać · 314 × 500 px. [Grafika](https://s.lubimyczytac.pl/upload/books/66000/66348/352x500.jpg) · [Źródło i uznanie](https://lubimyczytac.pl/ksiazka/66348/testament-dzieci-hirosimy)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Katalog biblioteczny nie podaje ISBN tego wydania.
+- Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/66000/66348/352x500.jpg
+
+### Ludzie
+
+Przegląd ludzkich pomyłek, od decyzji politycznych do katastrof środowiskowych. Phillips przygląda się temu, dlaczego powtarzamy błędy mimo wcześniejszych doświadczeń.
+
+- Albatros · Oprawa twarda · ISBN 9788382157659.
+- [Opis książki](https://www.wydawnictwoalbatros.com/ksiazki/ludzie-krotka-historia-o-tym-jak-spieprzylismy-wszystko/) · [Źródło wydania](https://www.wydawnictwoalbatros.com/ksiazki/ludzie-krotka-historia-o-tym-jak-spieprzylismy-wszystko/)
+- Wydawnictwo Albatros · 600 × 960 px. [Grafika](https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/02/PHILIPS-TOM-LUDZIE_R600.jpg) · [Źródło i uznanie](https://www.wydawnictwoalbatros.com/ksiazki/ludzie-krotka-historia-o-tym-jak-spieprzylismy-wszystko/)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/02/PHILIPS-TOM-LUDZIE_R600.jpg
+
 
 ## Technika i wynalazcy
 
@@ -350,6 +384,7 @@ Reportaż o pracy, rodzinie i codziennych wyborach kobiet na polskiej wsi w pier
 |---:|---|---|---|---:|---|
 | 1 | Symfonia C++ Standard — Programowanie w języku C++ orientowane obiektowo | Jerzy Grębosz | Wydanie III, dwa tomy | 2008 | 9788373661394 |
 | 2 | Tesla — Geniusz na skraju szaleństwa | W. Bernard Carlson | Wydanie polskie, druk | 2020 | 9788366553941 |
+| 3 | Błękitna kropka — Człowiek i jego przyszłość w kosmosie | Carl Sagan | Oprawa twarda | 2020 | 9788382020564 |
 
 ### Symfonia C++ Standard
 
@@ -372,6 +407,16 @@ Biografia Nikoli Tesli skupia się na jego metodzie pracy, wynalazkach i próbac
 - Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
 - Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/4928000/4928183/817402-352x500.jpg
 
+### Błękitna kropka
+
+Carl Sagan opowiada o eksploracji Układu Słonecznego i zastanawia się, co perspektywa kosmiczna zmienia w naszym myśleniu o Ziemi oraz przyszłości ludzkości.
+
+- Zysk i S-ka · Oprawa twarda · ISBN 9788382020564.
+- [Opis książki](https://sklep.zysk.com.pl/blekitna-kropka-5593.html) · [Źródło wydania](https://sklep.zysk.com.pl/blekitna-kropka-5593.html)
+- Zysk i S-ka · 349 × 512 px. [Grafika](https://sklep.zysk.com.pl/media/products/509797b675b9fbef1f6bd16d2d1b3380/images/thumbnail/big_blekitna-kropka-1400.png?lm=1762414499) · [Źródło i uznanie](https://sklep.zysk.com.pl/blekitna-kropka-5593.html)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://sklep.zysk.com.pl/media/products/509797b675b9fbef1f6bd16d2d1b3380/images/thumbnail/big_blekitna-kropka-1400.png?lm=1762414499
+
 
 ## Fantastyka i science fiction
 
@@ -382,6 +427,9 @@ Biografia Nikoli Tesli skupia się na jego metodzie pracy, wynalazkach i próbac
 | 3 | Bajki robotów | Stanisław Lem | Wydanie polskie, druk | 2024 | 9788308085332 |
 | 4 | Diuna | Frank Herbert | Wydanie polskie, druk | 2020 | 9788381881654 |
 | 5 | Blade Runner — Czy androidy marzą o elektrycznych owcach? | Philip K. Dick | Wydanie polskie, druk | 2026 | 9788383385242 |
+| 6 | Rzeźnia numer pięć | Kurt Vonnegut | Oprawa twarda | 2025 | 9788383356013 |
+| 7 | Hobbit, czyli tam i z powrotem | J.R.R. Tolkien | Edycja LUX, oprawa twarda | 2024 | 9788324411641 |
+| 8 | Mechaniczna pomarańcza | Anthony Burgess | Wersja R, przekład Roberta Stillera | 2021 | 9788379982608 |
 
 ### Władca Pierścieni
 
@@ -434,6 +482,36 @@ Zadanie łowcy nagród Ricka Deckarda prowadzi do pytań o empatię i granicę m
 - Powieść znana także jako „Łowca androidów”.
 - Wyświetlany adres. https://wydawnictwoakcent.pl/assets/covers/card/5b3f346bb9deaed2464f.webp
 
+### Rzeźnia numer pięć
+
+Billy Pilgrim przemieszcza się w czasie, wracając do bombardowania Drezna i innych zdarzeń z własnego życia. Vonnegut łączy doświadczenie wojny z fantastyką i czarnym humorem.
+
+- Zysk i S-ka · Oprawa twarda · ISBN 9788383356013.
+- [Opis książki](https://sklep.zysk.com.pl/rzeznia-numer-piec-54-90-zl-wyd-2025.html) · [Źródło wydania](https://sklep.zysk.com.pl/rzeznia-numer-piec-54-90-zl-wyd-2025.html)
+- Czytam.pl · 480 × 707 px. [Grafika](https://webimage.pl/pics/013/6/rzeznia-numer-piec-kurt-vonnegut-b9788383356013.jpg) · [Źródło i uznanie](https://czytam.pl/rzeznia-numer-piec-vonnegut-kurt-1259570)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://webimage.pl/pics/013/6/rzeznia-numer-piec-kurt-vonnegut-b9788383356013.jpg
+
+### Hobbit, czyli tam i z powrotem
+
+Bilbo Baggins wyrusza z kompanią krasnoludów do Samotnej Góry. Wyprawa prowadzi go do spotkania ze smokiem i odkrycia niezwykłego pierścienia.
+
+- Iskry · Edycja LUX, oprawa twarda · ISBN 9788324411641.
+- [Opis książki](https://www.poczytaj.pl/ksiazka/hobbit-czyli-tam-i-z-powrotem-tolkien-jrr,596915) · [Źródło wydania](https://www.poczytaj.pl/ksiazka/hobbit-czyli-tam-i-z-powrotem-tolkien-jrr,596915)
+- Poczytaj.pl · 330 × 606 px. [Grafika](https://staticl.poczytaj.pl/596000/hobbit-czyli-tam-i-z-powrotem-tolkien-jrr,596915-l.jpg) · [Źródło i uznanie](https://www.poczytaj.pl/ksiazka/hobbit-czyli-tam-i-z-powrotem-tolkien-jrr,596915)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://staticl.poczytaj.pl/596000/hobbit-czyli-tam-i-z-powrotem-tolkien-jrr,596915-l.jpg
+
+### Mechaniczna pomarańcza
+
+Nastoletni Alex poddaje się eksperymentalnej terapii, która ma pozbawić go skłonności do przemocy. Antyutopia Burgessa pyta, ile warte jest dobro wymuszone przez państwo.
+
+- Vis-à-vis Etiuda · Wersja R, przekład Roberta Stillera · ISBN 9788379982608.
+- [Opis książki](https://lubimyczytac.pl/ksiazka/5039895/mechaniczna-pomarancza) · [Źródło wydania](https://lubimyczytac.pl/ksiazka/5039895/mechaniczna-pomarancza)
+- Lubimy Czytać · 352 × 500 px. [Grafika](https://s.lubimyczytac.pl/upload/books/5039000/5039895/1082552-352x500.jpg) · [Źródło i uznanie](https://lubimyczytac.pl/ksiazka/5039895/mechaniczna-pomarancza)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/5039000/5039895/1082552-352x500.jpg
+
 
 ## Groza
 
@@ -444,6 +522,8 @@ Zadanie łowcy nagród Ricka Deckarda prowadzi do pytań o empatię i granicę m
 | 3 | Inkub | Artur Urbanowicz | Wydanie polskie, druk | 2019 | 9788377313190 |
 | 4 | Terror | Dan Simmons | Wydanie polskie, druk | 2022 | 9788377314197 |
 | 5 | Chodź ze mną | Konrad Możdżeń | Wydanie polskie, druk | 2020 | 9788377313664 |
+| 6 | Dracula | Bram Stoker | Oprawa miękka | 2011 | 9788377310328 |
+| 7 | Dziecko Rosemary | Ira Levin | Oprawa twarda | 2026 | 9788383617992 |
 
 ### Bastion
 
@@ -495,6 +575,26 @@ Powieść grozy o zbrodni, której konsekwencje powracają w życiu następnych 
 - Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
 - Wyświetlany adres. https://ecsmedia.pl/cir/b/chodz-ze-mna-ZDJECIE_OKLADKI_PRZOD_DUZY/5811/15942022796455811.webp
 
+### Dracula
+
+Z listów, dzienników i wycinków prasowych wyłania się historia hrabiego Draculi i ludzi próbujących go powstrzymać.
+
+- Vesper · Oprawa miękka · ISBN 9788377310328.
+- [Opis książki](https://vesper.pl/43-dracula.html) · [Źródło wydania](https://vesper.pl/43-dracula.html)
+- Wydawnictwo Vesper · 840 × 1260 px. [Grafika](https://vesper.pl/43-product_main_2x/dracula.jpg) · [Źródło i uznanie](https://vesper.pl/43-dracula.html)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://vesper.pl/43-product_main_2x/dracula.jpg
+
+### Dziecko Rosemary
+
+Po przeprowadzce do nowojorskiej kamienicy Rosemary zachodzi w ciążę. Z czasem zaczyna podejrzewać, że troska sąsiadów skrywa wobec niej własne plany.
+
+- Albatros · Oprawa twarda · ISBN 9788383617992.
+- [Opis książki](https://www.wydawnictwoalbatros.com/ksiazki/dziecko-rosemary/) · [Źródło wydania](https://www.wydawnictwoalbatros.com/ksiazki/dziecko-rosemary/)
+- Wydawnictwo Albatros · 600 × 923 px. [Grafika](https://www.wydawnictwoalbatros.com/wp-content/uploads/2026/03/LEVIN-DZIECKO-ROSEMARY-R600.jpg) · [Źródło i uznanie](https://www.wydawnictwoalbatros.com/ksiazki/dziecko-rosemary/)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://www.wydawnictwoalbatros.com/wp-content/uploads/2026/03/LEVIN-DZIECKO-ROSEMARY-R600.jpg
+
 
 ## Proza
 
@@ -506,6 +606,13 @@ Powieść grozy o zbrodni, której konsekwencje powracają w życiu następnych 
 | 4 | Śmierć Komandora — Pojawia się idea | Haruki Murakami | Wydanie I, tom 1 | 2018 | 9788328710467 |
 | 5 | Mistrz i Małgorzata | Michaił Bułhakow | Wydanie polskie, druk | 2016 | 9788324043651 |
 | 6 | Serce pełne skorpionów | Wojciech Engelking | Wydanie polskie, druk | 2021 | 9788328076815 |
+| 7 | O czym mówimy, kiedy mówimy o miłości | Raymond Carver | Wydanie polskie, przekład Krzysztofa Puławskiego | 2006 | 9788388612930 |
+| 8 | Zły | Leopold Tyrmand | Oprawa twarda | 2025 | 9788382413274 |
+| 9 | Ojciec chrzestny | Mario Puzo | Seria „Świat Mafii”, oprawa twarda | 2023 | 9788367512893 |
+| 10 | Prowadź swój pług przez kości umarłych | Olga Tokarczuk | Wydanie IV, oprawa twarda | 2021 | 9788308085752 |
+| 11 | Wzgórze psów | Jakub Żulczyk | Oprawa miękka | 2025 | 9788368283204 |
+| 12 | Pachnidło | Patrick Süskind | Seria „Kanon W.A.B.” | 2026 | 9788384491850 |
+| 13 | Trainspotting | Irvine Welsh | Oprawa miękka | 2020 | 9788379982462 |
 
 ### Sto lat samotności
 
@@ -567,3 +674,73 @@ Powieść o dorastaniu i pamięci, rozpięta między warszawską młodością bo
 - Księgarnia Znak · 1400 × 2091 px. [Grafika](https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/serce-pelne-skorpionow-142742/142742/935db96fc3d1535d68a177f7cdea8152.jpeg) · [Źródło i uznanie](https://www.znak.com.pl/p/serce-pelne-skorpionow-wojciech-engelking-142742)
 - Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
 - Wyświetlany adres. https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/serce-pelne-skorpionow-142742/142742/935db96fc3d1535d68a177f7cdea8152.jpeg
+
+### O czym mówimy, kiedy mówimy o miłości
+
+W krótkich opowiadaniach Carvera zwyczajne rozmowy odsłaniają samotność i napięcia w bliskich relacjach. Najwięcej mówi to, co bohaterowie pomijają.
+
+- Świat Literacki · Wydanie polskie, przekład Krzysztofa Puławskiego · ISBN 9788388612930.
+- [Opis książki](https://lubimyczytac.pl/ksiazka/38186/o-czym-mowimy-kiedy-mowimy-o-milosci) · [Źródło wydania](https://lubimyczytac.pl/ksiazka/38186/o-czym-mowimy-kiedy-mowimy-o-milosci)
+- Lubimy Czytać · 352 × 500 px. [Grafika](https://s.lubimyczytac.pl/upload/books/38000/38186/822425-352x500.jpg) · [Źródło i uznanie](https://lubimyczytac.pl/ksiazka/38186/o-czym-mowimy-kiedy-mowimy-o-milosci)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/38000/38186/822425-352x500.jpg
+
+### Zły
+
+Zagadkowy obrońca pojawia się na ulicach powojennej Warszawy. Kryminalna intryga prowadzi przez podwórka, lokale i ciemne zaułki miasta.
+
+- Wydawnictwo MG · Oprawa twarda · ISBN 9788382413274.
+- [Opis książki](https://www.swiatksiazki.pl/zly-7502180-ksiazka.html) · [Źródło wydania](https://www.swiatksiazki.pl/zly-7502180-ksiazka.html)
+- Czytam.pl · 480 × 675 px. [Grafika](https://webimage.pl/pics/274/3/zly-tyrmand-leopold-b9788382413274.jpg) · [Źródło i uznanie](https://czytam.pl/zly-tyrmand-leopold-1275424)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://webimage.pl/pics/274/3/zly-tyrmand-leopold-b9788382413274.jpg
+
+### Ojciec chrzestny
+
+Historia rodziny Corleone i Michaela, który chce utrzymać dystans wobec rodzinnego interesu. Droga do władzy wystawia na próbę lojalność wobec najbliższych.
+
+- Albatros · Seria „Świat Mafii”, oprawa twarda · ISBN 9788367512893.
+- [Opis książki](https://www.wydawnictwoalbatros.com/ksiazki/ojciec-chrzestny-3/) · [Źródło wydania](https://www.wydawnictwoalbatros.com/ksiazki/ojciec-chrzestny-3/)
+- Wydawnictwo Albatros · 600 × 948 px. [Grafika](https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/01/PUZO-MARIO-OJCIEC-CHRZESTNY-twarda-39mm-RGB-600px.jpg) · [Źródło i uznanie](https://www.wydawnictwoalbatros.com/ksiazki/ojciec-chrzestny-3/)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/01/PUZO-MARIO-OJCIEC-CHRZESTNY-twarda-39mm-RGB-600px.jpg
+
+### Prowadź swój pług przez kości umarłych
+
+Janina Duszejko próbuje wyjaśnić serię tajemniczych śmierci na Kłodzczyźnie. Za zagadką kryminalną kryją się pytania o stosunek ludzi do zwierząt.
+
+- Wydawnictwo Literackie · Wydanie IV, oprawa twarda · ISBN 9788308085752.
+- [Opis książki](https://www.wydawnictwoliterackie.pl/produkt/3995/prowadz-swoj-plug-przez-kosci-umarlych) · [Źródło wydania](https://www.wydawnictwoliterackie.pl/produkt/3995/prowadz-swoj-plug-przez-kosci-umarlych)
+- Wydawnictwo Literackie · 460 × 724 px. [Grafika](https://www.wydawnictwoliterackie.pl/storage/images/products/460x724/prowadz_swoj_plug_przez_kosci_umarlych_619647f0c3ce5.jpg) · [Źródło i uznanie](https://www.wydawnictwoliterackie.pl/produkt/3995/prowadz-swoj-plug-przez-kosci-umarlych)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://www.wydawnictwoliterackie.pl/storage/images/products/460x724/prowadz_swoj_plug_przez_kosci_umarlych_619647f0c3ce5.jpg
+
+### Wzgórze psów
+
+Po powrocie do rodzinnego Zyborka Mikołaj i Justyna odkrywają, jak mocno teraźniejszość miasta zależy od dawnych zbrodni i przemilczeń.
+
+- Świat Książki · Oprawa miękka · ISBN 9788368283204.
+- [Opis książki](https://www.swiatksiazki.pl/wzgorze-psow-7397276-ksiazka.html) · [Źródło wydania](https://www.swiatksiazki.pl/wzgorze-psow-7397276-ksiazka.html)
+- Dystrybucja Ateneum · 656 × 1024 px. [Grafika](https://www.ateneum.pl/phttw/671552_large.jpg) · [Źródło i uznanie](https://www.ateneum.pl/pozycja.php?id=671552)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://www.ateneum.pl/phttw/671552_large.jpg
+
+### Pachnidło
+
+Obdarzony niezwykłym węchem Jean-Baptiste Grenouille pragnie stworzyć zapach doskonały. W XVIII-wiecznej Francji jego obsesja prowadzi do zbrodni.
+
+- W.A.B. · Seria „Kanon W.A.B.” · ISBN 9788384491850.
+- [Opis książki](https://www.swiatksiazki.pl/pachnidlo-7588438-ksiazka.html) · [Źródło wydania](https://www.swiatksiazki.pl/pachnidlo-7588438-ksiazka.html)
+- Czytam.pl · 400 × 599 px. [Grafika](https://webimage.pl/pics/850/1/pachnidlo-patrick-suskind--b9788384491850.jpg) · [Źródło i uznanie](https://czytam.pl/pachnidlo-patrick-suskind--1351057)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://webimage.pl/pics/850/1/pachnidlo-patrick-suskind--b9788384491850.jpg
+
+### Trainspotting
+
+Głosy Marka Rentona i jego znajomych składają się na portret Edynburga, przyjaźni i heroinowego uzależnienia.
+
+- Vis-à-vis Etiuda · Oprawa miękka · ISBN 9788379982462.
+- [Opis książki](https://etiuda.net/p1027,trainspotting-br.html) · [Źródło wydania](https://etiuda.net/p1027,trainspotting-br.html)
+- Vis-à-vis Etiuda · 792 × 1131 px. [Grafika](https://etiuda.net/galerie/t/trainspotting_273.jpg) · [Źródło i uznanie](https://etiuda.net/p1027,trainspotting-br.html)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://etiuda.net/galerie/t/trainspotting_273.jpg

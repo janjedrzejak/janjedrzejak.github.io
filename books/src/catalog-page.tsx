@@ -66,8 +66,12 @@ function Catalog() {
               </p>
               <p className="catalog-meta">
                 {book.edition} · {book.year} · {book.publisher}
-                <br />
-                ISBN {book.isbn}
+                {book.isbn && (
+                  <>
+                    <br />
+                    ISBN {book.isbn}
+                  </>
+                )}
               </p>
               <p className="note">{book.description}</p>
               {book.editionNote && (

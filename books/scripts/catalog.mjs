@@ -12,7 +12,7 @@ const shelfIds = new Set();
 const lines = [
   "# Wydania i źródła okładek",
   "",
-  "ISBN odnosi się do podanego wydania drukowanego. Okładki pochodzą z serwisów wydawców i dystrybutorów.",
+  "ISBN odnosi się do podanego wydania drukowanego. Źródła okładek podano przy każdym wydaniu.",
 ];
 
 for (const { id, label, books } of [
@@ -23,6 +23,7 @@ for (const { id, label, books } of [
     throw new Error("Duplicate, malformed or empty shelf " + id);
   }
   shelfIds.add(id);
+  const shelfBookIds = new Set();
   const sources = [];
   lines.push(
     "",
@@ -31,22 +32,26 @@ for (const { id, label, books } of [
     "| Nr | Tytuł | Autorzy / redaktorzy | Wydanie | Rok | ISBN-13 |",
     "|---:|---|---|---|---:|---|",
   );
-  for (const [i, book] of books.entries()) {
+  for (const [i, entry] of books.entries()) {
+    const shared = typeof entry === "string";
+    const book = shared ? personal.find((item) => item.id === entry) : entry;
+    if (!book) throw new Error("Unknown personal book " + entry);
     if (
-      ids.has(book.id) ||
+      shelfBookIds.has(book.id) ||
+      (!shared && ids.has(book.id)) ||
       !/^[a-z0-9-]+$/.test(book.id) ||
-      book.number !== i + 1
+      (!shared && book.number !== i + 1)
     ) {
       throw new Error("Duplicate, malformed or unordered book " + book.id);
     }
+    shelfBookIds.add(book.id);
     ids.add(book.id);
-    if (
-      !/^\d{13}$/.test(book.isbn) ||
+    const validIsbn = /^\d{13}$/.test(book.isbn) &&
       [...book.isbn].reduce(
         (sum, digit, n) => sum + Number(digit) * (n % 2 ? 3 : 1),
         0,
-      ) % 10
-    ) {
+      ) % 10 === 0;
+    if (!validIsbn && (book.isbn !== "" || !book.editionNote)) {
       throw new Error("Invalid ISBN " + book.id);
     }
     const c = book.cover;
@@ -65,7 +70,7 @@ for (const { id, label, books } of [
       (book.credit === "Editors" ? "red. " : "") + book.authors.join(", ");
     lines.push(
       "| " +
-        [book.number, title, authors, book.edition, book.year, book.isbn].join(
+        [i + 1, title, authors, book.edition, book.year, book.isbn || "—"].join(
           " | ",
         ) +
         " |",
@@ -79,8 +84,7 @@ for (const { id, label, books } of [
         book.publisher +
         " · " +
         book.edition +
-        " · ISBN " +
-        book.isbn +
+        (book.isbn ? " · ISBN " + book.isbn : "") +
         ".",
       "- [Opis książki](" +
         book.official +

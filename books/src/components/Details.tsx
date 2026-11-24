@@ -72,7 +72,8 @@ export function Details({
               {book.edition} · {book.year} · {book.publisher}
             </p>
             <p>
-              {book.category} · ISBN {book.isbn}
+              {book.category}
+              {book.isbn && " · ISBN " + book.isbn}
             </p>
             {book.editionNote && <p>{book.editionNote}</p>}
           </div>

@@ -63,7 +63,8 @@ export function Cover({
           Okładka niedostępna
           <br />
           <small>
-            {book.spine} · {book.isbn}
+            {book.spine}
+            {book.isbn && " · " + book.isbn}
           </small>
         </span>
       )}

@@ -6,19 +6,34 @@ export type Book = (typeof personalBooks)[number];
 const personalTitle = "Półka ważnych dla mnie książek";
 export const shelves = [
   { id: "", label: "Ważne dla mnie", title: personalTitle, books: personalBooks },
-  ...themedShelves.map((shelf) => ({ ...shelf, title: shelf.label })),
+  ...themedShelves.map((shelf) => ({
+    ...shelf,
+    title: shelf.label,
+    books: shelf.books.map((entry, index) => {
+      if (typeof entry !== "string") return entry;
+      const book = personalBooks.find(({ id }) => id === entry)!;
+      return {
+        ...book,
+        number: index + 1,
+        category: shelf.label,
+        stage: shelf.label,
+      };
+    }),
+  })),
 ];
 
-// Book links resolve to their own shelf, including links without a shelf query.
+// Keep an explicit shelf for books that appear in more than one collection.
 const url = new URL(location.href);
 const bookId = url.hash.startsWith("#book/") ? url.hash.slice(6) : null;
+const requestedShelf = shelves.find(
+  (shelf) => shelf.id === url.searchParams.get("shelf"),
+);
 const linkedShelf = bookId
-  ? shelves.find((shelf) => shelf.books.some((book) => book.id === bookId))
+  ? requestedShelf?.books.some((book) => book.id === bookId)
+    ? requestedShelf
+    : shelves.find((shelf) => shelf.books.some((book) => book.id === bookId))
   : undefined;
-const selectedShelf =
-  linkedShelf ??
-  shelves.find((shelf) => shelf.id === url.searchParams.get("shelf")) ??
-  shelves[0];
+const selectedShelf = linkedShelf ?? requestedShelf ?? shelves[0];
 if (selectedShelf.id) {
   url.searchParams.set("shelf", selectedShelf.id);
 } else {

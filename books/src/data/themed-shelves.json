@@ -469,6 +469,100 @@
           "difference": "Fotografia kompletu trzech tomów.",
           "alternative": ""
         }
+      },
+      {
+        "id": "testament-dzieci-hirosimy",
+        "number": 5,
+        "category": "Biografie i historia",
+        "title": "Testament dzieci Hirosimy",
+        "subtitle": "",
+        "authors": [
+          "Arata Osada"
+        ],
+        "credit": "Editors",
+        "edition": "Pierwsze wydanie polskie",
+        "year": 1976,
+        "isbn": "",
+        "publisher": "Książka i Wiedza",
+        "description": "Wspomnienia osób, które jako dzieci przeżyły zrzucenie bomby atomowej na Hiroszimę. Zbiór zainicjowany przez Aratę Osadę oddaje głos młodym świadkom katastrofy.",
+        "topics": [
+          "Hiroszima",
+          "Świadectwa"
+        ],
+        "official": "https://lubimyczytac.pl/ksiazka/66348/testament-dzieci-hirosimy",
+        "editionSource": "https://w.bibliotece.pl/1446430/Testament%2Bdzieci%2BHirosimy",
+        "stage": "Biografie i historia",
+        "spine": "Testament dzieci Hirosimy",
+        "shortAuthor": "Osada",
+        "aspect": 0.628,
+        "palette": [
+          "#373737",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "Katalog biblioteczny nie podaje ISBN tego wydania.",
+        "cover": {
+          "src": "https://s.lubimyczytac.pl/upload/books/66000/66348/352x500.jpg",
+          "source": "https://s.lubimyczytac.pl/upload/books/66000/66348/352x500.jpg",
+          "provider": "Lubimy Czytać",
+          "attribution": "https://lubimyczytac.pl/ksiazka/66348/testament-dzieci-hirosimy",
+          "rightsUrl": "https://lubimyczytac.pl/ksiazka/66348/testament-dzieci-hirosimy",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Testament dzieci Hirosimy”.",
+          "size": [
+            314,
+            500
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "ludzie-krotka-historia",
+        "number": 6,
+        "category": "Biografie i historia",
+        "title": "Ludzie",
+        "subtitle": "Krótka historia o tym, jak spieprzyliśmy wszystko",
+        "authors": [
+          "Tom Phillips"
+        ],
+        "credit": "Authors",
+        "edition": "Oprawa twarda",
+        "year": 2021,
+        "isbn": "9788382157659",
+        "publisher": "Albatros",
+        "description": "Przegląd ludzkich pomyłek, od decyzji politycznych do katastrof środowiskowych. Phillips przygląda się temu, dlaczego powtarzamy błędy mimo wcześniejszych doświadczeń.",
+        "topics": [
+          "Historia",
+          "Błędy poznawcze"
+        ],
+        "official": "https://www.wydawnictwoalbatros.com/ksiazki/ludzie-krotka-historia-o-tym-jak-spieprzylismy-wszystko/",
+        "editionSource": "https://www.wydawnictwoalbatros.com/ksiazki/ludzie-krotka-historia-o-tym-jak-spieprzylismy-wszystko/",
+        "stage": "Biografie i historia",
+        "spine": "Ludzie",
+        "shortAuthor": "Phillips",
+        "aspect": 0.625,
+        "palette": [
+          "#544536",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/02/PHILIPS-TOM-LUDZIE_R600.jpg",
+          "source": "https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/02/PHILIPS-TOM-LUDZIE_R600.jpg",
+          "provider": "Wydawnictwo Albatros",
+          "attribution": "https://www.wydawnictwoalbatros.com/ksiazki/ludzie-krotka-historia-o-tym-jak-spieprzylismy-wszystko/",
+          "rightsUrl": "https://www.wydawnictwoalbatros.com/ksiazki/ludzie-krotka-historia-o-tym-jak-spieprzylismy-wszystko/",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Ludzie. Krótka historia o tym, jak spieprzyliśmy wszystko”.",
+          "size": [
+            600,
+            960
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
       }
     ]
   },
@@ -567,7 +661,8 @@
           "difference": "Grafika wydania podanego w katalogu.",
           "alternative": ""
         }
-      }
+      },
+      "blekitna-kropka"
     ]
   },
   {
@@ -799,6 +894,147 @@
           "size": [
             420,
             669
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "rzeznia-numer-piec",
+        "number": 6,
+        "category": "Fantastyka i science fiction",
+        "title": "Rzeźnia numer pięć",
+        "subtitle": "",
+        "authors": [
+          "Kurt Vonnegut"
+        ],
+        "credit": "Authors",
+        "edition": "Oprawa twarda",
+        "year": 2025,
+        "isbn": "9788383356013",
+        "publisher": "Zysk i S-ka",
+        "description": "Billy Pilgrim przemieszcza się w czasie, wracając do bombardowania Drezna i innych zdarzeń z własnego życia. Vonnegut łączy doświadczenie wojny z fantastyką i czarnym humorem.",
+        "topics": [
+          "Wojna",
+          "Podróże w czasie"
+        ],
+        "official": "https://sklep.zysk.com.pl/rzeznia-numer-piec-54-90-zl-wyd-2025.html",
+        "editionSource": "https://sklep.zysk.com.pl/rzeznia-numer-piec-54-90-zl-wyd-2025.html",
+        "stage": "Fantastyka i science fiction",
+        "spine": "Rzeźnia numer pięć",
+        "shortAuthor": "Vonnegut",
+        "aspect": 0.6789,
+        "palette": [
+          "#57302b",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://webimage.pl/pics/013/6/rzeznia-numer-piec-kurt-vonnegut-b9788383356013.jpg",
+          "source": "https://webimage.pl/pics/013/6/rzeznia-numer-piec-kurt-vonnegut-b9788383356013.jpg",
+          "provider": "Czytam.pl",
+          "attribution": "https://czytam.pl/rzeznia-numer-piec-vonnegut-kurt-1259570",
+          "rightsUrl": "https://czytam.pl/rzeznia-numer-piec-vonnegut-kurt-1259570",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Rzeźnia numer pięć”.",
+          "size": [
+            480,
+            707
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "hobbit",
+        "number": 7,
+        "category": "Fantastyka i science fiction",
+        "title": "Hobbit, czyli tam i z powrotem",
+        "subtitle": "",
+        "authors": [
+          "J.R.R. Tolkien"
+        ],
+        "credit": "Authors",
+        "edition": "Edycja LUX, oprawa twarda",
+        "year": 2024,
+        "isbn": "9788324411641",
+        "publisher": "Iskry",
+        "description": "Bilbo Baggins wyrusza z kompanią krasnoludów do Samotnej Góry. Wyprawa prowadzi go do spotkania ze smokiem i odkrycia niezwykłego pierścienia.",
+        "topics": [
+          "Śródziemie",
+          "Przygoda"
+        ],
+        "official": "https://www.poczytaj.pl/ksiazka/hobbit-czyli-tam-i-z-powrotem-tolkien-jrr,596915",
+        "editionSource": "https://www.poczytaj.pl/ksiazka/hobbit-czyli-tam-i-z-powrotem-tolkien-jrr,596915",
+        "stage": "Fantastyka i science fiction",
+        "spine": "Hobbit, czyli tam i z powrotem",
+        "shortAuthor": "Tolkien",
+        "aspect": 0.5446,
+        "palette": [
+          "#3c412f",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://staticl.poczytaj.pl/596000/hobbit-czyli-tam-i-z-powrotem-tolkien-jrr,596915-l.jpg",
+          "source": "https://staticl.poczytaj.pl/596000/hobbit-czyli-tam-i-z-powrotem-tolkien-jrr,596915-l.jpg",
+          "provider": "Poczytaj.pl",
+          "attribution": "https://www.poczytaj.pl/ksiazka/hobbit-czyli-tam-i-z-powrotem-tolkien-jrr,596915",
+          "rightsUrl": "https://www.poczytaj.pl/ksiazka/hobbit-czyli-tam-i-z-powrotem-tolkien-jrr,596915",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Hobbit, czyli tam i z powrotem”.",
+          "size": [
+            330,
+            606
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "mechaniczna-pomarancza",
+        "number": 8,
+        "category": "Fantastyka i science fiction",
+        "title": "Mechaniczna pomarańcza",
+        "subtitle": "",
+        "authors": [
+          "Anthony Burgess"
+        ],
+        "credit": "Authors",
+        "edition": "Wersja R, przekład Roberta Stillera",
+        "year": 2021,
+        "isbn": "9788379982608",
+        "publisher": "Vis-à-vis Etiuda",
+        "description": "Nastoletni Alex poddaje się eksperymentalnej terapii, która ma pozbawić go skłonności do przemocy. Antyutopia Burgessa pyta, ile warte jest dobro wymuszone przez państwo.",
+        "topics": [
+          "Antyutopia",
+          "Wolna wola"
+        ],
+        "official": "https://lubimyczytac.pl/ksiazka/5039895/mechaniczna-pomarancza",
+        "editionSource": "https://lubimyczytac.pl/ksiazka/5039895/mechaniczna-pomarancza",
+        "stage": "Fantastyka i science fiction",
+        "spine": "Mechaniczna pomarańcza",
+        "shortAuthor": "Burgess",
+        "aspect": 0.704,
+        "palette": [
+          "#642424",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://s.lubimyczytac.pl/upload/books/5039000/5039895/1082552-352x500.jpg",
+          "source": "https://s.lubimyczytac.pl/upload/books/5039000/5039895/1082552-352x500.jpg",
+          "provider": "Lubimy Czytać",
+          "attribution": "https://lubimyczytac.pl/ksiazka/5039895/mechaniczna-pomarancza",
+          "rightsUrl": "https://lubimyczytac.pl/ksiazka/5039895/mechaniczna-pomarancza",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Mechaniczna pomarańcza”.",
+          "size": [
+            352,
+            500
           ],
           "difference": "Grafika wydania podanego w katalogu.",
           "alternative": ""
@@ -1035,6 +1271,100 @@
           "size": [
             317,
             448
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "dracula",
+        "number": 6,
+        "category": "Groza",
+        "title": "Dracula",
+        "subtitle": "",
+        "authors": [
+          "Bram Stoker"
+        ],
+        "credit": "Authors",
+        "edition": "Oprawa miękka",
+        "year": 2011,
+        "isbn": "9788377310328",
+        "publisher": "Vesper",
+        "description": "Z listów, dzienników i wycinków prasowych wyłania się historia hrabiego Draculi i ludzi próbujących go powstrzymać.",
+        "topics": [
+          "Gotyk",
+          "Wampiry"
+        ],
+        "official": "https://vesper.pl/43-dracula.html",
+        "editionSource": "https://vesper.pl/43-dracula.html",
+        "stage": "Groza",
+        "spine": "Dracula",
+        "shortAuthor": "Stoker",
+        "aspect": 0.6667,
+        "palette": [
+          "#5b1c20",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://vesper.pl/43-product_main_2x/dracula.jpg",
+          "source": "https://vesper.pl/43-product_main_2x/dracula.jpg",
+          "provider": "Wydawnictwo Vesper",
+          "attribution": "https://vesper.pl/43-dracula.html",
+          "rightsUrl": "https://vesper.pl/43-dracula.html",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Dracula”.",
+          "size": [
+            840,
+            1260
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "dziecko-rosemary",
+        "number": 7,
+        "category": "Groza",
+        "title": "Dziecko Rosemary",
+        "subtitle": "",
+        "authors": [
+          "Ira Levin"
+        ],
+        "credit": "Authors",
+        "edition": "Oprawa twarda",
+        "year": 2026,
+        "isbn": "9788383617992",
+        "publisher": "Albatros",
+        "description": "Po przeprowadzce do nowojorskiej kamienicy Rosemary zachodzi w ciążę. Z czasem zaczyna podejrzewać, że troska sąsiadów skrywa wobec niej własne plany.",
+        "topics": [
+          "Groza psychologiczna",
+          "Nieufność"
+        ],
+        "official": "https://www.wydawnictwoalbatros.com/ksiazki/dziecko-rosemary/",
+        "editionSource": "https://www.wydawnictwoalbatros.com/ksiazki/dziecko-rosemary/",
+        "stage": "Groza",
+        "spine": "Dziecko Rosemary",
+        "shortAuthor": "Levin",
+        "aspect": 0.6501,
+        "palette": [
+          "#26342d",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://www.wydawnictwoalbatros.com/wp-content/uploads/2026/03/LEVIN-DZIECKO-ROSEMARY-R600.jpg",
+          "source": "https://www.wydawnictwoalbatros.com/wp-content/uploads/2026/03/LEVIN-DZIECKO-ROSEMARY-R600.jpg",
+          "provider": "Wydawnictwo Albatros",
+          "attribution": "https://www.wydawnictwoalbatros.com/ksiazki/dziecko-rosemary/",
+          "rightsUrl": "https://www.wydawnictwoalbatros.com/ksiazki/dziecko-rosemary/",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Dziecko Rosemary”.",
+          "size": [
+            600,
+            923
           ],
           "difference": "Grafika wydania podanego w katalogu.",
           "alternative": ""
@@ -1317,6 +1647,335 @@
           "size": [
             1400,
             2091
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "o-czym-mowimy-kiedy-mowimy-o-milosci",
+        "number": 7,
+        "category": "Proza",
+        "title": "O czym mówimy, kiedy mówimy o miłości",
+        "subtitle": "",
+        "authors": [
+          "Raymond Carver"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, przekład Krzysztofa Puławskiego",
+        "year": 2006,
+        "isbn": "9788388612930",
+        "publisher": "Świat Literacki",
+        "description": "W krótkich opowiadaniach Carvera zwyczajne rozmowy odsłaniają samotność i napięcia w bliskich relacjach. Najwięcej mówi to, co bohaterowie pomijają.",
+        "topics": [
+          "Opowiadania",
+          "Relacje"
+        ],
+        "official": "https://lubimyczytac.pl/ksiazka/38186/o-czym-mowimy-kiedy-mowimy-o-milosci",
+        "editionSource": "https://lubimyczytac.pl/ksiazka/38186/o-czym-mowimy-kiedy-mowimy-o-milosci",
+        "stage": "Proza",
+        "spine": "O czym mówimy, kiedy mówimy o miłości",
+        "shortAuthor": "Carver",
+        "aspect": 0.704,
+        "palette": [
+          "#2e402f",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://s.lubimyczytac.pl/upload/books/38000/38186/822425-352x500.jpg",
+          "source": "https://s.lubimyczytac.pl/upload/books/38000/38186/822425-352x500.jpg",
+          "provider": "Lubimy Czytać",
+          "attribution": "https://lubimyczytac.pl/ksiazka/38186/o-czym-mowimy-kiedy-mowimy-o-milosci",
+          "rightsUrl": "https://lubimyczytac.pl/ksiazka/38186/o-czym-mowimy-kiedy-mowimy-o-milosci",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „O czym mówimy, kiedy mówimy o miłości”.",
+          "size": [
+            352,
+            500
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "zly",
+        "number": 8,
+        "category": "Proza",
+        "title": "Zły",
+        "subtitle": "",
+        "authors": [
+          "Leopold Tyrmand"
+        ],
+        "credit": "Authors",
+        "edition": "Oprawa twarda",
+        "year": 2025,
+        "isbn": "9788382413274",
+        "publisher": "Wydawnictwo MG",
+        "description": "Zagadkowy obrońca pojawia się na ulicach powojennej Warszawy. Kryminalna intryga prowadzi przez podwórka, lokale i ciemne zaułki miasta.",
+        "topics": [
+          "Warszawa",
+          "Kryminał"
+        ],
+        "official": "https://www.swiatksiazki.pl/zly-7502180-ksiazka.html",
+        "editionSource": "https://www.swiatksiazki.pl/zly-7502180-ksiazka.html",
+        "stage": "Proza",
+        "spine": "Zły",
+        "shortAuthor": "Tyrmand",
+        "aspect": 0.7111,
+        "palette": [
+          "#543824",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://webimage.pl/pics/274/3/zly-tyrmand-leopold-b9788382413274.jpg",
+          "source": "https://webimage.pl/pics/274/3/zly-tyrmand-leopold-b9788382413274.jpg",
+          "provider": "Czytam.pl",
+          "attribution": "https://czytam.pl/zly-tyrmand-leopold-1275424",
+          "rightsUrl": "https://czytam.pl/zly-tyrmand-leopold-1275424",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Zły”.",
+          "size": [
+            480,
+            675
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "ojciec-chrzestny",
+        "number": 9,
+        "category": "Proza",
+        "title": "Ojciec chrzestny",
+        "subtitle": "",
+        "authors": [
+          "Mario Puzo"
+        ],
+        "credit": "Authors",
+        "edition": "Seria „Świat Mafii”, oprawa twarda",
+        "year": 2023,
+        "isbn": "9788367512893",
+        "publisher": "Albatros",
+        "description": "Historia rodziny Corleone i Michaela, który chce utrzymać dystans wobec rodzinnego interesu. Droga do władzy wystawia na próbę lojalność wobec najbliższych.",
+        "topics": [
+          "Rodzina",
+          "Władza"
+        ],
+        "official": "https://www.wydawnictwoalbatros.com/ksiazki/ojciec-chrzestny-3/",
+        "editionSource": "https://www.wydawnictwoalbatros.com/ksiazki/ojciec-chrzestny-3/",
+        "stage": "Proza",
+        "spine": "Ojciec chrzestny",
+        "shortAuthor": "Puzo",
+        "aspect": 0.6329,
+        "palette": [
+          "#541e23",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/01/PUZO-MARIO-OJCIEC-CHRZESTNY-twarda-39mm-RGB-600px.jpg",
+          "source": "https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/01/PUZO-MARIO-OJCIEC-CHRZESTNY-twarda-39mm-RGB-600px.jpg",
+          "provider": "Wydawnictwo Albatros",
+          "attribution": "https://www.wydawnictwoalbatros.com/ksiazki/ojciec-chrzestny-3/",
+          "rightsUrl": "https://www.wydawnictwoalbatros.com/ksiazki/ojciec-chrzestny-3/",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Ojciec chrzestny”.",
+          "size": [
+            600,
+            948
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "prowadz-swoj-plug-przez-kosci-umarlych",
+        "number": 10,
+        "category": "Proza",
+        "title": "Prowadź swój pług przez kości umarłych",
+        "subtitle": "",
+        "authors": [
+          "Olga Tokarczuk"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie IV, oprawa twarda",
+        "year": 2021,
+        "isbn": "9788308085752",
+        "publisher": "Wydawnictwo Literackie",
+        "description": "Janina Duszejko próbuje wyjaśnić serię tajemniczych śmierci na Kłodzczyźnie. Za zagadką kryminalną kryją się pytania o stosunek ludzi do zwierząt.",
+        "topics": [
+          "Thriller",
+          "Zwierzęta"
+        ],
+        "official": "https://www.wydawnictwoliterackie.pl/produkt/3995/prowadz-swoj-plug-przez-kosci-umarlych",
+        "editionSource": "https://www.wydawnictwoliterackie.pl/produkt/3995/prowadz-swoj-plug-przez-kosci-umarlych",
+        "stage": "Proza",
+        "spine": "Prowadź swój pług przez kości umarłych",
+        "shortAuthor": "Tokarczuk",
+        "aspect": 0.6354,
+        "palette": [
+          "#422d25",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://www.wydawnictwoliterackie.pl/storage/images/products/460x724/prowadz_swoj_plug_przez_kosci_umarlych_619647f0c3ce5.jpg",
+          "source": "https://www.wydawnictwoliterackie.pl/storage/images/products/460x724/prowadz_swoj_plug_przez_kosci_umarlych_619647f0c3ce5.jpg",
+          "provider": "Wydawnictwo Literackie",
+          "attribution": "https://www.wydawnictwoliterackie.pl/produkt/3995/prowadz-swoj-plug-przez-kosci-umarlych",
+          "rightsUrl": "https://www.wydawnictwoliterackie.pl/produkt/3995/prowadz-swoj-plug-przez-kosci-umarlych",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Prowadź swój pług przez kości umarłych”.",
+          "size": [
+            460,
+            724
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "wzgorze-psow",
+        "number": 11,
+        "category": "Proza",
+        "title": "Wzgórze psów",
+        "subtitle": "",
+        "authors": [
+          "Jakub Żulczyk"
+        ],
+        "credit": "Authors",
+        "edition": "Oprawa miękka",
+        "year": 2025,
+        "isbn": "9788368283204",
+        "publisher": "Świat Książki",
+        "description": "Po powrocie do rodzinnego Zyborka Mikołaj i Justyna odkrywają, jak mocno teraźniejszość miasta zależy od dawnych zbrodni i przemilczeń.",
+        "topics": [
+          "Thriller",
+          "Pamięć"
+        ],
+        "official": "https://www.swiatksiazki.pl/wzgorze-psow-7397276-ksiazka.html",
+        "editionSource": "https://www.swiatksiazki.pl/wzgorze-psow-7397276-ksiazka.html",
+        "stage": "Proza",
+        "spine": "Wzgórze psów",
+        "shortAuthor": "Żulczyk",
+        "aspect": 0.6406,
+        "palette": [
+          "#662a27",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://www.ateneum.pl/phttw/671552_large.jpg",
+          "source": "https://www.ateneum.pl/phttw/671552_large.jpg",
+          "provider": "Dystrybucja Ateneum",
+          "attribution": "https://www.ateneum.pl/pozycja.php?id=671552",
+          "rightsUrl": "https://www.ateneum.pl/pozycja.php?id=671552",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Wzgórze psów”.",
+          "size": [
+            656,
+            1024
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "pachnidlo",
+        "number": 12,
+        "category": "Proza",
+        "title": "Pachnidło",
+        "subtitle": "",
+        "authors": [
+          "Patrick Süskind"
+        ],
+        "credit": "Authors",
+        "edition": "Seria „Kanon W.A.B.”",
+        "year": 2026,
+        "isbn": "9788384491850",
+        "publisher": "W.A.B.",
+        "description": "Obdarzony niezwykłym węchem Jean-Baptiste Grenouille pragnie stworzyć zapach doskonały. W XVIII-wiecznej Francji jego obsesja prowadzi do zbrodni.",
+        "topics": [
+          "Obsesja",
+          "Zapach"
+        ],
+        "official": "https://www.swiatksiazki.pl/pachnidlo-7588438-ksiazka.html",
+        "editionSource": "https://www.swiatksiazki.pl/pachnidlo-7588438-ksiazka.html",
+        "stage": "Proza",
+        "spine": "Pachnidło",
+        "shortAuthor": "Süskind",
+        "aspect": 0.6678,
+        "palette": [
+          "#5d3b31",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://webimage.pl/pics/850/1/pachnidlo-patrick-suskind--b9788384491850.jpg",
+          "source": "https://webimage.pl/pics/850/1/pachnidlo-patrick-suskind--b9788384491850.jpg",
+          "provider": "Czytam.pl",
+          "attribution": "https://czytam.pl/pachnidlo-patrick-suskind--1351057",
+          "rightsUrl": "https://czytam.pl/pachnidlo-patrick-suskind--1351057",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Pachnidło”.",
+          "size": [
+            400,
+            599
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "trainspotting",
+        "number": 13,
+        "category": "Proza",
+        "title": "Trainspotting",
+        "subtitle": "",
+        "authors": [
+          "Irvine Welsh"
+        ],
+        "credit": "Authors",
+        "edition": "Oprawa miękka",
+        "year": 2020,
+        "isbn": "9788379982462",
+        "publisher": "Vis-à-vis Etiuda",
+        "description": "Głosy Marka Rentona i jego znajomych składają się na portret Edynburga, przyjaźni i heroinowego uzależnienia.",
+        "topics": [
+          "Edynburg",
+          "Uzależnienie"
+        ],
+        "official": "https://etiuda.net/p1027,trainspotting-br.html",
+        "editionSource": "https://etiuda.net/p1027,trainspotting-br.html",
+        "stage": "Proza",
+        "spine": "Trainspotting",
+        "shortAuthor": "Welsh",
+        "aspect": 0.7003,
+        "palette": [
+          "#225160",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://etiuda.net/galerie/t/trainspotting_273.jpg",
+          "source": "https://etiuda.net/galerie/t/trainspotting_273.jpg",
+          "provider": "Vis-à-vis Etiuda",
+          "attribution": "https://etiuda.net/p1027,trainspotting-br.html",
+          "rightsUrl": "https://etiuda.net/p1027,trainspotting-br.html",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Trainspotting”.",
+          "size": [
+            792,
+            1131
           ],
           "difference": "Grafika wydania podanego w katalogu.",
           "alternative": ""

@@ -24,7 +24,8 @@ Build trafia do `books/dist/`. [Build portfolio](../README_DEPLOY.md) przenosi g
 ## Dodawanie książek
 
 - Dodaj rekord w [src/data/personal-books.json](src/data/personal-books.json) lub do odpowiedniej półki w [src/data/themed-shelves.json](src/data/themed-shelves.json). Uzupełnij trwały identyfikator, tytuł, autorów, wydanie, ISBN, źródło, kategorię, notę i prawdziwą okładkę. Ustal proporcję okładki na podstawie obrazu i kolory grzbietu.
-- Numery książek zaczynają się od 1 na każdej półce. Identyfikatory półek i identyfikatory książek w adresach `#book/…` muszą być unikalne.
+- Numery książek zaczynają się od 1 na każdej półce. Identyfikatory półek i rekordów książek muszą być unikalne. Aby pokazać książkę z „Ważne dla mnie” także na półce tematycznej, dodaj jej identyfikator jako tekst w tablicy `books` tej półki.
+- Jeżeli źródło wydania archiwalnego nie podaje ISBN, zostaw pustą wartość `isbn` i wyjaśnij przyczynę w `editionNote`.
 - Build sprawdza ISBN, metadane i lokalne pliki oraz odtwarza [katalog źródeł](docs/KATALOG.md). Kategorie sterujące półką są w [src/data/catalog.ts](src/data/catalog.ts).
 
 ## Mechanika i weryfikacja

@@ -913,5 +913,53 @@
       "difference": "Okładka polskiego wydania podanego w katalogu.",
       "alternative": "https://platon.com.pl/csAPIServer/content/ImageIdent/csPhotos|PhotoMed|255A7755-0EBD-4D0F-912E-FFD2A8194FDA|1/csPhotos_PhotoMed_255A7755-0EBD-4D0F-912E-FFD2A8194FDA_1.jpg"
     }
+  },
+  {
+    "id": "blekitna-kropka",
+    "number": 20,
+    "category": "Literatura",
+    "title": "Błękitna kropka",
+    "subtitle": "Człowiek i jego przyszłość w kosmosie",
+    "authors": [
+      "Carl Sagan"
+    ],
+    "credit": "Authors",
+    "edition": "Oprawa twarda",
+    "year": 2020,
+    "isbn": "9788382020564",
+    "publisher": "Zysk i S-ka",
+    "description": "Carl Sagan opowiada o eksploracji Układu Słonecznego i zastanawia się, co perspektywa kosmiczna zmienia w naszym myśleniu o Ziemi oraz przyszłości ludzkości.",
+    "topics": [
+      "Kosmos",
+      "Eksploracja",
+      "Perspektywa"
+    ],
+    "official": "https://sklep.zysk.com.pl/blekitna-kropka-5593.html",
+    "editionSource": "https://sklep.zysk.com.pl/blekitna-kropka-5593.html",
+    "stage": "Literatura",
+    "spine": "Błękitna kropka",
+    "shortAuthor": "Sagan",
+    "aspect": 0.6816,
+    "palette": [
+      "#292d42",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://sklep.zysk.com.pl/media/products/509797b675b9fbef1f6bd16d2d1b3380/images/thumbnail/big_blekitna-kropka-1400.png?lm=1762414499",
+      "source": "https://sklep.zysk.com.pl/media/products/509797b675b9fbef1f6bd16d2d1b3380/images/thumbnail/big_blekitna-kropka-1400.png?lm=1762414499",
+      "provider": "Zysk i S-ka",
+      "attribution": "https://sklep.zysk.com.pl/blekitna-kropka-5593.html",
+      "rightsUrl": "https://sklep.zysk.com.pl/blekitna-kropka-5593.html",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+      "alt": "Okładka książki „Błękitna kropka. Człowiek i jego przyszłość w kosmosie”.",
+      "size": [
+        349,
+        512
+      ],
+      "difference": "Grafika wydania podanego w katalogu.",
+      "alternative": ""
+    }
   }
 ]
