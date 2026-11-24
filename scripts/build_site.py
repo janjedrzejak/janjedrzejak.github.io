@@ -339,6 +339,44 @@ def build_page(path, language):
     return doc
 
 
+def add_books_layout(path, homepage):
+    output = OUT / path
+    doc = html.document_fromstring(output.read_text())
+    head = doc.find("head")
+    body = doc.find("body")
+    body.set("class", "books-page")
+
+    etree.SubElement(head, "link", rel="stylesheet", href="/home.css")
+    for script in ("layout.js", "pages.js"):
+        etree.SubElement(head, "script", src="/" + script, defer="defer")
+
+    home_path = urlsplit(url_for("index.html", doc.get("lang"))).path
+    for index, selector in enumerate((
+        '//a[@class="skip-link"]',
+        '//div[@class="page-progress"]',
+        '//header[@data-header]',
+        '//*[@id="mobile-menu"]',
+    )):
+        element = deepcopy(homepage.xpath(selector)[0])
+        element.set("data-books-chrome", "")
+        if element.tag == "a":
+            element.set("href", "#root")
+        for link in element.xpath('.//a[@href]'):
+            href = link.get("href")
+            if href.startswith("#"):
+                link.set("href", home_path + href)
+            elif href == "/books/":
+                link.set("aria-current", "page")
+        body.insert(index, element)
+
+    footer = deepcopy(homepage.xpath('//footer[@class="site-footer"]')[0])
+    footer.set("data-books-chrome", "")
+    footer.xpath('.//*[@id="current-year"]')[0].set("data-current-year", "")
+    body.append(footer)
+    version_local_assets(doc)
+    output.write_text(html.tostring(doc, encoding="unicode", doctype="<!DOCTYPE html>", method="html") + "\n")
+
+
 def build():
     subprocess.run(["npm", "run", "build"], cwd=BOOKS, check=True)
     if OUT.exists():
@@ -354,6 +392,8 @@ def build():
     for path in PAGES:
         for language in ("en", "pl"):
             docs[(path, language)] = build_page(path, language)
+    for path in BOOKS_URLS:
+        add_books_layout(path, docs[("index.html", "pl")])
     # Keep the utility page's intentional noindex and GitHub's real 404 response.
     for name in ("404.html", "ksiazka-nfc.html"):
         doc = html.document_fromstring((ROOT / name).read_text())

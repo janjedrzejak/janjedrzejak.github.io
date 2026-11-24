@@ -57,6 +57,9 @@ def validate():
             check(doc.get("lang") == "pl", f"{path}: wrong bookshelf language")
             check(doc.xpath('//link[@rel="canonical"]/@href') == [canonical], f"{path}: wrong canonical")
             check(bool(doc.xpath('//script[@type="module" and @src]')), f"{path}: missing bookshelf entry module")
+            for selector in ('//header[@data-header]', '//*[@id="mobile-menu"]', '//footer[@class="site-footer"]'):
+                check(len(doc.xpath(selector + '[@data-books-chrome]')) == 1, f"{path}: missing or duplicated portfolio layout {selector}")
+            check(doc.xpath('//a[@aria-current="page" and @href="/books/"]/text()') == ["Książki", "Książki"], f"{path}: missing active Books navigation")
             expected_urls.add(canonical)
             continue
         language = "pl" if path.startswith("pl/") else "en"

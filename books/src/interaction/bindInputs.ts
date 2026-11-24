@@ -110,7 +110,15 @@ export function bindInputs(root: HTMLElement, controller: ShelfController) {
   window.addEventListener(
     "keydown",
     (e) => {
-      if (e.altKey || e.metaKey || e.ctrlKey || e.isComposing) return;
+      if (
+        e.altKey ||
+        e.metaKey ||
+        e.ctrlKey ||
+        e.isComposing ||
+        document.body.classList.contains("menu-open") ||
+        (e.target instanceof Element && e.target.closest("[data-books-chrome]"))
+      )
+        return;
       if (!controller.onShelf) {
         if (e.key === "Escape") {
           e.preventDefault();

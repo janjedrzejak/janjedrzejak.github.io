@@ -3,7 +3,6 @@ import personal from "./personal-books.json";
 
 export type Book = (typeof engineering)[number];
 
-export const portfolio = "/pl/";
 export const readingMap =
   "https://github.com/nagavineerpasam/systems-to-ai-reading-map";
 export const personalTitle = "Półka ważnych dla mnie książek";

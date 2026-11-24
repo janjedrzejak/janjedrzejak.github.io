@@ -1,6 +1,6 @@
 .details {
   position: fixed;
-  z-index: 10;
+  z-index: 210;
   inset: 0;
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);

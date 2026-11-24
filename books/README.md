@@ -19,7 +19,7 @@ npm run build
 npm run preview
 ```
 
-Build trafia do `books/dist/`. [Build portfolio](../README_DEPLOY.md) przenosi go do `_site/books/` i publikuje razem ze stroną główną. Style wykorzystują kolorystykę i typografię portfolio. Tekstury polskich wydań pochodzą z serwisów wydawców oraz dystrybutorów.
+Build trafia do `books/dist/`. [Build portfolio](../README_DEPLOY.md) przenosi go do `_site/books/` i dodaje wspólny nagłówek, menu oraz stopkę z polskiej strony głównej. Pełną stronę można sprawdzić w podglądzie z katalogu głównego repozytorium. Tekstury polskich wydań pochodzą z serwisów wydawców oraz dystrybutorów.
 
 ## Dodawanie książek
 

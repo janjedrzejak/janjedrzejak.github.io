@@ -23,6 +23,7 @@ export class ShelfController {
   private reduced = matchMedia("(prefers-reduced-motion: reduce)");
   private unbind: () => void;
   private cursor: HTMLElement;
+  private background: HTMLElement[];
   private pointer = {
     x: 0,
     y: 0,
@@ -47,6 +48,10 @@ export class ShelfController {
       root.querySelector(".stage")!,
     );
     this.cursor = root.querySelector(".shelf-cursor")!;
+    this.background = [
+      root.querySelector<HTMLElement>(".library-shell")!,
+      ...document.querySelectorAll<HTMLElement>("[data-books-chrome]"),
+    ];
     this.observer = new ResizeObserver(this.resize);
     this.observer.observe(this.scene.fit);
     this.reduced.addEventListener("change", this.motionPreference);
@@ -170,7 +175,7 @@ export class ShelfController {
     this.scene.draw(this.position, -1, this.pitch, this.yaw, 0, true);
     this.renderDetail(index);
     const panel = this.root.querySelector<HTMLElement>("#book-details")!;
-    this.root.querySelector<HTMLElement>(".library-shell")!.inert = true;
+    this.background.forEach((element) => (element.inert = true));
     this.cursor.dataset.mode = "";
     this.detail = new DetailMotion(panel, books[index].aspect);
     const now = performance.now();
@@ -229,7 +234,7 @@ export class ShelfController {
     this.detail = null;
     this.detailIndex = -1;
     this.renderDetail(null);
-    this.root.querySelector<HTMLElement>(".library-shell")!.inert = false;
+    this.background.forEach((element) => (element.inert = false));
     this.phaseTo("idle");
     document.title = pageTitle;
     const nextFocus =
@@ -347,5 +352,6 @@ export class ShelfController {
     window.removeEventListener("hashchange", this.readRoute);
     this.reduced.removeEventListener("change", this.motionPreference);
     this.detail?.dispose();
+    this.background.forEach((element) => (element.inert = false));
   }
 }

@@ -7,12 +7,12 @@ import {
   otherLabel,
   otherShelf,
   readingMap,
+  shelfQuery,
   shelfTitle,
   technicalShelf,
 } from "../data/catalog";
 import { BookModel } from "../geometry/BookModel";
 import { ShelfController } from "../animation/ShelfController";
-import { Header } from "./Header";
 import { Details } from "./Details";
 import "../styles/layout.css";
 import "../styles/book.css";
@@ -90,13 +90,17 @@ export function Shelf() {
   return (
     <div id="experience" ref={root} tabIndex={-1}>
       <div className="library-shell">
-        <Header />
         <main className="library-main">
           <div className="heading-row">
             <h1>{shelfTitle}</h1>
-            <a className="collection-link desktop-collection" href={otherShelf}>
-              {otherLabel}
-            </a>
+            <nav className="library-nav" aria-label="Nawigacja półki">
+              <a className="collection-link" href={"./catalog.html" + shelfQuery}>
+                Katalog
+              </a>
+              <a className="collection-link" href={otherShelf}>
+                {otherLabel}
+              </a>
+            </nav>
           </div>
           <section className="collection" aria-label="Półka z książkami">
             <div className="shelf-index">
@@ -156,28 +160,16 @@ export function Shelf() {
                 <Arrow next />
               </button>
             </div>
-            <div
-              className={
-                technicalShelf ? "shelf-links technical-links" : "shelf-links"
-              }
-            >
+            {technicalShelf && (
               <a
-                className="collection-link mobile-collection"
-                href={otherShelf}
+                className="collection-link"
+                href={readingMap}
+                target="_blank"
+                rel="noreferrer"
               >
-                {otherLabel}
+                Mapa lektur
               </a>
-              {technicalShelf && (
-                <a
-                  className="collection-link"
-                  href={readingMap}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Mapa lektur
-                </a>
-              )}
-            </div>
+            )}
           </section>
         </main>
       </div>
