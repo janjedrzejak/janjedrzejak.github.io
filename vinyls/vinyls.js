@@ -74,16 +74,18 @@ const sleeves = entries.map((entry, index) => {
   image.addEventListener("error", () => image.classList.add("is-missing"));
   front.append(fallback, image);
   sleeve.append(spine, front, makeFace("back"), makeFace("edge"), makeFace("head"), makeFace("foot"));
-  sleeve.addEventListener("click", () => {
-    if (index === current) openAlbum(index);
-    else {
-      glide(position + offsetFrom(index, position));
-      controls.open.focus({ preventScroll: true });
-    }
-  });
+  sleeve.addEventListener("click", () => activate(index));
   models.append(sleeve);
   return { sleeve, image, spine, front, visible: false, lift: 0 };
 });
+
+function activate(index) {
+  if (index === current) openAlbum(index);
+  else {
+    glide(position + offsetFrom(index, position));
+    controls.open.focus({ preventScroll: true });
+  }
+}
 
 function measure() {
   visibleWidth = crate.clientWidth;
@@ -293,3 +295,18 @@ crate.addEventListener("click", (event) => {
   event.preventDefault();
   event.stopPropagation();
 }, { capture: true });
+crate.addEventListener("click", (event) => {
+  if (event.target !== models && event.target !== crate) return;
+  // A touch can hit the stage instead of a transformed face in a 3D button.
+  const containsPoint = (face) => {
+    const bounds = face.getBoundingClientRect();
+    return event.clientX >= bounds.left && event.clientX <= bounds.right &&
+      event.clientY >= bounds.top && event.clientY <= bounds.bottom;
+  };
+  if (containsPoint(sleeves[current].front)) {
+    activate(current);
+    return;
+  }
+  const index = sleeves.findIndex(({ visible, spine }) => visible && containsPoint(spine));
+  if (index >= 0) activate(index);
+});
