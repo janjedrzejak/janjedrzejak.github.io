@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Płyty, do których wracam. Osobista kolekcja winyli Jana Jędrzejaka, od rocka po black metal.">
+  <meta property="og:title" content="Półka z winylami | Jan Jędrzejak">
+  <meta property="og:description" content="Płyty, do których wracam. Osobista kolekcja winyli Jana Jędrzejaka.">
+  <meta property="og:url" content="https://janjedrzejak.github.io/vinyls/">
+  <link rel="canonical" href="https://janjedrzejak.github.io/vinyls/">
+  <link rel="icon" href="/books/mark.svg" type="image/svg+xml">
+  <title>Półka z winylami | Jan Jędrzejak</title>
+  <link rel="stylesheet" href="/vinyls/vinyls.css">
+  <script type="module" src="/vinyls/vinyls.js"></script>
+</head>
+<body class="vinyl-page">
+  <main id="root" class="vinyl-main" tabindex="-1">
+    <header class="vinyl-intro">
+      <h1>Półka z winylami</h1>
+      <p>Płyty, do których wracam.</p>
+    </header>
+    <section class="vinyl-player" aria-label="Przeglądaj winyle" hidden>
+      <div class="vinyl-crate" role="group" aria-label="Koperty płyt">
+        <div class="vinyl-models" id="vinyl-models"></div>
+      </div>
+      <div class="vinyl-selection">
+        <div class="vinyl-metadata" aria-live="polite" aria-atomic="true">
+          <p class="vinyl-artist"></p>
+          <h2 class="vinyl-title"></h2>
+          <p class="vinyl-year"></p>
+        </div>
+        <div class="vinyl-actions">
+          <button type="button" class="vinyl-toggle" aria-controls="vinyl-models">Wysuń winyl</button>
+          <a class="vinyl-listen" target="_blank" rel="noreferrer">Odsłuchaj <span aria-hidden="true">↗︎</span></a>
+        </div>
+        <div class="vinyl-navigation" aria-label="Zmień album">
+          <button type="button" class="vinyl-previous" aria-label="Poprzedni album">←</button>
+          <span class="vinyl-count"></span>
+          <button type="button" class="vinyl-next" aria-label="Następny album">→</button>
+        </div>
+      </div>
+    </section>
+    <details class="vinyl-catalog" open>
+      <summary>Lista płyt <span class="vinyl-total"></span></summary>
+      <ol class="vinyl-list"></ol>
+    </details>
+  </main>
+</body>
+</html>

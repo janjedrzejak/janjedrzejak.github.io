@@ -19,6 +19,10 @@ BOOKS_URLS = {
     "books/index.html": ORIGIN + "/books/",
     "books/catalog.html": ORIGIN + "/books/catalog.html",
 }
+VINYLS = ROOT / "vinyls"
+VINYL_PAGE = "vinyls/index.html"
+VINYL_URL = ORIGIN + "/vinyls/"
+COLLECTION_URLS = {**BOOKS_URLS, VINYL_PAGE: VINYL_URL}
 PAGES = json.loads((ROOT / "scripts/seo-pages.json").read_text())
 HOME_PL = json.loads((ROOT / "scripts/home-pl.json").read_text())
 ARTICLES = [p for p in PAGES if p.startswith("blog-posts/")]
@@ -339,12 +343,11 @@ def build_page(path, language):
     return doc
 
 
-def add_books_layout(path, homepage):
-    output = OUT / path
-    doc = html.document_fromstring(output.read_text())
+def add_collection_layout(doc, homepage, active_href=None):
     head = doc.find("head")
     body = doc.find("body")
-    body.set("class", "books-page")
+    if active_href == "/books/":
+        body.classes.add("books-page")
 
     etree.SubElement(head, "link", rel="stylesheet", href="/home.css")
     for script in ("layout.js", "pages.js"):
@@ -365,7 +368,7 @@ def add_books_layout(path, homepage):
             href = link.get("href")
             if href.startswith("#"):
                 link.set("href", home_path + href)
-            elif href == "/books/":
+            elif href == active_href:
                 link.set("aria-current", "page")
         body.insert(index, element)
 
@@ -374,7 +377,24 @@ def add_books_layout(path, homepage):
     footer.xpath('.//*[@id="current-year"]')[0].set("data-current-year", "")
     body.append(footer)
     version_local_assets(doc)
-    output.write_text(html.tostring(doc, encoding="unicode", doctype="<!DOCTYPE html>", method="html") + "\n")
+
+
+def add_vinyl_catalog(doc):
+    albums = json.loads((VINYLS / "albums.json").read_text())
+    ids = [album["id"] for album in albums]
+    if not ids or len(ids) != len(set(ids)):
+        raise ValueError("The vinyl collection must have unique album identifiers")
+    listing = doc.xpath('//ol[@class="vinyl-list"]')[0]
+    doc.xpath('//span[@class="vinyl-total"]')[0].text = str(len(albums))
+    for album in albums:
+        if any(urlsplit(album[field]).scheme != "https" for field in ("cover", "listen")):
+            raise ValueError(f"Expected HTTPS artwork and listening links for {album['id']}")
+        item = etree.SubElement(listing, "li", id=album["id"])
+        link = etree.SubElement(item, "a", href=album["listen"], target="_blank", rel="noreferrer")
+        for field in ("title", "artist", "year", "cover"):
+            link.set("data-" + field, str(album[field]))
+        for field in ("title", "artist", "year"):
+            etree.SubElement(link, "span", {"class": "list-" + field}).text = str(album[field])
 
 
 def build():
@@ -383,6 +403,9 @@ def build():
         shutil.rmtree(OUT)
     OUT.mkdir()
     shutil.copytree(BOOKS / "dist", OUT / "books")
+    (OUT / "vinyls").mkdir()
+    for name in ("index.html", "vinyls.css", "vinyls.js"):
+        shutil.copy2(VINYLS / name, OUT / "vinyls" / name)
     for name in ("img", "cookie", "res", "downloads"):
         shutil.copytree(ROOT / name, OUT / name, ignore=shutil.ignore_patterns(".DS_Store"))
     for pattern in ("*.css", "*.js", "*.pdf", "robots.txt"):
@@ -392,8 +415,13 @@ def build():
     for path in PAGES:
         for language in ("en", "pl"):
             docs[(path, language)] = build_page(path, language)
-    for path in BOOKS_URLS:
-        add_books_layout(path, docs[("index.html", "pl")])
+    for path in COLLECTION_URLS:
+        output = OUT / path
+        doc = html.document_fromstring(output.read_text())
+        if path == VINYL_PAGE:
+            add_vinyl_catalog(doc)
+        add_collection_layout(doc, docs[("index.html", "pl")], "/books/" if path in BOOKS_URLS else None)
+        output.write_text(html.tostring(doc, encoding="unicode", doctype="<!DOCTYPE html>", method="html") + "\n")
     # Keep the utility page's intentional noindex and GitHub's real 404 response.
     for name in ("404.html", "ksiazka-nfc.html"):
         doc = html.document_fromstring((ROOT / name).read_text())
@@ -415,11 +443,11 @@ def build():
         etree.SubElement(entry, "loc").text = url_for(path, language)
         if PAGES[path].get("modified"):
             etree.SubElement(entry, "lastmod").text = PAGES[path]["modified"]
-    for address in BOOKS_URLS.values():
+    for address in COLLECTION_URLS.values():
         entry = etree.SubElement(sitemap, "url")
         etree.SubElement(entry, "loc").text = address
     (OUT / "sitemap.xml").write_bytes(etree.tostring(sitemap, pretty_print=True, encoding="UTF-8", xml_declaration=True))
-    print(f"Built {len(docs)} localized pages, 2 utility pages and the bookshelf in {OUT}")
+    print(f"Built {len(docs)} localized pages, 2 utility pages and the collections in {OUT}")
 
 
 if __name__ == "__main__":

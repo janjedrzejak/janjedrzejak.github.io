@@ -1,0 +1,224 @@
+[
+  {
+    "id": "mgla-groza",
+    "artist": "Mgła",
+    "title": "Groza",
+    "year": 2008,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/be/74/01/be740126-bbec-1549-c8ba-def3c2ff4b9d/5057917869966_cover.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/groza/1439907215"
+  },
+  {
+    "id": "mgla-with-hearts-toward-none",
+    "artist": "Mgła",
+    "title": "With Hearts Toward None",
+    "year": 2012,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c7/ec/c5/c7ecc528-63a4-ae3c-f0ef-97be6e7a53f0/5057917483186_cover.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/with-hearts-toward-none/1439908964"
+  },
+  {
+    "id": "mgla-exercises-in-futility",
+    "artist": "Mgła",
+    "title": "Exercises in Futility",
+    "year": 2015,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8b/db/4a/8bdb4a75-672a-e69f-a517-7a53fb615f37/5057917257497_cover.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/exercises-in-futility/1439910664"
+  },
+  {
+    "id": "mgla-age-of-excuse",
+    "artist": "Mgła",
+    "title": "Age of Excuse",
+    "year": 2019,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ea/79/d7/ea79d7e2-cf7a-9bc9-7ae9-1f6c6d82a4a6/5059366661320_cover.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/age-of-excuse/1479040873"
+  },
+  {
+    "id": "megadeth-youthanasia",
+    "artist": "Megadeth",
+    "title": "Youthanasia",
+    "year": 1994,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/1a/fc/9f/1afc9f2b-9297-1670-ee64-a0fc547857e0/19UMGIM16960.rgb.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/youthanasia/1455396819"
+  },
+  {
+    "id": "metallica-kill-em-all",
+    "artist": "Metallica",
+    "title": "Kill ’Em All",
+    "year": 1983,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/73/06/19/73061928-34a2-6462-963a-039203d507fe/dj.cloeijsr.png/600x600bb.jpg",
+    "listen": "https://open.spotify.com/album/7hKjNN2595RdaLSR2PB7sA",
+    "artworkSource": "https://music.apple.com/us/album/kill-em-all-remastered/579146130"
+  },
+  {
+    "id": "metallica-ride-the-lightning",
+    "artist": "Metallica",
+    "title": "Ride the Lightning",
+    "year": 1984,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/0f/7a/74/0f7a7472-92fa-e77d-384a-1e4304705e83/dj.jbiruenb.png/600x600bb.jpg",
+    "listen": "https://open.spotify.com/album/05DePtm7oQMdL3Uzw2Jmsc",
+    "artworkSource": "https://music.apple.com/us/album/ride-the-lightning-remastered-2016-remastered-version/579148345"
+  },
+  {
+    "id": "metallica-black-album",
+    "artist": "Metallica",
+    "title": "Metallica (The Black Album)",
+    "year": 1991,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/9e/80/1b/9e801b06-67fa-0990-2d15-85480ad3cd46/850007452025.png/600x600bb.jpg",
+    "listen": "https://open.spotify.com/album/55fq75UfkYbGMq4CncCtOH",
+    "artworkSource": "https://music.apple.com/us/album/metallica-remastered/1572046434"
+  },
+  {
+    "id": "motorhead-march-or-die",
+    "artist": "Motörhead",
+    "title": "March ör Die",
+    "year": 1992,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/67/46/35/mzi.ffnxsnkh.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/march-or-die/192926748"
+  },
+  {
+    "id": "david-bowie-low",
+    "artist": "David Bowie",
+    "title": "Low",
+    "year": 1977,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f7/49/2d/f7492da6-164e-b023-4b17-937329c35458/190295842895.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/low-2017-remaster/1347895593"
+  },
+  {
+    "id": "pink-floyd-dark-side-of-the-moon",
+    "artist": "Pink Floyd",
+    "title": "The Dark Side of the Moon",
+    "year": 1973,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3e/76/b0/3e76b0e3-762b-2286-a019-8afb19cee541/886445635829.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/the-dark-side-of-the-moon/1065973699"
+  },
+  {
+    "id": "pink-floyd-the-division-bell",
+    "artist": "Pink Floyd",
+    "title": "The Division Bell",
+    "year": 1994,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f7/47/bf/f747bf4c-6a88-c26f-9545-f0ffed0b8992/886445627572.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/the-division-bell/1065976549"
+  },
+  {
+    "id": "pink-floyd-animals",
+    "artist": "Pink Floyd",
+    "title": "Animals",
+    "year": 1977,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ef/03/66/ef036634-5956-38db-ba78-db6200adfdc4/886445635942.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/animals/1065974284"
+  },
+  {
+    "id": "pink-floyd-delicate-sound-of-thunder",
+    "artist": "Pink Floyd",
+    "title": "Delicate Sound of Thunder",
+    "year": 1988,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/93/74/62/937462d8-57c4-abbc-0f12-6f2a73ac1da9/886445613889.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/delicate-sound-of-thunder-live/1065976276"
+  },
+  {
+    "id": "joy-division-unknown-pleasures",
+    "artist": "Joy Division",
+    "title": "Unknown Pleasures",
+    "year": 1979,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/13/90/c0/1390c072-4249-3739-7b3d-fd73ee4a5698/825646562831.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/unknown-pleasures-2019-digital-master/1476702180"
+  },
+  {
+    "id": "joy-division-closer",
+    "artist": "Joy Division",
+    "title": "Closer",
+    "year": 1980,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/d9/2a/d1/d92ad12e-cdf2-e567-9612-af2fdfa82237/dj.uzqznczn.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/closer-collectors-edition/266610001"
+  },
+  {
+    "id": "nirvana-in-utero",
+    "artist": "Nirvana",
+    "title": "In Utero",
+    "year": 1993,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e3/20/03/e32003a4-99bc-1c70-40ba-001882f35dba/00602537526840.rgb.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/in-utero-20th-anniversary-edition/1440858699"
+  },
+  {
+    "id": "led-zeppelin-ii",
+    "artist": "Led Zeppelin",
+    "title": "Led Zeppelin II",
+    "year": 1969,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1a/3d/bb/1a3dbb86-c1f8-737e-571f-d6b647a230be/dj.rhubuvkd.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/led-zeppelin-ii-remastered/580708374"
+  },
+  {
+    "id": "led-zeppelin-iii",
+    "artist": "Led Zeppelin",
+    "title": "Led Zeppelin III",
+    "year": 1970,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/62/fd/14/62fd14aa-d202-a86a-d948-0a5550b35fc3/dj.rkzuiqye.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/led-zeppelin-iii-remastered/580708279"
+  },
+  {
+    "id": "tsa-heavy-metal-world",
+    "artist": "TSA",
+    "title": "Heavy Metal World",
+    "year": 1984,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/cf/53/da/cf53da21-be00-8f92-70d4-7ebacd0b4dc3/5907785039377.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/heavy-metal-world/1099471110"
+  },
+  {
+    "id": "kat-roze-milosci",
+    "artist": "KAT",
+    "title": "…Róże miłości najchętniej przyjmują się na grobach",
+    "year": 1996,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/4b/1c/6d/4b1c6d88-3f46-cdef-ec13-6e06f28c26b2/5907785039681.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/r%C3%B3%C5%BCe-mi%C5%82o%C5%9Bci-najchetniej-przyjmuj%C4%85-si%C4%99-na-grobach/1157714108"
+  },
+  {
+    "id": "furia-ksiezyc-milczy-luty",
+    "artist": "Furia",
+    "title": "Księżyc milczy luty",
+    "year": 2016,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/48/a0/e9/48a0e9fb-3292-033c-f2ee-644bc3dd789c/FURIA-cover-2400px-300dpi.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/ksi%C4%99%C5%BCyc-milczy-luty/1212562986"
+  },
+  {
+    "id": "furia-marzannie-krolowej-polski",
+    "artist": "Furia",
+    "title": "Marzannie, królowej Polski",
+    "year": 2012,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/26/04/b2/2604b223-3822-462d-41fa-9da859f3ba23/cover.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/marzannie-krolowej-polski/522132068"
+  },
+  {
+    "id": "alice-in-chains-dirt",
+    "artist": "Alice in Chains",
+    "title": "Dirt",
+    "year": 1992,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/54/26/62/5426627b-4707-7867-acc0-ce616d250381/074645247526.jpg/600x600bb.jpg",
+    "listen": "https://music.apple.com/pl/album/dirt-remastered/157316517"
+  },
+  {
+    "id": "slayer-seasons-in-the-abyss",
+    "artist": "Slayer",
+    "title": "Seasons in the Abyss",
+    "year": 1990,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d4/5c/1f/d45c1fba-2491-095f-1aad-18a26a336edc/00731458679820.rgb.jpg/600x600bb.jpg",
+    "listen": "https://open.spotify.com/album/416nVgqae48Dw0EjD6N4EU",
+    "artworkSource": "https://music.apple.com/us/album/seasons-in-the-abyss/1440920134"
+  },
+  {
+    "id": "iron-maiden-killers",
+    "artist": "Iron Maiden",
+    "title": "Killers",
+    "year": 1981,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7a/d1/0c/7ad10c97-6c8b-f63b-b324-1950718bc9a8/0881034134431.jpg/600x600bb.jpg",
+    "listen": "https://open.spotify.com/album/5REF2imQI3lMAmeWcDXE3D",
+    "artworkSource": "https://music.apple.com/us/album/killers-2015-remaster/1713874443"
+  },
+  {
+    "id": "iron-maiden-no-prayer-for-the-dying",
+    "artist": "Iron Maiden",
+    "title": "No Prayer for the Dying",
+    "year": 1990,
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5e/f6/fa/5ef6fa75-5c89-8989-d5e1-f1faa4648164/0881034134509.jpg/600x600bb.jpg",
+    "listen": "https://open.spotify.com/album/21ZEAwY2TDnoQvVMJKkjUk",
+    "artworkSource": "https://music.apple.com/us/album/no-prayer-for-the-dying-2015-remaster/1716081865"
+  }
+]

@@ -6,7 +6,7 @@ from collections import Counter
 import json
 import hashlib
 from lxml import etree, html
-from build_site import OUT, ORIGIN, PAGES, ARTICLES, BOOKS_URLS, url_for
+from build_site import OUT, ORIGIN, PAGES, ARTICLES, BOOKS_URLS, COLLECTION_URLS, VINYL_PAGE, url_for
 
 
 def validate():
@@ -52,18 +52,25 @@ def validate():
         if path in ("404.html", "ksiazka-nfc.html"):
             check("noindex" in " ".join(doc.xpath('//meta[@name="robots"]/@content')), f"{path}: utility page must remain noindex")
             continue
-        if path in BOOKS_URLS:
-            canonical = BOOKS_URLS[path]
-            check(doc.get("lang") == "pl", f"{path}: wrong bookshelf language")
+        if path in COLLECTION_URLS:
+            canonical = COLLECTION_URLS[path]
+            check(doc.get("lang") == "pl", f"{path}: wrong collection language")
             check(doc.xpath('//link[@rel="canonical"]/@href') == [canonical], f"{path}: wrong canonical")
-            check(bool(doc.xpath('//script[@type="module" and @src]')), f"{path}: missing bookshelf entry module")
+            check(bool(doc.xpath('//script[@type="module" and @src]')), f"{path}: missing collection entry module")
             for selector in ('//header[@data-header]', '//*[@id="mobile-menu"]', '//footer[@class="site-footer"]'):
                 check(len(doc.xpath(selector + '[@data-books-chrome]')) == 1, f"{path}: missing or duplicated portfolio layout {selector}")
-            check(doc.xpath('//a[@aria-current="page" and @href="/books/"]/text()') == ["Książki", "Książki"], f"{path}: missing active Books navigation")
+            if path in BOOKS_URLS:
+                check(doc.xpath('//a[@aria-current="page" and @href="/books/"]/text()') == ["Książki", "Książki"], f"{path}: missing active Books navigation")
+            if path == VINYL_PAGE:
+                albums = doc.xpath('//ol[@class="vinyl-list"]/li/a[@data-cover and @href]')
+                check(bool(albums), f"{path}: no albums available without JavaScript")
             expected_urls.add(canonical)
             continue
         language = "pl" if path.startswith("pl/") else "en"
         source = path.removeprefix("pl/")
+        if source == "index.html":
+            check(len(doc.xpath('//*[@id="profile"]//a[@href="/vinyls/"]')) == 1, f"{path}: vinyl shelf link must be in the bio")
+            check(not doc.xpath('//nav//a[@href="/vinyls/"]'), f"{path}: vinyl shelf link belongs only in the bio")
         canonical = url_for(source, language)
         check(doc.get("lang") == language, f"{path}: wrong document language")
         check(doc.xpath('//link[@rel="canonical"]/@href') == [canonical], f"{path}: wrong canonical")
