@@ -218,3 +218,352 @@ Republika świata Huxleya utrwala porządek społeczny poprzez warunkowanie, roz
 - Muza / Znak · 1400 × 2128 px. [Grafika](https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/nowy-wspanialy-swiat-104052/104052/d5ef9dcdea4f6b92efd1f3a1ebcd7b21.jpeg) · [Źródło i uznanie](https://www.znak.com.pl/p/nowy-wspanialy-swiat-aldous-huxley-104052)
 - Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora. Okładka polskiego wydania podanego w katalogu.
 - Wyświetlany adres. https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/nowy-wspanialy-swiat-104052/104052/d5ef9dcdea4f6b92efd1f3a1ebcd7b21.jpeg
+
+
+## Muzyka
+
+| Nr | Tytuł | Autorzy / redaktorzy | Wydanie | Rok | ISBN-13 |
+|---:|---|---|---|---:|---|
+| 1 | Metallica — Bez przebaczenia | Joel McIver | Wydanie polskie, druk | 2014 | 9788364373107 |
+| 2 | Przenikliwe światło, słońce i cała reszta — Joy Division w ustnych relacjach | Jon Savage | Wydanie polskie, druk | 2020 | 9788395234941 |
+| 3 | Black Metal — Ewolucja kultu | Dayal Patterson | Wydanie polskie, druk | 2016 | 9788363785246 |
+| 4 | Pink Floyd — Prędzej świnie zaczną latać | Mark Blake | Wydanie polskie, druk | 2018 | 9788381292719 |
+| 5 | Piekło i metal — Historia zespołu Kat | Mateusz Żyła | Wydanie polskie, druk | 2023 | 9788383301570 |
+| 6 | Władcy chaosu — Krwawe powstanie satanistycznego metalowego podziemia | Michael Moynihan, Didrik Søderlind | Wydanie polskie, druk | 2010 | 9788387598341 |
+
+### Metallica
+
+Historia Metalliki od początków thrashu po lata światowych tras i sporów wewnątrz zespołu.
+
+- In Rock · Wydanie polskie, druk · ISBN 9788364373107.
+- [Opis książki](https://lubimyczytac.pl/ksiazka/228481/metallica-bez-przebaczenia) · [Źródło wydania](https://lubimyczytac.pl/ksiazka/228481/metallica-bez-przebaczenia)
+- Lubimy Czytać · 352 × 500 px. [Grafika](https://s.lubimyczytac.pl/upload/books/228000/228481/298498-352x500.jpg) · [Źródło i uznanie](https://lubimyczytac.pl/ksiazka/228481/metallica-bez-przebaczenia)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/228000/228481/298498-352x500.jpg
+
+### Przenikliwe światło, słońce i cała reszta
+
+Zebrane przez Jona Savage’a głosy muzyków, bliskich i współpracowników składają się na historię Joy Division i postpunkowego Manchesteru.
+
+- Kosmos Kosmos · Wydanie polskie, druk · ISBN 9788395234941.
+- [Opis książki](https://lubimyczytac.pl/ksiazka/4928696/przenikliwe-swiatlo-slonce-i-cala-reszta-joy-division-w-ustnych-relacjach) · [Źródło wydania](https://lubimyczytac.pl/ksiazka/4928696/przenikliwe-swiatlo-slonce-i-cala-reszta-joy-division-w-ustnych-relacjach)
+- Lubimy Czytać · 352 × 500 px. [Grafika](https://s.lubimyczytac.pl/upload/books/4928000/4928696/818754-352x500.jpg) · [Źródło i uznanie](https://lubimyczytac.pl/ksiazka/4928696/przenikliwe-swiatlo-slonce-i-cala-reszta-joy-division-w-ustnych-relacjach)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/4928000/4928696/818754-352x500.jpg
+
+### Black Metal
+
+Kronika rozwoju black metalu oparta na rozmowach z muzykami i historii kolejnych scen.
+
+- Kagra · Wydanie polskie, druk · ISBN 9788363785246.
+- [Opis książki](https://ateneum.net.pl/pozycja.php?id=208986) · [Źródło wydania](https://ateneum.net.pl/pozycja.php?id=208986)
+- Ateneum · 374 × 550 px. [Grafika](https://www.ateneum.pl/phttw/208986_large.jpg) · [Źródło i uznanie](https://ateneum.net.pl/pozycja.php?id=208986)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://www.ateneum.pl/phttw/208986_large.jpg
+
+### Pink Floyd
+
+Biografia Pink Floyd śledzi twórczą współpracę i konflikty, które kształtowały brzmienie oraz losy grupy.
+
+- SQN · Wydanie polskie, druk · ISBN 9788381292719.
+- [Opis książki](https://www.wydawnictwoakcent.pl/ksiazka/pink-floyd-predzej-swinie-zaczna-latac-prawdziwa-historia-pink-floyd-wydanie-i/) · [Źródło wydania](https://www.wydawnictwoakcent.pl/ksiazka/pink-floyd-predzej-swinie-zaczna-latac-prawdziwa-historia-pink-floyd-wydanie-i/)
+- Akcent · 420 × 602 px. [Grafika](https://wydawnictwoakcent.pl/assets/covers/card/27ab270c52e851ebc9d4.webp) · [Źródło i uznanie](https://www.wydawnictwoakcent.pl/ksiazka/pink-floyd-predzej-swinie-zaczna-latac-prawdziwa-historia-pink-floyd-wydanie-i/)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://wydawnictwoakcent.pl/assets/covers/card/27ab270c52e851ebc9d4.webp
+
+### Piekło i metal
+
+Historia Kata pokazuje miejsce zespołu w polskim metalu, jego teksty, muzyczne inspiracje i spory.
+
+- SQN · Wydanie polskie, druk · ISBN 9788383301570.
+- [Opis książki](https://sqn.pl/ksiazki/pieklo-i-metal-historia-zespolu-kat/) · [Źródło wydania](https://lubimyczytac.pl/ksiazka/5085753/pieklo-i-metal-historia-zespolu-kat)
+- Lubimy Czytać · 352 × 500 px. [Grafika](https://s.lubimyczytac.pl/upload/books/5085000/5085753/1098582-352x500.jpg) · [Źródło i uznanie](https://lubimyczytac.pl/ksiazka/5085753/pieklo-i-metal-historia-zespolu-kat)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/5085000/5085753/1098582-352x500.jpg
+
+### Władcy chaosu
+
+Reportaż o norweskiej scenie blackmetalowej, jej ideologiach i przestępstwach, które nadały jej rozgłos.
+
+- Kagra · Wydanie polskie, druk · ISBN 9788387598341.
+- [Opis książki](https://lubimyczytac.pl/ksiazka/65065/wladcy-chaosu-krwawe-powstanie-satanistycznego-metalowego-podziemia) · [Źródło wydania](https://lubimyczytac.pl/ksiazka/65065/wladcy-chaosu-krwawe-powstanie-satanistycznego-metalowego-podziemia)
+- Lubimy Czytać · 196 × 280 px. [Grafika](https://s.lubimyczytac.pl/upload/books/65000/65065/352x500.jpg) · [Źródło i uznanie](https://lubimyczytac.pl/ksiazka/65065/wladcy-chaosu-krwawe-powstanie-satanistycznego-metalowego-podziemia)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/65000/65065/352x500.jpg
+
+
+## Biografie i historia
+
+| Nr | Tytuł | Autorzy / redaktorzy | Wydanie | Rok | ISBN-13 |
+|---:|---|---|---|---:|---|
+| 1 | Cybulski — Podwójne salto | Dorota Karaś | Wydanie z 2025 r. | 2025 | 9788384270004 |
+| 2 | Zawód fotograf | Chris Niedenthal | Wydanie rozszerzone | 2020 | 9788366500907 |
+| 3 | Chłopki — Opowieść o naszych babkach | Joanna Kuciel-Frydryszak | Wydanie polskie, druk | 2023 | 9788367859134 |
+| 4 | Archipelag GUŁag — Tomy 1–3 | Aleksander Sołżenicyn | Wydanie w trzech tomach | 2026 | 9788383385365 |
+
+### Cybulski
+
+Biografia Zbigniewa Cybulskiego pokazuje jego drogę na ekran, życie poza planem i ciężar sławy.
+
+- Znak · Wydanie z 2025 r. · ISBN 9788384270004.
+- [Opis książki](https://lubimyczytac.pl/ksiazka/5210533/cybulski-podwojne-salto) · [Źródło wydania](https://lubimyczytac.pl/ksiazka/5210533/cybulski-podwojne-salto)
+- Lubimy Czytać · 352 × 500 px. [Grafika](https://s.lubimyczytac.pl/upload/books/5210000/5210533/1308291-352x500.jpg) · [Źródło i uznanie](https://lubimyczytac.pl/ksiazka/5210533/cybulski-podwojne-salto)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/5210000/5210533/1308291-352x500.jpg
+
+### Zawód fotograf
+
+Autobiografia fotoreportera, którego zdjęcia dokumentują codzienność i przełomy polityczne w Europie Środkowo-Wschodniej.
+
+- Marginesy · Wydanie rozszerzone · ISBN 9788366500907.
+- [Opis książki](https://wydawnictwoakcent.pl/ksiazka/zawod-fotograf/) · [Źródło wydania](https://wydawnictwoakcent.pl/ksiazka/zawod-fotograf/)
+- Akcent · 420 × 573 px. [Grafika](https://wydawnictwoakcent.pl/assets/covers/card/338e37e04b86857f8f4f.webp) · [Źródło i uznanie](https://wydawnictwoakcent.pl/ksiazka/zawod-fotograf/)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wybrano autobiografię Chrisa Niedenthala.
+- Wyświetlany adres. https://wydawnictwoakcent.pl/assets/covers/card/338e37e04b86857f8f4f.webp
+
+### Chłopki
+
+Reportaż o pracy, rodzinie i codziennych wyborach kobiet na polskiej wsi w pierwszej połowie XX wieku.
+
+- Marginesy · Wydanie polskie, druk · ISBN 9788367859134.
+- [Opis książki](https://www.poczytaj.pl/ksiazka/chlopki-opowiesc-o-naszych-babkach-joanna-kucielfrydryszak%2C688350) · [Źródło wydania](https://www.poczytaj.pl/ksiazka/chlopki-opowiesc-o-naszych-babkach-joanna-kucielfrydryszak%2C688350)
+- Poczytaj.pl · 330 × 534 px. [Grafika](https://staticl.poczytaj.pl/688000/chlopki-opowiesc-o-naszych-babkach-joanna-kucielfrydryszak,688350-l.jpg) · [Źródło i uznanie](https://www.poczytaj.pl/ksiazka/chlopki-opowiesc-o-naszych-babkach-joanna-kucielfrydryszak%2C688350)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://staticl.poczytaj.pl/688000/chlopki-opowiesc-o-naszych-babkach-joanna-kucielfrydryszak,688350-l.jpg
+
+### Archipelag GUŁag
+
+Świadectwo radzieckiego systemu więzień i obozów pracy łączy doświadczenia autora z relacjami innych więźniów.
+
+- REBIS · Wydanie w trzech tomach · ISBN 9788383385365.
+- [Opis książki](https://www.rebis.com.pl/pl/products/archipelag-gulag-tomy-1-3-10577.html) · [Źródło wydania](https://www.rebis.com.pl/pl/products/archipelag-gulag-tomy-1-3-10577.html)
+- REBIS · 943 × 1172 px. [Grafika](https://www.rebis.com.pl/hpeciai/06f801ed106ef3987a4e0329619913b0/pol_pl_Archipelag-GULag-Tomy-1-3-10577_1_1.jpg) · [Źródło i uznanie](https://www.rebis.com.pl/pl/products/archipelag-gulag-tomy-1-3-10577.html)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Fotografia kompletu trzech tomów.
+- Grafika wydawcy przedstawia komplet trzech tomów.
+- Wyświetlany adres. https://www.rebis.com.pl/hpeciai/06f801ed106ef3987a4e0329619913b0/pol_pl_Archipelag-GULag-Tomy-1-3-10577_1_1.jpg
+
+
+## Technika i wynalazcy
+
+| Nr | Tytuł | Autorzy / redaktorzy | Wydanie | Rok | ISBN-13 |
+|---:|---|---|---|---:|---|
+| 1 | Symfonia C++ Standard — Programowanie w języku C++ orientowane obiektowo | Jerzy Grębosz | Wydanie III, dwa tomy | 2008 | 9788373661394 |
+| 2 | Tesla — Geniusz na skraju szaleństwa | W. Bernard Carlson | Wydanie polskie, druk | 2020 | 9788366553941 |
+
+### Symfonia C++ Standard
+
+Polski podręcznik C++ prowadzi od podstaw języka do programowania obiektowego i pracy z biblioteką standardową.
+
+- Edition 2000 · Wydanie III, dwa tomy · ISBN 9788373661394.
+- [Opis książki](https://www.ifj.edu.pl/private/grebosz/symfonia_c%2B%2B_std_p.html) · [Źródło wydania](https://www.poczytaj.pl/ksiazka/symfonia-c-standard-tom-1-2-jerzy-grebosz,113495)
+- Jerzy Grębosz · IFJ PAN · 240 × 351 px. [Grafika](https://www.ifj.edu.pl/private/grebosz/images/symf_std_wyd1_width_142.jpg) · [Źródło i uznanie](https://www.ifj.edu.pl/private/grebosz/symfonia_c%2B%2B_std_p.html)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Okładka tomu 1.
+- Grafika przedstawia okładkę tomu 1.
+- Wyświetlany adres. https://www.ifj.edu.pl/private/grebosz/images/symf_std_wyd1_width_142.jpg
+
+### Tesla
+
+Biografia Nikoli Tesli skupia się na jego metodzie pracy, wynalazkach i próbach wprowadzania ich na rynek.
+
+- Wydawnictwo Poznańskie · Wydanie polskie, druk · ISBN 9788366553941.
+- [Opis książki](https://wydawnictwopoznanskie.pl/produkt/tesla-geniusz-na-skraju-szalenstwa/) · [Źródło wydania](https://lubimyczytac.pl/ksiazka/4928183/tesla-geniusz-na-skraju-szalenstwa)
+- Lubimy Czytać · 352 × 500 px. [Grafika](https://s.lubimyczytac.pl/upload/books/4928000/4928183/817402-352x500.jpg) · [Źródło i uznanie](https://lubimyczytac.pl/ksiazka/4928183/tesla-geniusz-na-skraju-szalenstwa)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/4928000/4928183/817402-352x500.jpg
+
+
+## Fantastyka i science fiction
+
+| Nr | Tytuł | Autorzy / redaktorzy | Wydanie | Rok | ISBN-13 |
+|---:|---|---|---|---:|---|
+| 1 | Władca Pierścieni | J.R.R. Tolkien | Wydanie jednotomowe | 2021 | 9788328700789 |
+| 2 | Kongres futurologiczny | Stanisław Lem | Wydanie polskie, druk | 2025 | 9788308088197 |
+| 3 | Bajki robotów | Stanisław Lem | Wydanie polskie, druk | 2024 | 9788308085332 |
+| 4 | Diuna | Frank Herbert | Wydanie polskie, druk | 2020 | 9788381881654 |
+| 5 | Blade Runner — Czy androidy marzą o elektrycznych owcach? | Philip K. Dick | Wydanie polskie, druk | 2026 | 9788383385242 |
+
+### Władca Pierścieni
+
+Wyprawa Froda i jego towarzyszy przez Śródziemie w jednotomowym wydaniu całej powieści.
+
+- Muza · Wydanie jednotomowe · ISBN 9788328700789.
+- [Opis książki](https://www.znak.com.pl/p/wladca-pierscieni-j-r-r-tolkien-104026) · [Źródło wydania](https://www.znak.com.pl/p/wladca-pierscieni-j-r-r-tolkien-104026)
+- Księgarnia Znak · 1400 × 2099 px. [Grafika](https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/wladca-pierscieni-104026/104026/3477afbeab59a334d73dc09d7e22cee1.jpeg) · [Źródło i uznanie](https://www.znak.com.pl/p/wladca-pierscieni-j-r-r-tolkien-104026)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/wladca-pierscieni-104026/104026/3477afbeab59a334d73dc09d7e22cee1.jpeg
+
+### Kongres futurologiczny
+
+Przygoda Ijona Tichego staje się satyrą na świat, w którym technologia pozwala modelować postrzeganą rzeczywistość.
+
+- Wydawnictwo Literackie · Wydanie polskie, druk · ISBN 9788308088197.
+- [Opis książki](https://www.wydawnictwoliterackie.pl/produkt/5641/kongres-futurologiczny-kanon-lema) · [Źródło wydania](https://www.wydawnictwoliterackie.pl/produkt/5641/kongres-futurologiczny-kanon-lema)
+- Wydawnictwo Literackie · 223 × 307 px. [Grafika](https://www.wydawnictwoliterackie.pl/storage/images/products/223x307/kongres_futurologiczny_691b3cb10e1b3.jpg) · [Źródło i uznanie](https://www.wydawnictwoliterackie.pl/produkt/5641/kongres-futurologiczny-kanon-lema)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://www.wydawnictwoliterackie.pl/storage/images/products/223x307/kongres_futurologiczny_691b3cb10e1b3.jpg
+
+### Bajki robotów
+
+Baśniowe fabuły z robotami w rolach głównych łączą język dawnych opowieści z techniczną wyobraźnią Lema.
+
+- Wydawnictwo Literackie · Wydanie polskie, druk · ISBN 9788308085332.
+- [Opis książki](https://www.wydawnictwoliterackie.pl/index.php/produkt/2285/bajki-robotow) · [Źródło wydania](https://www.wydawnictwoliterackie.pl/index.php/produkt/2285/bajki-robotow)
+- Wydawnictwo Literackie · 223 × 352 px. [Grafika](https://www.wydawnictwoliterackie.pl/storage/images/products/223x307/bajki_robotow_60588133cb34d.jpg) · [Źródło i uznanie](https://www.wydawnictwoliterackie.pl/index.php/produkt/2285/bajki-robotow)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://www.wydawnictwoliterackie.pl/storage/images/products/223x307/bajki_robotow_60588133cb34d.jpg
+
+### Diuna
+
+Historia Paula Atrydy na Arrakis łączy polityczną walkę o zasoby z religią i ekologią pustynnej planety.
+
+- REBIS · Wydanie polskie, druk · ISBN 9788381881654.
+- [Opis książki](https://www.znak.com.pl/p/diuna-frank-herbert-132637) · [Źródło wydania](https://www.znak.com.pl/p/diuna-frank-herbert-132637)
+- Księgarnia Znak · 1181 × 1776 px. [Grafika](https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/diuna-132637/132637/8075944978f79878c03e7c6d2e101e90.jpeg) · [Źródło i uznanie](https://www.znak.com.pl/p/diuna-frank-herbert-132637)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/diuna-132637/132637/8075944978f79878c03e7c6d2e101e90.jpeg
+
+### Blade Runner
+
+Zadanie łowcy nagród Ricka Deckarda prowadzi do pytań o empatię i granicę między człowiekiem a androidem.
+
+- REBIS · Wydanie polskie, druk · ISBN 9788383385242.
+- [Opis książki](https://www.wydawnictwoakcent.pl/ksiazka/blade-runner-czy-androidy-marza-o-elektrycznych-owcach-5/) · [Źródło wydania](https://www.wydawnictwoakcent.pl/ksiazka/blade-runner-czy-androidy-marza-o-elektrycznych-owcach-5/)
+- Akcent · 420 × 669 px. [Grafika](https://wydawnictwoakcent.pl/assets/covers/card/5b3f346bb9deaed2464f.webp) · [Źródło i uznanie](https://www.wydawnictwoakcent.pl/ksiazka/blade-runner-czy-androidy-marza-o-elektrycznych-owcach-5/)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Powieść znana także jako „Łowca androidów”.
+- Wyświetlany adres. https://wydawnictwoakcent.pl/assets/covers/card/5b3f346bb9deaed2464f.webp
+
+
+## Groza
+
+| Nr | Tytuł | Autorzy / redaktorzy | Wydanie | Rok | ISBN-13 |
+|---:|---|---|---|---:|---|
+| 1 | Bastion | Stephen King | Wydanie polskie, druk | 2025 | 9788383619620 |
+| 2 | Zło ze wschodu | Andrzej Pilipiuk | Wydanie polskie, druk | 2023 | 9788379649686 |
+| 3 | Inkub | Artur Urbanowicz | Wydanie polskie, druk | 2019 | 9788377313190 |
+| 4 | Terror | Dan Simmons | Wydanie polskie, druk | 2022 | 9788377314197 |
+| 5 | Chodź ze mną | Konrad Możdżeń | Wydanie polskie, druk | 2020 | 9788377313664 |
+
+### Bastion
+
+Po pandemii pozostali przy życiu próbują odbudować społeczeństwo i odnaleźć swoje miejsce w nowym porządku.
+
+- Albatros · Wydanie polskie, druk · ISBN 9788383619620.
+- [Opis książki](https://www.wydawnictwoalbatros.com/ksiazki/bastion-3/) · [Źródło wydania](https://www.wydawnictwoalbatros.com/ksiazki/bastion-3/)
+- Albatros · 600 × 868 px. [Grafika](https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/01/Bastion-RGB-600px.jpg) · [Źródło i uznanie](https://www.wydawnictwoalbatros.com/ksiazki/bastion-3/)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/01/Bastion-RGB-600px.jpg
+
+### Zło ze wschodu
+
+Zbiór opowiadań łączących historyczne tło z fantastyką i opowieściami o spotkaniach z nieznanym.
+
+- Fabryka Słów · Wydanie polskie, druk · ISBN 9788379649686.
+- [Opis książki](https://www.pilipiuk.com/index.php/tworczosc/zbiory-opowiadan/zlo-ze-wschodu) · [Źródło wydania](https://lubimyczytac.pl/ksiazka/5065494/zlo-ze-wschodu)
+- Lubimy Czytać · 352 × 500 px. [Grafika](https://s.lubimyczytac.pl/upload/books/5065000/5065494/1093064-352x500.jpg) · [Źródło i uznanie](https://lubimyczytac.pl/ksiazka/5065494/zlo-ze-wschodu)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/5065000/5065494/1093064-352x500.jpg
+
+### Inkub
+
+Nadprzyrodzona groza na Suwalszczyźnie, gdzie lokalne wierzenia splatają się z tajemnicą wydarzeń z przeszłości.
+
+- Vesper · Wydanie polskie, druk · ISBN 9788377313190.
+- [Opis książki](https://lubimyczytac.pl/ksiazka/4870677/ksiazka) · [Źródło wydania](https://lubimyczytac.pl/ksiazka/4870677/ksiazka)
+- Lubimy Czytać · 352 × 500 px. [Grafika](https://s.lubimyczytac.pl/upload/books/4870000/4870677/728560-352x500.jpg) · [Źródło i uznanie](https://lubimyczytac.pl/ksiazka/4870677/ksiazka)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://s.lubimyczytac.pl/upload/books/4870000/4870677/728560-352x500.jpg
+
+### Terror
+
+W powieści inspirowanej wyprawą Franklina załogi uwięzione w arktycznym lodzie zmagają się z mrozem, głodem i tajemniczym zagrożeniem.
+
+- Vesper · Wydanie polskie, druk · ISBN 9788377314197.
+- [Opis książki](https://vesper.pl/1120-terror-wyd2022-dan-simmons-oprawa-miekka-.html) · [Źródło wydania](https://vesper.pl/1120-terror-wyd2022-dan-simmons-oprawa-miekka-.html)
+- Vesper · 840 × 1260 px. [Grafika](https://vesper.pl/1133-product_main_2x/terror-wyd2022-dan-simmons-oprawa-miekka-.jpg) · [Źródło i uznanie](https://vesper.pl/1120-terror-wyd2022-dan-simmons-oprawa-miekka-.html)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://vesper.pl/1133-product_main_2x/terror-wyd2022-dan-simmons-oprawa-miekka-.jpg
+
+### Chodź ze mną
+
+Powieść grozy o zbrodni, której konsekwencje powracają w życiu następnych pokoleń.
+
+- Vesper · Wydanie polskie, druk · ISBN 9788377313664.
+- [Opis książki](https://encyklopediafantastyki.pl/index.php?title=Chod%C5%BA_ze_mn%C4%85) · [Źródło wydania](https://www.empik.com/chodz-ze-mna-mozdzen-konrad,p1245861779,ksiazka-p)
+- Empik · 317 × 448 px. [Grafika](https://ecsmedia.pl/cir/b/chodz-ze-mna-ZDJECIE_OKLADKI_PRZOD_DUZY/5811/15942022796455811.webp) · [Źródło i uznanie](https://www.empik.com/chodz-ze-mna-mozdzen-konrad,p1245861779,ksiazka-p)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://ecsmedia.pl/cir/b/chodz-ze-mna-ZDJECIE_OKLADKI_PRZOD_DUZY/5811/15942022796455811.webp
+
+
+## Proza
+
+| Nr | Tytuł | Autorzy / redaktorzy | Wydanie | Rok | ISBN-13 |
+|---:|---|---|---|---:|---|
+| 1 | Sto lat samotności | Gabriel García Márquez | Wydanie polskie, druk | 2019 | 9788328713185 |
+| 2 | Dawno temu w Warszawie | Jakub Żulczyk | Wydanie polskie, druk | 2023 | 9788382892352 |
+| 3 | Pan Darek | Jakub Żulczyk | Wydanie polskie, druk | 2026 | 9788368921007 |
+| 4 | Śmierć Komandora — Pojawia się idea | Haruki Murakami | Wydanie I, tom 1 | 2018 | 9788328710467 |
+| 5 | Mistrz i Małgorzata | Michaił Bułhakow | Wydanie polskie, druk | 2016 | 9788324043651 |
+| 6 | Serce pełne skorpionów | Wojciech Engelking | Wydanie polskie, druk | 2021 | 9788328076815 |
+
+### Sto lat samotności
+
+Losy kolejnych pokoleń rodziny Buendíów splatają się z historią fikcyjnego Macondo.
+
+- Muza · Wydanie polskie, druk · ISBN 9788328713185.
+- [Opis książki](https://www.znak.com.pl/p/sto-lat-samotnosci-gabriel-garcia-marquez-121921) · [Źródło wydania](https://www.znak.com.pl/p/sto-lat-samotnosci-gabriel-garcia-marquez-121921)
+- Księgarnia Znak · 1400 × 2140 px. [Grafika](https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/sto-lat-samotnosci-121921/121921/26363676b3b639d5af8b8c5f2008dc10.jpeg) · [Źródło i uznanie](https://www.znak.com.pl/p/sto-lat-samotnosci-gabriel-garcia-marquez-121921)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/sto-lat-samotnosci-121921/121921/26363676b3b639d5af8b8c5f2008dc10.jpeg
+
+### Dawno temu w Warszawie
+
+Powrót do postaci ze Ślepnąc od świateł w Warszawie, gdzie pandemia zmienia układ sił w przestępczym półświatku.
+
+- Świat Książki · Wydanie polskie, druk · ISBN 9788382892352.
+- [Opis książki](https://wydawnictwoswiatksiazki.pl/tytul/dawno-temu-w-warszawie/) · [Źródło wydania](https://wydawnictwoswiatksiazki.pl/tytul/dawno-temu-w-warszawie/)
+- Świat Książki · 800 × 1273 px. [Grafika](https://wydawnictwoswiatksiazki.pl/wp-content/uploads/dawno-temu-w-warszawie.jpg) · [Źródło i uznanie](https://wydawnictwoswiatksiazki.pl/tytul/dawno-temu-w-warszawie/)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://wydawnictwoswiatksiazki.pl/wp-content/uploads/dawno-temu-w-warszawie.jpg
+
+### Pan Darek
+
+Darek wychodzi z więzienia w 1990 roku i próbuje odnaleźć się w Polsce u progu transformacji.
+
+- Świat Książki · Wydanie polskie, druk · ISBN 9788368921007.
+- [Opis książki](https://www.ateneum.pl/pozycja.php?id=823105) · [Źródło wydania](https://www.ateneum.pl/pozycja.php?id=823105)
+- Ateneum · 675 × 1080 px. [Grafika](https://www.ateneum.pl/phttw/823105_large.jpg) · [Źródło i uznanie](https://www.ateneum.pl/pozycja.php?id=823105)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://www.ateneum.pl/phttw/823105_large.jpg
+
+### Śmierć Komandora
+
+Malarz portrecista zaszywa się w domu w górach. Odkrycie ukrytego obrazu uruchamia wydarzenia, których nie umie wyjaśnić.
+
+- Muza · Wydanie I, tom 1 · ISBN 9788328710467.
+- [Opis książki](https://wydawnictwoakcent.pl/ksiazka/smierc-komandora-tom-1-pojawia-sie-idea/) · [Źródło wydania](https://wydawnictwoakcent.pl/ksiazka/smierc-komandora-tom-1-pojawia-sie-idea/)
+- Akcent · 420 × 593 px. [Grafika](https://wydawnictwoakcent.pl/assets/covers/card/003ce30f06356eddaa4c.webp) · [Źródło i uznanie](https://wydawnictwoakcent.pl/ksiazka/smierc-komandora-tom-1-pojawia-sie-idea/)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Okładka tomu 1 dwutomowej powieści. Tom 2 nosi podtytuł „Metafora się zmienia”.
+- Wyświetlany adres. https://wydawnictwoakcent.pl/assets/covers/card/003ce30f06356eddaa4c.webp
+
+### Mistrz i Małgorzata
+
+Diabeł odwiedza Moskwę, a historia Mistrza i Małgorzaty splata się z opowieścią o Poncjuszu Piłacie.
+
+- Znak · Wydanie polskie, druk · ISBN 9788324043651.
+- [Opis książki](https://www.znak.com.pl/p/mistrz-i-malgorzata-michail-bulhakow-13215) · [Źródło wydania](https://www.znak.com.pl/p/mistrz-i-malgorzata-michail-bulhakow-13215)
+- Księgarnia Znak · 331 × 500 px. [Grafika](https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/mistrz-i-malgorzata-13215/13215/219252d1a1d7aa2a586a2ae4aa07de37.jpeg) · [Źródło i uznanie](https://www.znak.com.pl/p/mistrz-i-malgorzata-michail-bulhakow-13215)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/mistrz-i-malgorzata-13215/13215/219252d1a1d7aa2a586a2ae4aa07de37.jpeg
+
+### Serce pełne skorpionów
+
+Powieść o dorastaniu i pamięci, rozpięta między warszawską młodością bohatera a jego późniejszym życiem.
+
+- W.A.B. · Wydanie polskie, druk · ISBN 9788328076815.
+- [Opis książki](https://www.znak.com.pl/p/serce-pelne-skorpionow-wojciech-engelking-142742) · [Źródło wydania](https://www.znak.com.pl/p/serce-pelne-skorpionow-wojciech-engelking-142742)
+- Księgarnia Znak · 1400 × 2091 px. [Grafika](https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/serce-pelne-skorpionow-142742/142742/935db96fc3d1535d68a177f7cdea8152.jpeg) · [Źródło i uznanie](https://www.znak.com.pl/p/serce-pelne-skorpionow-wojciech-engelking-142742)
+- Okładka wyświetlana bezpośrednio z serwisu źródłowego. Grafika wydania podanego w katalogu.
+- Wyświetlany adres. https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/serce-pelne-skorpionow-142742/142742/935db96fc3d1535d68a177f7cdea8152.jpeg

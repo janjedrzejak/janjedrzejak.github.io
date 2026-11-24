@@ -1,6 +1,6 @@
 # Półka ważnych dla mnie książek
 
-Osobista kolekcja Jana Jędrzejaka obejmuje 19 polskich wydań w czterech kategoriach: produkt i strategia, technologia i AI, reportaż i biografie oraz literatura.
+Kolekcja Jana Jędrzejaka obejmuje półkę „Ważne dla mnie” oraz sześć półek tematycznych. Wybór półki działa w widoku 3D i w katalogu.
 
 [Otwórz półkę](https://janjedrzejak.github.io/books/) · [Katalog](https://janjedrzejak.github.io/books/catalog.html)
 
@@ -23,8 +23,8 @@ Build trafia do `books/dist/`. [Build portfolio](../README_DEPLOY.md) przenosi g
 
 ## Dodawanie książek
 
-- Dodaj rekord w [src/data/personal-books.json](src/data/personal-books.json). Uzupełnij trwały identyfikator, tytuł, autorów, wydanie, ISBN, źródło, kategorię, notę i prawdziwą okładkę. Ustal proporcję okładki na podstawie obrazu i kolory grzbietu.
-- Numery książek zaczynają się od 1. Identyfikatory w adresach `#book/…` muszą być unikalne.
+- Dodaj rekord w [src/data/personal-books.json](src/data/personal-books.json) lub do odpowiedniej półki w [src/data/themed-shelves.json](src/data/themed-shelves.json). Uzupełnij trwały identyfikator, tytuł, autorów, wydanie, ISBN, źródło, kategorię, notę i prawdziwą okładkę. Ustal proporcję okładki na podstawie obrazu i kolory grzbietu.
+- Numery książek zaczynają się od 1 na każdej półce. Identyfikatory półek i identyfikatory książek w adresach `#book/…` muszą być unikalne.
 - Build sprawdza ISBN, metadane i lokalne pliki oraz odtwarza [katalog źródeł](docs/KATALOG.md). Kategorie sterujące półką są w [src/data/catalog.ts](src/data/catalog.ts).
 
 ## Mechanika i weryfikacja

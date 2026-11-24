@@ -1,25 +1,42 @@
-import books from "./personal-books.json";
+import personalBooks from "./personal-books.json";
+import themedShelves from "./themed-shelves.json";
 
-export type Book = (typeof books)[number];
-export { books };
+export type Book = (typeof personalBooks)[number];
 
-// Old links resolve to this shelf. Keep valid book links and other parameters.
+const personalTitle = "Półka ważnych dla mnie książek";
+export const shelves = [
+  { id: "", label: "Ważne dla mnie", title: personalTitle, books: personalBooks },
+  ...themedShelves.map((shelf) => ({ ...shelf, title: shelf.label })),
+];
+
+// Book links resolve to their own shelf, including links without a shelf query.
 const url = new URL(location.href);
-if (url.searchParams.get("shelf") === "engineering") {
+const bookId = url.hash.startsWith("#book/") ? url.hash.slice(6) : null;
+const linkedShelf = bookId
+  ? shelves.find((shelf) => shelf.books.some((book) => book.id === bookId))
+  : undefined;
+const selectedShelf =
+  linkedShelf ??
+  shelves.find((shelf) => shelf.id === url.searchParams.get("shelf")) ??
+  shelves[0];
+if (selectedShelf.id) {
+  url.searchParams.set("shelf", selectedShelf.id);
+} else {
   url.searchParams.delete("shelf");
 }
-if (
-  url.hash.startsWith("#book/") &&
-  !books.some((book) => book.id === url.hash.slice(6))
-) {
-  url.hash = "";
-}
+if (bookId !== null && !linkedShelf) url.hash = "";
 if (url.href !== location.href) {
   history.replaceState(history.state, "", url.href);
 }
 
-export const shelfTitle = "Półka ważnych dla mnie książek";
+export const books: Book[] = selectedShelf.books;
+export const shelfId = selectedShelf.id;
+export const wraps = !shelfId;
+export const shelfTitle = selectedShelf.title;
 export const pageTitle = shelfTitle + " · Jan Jędrzejak";
+export const catalogTitle = shelfId
+  ? "Katalog · " + shelfTitle
+  : "Katalog ważnych książek";
 export const categories = [
   ["Wszystkie", "All"],
   ["Produkt", "Produkt i strategia"],
@@ -28,7 +45,9 @@ export const categories = [
   ["Literatura", "Literatura"],
 ] as const;
 export const numberLabel = (n: number) => String(n).padStart(2, "0");
-export const bookHref = (id: string) => "./#book/" + id;
+export const shelfHref = (id = shelfId, catalog = false) =>
+  (catalog ? "./catalog.html" : "./") + (id ? "?shelf=" + id : "");
+export const bookHref = (id: string) => shelfHref() + "#book/" + id;
 
 export function asset(path: string) {
   return /^https:\/\//.test(path)

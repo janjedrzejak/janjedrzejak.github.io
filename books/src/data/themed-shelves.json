@@ -1,0 +1,1327 @@
+[
+  {
+    "id": "muzyka",
+    "label": "Muzyka",
+    "books": [
+      {
+        "id": "metallica-bez-przebaczenia",
+        "number": 1,
+        "category": "Muzyka",
+        "title": "Metallica",
+        "subtitle": "Bez przebaczenia",
+        "authors": [
+          "Joel McIver"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2014,
+        "isbn": "9788364373107",
+        "publisher": "In Rock",
+        "description": "Historia Metalliki od początków thrashu po lata światowych tras i sporów wewnątrz zespołu.",
+        "topics": [
+          "Thrash metal"
+        ],
+        "official": "https://lubimyczytac.pl/ksiazka/228481/metallica-bez-przebaczenia",
+        "editionSource": "https://lubimyczytac.pl/ksiazka/228481/metallica-bez-przebaczenia",
+        "stage": "Muzyka",
+        "spine": "Metallica",
+        "shortAuthor": "McIver",
+        "aspect": 0.704,
+        "palette": [
+          "#32383b",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://s.lubimyczytac.pl/upload/books/228000/228481/298498-352x500.jpg",
+          "source": "https://s.lubimyczytac.pl/upload/books/228000/228481/298498-352x500.jpg",
+          "provider": "Lubimy Czytać",
+          "attribution": "https://lubimyczytac.pl/ksiazka/228481/metallica-bez-przebaczenia",
+          "rightsUrl": "https://lubimyczytac.pl/ksiazka/228481/metallica-bez-przebaczenia",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Metallica. Bez przebaczenia”.",
+          "size": [
+            352,
+            500
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "joy-division-ustne-relacje",
+        "number": 2,
+        "category": "Muzyka",
+        "title": "Przenikliwe światło, słońce i cała reszta",
+        "subtitle": "Joy Division w ustnych relacjach",
+        "authors": [
+          "Jon Savage"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2020,
+        "isbn": "9788395234941",
+        "publisher": "Kosmos Kosmos",
+        "description": "Zebrane przez Jona Savage’a głosy muzyków, bliskich i współpracowników składają się na historię Joy Division i postpunkowego Manchesteru.",
+        "topics": [
+          "Post-punk"
+        ],
+        "official": "https://lubimyczytac.pl/ksiazka/4928696/przenikliwe-swiatlo-slonce-i-cala-reszta-joy-division-w-ustnych-relacjach",
+        "editionSource": "https://lubimyczytac.pl/ksiazka/4928696/przenikliwe-swiatlo-slonce-i-cala-reszta-joy-division-w-ustnych-relacjach",
+        "stage": "Muzyka",
+        "spine": "Joy Division",
+        "shortAuthor": "Savage",
+        "aspect": 0.704,
+        "palette": [
+          "#32383b",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://s.lubimyczytac.pl/upload/books/4928000/4928696/818754-352x500.jpg",
+          "source": "https://s.lubimyczytac.pl/upload/books/4928000/4928696/818754-352x500.jpg",
+          "provider": "Lubimy Czytać",
+          "attribution": "https://lubimyczytac.pl/ksiazka/4928696/przenikliwe-swiatlo-slonce-i-cala-reszta-joy-division-w-ustnych-relacjach",
+          "rightsUrl": "https://lubimyczytac.pl/ksiazka/4928696/przenikliwe-swiatlo-slonce-i-cala-reszta-joy-division-w-ustnych-relacjach",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Przenikliwe światło, słońce i cała reszta. Joy Division w ustnych relacjach”.",
+          "size": [
+            352,
+            500
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "black-metal-ewolucja-kultu",
+        "number": 3,
+        "category": "Muzyka",
+        "title": "Black Metal",
+        "subtitle": "Ewolucja kultu",
+        "authors": [
+          "Dayal Patterson"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2016,
+        "isbn": "9788363785246",
+        "publisher": "Kagra",
+        "description": "Kronika rozwoju black metalu oparta na rozmowach z muzykami i historii kolejnych scen.",
+        "topics": [
+          "Black metal"
+        ],
+        "official": "https://ateneum.net.pl/pozycja.php?id=208986",
+        "editionSource": "https://ateneum.net.pl/pozycja.php?id=208986",
+        "stage": "Muzyka",
+        "spine": "Black Metal",
+        "shortAuthor": "Patterson",
+        "aspect": 0.68,
+        "palette": [
+          "#332528",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://www.ateneum.pl/phttw/208986_large.jpg",
+          "source": "https://www.ateneum.pl/phttw/208986_large.jpg",
+          "provider": "Ateneum",
+          "attribution": "https://ateneum.net.pl/pozycja.php?id=208986",
+          "rightsUrl": "https://ateneum.net.pl/pozycja.php?id=208986",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Black Metal. Ewolucja kultu”.",
+          "size": [
+            374,
+            550
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "pink-floyd-predzej-swinie-zaczna-latac",
+        "number": 4,
+        "category": "Muzyka",
+        "title": "Pink Floyd",
+        "subtitle": "Prędzej świnie zaczną latać",
+        "authors": [
+          "Mark Blake"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2018,
+        "isbn": "9788381292719",
+        "publisher": "SQN",
+        "description": "Biografia Pink Floyd śledzi twórczą współpracę i konflikty, które kształtowały brzmienie oraz losy grupy.",
+        "topics": [
+          "Rock progresywny"
+        ],
+        "official": "https://www.wydawnictwoakcent.pl/ksiazka/pink-floyd-predzej-swinie-zaczna-latac-prawdziwa-historia-pink-floyd-wydanie-i/",
+        "editionSource": "https://www.wydawnictwoakcent.pl/ksiazka/pink-floyd-predzej-swinie-zaczna-latac-prawdziwa-historia-pink-floyd-wydanie-i/",
+        "stage": "Muzyka",
+        "spine": "Pink Floyd",
+        "shortAuthor": "Blake",
+        "aspect": 0.6977,
+        "palette": [
+          "#998c8e",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://wydawnictwoakcent.pl/assets/covers/card/27ab270c52e851ebc9d4.webp",
+          "source": "https://wydawnictwoakcent.pl/assets/covers/card/27ab270c52e851ebc9d4.webp",
+          "provider": "Akcent",
+          "attribution": "https://www.wydawnictwoakcent.pl/ksiazka/pink-floyd-predzej-swinie-zaczna-latac-prawdziwa-historia-pink-floyd-wydanie-i/",
+          "rightsUrl": "https://www.wydawnictwoakcent.pl/ksiazka/pink-floyd-predzej-swinie-zaczna-latac-prawdziwa-historia-pink-floyd-wydanie-i/",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Pink Floyd. Prędzej świnie zaczną latać”.",
+          "size": [
+            420,
+            602
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "pieklo-i-metal-kat",
+        "number": 5,
+        "category": "Muzyka",
+        "title": "Piekło i metal",
+        "subtitle": "Historia zespołu Kat",
+        "authors": [
+          "Mateusz Żyła"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2023,
+        "isbn": "9788383301570",
+        "publisher": "SQN",
+        "description": "Historia Kata pokazuje miejsce zespołu w polskim metalu, jego teksty, muzyczne inspiracje i spory.",
+        "topics": [
+          "Polski metal"
+        ],
+        "official": "https://sqn.pl/ksiazki/pieklo-i-metal-historia-zespolu-kat/",
+        "editionSource": "https://lubimyczytac.pl/ksiazka/5085753/pieklo-i-metal-historia-zespolu-kat",
+        "stage": "Muzyka",
+        "spine": "Piekło i metal",
+        "shortAuthor": "Żyła",
+        "aspect": 0.704,
+        "palette": [
+          "#6c534d",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://s.lubimyczytac.pl/upload/books/5085000/5085753/1098582-352x500.jpg",
+          "source": "https://s.lubimyczytac.pl/upload/books/5085000/5085753/1098582-352x500.jpg",
+          "provider": "Lubimy Czytać",
+          "attribution": "https://lubimyczytac.pl/ksiazka/5085753/pieklo-i-metal-historia-zespolu-kat",
+          "rightsUrl": "https://lubimyczytac.pl/ksiazka/5085753/pieklo-i-metal-historia-zespolu-kat",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Piekło i metal. Historia zespołu Kat”.",
+          "size": [
+            352,
+            500
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "wladcy-chaosu",
+        "number": 6,
+        "category": "Muzyka",
+        "title": "Władcy chaosu",
+        "subtitle": "Krwawe powstanie satanistycznego metalowego podziemia",
+        "authors": [
+          "Michael Moynihan",
+          "Didrik Søderlind"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2010,
+        "isbn": "9788387598341",
+        "publisher": "Kagra",
+        "description": "Reportaż o norweskiej scenie blackmetalowej, jej ideologiach i przestępstwach, które nadały jej rozgłos.",
+        "topics": [
+          "Historia black metalu"
+        ],
+        "official": "https://lubimyczytac.pl/ksiazka/65065/wladcy-chaosu-krwawe-powstanie-satanistycznego-metalowego-podziemia",
+        "editionSource": "https://lubimyczytac.pl/ksiazka/65065/wladcy-chaosu-krwawe-powstanie-satanistycznego-metalowego-podziemia",
+        "stage": "Muzyka",
+        "spine": "Władcy chaosu",
+        "shortAuthor": "Moynihan · Søderlind",
+        "aspect": 0.7,
+        "palette": [
+          "#878779",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://s.lubimyczytac.pl/upload/books/65000/65065/352x500.jpg",
+          "source": "https://s.lubimyczytac.pl/upload/books/65000/65065/352x500.jpg",
+          "provider": "Lubimy Czytać",
+          "attribution": "https://lubimyczytac.pl/ksiazka/65065/wladcy-chaosu-krwawe-powstanie-satanistycznego-metalowego-podziemia",
+          "rightsUrl": "https://lubimyczytac.pl/ksiazka/65065/wladcy-chaosu-krwawe-powstanie-satanistycznego-metalowego-podziemia",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Władcy chaosu. Krwawe powstanie satanistycznego metalowego podziemia”.",
+          "size": [
+            196,
+            280
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "biografie",
+    "label": "Biografie i historia",
+    "books": [
+      {
+        "id": "cybulski-podwojne-salto",
+        "number": 1,
+        "category": "Biografie i historia",
+        "title": "Cybulski",
+        "subtitle": "Podwójne salto",
+        "authors": [
+          "Dorota Karaś"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie z 2025 r.",
+        "year": 2025,
+        "isbn": "9788384270004",
+        "publisher": "Znak",
+        "description": "Biografia Zbigniewa Cybulskiego pokazuje jego drogę na ekran, życie poza planem i ciężar sławy.",
+        "topics": [
+          "Kino polskie"
+        ],
+        "official": "https://lubimyczytac.pl/ksiazka/5210533/cybulski-podwojne-salto",
+        "editionSource": "https://lubimyczytac.pl/ksiazka/5210533/cybulski-podwojne-salto",
+        "stage": "Biografie i historia",
+        "spine": "Cybulski",
+        "shortAuthor": "Karaś",
+        "aspect": 0.704,
+        "palette": [
+          "#615e52",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://s.lubimyczytac.pl/upload/books/5210000/5210533/1308291-352x500.jpg",
+          "source": "https://s.lubimyczytac.pl/upload/books/5210000/5210533/1308291-352x500.jpg",
+          "provider": "Lubimy Czytać",
+          "attribution": "https://lubimyczytac.pl/ksiazka/5210533/cybulski-podwojne-salto",
+          "rightsUrl": "https://lubimyczytac.pl/ksiazka/5210533/cybulski-podwojne-salto",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Cybulski. Podwójne salto”.",
+          "size": [
+            352,
+            500
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "zawod-fotograf",
+        "number": 2,
+        "category": "Biografie i historia",
+        "title": "Zawód fotograf",
+        "subtitle": "",
+        "authors": [
+          "Chris Niedenthal"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie rozszerzone",
+        "year": 2020,
+        "isbn": "9788366500907",
+        "publisher": "Marginesy",
+        "description": "Autobiografia fotoreportera, którego zdjęcia dokumentują codzienność i przełomy polityczne w Europie Środkowo-Wschodniej.",
+        "topics": [
+          "Fotoreportaż"
+        ],
+        "official": "https://wydawnictwoakcent.pl/ksiazka/zawod-fotograf/",
+        "editionSource": "https://wydawnictwoakcent.pl/ksiazka/zawod-fotograf/",
+        "stage": "Biografie i historia",
+        "spine": "Zawód fotograf",
+        "shortAuthor": "Niedenthal",
+        "aspect": 0.733,
+        "palette": [
+          "#8d1c1c",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "Wybrano autobiografię Chrisa Niedenthala.",
+        "cover": {
+          "src": "https://wydawnictwoakcent.pl/assets/covers/card/338e37e04b86857f8f4f.webp",
+          "source": "https://wydawnictwoakcent.pl/assets/covers/card/338e37e04b86857f8f4f.webp",
+          "provider": "Akcent",
+          "attribution": "https://wydawnictwoakcent.pl/ksiazka/zawod-fotograf/",
+          "rightsUrl": "https://wydawnictwoakcent.pl/ksiazka/zawod-fotograf/",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Zawód fotograf”.",
+          "size": [
+            420,
+            573
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "chlopki",
+        "number": 3,
+        "category": "Biografie i historia",
+        "title": "Chłopki",
+        "subtitle": "Opowieść o naszych babkach",
+        "authors": [
+          "Joanna Kuciel-Frydryszak"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2023,
+        "isbn": "9788367859134",
+        "publisher": "Marginesy",
+        "description": "Reportaż o pracy, rodzinie i codziennych wyborach kobiet na polskiej wsi w pierwszej połowie XX wieku.",
+        "topics": [
+          "Historia społeczna"
+        ],
+        "official": "https://www.poczytaj.pl/ksiazka/chlopki-opowiesc-o-naszych-babkach-joanna-kucielfrydryszak%2C688350",
+        "editionSource": "https://www.poczytaj.pl/ksiazka/chlopki-opowiesc-o-naszych-babkach-joanna-kucielfrydryszak%2C688350",
+        "stage": "Biografie i historia",
+        "spine": "Chłopki",
+        "shortAuthor": "Kuciel-Frydryszak",
+        "aspect": 0.618,
+        "palette": [
+          "#957d48",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://staticl.poczytaj.pl/688000/chlopki-opowiesc-o-naszych-babkach-joanna-kucielfrydryszak,688350-l.jpg",
+          "source": "https://staticl.poczytaj.pl/688000/chlopki-opowiesc-o-naszych-babkach-joanna-kucielfrydryszak,688350-l.jpg",
+          "provider": "Poczytaj.pl",
+          "attribution": "https://www.poczytaj.pl/ksiazka/chlopki-opowiesc-o-naszych-babkach-joanna-kucielfrydryszak%2C688350",
+          "rightsUrl": "https://www.poczytaj.pl/ksiazka/chlopki-opowiesc-o-naszych-babkach-joanna-kucielfrydryszak%2C688350",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Chłopki. Opowieść o naszych babkach”.",
+          "size": [
+            330,
+            534
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "archipelag-gulag",
+        "number": 4,
+        "category": "Biografie i historia",
+        "title": "Archipelag GUŁag",
+        "subtitle": "Tomy 1–3",
+        "authors": [
+          "Aleksander Sołżenicyn"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie w trzech tomach",
+        "year": 2026,
+        "isbn": "9788383385365",
+        "publisher": "REBIS",
+        "description": "Świadectwo radzieckiego systemu więzień i obozów pracy łączy doświadczenia autora z relacjami innych więźniów.",
+        "topics": [
+          "Historia ZSRR"
+        ],
+        "official": "https://www.rebis.com.pl/pl/products/archipelag-gulag-tomy-1-3-10577.html",
+        "editionSource": "https://www.rebis.com.pl/pl/products/archipelag-gulag-tomy-1-3-10577.html",
+        "stage": "Biografie i historia",
+        "spine": "Archipelag GUŁag",
+        "shortAuthor": "Sołżenicyn",
+        "aspect": 0.8046,
+        "palette": [
+          "#32383b",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "Grafika wydawcy przedstawia komplet trzech tomów.",
+        "cover": {
+          "src": "https://www.rebis.com.pl/hpeciai/06f801ed106ef3987a4e0329619913b0/pol_pl_Archipelag-GULag-Tomy-1-3-10577_1_1.jpg",
+          "source": "https://www.rebis.com.pl/hpeciai/06f801ed106ef3987a4e0329619913b0/pol_pl_Archipelag-GULag-Tomy-1-3-10577_1_1.jpg",
+          "provider": "REBIS",
+          "attribution": "https://www.rebis.com.pl/pl/products/archipelag-gulag-tomy-1-3-10577.html",
+          "rightsUrl": "https://www.rebis.com.pl/pl/products/archipelag-gulag-tomy-1-3-10577.html",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Archipelag GUŁag. Tomy 1–3”.",
+          "size": [
+            943,
+            1172
+          ],
+          "difference": "Fotografia kompletu trzech tomów.",
+          "alternative": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "technika",
+    "label": "Technika i wynalazcy",
+    "books": [
+      {
+        "id": "symfonia-cpp",
+        "number": 1,
+        "category": "Technika i wynalazcy",
+        "title": "Symfonia C++ Standard",
+        "subtitle": "Programowanie w języku C++ orientowane obiektowo",
+        "authors": [
+          "Jerzy Grębosz"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie III, dwa tomy",
+        "year": 2008,
+        "isbn": "9788373661394",
+        "publisher": "Edition 2000",
+        "description": "Polski podręcznik C++ prowadzi od podstaw języka do programowania obiektowego i pracy z biblioteką standardową.",
+        "topics": [
+          "C++"
+        ],
+        "official": "https://www.ifj.edu.pl/private/grebosz/symfonia_c%2B%2B_std_p.html",
+        "editionSource": "https://www.poczytaj.pl/ksiazka/symfonia-c-standard-tom-1-2-jerzy-grebosz,113495",
+        "stage": "Technika i wynalazcy",
+        "spine": "Symfonia C++ Standard",
+        "shortAuthor": "Grębosz",
+        "aspect": 0.6838,
+        "palette": [
+          "#43282d",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "Grafika przedstawia okładkę tomu 1.",
+        "cover": {
+          "src": "https://www.ifj.edu.pl/private/grebosz/images/symf_std_wyd1_width_142.jpg",
+          "source": "https://www.ifj.edu.pl/private/grebosz/images/symf_std_wyd1_width_142.jpg",
+          "provider": "Jerzy Grębosz · IFJ PAN",
+          "attribution": "https://www.ifj.edu.pl/private/grebosz/symfonia_c%2B%2B_std_p.html",
+          "rightsUrl": "https://www.ifj.edu.pl/private/grebosz/symfonia_c%2B%2B_std_p.html",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Symfonia C++ Standard. Programowanie w języku C++ orientowane obiektowo”.",
+          "size": [
+            240,
+            351
+          ],
+          "difference": "Okładka tomu 1.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "tesla-geniusz-na-skraju-szalenstwa",
+        "number": 2,
+        "category": "Technika i wynalazcy",
+        "title": "Tesla",
+        "subtitle": "Geniusz na skraju szaleństwa",
+        "authors": [
+          "W. Bernard Carlson"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2020,
+        "isbn": "9788366553941",
+        "publisher": "Wydawnictwo Poznańskie",
+        "description": "Biografia Nikoli Tesli skupia się na jego metodzie pracy, wynalazkach i próbach wprowadzania ich na rynek.",
+        "topics": [
+          "Historia techniki"
+        ],
+        "official": "https://wydawnictwopoznanskie.pl/produkt/tesla-geniusz-na-skraju-szalenstwa/",
+        "editionSource": "https://lubimyczytac.pl/ksiazka/4928183/tesla-geniusz-na-skraju-szalenstwa",
+        "stage": "Technika i wynalazcy",
+        "spine": "Tesla",
+        "shortAuthor": "Carlson",
+        "aspect": 0.704,
+        "palette": [
+          "#60696c",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://s.lubimyczytac.pl/upload/books/4928000/4928183/817402-352x500.jpg",
+          "source": "https://s.lubimyczytac.pl/upload/books/4928000/4928183/817402-352x500.jpg",
+          "provider": "Lubimy Czytać",
+          "attribution": "https://lubimyczytac.pl/ksiazka/4928183/tesla-geniusz-na-skraju-szalenstwa",
+          "rightsUrl": "https://lubimyczytac.pl/ksiazka/4928183/tesla-geniusz-na-skraju-szalenstwa",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Tesla. Geniusz na skraju szaleństwa”.",
+          "size": [
+            352,
+            500
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "fantastyka",
+    "label": "Fantastyka i science fiction",
+    "books": [
+      {
+        "id": "wladca-pierscieni",
+        "number": 1,
+        "category": "Fantastyka i science fiction",
+        "title": "Władca Pierścieni",
+        "subtitle": "",
+        "authors": [
+          "J.R.R. Tolkien"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie jednotomowe",
+        "year": 2021,
+        "isbn": "9788328700789",
+        "publisher": "Muza",
+        "description": "Wyprawa Froda i jego towarzyszy przez Śródziemie w jednotomowym wydaniu całej powieści.",
+        "topics": [
+          "Fantasy"
+        ],
+        "official": "https://www.znak.com.pl/p/wladca-pierscieni-j-r-r-tolkien-104026",
+        "editionSource": "https://www.znak.com.pl/p/wladca-pierscieni-j-r-r-tolkien-104026",
+        "stage": "Fantastyka i science fiction",
+        "spine": "Władca Pierścieni",
+        "shortAuthor": "Tolkien",
+        "aspect": 0.667,
+        "palette": [
+          "#342223",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/wladca-pierscieni-104026/104026/3477afbeab59a334d73dc09d7e22cee1.jpeg",
+          "source": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/wladca-pierscieni-104026/104026/3477afbeab59a334d73dc09d7e22cee1.jpeg",
+          "provider": "Księgarnia Znak",
+          "attribution": "https://www.znak.com.pl/p/wladca-pierscieni-j-r-r-tolkien-104026",
+          "rightsUrl": "https://www.znak.com.pl/p/wladca-pierscieni-j-r-r-tolkien-104026",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Władca Pierścieni”.",
+          "size": [
+            1400,
+            2099
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "kongres-futurologiczny",
+        "number": 2,
+        "category": "Fantastyka i science fiction",
+        "title": "Kongres futurologiczny",
+        "subtitle": "",
+        "authors": [
+          "Stanisław Lem"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2025,
+        "isbn": "9788308088197",
+        "publisher": "Wydawnictwo Literackie",
+        "description": "Przygoda Ijona Tichego staje się satyrą na świat, w którym technologia pozwala modelować postrzeganą rzeczywistość.",
+        "topics": [
+          "Satyra SF"
+        ],
+        "official": "https://www.wydawnictwoliterackie.pl/produkt/5641/kongres-futurologiczny-kanon-lema",
+        "editionSource": "https://www.wydawnictwoliterackie.pl/produkt/5641/kongres-futurologiczny-kanon-lema",
+        "stage": "Fantastyka i science fiction",
+        "spine": "Kongres futurologiczny",
+        "shortAuthor": "Lem",
+        "aspect": 0.7264,
+        "palette": [
+          "#4c3c2a",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://www.wydawnictwoliterackie.pl/storage/images/products/223x307/kongres_futurologiczny_691b3cb10e1b3.jpg",
+          "source": "https://www.wydawnictwoliterackie.pl/storage/images/products/223x307/kongres_futurologiczny_691b3cb10e1b3.jpg",
+          "provider": "Wydawnictwo Literackie",
+          "attribution": "https://www.wydawnictwoliterackie.pl/produkt/5641/kongres-futurologiczny-kanon-lema",
+          "rightsUrl": "https://www.wydawnictwoliterackie.pl/produkt/5641/kongres-futurologiczny-kanon-lema",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Kongres futurologiczny”.",
+          "size": [
+            223,
+            307
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "bajki-robotow",
+        "number": 3,
+        "category": "Fantastyka i science fiction",
+        "title": "Bajki robotów",
+        "subtitle": "",
+        "authors": [
+          "Stanisław Lem"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2024,
+        "isbn": "9788308085332",
+        "publisher": "Wydawnictwo Literackie",
+        "description": "Baśniowe fabuły z robotami w rolach głównych łączą język dawnych opowieści z techniczną wyobraźnią Lema.",
+        "topics": [
+          "Opowiadania SF"
+        ],
+        "official": "https://www.wydawnictwoliterackie.pl/index.php/produkt/2285/bajki-robotow",
+        "editionSource": "https://www.wydawnictwoliterackie.pl/index.php/produkt/2285/bajki-robotow",
+        "stage": "Fantastyka i science fiction",
+        "spine": "Bajki robotów",
+        "shortAuthor": "Lem",
+        "aspect": 0.6335,
+        "palette": [
+          "#606d6f",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://www.wydawnictwoliterackie.pl/storage/images/products/223x307/bajki_robotow_60588133cb34d.jpg",
+          "source": "https://www.wydawnictwoliterackie.pl/storage/images/products/223x307/bajki_robotow_60588133cb34d.jpg",
+          "provider": "Wydawnictwo Literackie",
+          "attribution": "https://www.wydawnictwoliterackie.pl/index.php/produkt/2285/bajki-robotow",
+          "rightsUrl": "https://www.wydawnictwoliterackie.pl/index.php/produkt/2285/bajki-robotow",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Bajki robotów”.",
+          "size": [
+            223,
+            352
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "diuna",
+        "number": 4,
+        "category": "Fantastyka i science fiction",
+        "title": "Diuna",
+        "subtitle": "",
+        "authors": [
+          "Frank Herbert"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2020,
+        "isbn": "9788381881654",
+        "publisher": "REBIS",
+        "description": "Historia Paula Atrydy na Arrakis łączy polityczną walkę o zasoby z religią i ekologią pustynnej planety.",
+        "topics": [
+          "Space opera"
+        ],
+        "official": "https://www.znak.com.pl/p/diuna-frank-herbert-132637",
+        "editionSource": "https://www.znak.com.pl/p/diuna-frank-herbert-132637",
+        "stage": "Fantastyka i science fiction",
+        "spine": "Diuna",
+        "shortAuthor": "Herbert",
+        "aspect": 0.665,
+        "palette": [
+          "#6e6751",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/diuna-132637/132637/8075944978f79878c03e7c6d2e101e90.jpeg",
+          "source": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/diuna-132637/132637/8075944978f79878c03e7c6d2e101e90.jpeg",
+          "provider": "Księgarnia Znak",
+          "attribution": "https://www.znak.com.pl/p/diuna-frank-herbert-132637",
+          "rightsUrl": "https://www.znak.com.pl/p/diuna-frank-herbert-132637",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Diuna”.",
+          "size": [
+            1181,
+            1776
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "lowca-androidow",
+        "number": 5,
+        "category": "Fantastyka i science fiction",
+        "title": "Blade Runner",
+        "subtitle": "Czy androidy marzą o elektrycznych owcach?",
+        "authors": [
+          "Philip K. Dick"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2026,
+        "isbn": "9788383385242",
+        "publisher": "REBIS",
+        "description": "Zadanie łowcy nagród Ricka Deckarda prowadzi do pytań o empatię i granicę między człowiekiem a androidem.",
+        "topics": [
+          "Tożsamość i empatia"
+        ],
+        "official": "https://www.wydawnictwoakcent.pl/ksiazka/blade-runner-czy-androidy-marza-o-elektrycznych-owcach-5/",
+        "editionSource": "https://www.wydawnictwoakcent.pl/ksiazka/blade-runner-czy-androidy-marza-o-elektrycznych-owcach-5/",
+        "stage": "Fantastyka i science fiction",
+        "spine": "Łowca androidów",
+        "shortAuthor": "Dick",
+        "aspect": 0.6278,
+        "palette": [
+          "#72615d",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "Powieść znana także jako „Łowca androidów”.",
+        "cover": {
+          "src": "https://wydawnictwoakcent.pl/assets/covers/card/5b3f346bb9deaed2464f.webp",
+          "source": "https://wydawnictwoakcent.pl/assets/covers/card/5b3f346bb9deaed2464f.webp",
+          "provider": "Akcent",
+          "attribution": "https://www.wydawnictwoakcent.pl/ksiazka/blade-runner-czy-androidy-marza-o-elektrycznych-owcach-5/",
+          "rightsUrl": "https://www.wydawnictwoakcent.pl/ksiazka/blade-runner-czy-androidy-marza-o-elektrycznych-owcach-5/",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Blade Runner. Czy androidy marzą o elektrycznych owcach?”.",
+          "size": [
+            420,
+            669
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "groza",
+    "label": "Groza",
+    "books": [
+      {
+        "id": "bastion",
+        "number": 1,
+        "category": "Groza",
+        "title": "Bastion",
+        "subtitle": "",
+        "authors": [
+          "Stephen King"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2025,
+        "isbn": "9788383619620",
+        "publisher": "Albatros",
+        "description": "Po pandemii pozostali przy życiu próbują odbudować społeczeństwo i odnaleźć swoje miejsce w nowym porządku.",
+        "topics": [
+          "Postapokalipsa"
+        ],
+        "official": "https://www.wydawnictwoalbatros.com/ksiazki/bastion-3/",
+        "editionSource": "https://www.wydawnictwoalbatros.com/ksiazki/bastion-3/",
+        "stage": "Groza",
+        "spine": "Bastion",
+        "shortAuthor": "King",
+        "aspect": 0.6912,
+        "palette": [
+          "#7a9669",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/01/Bastion-RGB-600px.jpg",
+          "source": "https://www.wydawnictwoalbatros.com/wp-content/uploads/2019/01/Bastion-RGB-600px.jpg",
+          "provider": "Albatros",
+          "attribution": "https://www.wydawnictwoalbatros.com/ksiazki/bastion-3/",
+          "rightsUrl": "https://www.wydawnictwoalbatros.com/ksiazki/bastion-3/",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Bastion”.",
+          "size": [
+            600,
+            868
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "zlo-ze-wschodu",
+        "number": 2,
+        "category": "Groza",
+        "title": "Zło ze wschodu",
+        "subtitle": "",
+        "authors": [
+          "Andrzej Pilipiuk"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2023,
+        "isbn": "9788379649686",
+        "publisher": "Fabryka Słów",
+        "description": "Zbiór opowiadań łączących historyczne tło z fantastyką i opowieściami o spotkaniach z nieznanym.",
+        "topics": [
+          "Opowiadania fantastyczne"
+        ],
+        "official": "https://www.pilipiuk.com/index.php/tworczosc/zbiory-opowiadan/zlo-ze-wschodu",
+        "editionSource": "https://lubimyczytac.pl/ksiazka/5065494/zlo-ze-wschodu",
+        "stage": "Groza",
+        "spine": "Zło ze wschodu",
+        "shortAuthor": "Pilipiuk",
+        "aspect": 0.704,
+        "palette": [
+          "#562d2a",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://s.lubimyczytac.pl/upload/books/5065000/5065494/1093064-352x500.jpg",
+          "source": "https://s.lubimyczytac.pl/upload/books/5065000/5065494/1093064-352x500.jpg",
+          "provider": "Lubimy Czytać",
+          "attribution": "https://lubimyczytac.pl/ksiazka/5065494/zlo-ze-wschodu",
+          "rightsUrl": "https://lubimyczytac.pl/ksiazka/5065494/zlo-ze-wschodu",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Zło ze wschodu”.",
+          "size": [
+            352,
+            500
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "inkub",
+        "number": 3,
+        "category": "Groza",
+        "title": "Inkub",
+        "subtitle": "",
+        "authors": [
+          "Artur Urbanowicz"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2019,
+        "isbn": "9788377313190",
+        "publisher": "Vesper",
+        "description": "Nadprzyrodzona groza na Suwalszczyźnie, gdzie lokalne wierzenia splatają się z tajemnicą wydarzeń z przeszłości.",
+        "topics": [
+          "Groza ludowa"
+        ],
+        "official": "https://lubimyczytac.pl/ksiazka/4870677/ksiazka",
+        "editionSource": "https://lubimyczytac.pl/ksiazka/4870677/ksiazka",
+        "stage": "Groza",
+        "spine": "Inkub",
+        "shortAuthor": "Urbanowicz",
+        "aspect": 0.704,
+        "palette": [
+          "#262330",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://s.lubimyczytac.pl/upload/books/4870000/4870677/728560-352x500.jpg",
+          "source": "https://s.lubimyczytac.pl/upload/books/4870000/4870677/728560-352x500.jpg",
+          "provider": "Lubimy Czytać",
+          "attribution": "https://lubimyczytac.pl/ksiazka/4870677/ksiazka",
+          "rightsUrl": "https://lubimyczytac.pl/ksiazka/4870677/ksiazka",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Inkub”.",
+          "size": [
+            352,
+            500
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "terror-dan-simmons",
+        "number": 4,
+        "category": "Groza",
+        "title": "Terror",
+        "subtitle": "",
+        "authors": [
+          "Dan Simmons"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2022,
+        "isbn": "9788377314197",
+        "publisher": "Vesper",
+        "description": "W powieści inspirowanej wyprawą Franklina załogi uwięzione w arktycznym lodzie zmagają się z mrozem, głodem i tajemniczym zagrożeniem.",
+        "topics": [
+          "Groza historyczna"
+        ],
+        "official": "https://vesper.pl/1120-terror-wyd2022-dan-simmons-oprawa-miekka-.html",
+        "editionSource": "https://vesper.pl/1120-terror-wyd2022-dan-simmons-oprawa-miekka-.html",
+        "stage": "Groza",
+        "spine": "Terror",
+        "shortAuthor": "Simmons",
+        "aspect": 0.6667,
+        "palette": [
+          "#98958a",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://vesper.pl/1133-product_main_2x/terror-wyd2022-dan-simmons-oprawa-miekka-.jpg",
+          "source": "https://vesper.pl/1133-product_main_2x/terror-wyd2022-dan-simmons-oprawa-miekka-.jpg",
+          "provider": "Vesper",
+          "attribution": "https://vesper.pl/1120-terror-wyd2022-dan-simmons-oprawa-miekka-.html",
+          "rightsUrl": "https://vesper.pl/1120-terror-wyd2022-dan-simmons-oprawa-miekka-.html",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Terror”.",
+          "size": [
+            840,
+            1260
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "chodz-ze-mna-mozdzen",
+        "number": 5,
+        "category": "Groza",
+        "title": "Chodź ze mną",
+        "subtitle": "",
+        "authors": [
+          "Konrad Możdżeń"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2020,
+        "isbn": "9788377313664",
+        "publisher": "Vesper",
+        "description": "Powieść grozy o zbrodni, której konsekwencje powracają w życiu następnych pokoleń.",
+        "topics": [
+          "Groza psychologiczna"
+        ],
+        "official": "https://encyklopediafantastyki.pl/index.php?title=Chod%C5%BA_ze_mn%C4%85",
+        "editionSource": "https://www.empik.com/chodz-ze-mna-mozdzen-konrad,p1245861779,ksiazka-p",
+        "stage": "Groza",
+        "spine": "Chodź ze mną",
+        "shortAuthor": "Możdżeń",
+        "aspect": 0.7076,
+        "palette": [
+          "#3d362e",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://ecsmedia.pl/cir/b/chodz-ze-mna-ZDJECIE_OKLADKI_PRZOD_DUZY/5811/15942022796455811.webp",
+          "source": "https://ecsmedia.pl/cir/b/chodz-ze-mna-ZDJECIE_OKLADKI_PRZOD_DUZY/5811/15942022796455811.webp",
+          "provider": "Empik",
+          "attribution": "https://www.empik.com/chodz-ze-mna-mozdzen-konrad,p1245861779,ksiazka-p",
+          "rightsUrl": "https://www.empik.com/chodz-ze-mna-mozdzen-konrad,p1245861779,ksiazka-p",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Chodź ze mną”.",
+          "size": [
+            317,
+            448
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "proza",
+    "label": "Proza",
+    "books": [
+      {
+        "id": "sto-lat-samotnosci",
+        "number": 1,
+        "category": "Proza",
+        "title": "Sto lat samotności",
+        "subtitle": "",
+        "authors": [
+          "Gabriel García Márquez"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2019,
+        "isbn": "9788328713185",
+        "publisher": "Muza",
+        "description": "Losy kolejnych pokoleń rodziny Buendíów splatają się z historią fikcyjnego Macondo.",
+        "topics": [
+          "Realizm magiczny"
+        ],
+        "official": "https://www.znak.com.pl/p/sto-lat-samotnosci-gabriel-garcia-marquez-121921",
+        "editionSource": "https://www.znak.com.pl/p/sto-lat-samotnosci-gabriel-garcia-marquez-121921",
+        "stage": "Proza",
+        "spine": "Sto lat samotności",
+        "shortAuthor": "Márquez",
+        "aspect": 0.6542,
+        "palette": [
+          "#14713b",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/sto-lat-samotnosci-121921/121921/26363676b3b639d5af8b8c5f2008dc10.jpeg",
+          "source": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/sto-lat-samotnosci-121921/121921/26363676b3b639d5af8b8c5f2008dc10.jpeg",
+          "provider": "Księgarnia Znak",
+          "attribution": "https://www.znak.com.pl/p/sto-lat-samotnosci-gabriel-garcia-marquez-121921",
+          "rightsUrl": "https://www.znak.com.pl/p/sto-lat-samotnosci-gabriel-garcia-marquez-121921",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Sto lat samotności”.",
+          "size": [
+            1400,
+            2140
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "dawno-temu-w-warszawie",
+        "number": 2,
+        "category": "Proza",
+        "title": "Dawno temu w Warszawie",
+        "subtitle": "",
+        "authors": [
+          "Jakub Żulczyk"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2023,
+        "isbn": "9788382892352",
+        "publisher": "Świat Książki",
+        "description": "Powrót do postaci ze Ślepnąc od świateł w Warszawie, gdzie pandemia zmienia układ sił w przestępczym półświatku.",
+        "topics": [
+          "Warszawa"
+        ],
+        "official": "https://wydawnictwoswiatksiazki.pl/tytul/dawno-temu-w-warszawie/",
+        "editionSource": "https://wydawnictwoswiatksiazki.pl/tytul/dawno-temu-w-warszawie/",
+        "stage": "Proza",
+        "spine": "Dawno temu w Warszawie",
+        "shortAuthor": "Żulczyk",
+        "aspect": 0.6284,
+        "palette": [
+          "#1c4c94",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://wydawnictwoswiatksiazki.pl/wp-content/uploads/dawno-temu-w-warszawie.jpg",
+          "source": "https://wydawnictwoswiatksiazki.pl/wp-content/uploads/dawno-temu-w-warszawie.jpg",
+          "provider": "Świat Książki",
+          "attribution": "https://wydawnictwoswiatksiazki.pl/tytul/dawno-temu-w-warszawie/",
+          "rightsUrl": "https://wydawnictwoswiatksiazki.pl/tytul/dawno-temu-w-warszawie/",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Dawno temu w Warszawie”.",
+          "size": [
+            800,
+            1273
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "pan-darek",
+        "number": 3,
+        "category": "Proza",
+        "title": "Pan Darek",
+        "subtitle": "",
+        "authors": [
+          "Jakub Żulczyk"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2026,
+        "isbn": "9788368921007",
+        "publisher": "Świat Książki",
+        "description": "Darek wychodzi z więzienia w 1990 roku i próbuje odnaleźć się w Polsce u progu transformacji.",
+        "topics": [
+          "Transformacja ustrojowa"
+        ],
+        "official": "https://www.ateneum.pl/pozycja.php?id=823105",
+        "editionSource": "https://www.ateneum.pl/pozycja.php?id=823105",
+        "stage": "Proza",
+        "spine": "Pan Darek",
+        "shortAuthor": "Żulczyk",
+        "aspect": 0.625,
+        "palette": [
+          "#32383b",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://www.ateneum.pl/phttw/823105_large.jpg",
+          "source": "https://www.ateneum.pl/phttw/823105_large.jpg",
+          "provider": "Ateneum",
+          "attribution": "https://www.ateneum.pl/pozycja.php?id=823105",
+          "rightsUrl": "https://www.ateneum.pl/pozycja.php?id=823105",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Pan Darek”.",
+          "size": [
+            675,
+            1080
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "smierc-komandora",
+        "number": 4,
+        "category": "Proza",
+        "title": "Śmierć Komandora",
+        "subtitle": "Pojawia się idea",
+        "authors": [
+          "Haruki Murakami"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie I, tom 1",
+        "year": 2018,
+        "isbn": "9788328710467",
+        "publisher": "Muza",
+        "description": "Malarz portrecista zaszywa się w domu w górach. Odkrycie ukrytego obrazu uruchamia wydarzenia, których nie umie wyjaśnić.",
+        "topics": [
+          "Realizm magiczny"
+        ],
+        "official": "https://wydawnictwoakcent.pl/ksiazka/smierc-komandora-tom-1-pojawia-sie-idea/",
+        "editionSource": "https://wydawnictwoakcent.pl/ksiazka/smierc-komandora-tom-1-pojawia-sie-idea/",
+        "stage": "Proza",
+        "spine": "Śmierć Komandora",
+        "shortAuthor": "Murakami",
+        "aspect": 0.7083,
+        "palette": [
+          "#736956",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "Okładka tomu 1 dwutomowej powieści. Tom 2 nosi podtytuł „Metafora się zmienia”.",
+        "cover": {
+          "src": "https://wydawnictwoakcent.pl/assets/covers/card/003ce30f06356eddaa4c.webp",
+          "source": "https://wydawnictwoakcent.pl/assets/covers/card/003ce30f06356eddaa4c.webp",
+          "provider": "Akcent",
+          "attribution": "https://wydawnictwoakcent.pl/ksiazka/smierc-komandora-tom-1-pojawia-sie-idea/",
+          "rightsUrl": "https://wydawnictwoakcent.pl/ksiazka/smierc-komandora-tom-1-pojawia-sie-idea/",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Śmierć Komandora. Pojawia się idea”.",
+          "size": [
+            420,
+            593
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "mistrz-i-malgorzata",
+        "number": 5,
+        "category": "Proza",
+        "title": "Mistrz i Małgorzata",
+        "subtitle": "",
+        "authors": [
+          "Michaił Bułhakow"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2016,
+        "isbn": "9788324043651",
+        "publisher": "Znak",
+        "description": "Diabeł odwiedza Moskwę, a historia Mistrza i Małgorzaty splata się z opowieścią o Poncjuszu Piłacie.",
+        "topics": [
+          "Satyra i fantastyka"
+        ],
+        "official": "https://www.znak.com.pl/p/mistrz-i-malgorzata-michail-bulhakow-13215",
+        "editionSource": "https://www.znak.com.pl/p/mistrz-i-malgorzata-michail-bulhakow-13215",
+        "stage": "Proza",
+        "spine": "Mistrz i Małgorzata",
+        "shortAuthor": "Bułhakow",
+        "aspect": 0.662,
+        "palette": [
+          "#8b413b",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/mistrz-i-malgorzata-13215/13215/219252d1a1d7aa2a586a2ae4aa07de37.jpeg",
+          "source": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/mistrz-i-malgorzata-13215/13215/219252d1a1d7aa2a586a2ae4aa07de37.jpeg",
+          "provider": "Księgarnia Znak",
+          "attribution": "https://www.znak.com.pl/p/mistrz-i-malgorzata-michail-bulhakow-13215",
+          "rightsUrl": "https://www.znak.com.pl/p/mistrz-i-malgorzata-michail-bulhakow-13215",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Mistrz i Małgorzata”.",
+          "size": [
+            331,
+            500
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      },
+      {
+        "id": "serce-pelne-skorpionow",
+        "number": 6,
+        "category": "Proza",
+        "title": "Serce pełne skorpionów",
+        "subtitle": "",
+        "authors": [
+          "Wojciech Engelking"
+        ],
+        "credit": "Authors",
+        "edition": "Wydanie polskie, druk",
+        "year": 2021,
+        "isbn": "9788328076815",
+        "publisher": "W.A.B.",
+        "description": "Powieść o dorastaniu i pamięci, rozpięta między warszawską młodością bohatera a jego późniejszym życiem.",
+        "topics": [
+          "Warszawa i pamięć"
+        ],
+        "official": "https://www.znak.com.pl/p/serce-pelne-skorpionow-wojciech-engelking-142742",
+        "editionSource": "https://www.znak.com.pl/p/serce-pelne-skorpionow-wojciech-engelking-142742",
+        "stage": "Proza",
+        "spine": "Serce pełne skorpionów",
+        "shortAuthor": "Engelking",
+        "aspect": 0.6695,
+        "palette": [
+          "#6e5e4c",
+          "#f5efe1",
+          "#d7c59d"
+        ],
+        "editionNote": "",
+        "cover": {
+          "src": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/serce-pelne-skorpionow-142742/142742/935db96fc3d1535d68a177f7cdea8152.jpeg",
+          "source": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/serce-pelne-skorpionow-142742/142742/935db96fc3d1535d68a177f7cdea8152.jpeg",
+          "provider": "Księgarnia Znak",
+          "attribution": "https://www.znak.com.pl/p/serce-pelne-skorpionow-wojciech-engelking-142742",
+          "rightsUrl": "https://www.znak.com.pl/p/serce-pelne-skorpionow-wojciech-engelking-142742",
+          "usage": "Okładka wyświetlana bezpośrednio z serwisu źródłowego.",
+          "alt": "Okładka książki „Serce pełne skorpionów”.",
+          "size": [
+            1400,
+            2091
+          ],
+          "difference": "Grafika wydania podanego w katalogu.",
+          "alternative": ""
+        }
+      }
+    ]
+  }
+]

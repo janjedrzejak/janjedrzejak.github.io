@@ -1,9 +1,17 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import { books, categories, numberLabel, shelfTitle } from "../data/catalog";
+import {
+  books,
+  categories,
+  numberLabel,
+  shelfId,
+  shelfTitle,
+  wraps,
+} from "../data/catalog";
 import { BookModel } from "../geometry/BookModel";
 import { ShelfController } from "../animation/ShelfController";
 import { Details } from "./Details";
+import { ShelfNavigation } from "./ShelfNavigation";
 import "../styles/layout.css";
 import "../styles/book.css";
 import "../styles/details.css";
@@ -23,7 +31,7 @@ function Arrow({ next }: { next: boolean }) {
     </svg>
   );
 }
-const solids = Array.from({ length: books.length * 3 }, (_, i) => (
+const solids = Array.from({ length: books.length * (wraps ? 3 : 1) }, (_, i) => (
   <BookModel
     key={i}
     slot={i}
@@ -51,7 +59,8 @@ export function Shelf() {
     };
   }, []);
   useLayoutEffect(() => {
-    const parent = group.current!;
+    const parent = group.current;
+    if (!parent) return;
     const adjust = () => {
       const current = parent.querySelector<HTMLButtonElement>(
         '[aria-pressed="true"]',
@@ -83,31 +92,29 @@ export function Shelf() {
         <main className="library-main">
           <div className="heading-row">
             <h1>{shelfTitle}</h1>
-            <nav className="library-nav" aria-label="Nawigacja półki">
-              <a className="collection-link" href="./catalog.html">
-                Katalog
-              </a>
-            </nav>
+            <ShelfNavigation />
           </div>
           <section className="collection" aria-label="Półka z książkami">
             <div className="shelf-index">
-              <div
-                className="groups"
-                role="group"
-                aria-label="Kategorie książek"
-                ref={group}
-              >
-                <i className="indicator" aria-hidden="true" />
-                {categories.map(([label, name]) => (
-                  <button
-                    key={name}
-                    aria-pressed={b.category === name}
-                    onClick={() => engine.current?.category(name)}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
+              {!shelfId && (
+                <div
+                  className="groups"
+                  role="group"
+                  aria-label="Kategorie książek"
+                  ref={group}
+                >
+                  <i className="indicator" aria-hidden="true" />
+                  {categories.map(([label, name]) => (
+                    <button
+                      key={name}
+                      aria-pressed={b.category === name}
+                      onClick={() => engine.current?.category(name)}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              )}
               <span className="position-count" aria-hidden="true">
                 {numberLabel(b.number)}
                 <i /> {books.length}

@@ -1,4 +1,4 @@
-import { books, pageTitle, shelfTitle } from "../data/catalog";
+import { books, pageTitle, shelfTitle, wraps } from "../data/catalog";
 import { approach, clamp, signedOffset, wrap } from "../geometry/pose";
 import { ShelfScene } from "../geometry/ShelfScene";
 import { DetailMotion } from "./DetailMotion";
@@ -8,7 +8,7 @@ export type Phase = "idle" | "browsing" | "opening" | "details" | "closing";
 export class ShelfController {
   phase: Phase = "idle";
   active = -1;
-  position = books.length;
+  position = wraps ? books.length : 0;
   target = this.position;
   drag = false;
   private scene: ShelfScene;
@@ -107,7 +107,7 @@ export class ShelfController {
   go(value: number) {
     if (!this.onShelf) return;
     this.pendingOpen = null;
-    this.target = value;
+    this.target = wraps ? value : clamp(value, 0, books.length - 1);
     this.phaseTo("browsing");
     this.wake();
   }
@@ -145,7 +145,7 @@ export class ShelfController {
   }
   clickSlot(slot: number) {
     if (!this.onShelf) return;
-    const distance = signedOffset(slot, this.position, this.scene.slots.length);
+    const distance = this.scene.distanceTo(slot, this.position);
     if (Math.abs(distance) < 0.5) this.openCurrent();
     else this.go(this.position + distance);
   }
@@ -223,9 +223,10 @@ export class ShelfController {
       return;
     }
     this.localEntry = !!history.state?.shelfDetail;
-    this.target = this.position =
-      Math.round(this.position) +
-      signedOffset(i, Math.round(this.position), books.length);
+    this.target = this.position = wraps
+      ? Math.round(this.position) +
+        signedOffset(i, Math.round(this.position), books.length)
+      : i;
     this.updateActive();
     this.show(i, false, initial === true);
   };

@@ -1,7 +1,16 @@
 import { createRoot } from "react-dom/client";
 import { useState } from "react";
-import { bookHref, books, categories, numberLabel } from "./data/catalog";
+import {
+  bookHref,
+  books,
+  catalogTitle,
+  categories,
+  numberLabel,
+  shelfHref,
+  shelfId,
+} from "./data/catalog";
 import { Cover } from "./components/Cover";
+import { ShelfNavigation } from "./components/ShelfNavigation";
 import "./styles/layout.css";
 import "./styles/book.css";
 import "./styles/catalog.css";
@@ -13,28 +22,26 @@ function Catalog() {
   return (
     <main className="catalog">
       <div className="catalog-heading">
-        <h1>Katalog ważnych książek</h1>
-        <nav className="library-nav" aria-label="Nawigacja katalogu">
-          <a className="collection-link" href="./">
-            Półka
-          </a>
-        </nav>
+        <h1>{catalogTitle}</h1>
+        <ShelfNavigation catalog />
       </div>
-      <div
-        className="catalog-filters"
-        role="group"
-        aria-label="Filtruj katalog"
-      >
-        {categories.map(([label, group]) => (
-          <button
-            key={group}
-            onClick={() => setFilter(group)}
-            aria-pressed={filter === group}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
+      {!shelfId && (
+        <div
+          className="catalog-filters"
+          role="group"
+          aria-label="Filtruj katalog"
+        >
+          {categories.map(([label, group]) => (
+            <button
+              key={group}
+              onClick={() => setFilter(group)}
+              aria-pressed={filter === group}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      )}
       <ol className="catalog-list">
         {selection.map((book) => (
           <li key={book.id}>
@@ -82,10 +89,11 @@ function Catalog() {
           </li>
         ))}
       </ol>
-      <a className="collection-link" href="./">
+      <a className="collection-link" href={shelfHref()}>
         Wróć na półkę
       </a>
     </main>
   );
 }
+document.title = catalogTitle + " · Jan Jędrzejak";
 createRoot(document.getElementById("root")!).render(<Catalog />);

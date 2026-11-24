@@ -1,4 +1,4 @@
-import { books } from "../data/catalog";
+import { books, wraps } from "../data/catalog";
 import { loadCover } from "../components/Cover";
 import { approach, bookPose, signedOffset, wrap } from "./pose";
 
@@ -44,6 +44,9 @@ export class ShelfScene {
   coverRect() {
     return this.selectedElement!.getBoundingClientRect();
   }
+  distanceTo(slot: number, position: number) {
+    return wraps ? signedOffset(slot, position, this.slots.length) : slot - position;
+  }
   draw(
     position: number,
     hover: number,
@@ -61,7 +64,7 @@ export class ShelfScene {
     const visible = this.rect.width * 0.5 + this.height * this.maxWidth * 1.5;
     let closest = Infinity;
     for (const s of this.slots) {
-      const distance = signedOffset(s.slot, position, this.slots.length);
+      const distance = this.distanceTo(s.slot, position);
       const goal = hover === s.slot && Math.abs(distance) > 0.5 ? 1 : 0;
       s.lift = reduced ? goal : approach(s.lift, goal, 12, dt, 0.001);
       if (s.lift !== goal) lifting = true;
