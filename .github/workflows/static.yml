@@ -23,14 +23,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     env:
       PAGES_ARTIFACT: github-pages-${{ github.run_attempt }}
+    outputs:
+      artifact_name: ${{ env.PAGES_ARTIFACT }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -77,8 +75,15 @@ jobs:
           done
           echo "::error::The Pages artifact did not become available after upload."
           exit 1
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
         with:
-          artifact_name: ${{ env.PAGES_ARTIFACT }}
+          artifact_name: ${{ needs.build.outputs.artifact_name }}
