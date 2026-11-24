@@ -31,8 +31,7 @@
           <p class="vinyl-year"></p>
         </div>
         <div class="vinyl-actions">
-          <button type="button" class="vinyl-toggle" aria-controls="vinyl-models">Wysuń winyl</button>
-          <a class="vinyl-listen" target="_blank" rel="noreferrer">Odsłuchaj <span aria-hidden="true">↗︎</span></a>
+          <button type="button" class="vinyl-open" aria-haspopup="dialog">Szczegóły albumu</button>
         </div>
         <div class="vinyl-navigation" aria-label="Zmień album">
           <button type="button" class="vinyl-previous" aria-label="Poprzedni album">←</button>
@@ -46,5 +45,19 @@
       <ol class="vinyl-list"></ol>
     </details>
   </main>
+  <dialog class="vinyl-detail" aria-labelledby="album-title">
+    <button type="button" class="vinyl-close" autofocus aria-label="Zamknij szczegóły">×</button>
+    <div class="album-summary">
+      <img class="album-cover" alt="" width="600" height="600">
+      <div>
+        <p class="album-artist"></p>
+        <h2 id="album-title"></h2>
+        <p class="album-year"></p>
+        <a class="vinyl-listen" target="_blank" rel="noreferrer"></a>
+      </div>
+    </div>
+    <h3 class="album-track-heading">Utwory</h3>
+    <ol class="album-tracks"></ol>
+  </dialog>
 </body>
 </html>

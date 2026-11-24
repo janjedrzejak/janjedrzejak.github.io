@@ -389,10 +389,18 @@ def add_vinyl_catalog(doc):
     for album in albums:
         if any(urlsplit(album[field]).scheme != "https" for field in ("cover", "listen")):
             raise ValueError(f"Expected HTTPS artwork and listening links for {album['id']}")
+        host = urlsplit(album["listen"]).hostname or ""
+        if not (host.endswith(".bandcamp.com") or host in ("www.youtube.com", "music.youtube.com")):
+            raise ValueError(f"Expected Bandcamp or YouTube for {album['id']}")
+        tracks = album["tracks"]
+        if not tracks or any(not isinstance(track, str) or not track.strip() for track in tracks):
+            raise ValueError(f"Missing track listing for {album['id']}")
         item = etree.SubElement(listing, "li", id=album["id"])
         link = etree.SubElement(item, "a", href=album["listen"], target="_blank", rel="noreferrer")
         for field in ("title", "artist", "year", "cover"):
             link.set("data-" + field, str(album[field]))
+        link.set("data-tracks", json.dumps(tracks, ensure_ascii=False))
+        link.set("data-listen-label", album["listenLabel"])
         for field in ("title", "artist", "year"):
             etree.SubElement(link, "span", {"class": "list-" + field}).text = str(album[field])
 

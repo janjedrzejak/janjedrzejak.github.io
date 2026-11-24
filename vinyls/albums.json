@@ -5,7 +5,16 @@
     "title": "Groza",
     "year": 2008,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/be/74/01/be740126-bbec-1549-c8ba-def3c2ff4b9d/5057917869966_cover.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/groza/1439907215"
+    "listen": "https://no-solace.bandcamp.com/album/groza-lp-2008",
+    "artworkSource": "https://music.apple.com/pl/album/groza/1439907215",
+    "tracksSource": "https://no-solace.bandcamp.com/album/groza-lp-2008",
+    "listenLabel": "Odsłuchaj na Bandcampie",
+    "tracks": [
+      "Groza I",
+      "Groza II",
+      "Groza III",
+      "Groza IV"
+    ]
   },
   {
     "id": "mgla-with-hearts-toward-none",
@@ -13,7 +22,19 @@
     "title": "With Hearts Toward None",
     "year": 2012,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c7/ec/c5/c7ecc528-63a4-ae3c-f0ef-97be6e7a53f0/5057917483186_cover.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/with-hearts-toward-none/1439908964"
+    "listen": "https://no-solace.bandcamp.com/album/with-hearts-toward-none-lp-2012",
+    "artworkSource": "https://music.apple.com/pl/album/with-hearts-toward-none/1439908964",
+    "tracksSource": "https://no-solace.bandcamp.com/album/with-hearts-toward-none-lp-2012",
+    "listenLabel": "Odsłuchaj na Bandcampie",
+    "tracks": [
+      "With hearts toward none I",
+      "With hearts toward none II",
+      "With hearts toward none III",
+      "With hearts toward none IV",
+      "With hearts toward none V",
+      "With hearts toward none VI",
+      "With hearts toward none VII"
+    ]
   },
   {
     "id": "mgla-exercises-in-futility",
@@ -21,7 +42,18 @@
     "title": "Exercises in Futility",
     "year": 2015,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8b/db/4a/8bdb4a75-672a-e69f-a517-7a53fb615f37/5057917257497_cover.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/exercises-in-futility/1439910664"
+    "listen": "https://no-solace.bandcamp.com/album/exercises-in-futility-lp-2015",
+    "artworkSource": "https://music.apple.com/pl/album/exercises-in-futility/1439910664",
+    "tracksSource": "https://no-solace.bandcamp.com/album/exercises-in-futility-lp-2015",
+    "listenLabel": "Odsłuchaj na Bandcampie",
+    "tracks": [
+      "Exercises in futility I",
+      "Exercises in futility II",
+      "Exercises in futility III",
+      "Exercises in futility IV",
+      "Exercises in futility V",
+      "Exercises in futility VI"
+    ]
   },
   {
     "id": "mgla-age-of-excuse",
@@ -29,7 +61,18 @@
     "title": "Age of Excuse",
     "year": 2019,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ea/79/d7/ea79d7e2-cf7a-9bc9-7ae9-1f6c6d82a4a6/5059366661320_cover.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/age-of-excuse/1479040873"
+    "listen": "https://no-solace.bandcamp.com/album/age-of-excuse",
+    "artworkSource": "https://music.apple.com/pl/album/age-of-excuse/1479040873",
+    "tracksSource": "https://no-solace.bandcamp.com/album/age-of-excuse",
+    "listenLabel": "Odsłuchaj na Bandcampie",
+    "tracks": [
+      "Age of Excuse I",
+      "Age of Excuse II",
+      "Age of Excuse III",
+      "Age of Excuse IV",
+      "Age of Excuse V",
+      "Age of Excuse VI"
+    ]
   },
   {
     "id": "megadeth-youthanasia",
@@ -37,7 +80,24 @@
     "title": "Youthanasia",
     "year": 1994,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/1a/fc/9f/1afc9f2b-9297-1670-ee64-a0fc547857e0/19UMGIM16960.rgb.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/youthanasia/1455396819"
+    "listen": "https://www.youtube.com/watch?v=yhfEjnQBIOo",
+    "artworkSource": "https://music.apple.com/pl/album/youthanasia/1455396819",
+    "tracksSource": "https://music.apple.com/pl/album/youthanasia/1455396819",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Reckoning Day",
+      "Train of Consequences",
+      "Addicted to Chaos",
+      "À Tout le Monde",
+      "Elysian Fields",
+      "The Killing Road",
+      "Blood of Heroes",
+      "Family Tree",
+      "Youthanasia",
+      "I Thought I Knew It All",
+      "Black Curtains",
+      "Victory"
+    ]
   },
   {
     "id": "metallica-kill-em-all",
@@ -45,8 +105,22 @@
     "title": "Kill ’Em All",
     "year": 1983,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/73/06/19/73061928-34a2-6462-963a-039203d507fe/dj.cloeijsr.png/600x600bb.jpg",
-    "listen": "https://open.spotify.com/album/7hKjNN2595RdaLSR2PB7sA",
-    "artworkSource": "https://music.apple.com/us/album/kill-em-all-remastered/579146130"
+    "listen": "https://www.youtube.com/watch?v=aAITxlCsj4Y",
+    "artworkSource": "https://music.apple.com/us/album/kill-em-all-remastered/579146130",
+    "tracksSource": "https://music.apple.com/us/album/kill-em-all-remastered/579146130",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Hit the Lights",
+      "The Four Horsemen",
+      "Motorbreath",
+      "Jump In the Fire",
+      "(Anesthesia)—Pulling Teeth",
+      "Whiplash",
+      "Phantom Lord",
+      "No Remorse",
+      "Seek & Destroy",
+      "Metal Militia"
+    ]
   },
   {
     "id": "metallica-ride-the-lightning",
@@ -54,8 +128,20 @@
     "title": "Ride the Lightning",
     "year": 1984,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/0f/7a/74/0f7a7472-92fa-e77d-384a-1e4304705e83/dj.jbiruenb.png/600x600bb.jpg",
-    "listen": "https://open.spotify.com/album/05DePtm7oQMdL3Uzw2Jmsc",
-    "artworkSource": "https://music.apple.com/us/album/ride-the-lightning-remastered-2016-remastered-version/579148345"
+    "listen": "https://www.youtube.com/watch?v=sfs6FYHcW9s",
+    "artworkSource": "https://music.apple.com/us/album/ride-the-lightning-remastered-2016-remastered-version/579148345",
+    "tracksSource": "https://music.apple.com/us/album/ride-the-lightning-remastered-2016-remastered-version/579148345",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Fight Fire with Fire",
+      "Ride the Lightning",
+      "For Whom the Bell Tolls",
+      "Fade to Black",
+      "Trapped Under Ice",
+      "Escape",
+      "Creeping Death",
+      "The Call of Ktulu"
+    ]
   },
   {
     "id": "metallica-black-album",
@@ -63,8 +149,24 @@
     "title": "Metallica (The Black Album)",
     "year": 1991,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/9e/80/1b/9e801b06-67fa-0990-2d15-85480ad3cd46/850007452025.png/600x600bb.jpg",
-    "listen": "https://open.spotify.com/album/55fq75UfkYbGMq4CncCtOH",
-    "artworkSource": "https://music.apple.com/us/album/metallica-remastered/1572046434"
+    "listen": "https://www.youtube.com/watch?v=S-Kn_tPJ4gs",
+    "artworkSource": "https://music.apple.com/us/album/metallica-remastered/1572046434",
+    "tracksSource": "https://music.apple.com/us/album/metallica-remastered/1572046434",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Enter Sandman",
+      "Sad But True",
+      "Holier Than Thou",
+      "The Unforgiven",
+      "Wherever I May Roam",
+      "Don't Tread On Me",
+      "Through the Never",
+      "Nothing Else Matters",
+      "Of Wolf and Man",
+      "The God That Failed",
+      "My Friend of Misery",
+      "The Struggle Within"
+    ]
   },
   {
     "id": "motorhead-march-or-die",
@@ -72,7 +174,23 @@
     "title": "March ör Die",
     "year": 1992,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/67/46/35/mzi.ffnxsnkh.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/march-or-die/192926748"
+    "listen": "https://www.youtube.com/watch?v=nQ7M21k7sik",
+    "artworkSource": "https://music.apple.com/pl/album/march-or-die/192926748",
+    "tracksSource": "https://music.apple.com/pl/album/march-or-die/192926748",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Stand",
+      "Cat Scratch Fever",
+      "Bad Religion",
+      "Jack the Ripper",
+      "I Ain't No Nice Guy",
+      "Hellraiser",
+      "Asylum Choir",
+      "Too Good to Be True",
+      "You Better Run",
+      "Name In Vain",
+      "March or Die"
+    ]
   },
   {
     "id": "david-bowie-low",
@@ -80,7 +198,23 @@
     "title": "Low",
     "year": 1977,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f7/49/2d/f7492da6-164e-b023-4b17-937329c35458/190295842895.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/low-2017-remaster/1347895593"
+    "listen": "https://www.youtube.com/watch?v=k3M_xjjUMX8",
+    "artworkSource": "https://music.apple.com/pl/album/low-2017-remaster/1347895593",
+    "tracksSource": "https://music.apple.com/pl/album/low-2017-remaster/1347895593",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Speed of Life",
+      "Breaking Glass",
+      "What in the World",
+      "Sound and Vision",
+      "Always Crashing in the Same Car",
+      "Be My Wife",
+      "A New Career in a New Town",
+      "Warszawa",
+      "Art Decade",
+      "Weeping Wall",
+      "Subterraneans"
+    ]
   },
   {
     "id": "pink-floyd-dark-side-of-the-moon",
@@ -88,7 +222,22 @@
     "title": "The Dark Side of the Moon",
     "year": 1973,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3e/76/b0/3e76b0e3-762b-2286-a019-8afb19cee541/886445635829.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/the-dark-side-of-the-moon/1065973699"
+    "listen": "https://www.youtube.com/watch?v=k9ynZnEBtvw",
+    "artworkSource": "https://music.apple.com/pl/album/the-dark-side-of-the-moon/1065973699",
+    "tracksSource": "https://music.apple.com/pl/album/the-dark-side-of-the-moon/1065973699",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Speak to Me",
+      "Breathe (In the Air)",
+      "On the Run",
+      "Time",
+      "The Great Gig In the Sky",
+      "Money",
+      "Us and Them",
+      "Any Colour You Like",
+      "Brain Damage",
+      "Eclipse"
+    ]
   },
   {
     "id": "pink-floyd-the-division-bell",
@@ -96,7 +245,23 @@
     "title": "The Division Bell",
     "year": 1994,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f7/47/bf/f747bf4c-6a88-c26f-9545-f0ffed0b8992/886445627572.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/the-division-bell/1065976549"
+    "listen": "https://www.youtube.com/watch?v=tAnZk9n-W6k",
+    "artworkSource": "https://music.apple.com/pl/album/the-division-bell/1065976549",
+    "tracksSource": "https://music.apple.com/pl/album/the-division-bell/1065976549",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Cluster One",
+      "What Do You Want from Me",
+      "Poles Apart",
+      "Marooned",
+      "A Great Day for Freedom",
+      "Wearing the Inside Out",
+      "Take It Back",
+      "Coming Back to Life",
+      "Keep Talking",
+      "Lost for Words",
+      "High Hopes"
+    ]
   },
   {
     "id": "pink-floyd-animals",
@@ -104,7 +269,17 @@
     "title": "Animals",
     "year": 1977,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ef/03/66/ef036634-5956-38db-ba78-db6200adfdc4/886445635942.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/animals/1065974284"
+    "listen": "https://www.youtube.com/watch?v=Pi-Fn1M7z1I",
+    "artworkSource": "https://music.apple.com/pl/album/animals/1065974284",
+    "tracksSource": "https://music.apple.com/pl/album/animals/1065974284",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Pigs On the Wing, Pt. 1",
+      "Dogs",
+      "Pigs (Three Different Ones)",
+      "Sheep",
+      "Pigs On the Wing, Pt. 2"
+    ]
   },
   {
     "id": "pink-floyd-delicate-sound-of-thunder",
@@ -112,7 +287,27 @@
     "title": "Delicate Sound of Thunder",
     "year": 1988,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/93/74/62/937462d8-57c4-abbc-0f12-6f2a73ac1da9/886445613889.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/delicate-sound-of-thunder-live/1065976276"
+    "listen": "https://www.youtube.com/watch?v=NUuX93W6XYA",
+    "artworkSource": "https://music.apple.com/pl/album/delicate-sound-of-thunder-live/1065976276",
+    "tracksSource": "https://music.apple.com/pl/album/delicate-sound-of-thunder-live/1065976276",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Shine On You Crazy Diamond (Live)",
+      "Learning to Fly (Live)",
+      "Yet Another Movie (Live)",
+      "Round and Around (Live)",
+      "Sorrow (Live)",
+      "The Dogs of War (Live)",
+      "On the Turning Away (Live)",
+      "One of These Days (Live)",
+      "Time (Live)",
+      "Wish You Were Here (Live)",
+      "Us and Them (Live)",
+      "Money (Live)",
+      "Another Brick In the Wall, Pt. 2 (Live)",
+      "Comfortably Numb (Live)",
+      "Run Like Hell (Live)"
+    ]
   },
   {
     "id": "joy-division-unknown-pleasures",
@@ -120,7 +315,22 @@
     "title": "Unknown Pleasures",
     "year": 1979,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/13/90/c0/1390c072-4249-3739-7b3d-fd73ee4a5698/825646562831.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/unknown-pleasures-2019-digital-master/1476702180"
+    "listen": "https://www.youtube.com/watch?v=7J9YtpUCYpI",
+    "artworkSource": "https://music.apple.com/pl/album/unknown-pleasures-2019-digital-master/1476702180",
+    "tracksSource": "https://music.apple.com/pl/album/unknown-pleasures-2019-digital-master/1476702180",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Disorder",
+      "Day of the Lords",
+      "Candidate",
+      "Insight",
+      "New Dawn Fades",
+      "She's Lost Control",
+      "Shadowplay",
+      "Wilderness",
+      "Interzone",
+      "I Remember Nothing"
+    ]
   },
   {
     "id": "joy-division-closer",
@@ -128,7 +338,21 @@
     "title": "Closer",
     "year": 1980,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/d9/2a/d1/d92ad12e-cdf2-e567-9612-af2fdfa82237/dj.uzqznczn.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/closer-collectors-edition/266610001"
+    "listen": "https://www.youtube.com/watch?v=WcWzGcIvkOs",
+    "artworkSource": "https://music.apple.com/pl/album/closer-collectors-edition/266610001",
+    "tracksSource": "https://music.apple.com/pl/album/closer-collectors-edition/266610001",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Atrocity Exhibition",
+      "Isolation",
+      "Passover",
+      "Colony",
+      "A Means to an End",
+      "Heart and Soul",
+      "Twenty Four Hours",
+      "The Eternal",
+      "Decades"
+    ]
   },
   {
     "id": "nirvana-in-utero",
@@ -136,7 +360,24 @@
     "title": "In Utero",
     "year": 1993,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e3/20/03/e32003a4-99bc-1c70-40ba-001882f35dba/00602537526840.rgb.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/in-utero-20th-anniversary-edition/1440858699"
+    "listen": "https://www.youtube.com/watch?v=wB23Kb7nshY",
+    "artworkSource": "https://music.apple.com/pl/album/in-utero-20th-anniversary-edition/1440858699",
+    "tracksSource": "https://music.apple.com/pl/album/in-utero-20th-anniversary-edition/1440858699",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Serve the Servants",
+      "Scentless Apprentice",
+      "Heart-Shaped Box",
+      "Rape Me",
+      "Frances Farmer Will Have Her Revenge On Seattle",
+      "Dumb",
+      "Very Ape",
+      "Milk It",
+      "Pennyroyal Tea",
+      "Radio Friendly Unit Shifter",
+      "Tourette's",
+      "All Apologies"
+    ]
   },
   {
     "id": "led-zeppelin-ii",
@@ -144,7 +385,21 @@
     "title": "Led Zeppelin II",
     "year": 1969,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1a/3d/bb/1a3dbb86-c1f8-737e-571f-d6b647a230be/dj.rhubuvkd.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/led-zeppelin-ii-remastered/580708374"
+    "listen": "https://www.youtube.com/watch?v=7T4LnsuB9Ms",
+    "artworkSource": "https://music.apple.com/pl/album/led-zeppelin-ii-remastered/580708374",
+    "tracksSource": "https://music.apple.com/pl/album/led-zeppelin-ii-remastered/580708374",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Whole Lotta Love",
+      "What Is and What Should Never Be",
+      "The Lemon Song",
+      "Thank You",
+      "Heartbreaker",
+      "Living Loving Maid (She's Just a Woman)",
+      "Ramble On",
+      "Moby Dick",
+      "Bring It On Home"
+    ]
   },
   {
     "id": "led-zeppelin-iii",
@@ -152,7 +407,22 @@
     "title": "Led Zeppelin III",
     "year": 1970,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/62/fd/14/62fd14aa-d202-a86a-d948-0a5550b35fc3/dj.rkzuiqye.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/led-zeppelin-iii-remastered/580708279"
+    "listen": "https://www.youtube.com/watch?v=i-3V_gJBCd4",
+    "artworkSource": "https://music.apple.com/pl/album/led-zeppelin-iii-remastered/580708279",
+    "tracksSource": "https://music.apple.com/pl/album/led-zeppelin-iii-remastered/580708279",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Immigrant Song",
+      "Friends",
+      "Celebration Day",
+      "Since I've Been Loving You",
+      "Out On the Tiles",
+      "Gallows Pole",
+      "Tangerine",
+      "That's the Way",
+      "Bron-Y-Aur Stomp",
+      "Hats Off to (Roy) Harper"
+    ]
   },
   {
     "id": "tsa-heavy-metal-world",
@@ -160,7 +430,21 @@
     "title": "Heavy Metal World",
     "year": 1984,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/cf/53/da/cf53da21-be00-8f92-70d4-7ebacd0b4dc3/5907785039377.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/heavy-metal-world/1099471110"
+    "listen": "https://www.youtube.com/watch?v=h0cSFmXHw-4",
+    "artworkSource": "https://music.apple.com/pl/album/heavy-metal-world/1099471110",
+    "tracksSource": "https://winyle-online.pl/produkt/1def9851/heavy-metal-world-tsa-winyl-lp-album-c-1984",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Kocica",
+      "Ty On Ja",
+      "Biała Śmierć",
+      "Alien",
+      "Maratończyk",
+      "Koszmarny Sen",
+      "Piosełka",
+      "Heavy Metal Świat",
+      "TSA pod Tatrami"
+    ]
   },
   {
     "id": "kat-roze-milosci",
@@ -168,7 +452,20 @@
     "title": "…Róże miłości najchętniej przyjmują się na grobach",
     "year": 1996,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/4b/1c/6d/4b1c6d88-3f46-cdef-ec13-6e06f28c26b2/5907785039681.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/r%C3%B3%C5%BCe-mi%C5%82o%C5%9Bci-najchetniej-przyjmuj%C4%85-si%C4%99-na-grobach/1157714108"
+    "listen": "https://www.youtube.com/watch?v=p-ncV_2F_UQ",
+    "artworkSource": "https://music.apple.com/pl/album/r%C3%B3%C5%BCe-mi%C5%82o%C5%9Bci-najchetniej-przyjmuj%C4%85-si%C4%99-na-grobach/1157714108",
+    "tracksSource": "https://music.apple.com/pl/album/r%C3%B3%C5%BCe-mi%C5%82o%C5%9Bci-najchetniej-przyjmuj%C4%85-si%C4%99-na-grobach/1157714108",
+    "listenLabel": "Posłuchaj utworu na YouTube",
+    "tracks": [
+      "Odi Profanum Vulgus",
+      "Purpurowe Gody",
+      "Płaszcz Skrytobójcy",
+      "Stworzyłem Piękną Rzecz",
+      "Słodki Krem",
+      "Wierzę",
+      "Srzeż Się Plucia Pod Wiatr",
+      "Szmaragd Bazyliszka"
+    ]
   },
   {
     "id": "furia-ksiezyc-milczy-luty",
@@ -176,7 +473,18 @@
     "title": "Księżyc milczy luty",
     "year": 2016,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/48/a0/e9/48a0e9fb-3292-033c-f2ee-644bc3dd789c/FURIA-cover-2400px-300dpi.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/ksi%C4%99%C5%BCyc-milczy-luty/1212562986"
+    "listen": "https://paganrecords.bandcamp.com/album/ksi-yc-milczy-luty",
+    "artworkSource": "https://music.apple.com/pl/album/ksi%C4%99%C5%BCyc-milczy-luty/1212562986",
+    "tracksSource": "https://paganrecords.bandcamp.com/album/ksi-yc-milczy-luty",
+    "listenLabel": "Odsłuchaj na Bandcampie",
+    "tracks": [
+      "Za ćmą, w dym",
+      "Ciało",
+      "Tam jest tu",
+      "Grzej",
+      "Zabieraj łapska",
+      "Zwykłe czary wieją"
+    ]
   },
   {
     "id": "furia-marzannie-krolowej-polski",
@@ -184,7 +492,19 @@
     "title": "Marzannie, królowej Polski",
     "year": 2012,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/26/04/b2/2604b223-3822-462d-41fa-9da859f3ba23/cover.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/marzannie-krolowej-polski/522132068"
+    "listen": "https://paganrecords.bandcamp.com/album/marzannie-kr-lowej-polski",
+    "artworkSource": "https://music.apple.com/pl/album/marzannie-krolowej-polski/522132068",
+    "tracksSource": "https://paganrecords.bandcamp.com/album/marzannie-kr-lowej-polski",
+    "listenLabel": "Odsłuchaj na Bandcampie",
+    "tracks": [
+      "Wyjcie psy",
+      ".",
+      "Wodzenie",
+      "Skads do nikad",
+      "Kosi ta śmierc",
+      "Podz w dol",
+      "Sa to kola"
+    ]
   },
   {
     "id": "alice-in-chains-dirt",
@@ -192,7 +512,25 @@
     "title": "Dirt",
     "year": 1992,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/54/26/62/5426627b-4707-7867-acc0-ce616d250381/074645247526.jpg/600x600bb.jpg",
-    "listen": "https://music.apple.com/pl/album/dirt-remastered/157316517"
+    "listen": "https://www.youtube.com/watch?v=cVmQPS6o9so",
+    "artworkSource": "https://music.apple.com/pl/album/dirt-remastered/157316517",
+    "tracksSource": "https://music.apple.com/pl/album/dirt-remastered/157316517",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Them Bones",
+      "Dam That River",
+      "Rain When I Die",
+      "Down In a Hole",
+      "Sickman",
+      "Rooster",
+      "Junkhead",
+      "Dirt",
+      "God Smack",
+      "Untitled",
+      "Hate to Feel",
+      "Angry Chair",
+      "Would?"
+    ]
   },
   {
     "id": "slayer-seasons-in-the-abyss",
@@ -200,8 +538,22 @@
     "title": "Seasons in the Abyss",
     "year": 1990,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/d4/5c/1f/d45c1fba-2491-095f-1aad-18a26a336edc/00731458679820.rgb.jpg/600x600bb.jpg",
-    "listen": "https://open.spotify.com/album/416nVgqae48Dw0EjD6N4EU",
-    "artworkSource": "https://music.apple.com/us/album/seasons-in-the-abyss/1440920134"
+    "listen": "https://www.youtube.com/watch?v=V_vM2nGkRkI",
+    "artworkSource": "https://music.apple.com/us/album/seasons-in-the-abyss/1440920134",
+    "tracksSource": "https://music.apple.com/us/album/seasons-in-the-abyss/1440920134",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "War Ensemble",
+      "Blood Red",
+      "Spirit In Black",
+      "Expendable Youth",
+      "Dead Skin Mask",
+      "Hallowed Point",
+      "Skeletons of Society",
+      "Temptation",
+      "Born of Fire",
+      "Seasons In the Abyss"
+    ]
   },
   {
     "id": "iron-maiden-killers",
@@ -209,8 +561,22 @@
     "title": "Killers",
     "year": 1981,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7a/d1/0c/7ad10c97-6c8b-f63b-b324-1950718bc9a8/0881034134431.jpg/600x600bb.jpg",
-    "listen": "https://open.spotify.com/album/5REF2imQI3lMAmeWcDXE3D",
-    "artworkSource": "https://music.apple.com/us/album/killers-2015-remaster/1713874443"
+    "listen": "https://www.youtube.com/watch?v=dYxY466qyjg",
+    "artworkSource": "https://music.apple.com/us/album/killers-2015-remaster/1713874443",
+    "tracksSource": "https://music.apple.com/us/album/killers-2015-remaster/1713874443",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "The Ides of March",
+      "Wrathchild",
+      "Murders in the Rue Morgue",
+      "Another Life",
+      "Genghis Khan",
+      "Innocent Exile",
+      "Killers",
+      "Prodigal Son",
+      "Purgatory",
+      "Drifter"
+    ]
   },
   {
     "id": "iron-maiden-no-prayer-for-the-dying",
@@ -218,7 +584,21 @@
     "title": "No Prayer for the Dying",
     "year": 1990,
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/5e/f6/fa/5ef6fa75-5c89-8989-d5e1-f1faa4648164/0881034134509.jpg/600x600bb.jpg",
-    "listen": "https://open.spotify.com/album/21ZEAwY2TDnoQvVMJKkjUk",
-    "artworkSource": "https://music.apple.com/us/album/no-prayer-for-the-dying-2015-remaster/1716081865"
+    "listen": "https://www.youtube.com/watch?v=bJYU1e4g_MM",
+    "artworkSource": "https://music.apple.com/us/album/no-prayer-for-the-dying-2015-remaster/1716081865",
+    "tracksSource": "https://music.apple.com/us/album/no-prayer-for-the-dying-2015-remaster/1716081865",
+    "listenLabel": "Odsłuchaj na YouTube",
+    "tracks": [
+      "Tailgunner",
+      "Holy Smoke",
+      "No Prayer for the Dying",
+      "Public Enema Number One",
+      "Fates Warning",
+      "The Assassin",
+      "Run Silent Run Deep",
+      "Hooks in You",
+      "Bring Your Daughter...To the Slaughter",
+      "Mother Russia"
+    ]
   }
 ]
