@@ -1,6 +1,6 @@
 # Półka ważnych dla mnie książek
 
-Osobista kolekcja Jana Jędrzejaka w czterech kategoriach: produkt i strategia, technologia i AI, reportaż i biografie oraz literatura. Domyślna półka prezentuje 18 polskich wydań. Oryginalna półka inżynierska z 14 książkami jest dostępna obok kolekcji osobistej. Rozdzielenie kolekcji zachowuje linki do wcześniejszych tytułów.
+Osobista kolekcja Jana Jędrzejaka w czterech kategoriach: produkt i strategia, technologia i AI, reportaż i biografie oraz literatura. Domyślna półka prezentuje 19 polskich wydań. Oryginalna półka inżynierska z 14 książkami jest dostępna obok kolekcji osobistej. Rozdzielenie kolekcji zachowuje linki do wcześniejszych tytułów.
 
 [Otwórz półkę](https://janjedrzejak.github.io/books/) · [Katalog](https://janjedrzejak.github.io/books/catalog.html) · [Półka inżynierska](https://janjedrzejak.github.io/books/?shelf=engineering)
 

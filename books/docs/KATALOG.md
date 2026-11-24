@@ -7,23 +7,24 @@ ISBN odnosi się do podanego wydania drukowanego. Nowa kolekcja wyświetla okła
 | Nr | Tytuł | Autorzy / redaktorzy | Wydanie | Rok | ISBN-13 |
 |---:|---|---|---|---:|---|
 | 1 | Profesjonalny właściciel produktu — Jak Scrum zwiększa przewagę konkurencyjną | Don McGreal, Ralph Jocham | Wydanie polskie, druk | 2019 | 9788375413717 |
-| 2 | Czysty Agile — Powrót do podstaw | Robert C. Martin | Wydanie polskie, druk | 2020 | 9788328363045 |
-| 3 | Sztuka zarządzania projektami | Scott Berkun | Wydanie polskie, druk | 2006 | 9788324600953 |
-| 4 | Sztuka wojny | Sun Tzu, Sun Pin | Wydanie IV, twarda oprawa | 2024 | 9788328911147 |
-| 5 | JavaScript. Programowanie obiektowe | Stoyan Stefanov | Wydanie polskie, druk | 2010 | 9788324622429 |
-| 6 | Sieci komputerowe. Kompendium | Karol Krysiak | Wydanie II, miękka oprawa | 2012 | 9788324635405 |
-| 7 | Inżynieria dużych modeli językowych — Podręcznik projektowania, trenowania i wdrażania LLM | Paul Iusztin, Maxime Labonne | Wydanie polskie, druk | 2025 | 9788328925304 |
-| 8 | Inżynieria AI — Tworzenie aplikacji z wykorzystaniem modeli bazowych | Chip Huyen | Wydanie polskie, druk | 2025 | 9788328926288 |
-| 9 | Quo vAIdis | Andrzej Dragan | Wydanie I, oprawa miękka ze skrzydełkami | 2025 | 9788383990088 |
-| 10 | Imperium sztucznej inteligencji — Sny i koszmary w OpenAI Sama Altmana | Karen Hao | Wydanie polskie, druk | 2026 | 9788383990385 |
-| 11 | Mindf*ck | Christopher Wylie | Wydanie polskie, druk | 2020 | 9788366575271 |
-| 12 | Pamięć nieulotna | Edward Snowden | Wydanie polskie, druk | 2019 | 9788366360150 |
-| 13 | Steve Jobs | Walter Isaacson | Wydanie polskie, twarda oprawa | 2011 | 9788361428510 |
-| 14 | Źródło | Ayn Rand | Wydanie 2023, twarda oprawa | 2023 | 9788382022124 |
-| 15 | Solaris | Stanisław Lem | Wydanie II w tej edycji | 2018 | 9788308085882 |
-| 16 | Ubik | Philip K. Dick | Wydanie IV poprawione, dodruk 2025 | 2025 | 9788383380056 |
-| 17 | Rok 1984 | George Orwell | Wydanie z opracowaniem, miękka oprawa | 2025 | 9788375179309 |
-| 18 | Nowy wspaniały świat | Aldous Huxley | Wydanie 12, miękka oprawa | 2019 | 9788328708303 |
+| 2 | Mapowanie historyjek użytkownika — Przepis na produkt idealny | Jeff Patton | Wydanie polskie, druk | 2021 | 9788328379183 |
+| 3 | Czysty Agile — Powrót do podstaw | Robert C. Martin | Wydanie polskie, druk | 2020 | 9788328363045 |
+| 4 | Sztuka zarządzania projektami | Scott Berkun | Wydanie polskie, druk | 2006 | 9788324600953 |
+| 5 | Sztuka wojny | Sun Tzu, Sun Pin | Wydanie IV, twarda oprawa | 2024 | 9788328911147 |
+| 6 | JavaScript. Programowanie obiektowe | Stoyan Stefanov | Wydanie polskie, druk | 2010 | 9788324622429 |
+| 7 | Sieci komputerowe. Kompendium | Karol Krysiak | Wydanie II, miękka oprawa | 2012 | 9788324635405 |
+| 8 | Inżynieria dużych modeli językowych — Podręcznik projektowania, trenowania i wdrażania LLM | Paul Iusztin, Maxime Labonne | Wydanie polskie, druk | 2025 | 9788328925304 |
+| 9 | Inżynieria AI — Tworzenie aplikacji z wykorzystaniem modeli bazowych | Chip Huyen | Wydanie polskie, druk | 2025 | 9788328926288 |
+| 10 | Quo vAIdis | Andrzej Dragan | Wydanie I, oprawa miękka ze skrzydełkami | 2025 | 9788383990088 |
+| 11 | Imperium sztucznej inteligencji — Sny i koszmary w OpenAI Sama Altmana | Karen Hao | Wydanie polskie, druk | 2026 | 9788383990385 |
+| 12 | Mindf*ck | Christopher Wylie | Wydanie polskie, druk | 2020 | 9788366575271 |
+| 13 | Pamięć nieulotna | Edward Snowden | Wydanie polskie, druk | 2019 | 9788366360150 |
+| 14 | Steve Jobs | Walter Isaacson | Wydanie polskie, twarda oprawa | 2011 | 9788361428510 |
+| 15 | Źródło | Ayn Rand | Wydanie 2023, twarda oprawa | 2023 | 9788382022124 |
+| 16 | Solaris | Stanisław Lem | Wydanie II w tej edycji | 2018 | 9788308085882 |
+| 17 | Ubik | Philip K. Dick | Wydanie IV poprawione, dodruk 2025 | 2025 | 9788383380056 |
+| 18 | Rok 1984 | George Orwell | Wydanie z opracowaniem, miękka oprawa | 2025 | 9788375179309 |
+| 19 | Nowy wspaniały świat | Aldous Huxley | Wydanie 12, miękka oprawa | 2019 | 9788328708303 |
 
 ### Profesjonalny właściciel produktu
 
@@ -34,6 +35,17 @@ Perspektywa właściciela produktu łączy pracę z Product Backlogiem z odpowie
 - Ateneum / APN Promise · 500 × 677 px. [Grafika](https://www.ateneum.pl/phttw/320378_large.jpg) · [Źródło i uznanie](https://www.ateneum.net.pl/pozycja.php?id=320378)
 - Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora. Okładka polskiego wydania podanego w katalogu.
 - Wyświetlany adres. https://www.ateneum.pl/phttw/320378_large.jpg
+
+### Mapowanie historyjek użytkownika
+
+Jeff Patton pokazuje, jak uporządkować historyjki wzdłuż działań użytkownika. Mapa pomaga zespołowi zobaczyć całą ścieżkę, uzgodnić priorytety i zaplanować kolejne wydania produktu.
+
+- Helion · Wydanie polskie, druk · ISBN 9788328379183.
+- [Opis książki](https://helion.pl/ksiazki/mapowanie-historyjek-uzytkownika-przepis-na-produkt-idealny-jeff-patton,maphiv.htm) · [Źródło wydania](https://www.bn.org.pl/download/document/1621335820.pdf)
+- Helion · 326 × 466 px. [Grafika](https://static01.ebookpoint.pl/global/okladki/326x466/maphiv.jpg) · [Źródło i uznanie](https://helion.pl/ksiazki/mapowanie-historyjek-uzytkownika-przepis-na-produkt-idealny-jeff-patton,maphiv.htm)
+- Okładka wyświetlana bezpośrednio z serwisu wydawcy. Okładka polskiego wydania podanego w katalogu.
+- Przekład Maksymiliana Gutowskiego. Rok wydania według Biblioteki Narodowej.
+- Wyświetlany adres. https://static01.ebookpoint.pl/global/okladki/326x466/maphiv.jpg
 
 ### Czysty Agile
 

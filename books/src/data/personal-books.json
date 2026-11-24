@@ -49,8 +49,56 @@
     }
   },
   {
-    "id": "czysty-agile",
+    "id": "mapowanie-historyjek-uzytkownika",
     "number": 2,
+    "category": "Produkt i strategia",
+    "title": "Mapowanie historyjek użytkownika",
+    "subtitle": "Przepis na produkt idealny",
+    "authors": [
+      "Jeff Patton"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie polskie, druk",
+    "year": 2021,
+    "isbn": "9788328379183",
+    "publisher": "Helion",
+    "description": "Jeff Patton pokazuje, jak uporządkować historyjki wzdłuż działań użytkownika. Mapa pomaga zespołowi zobaczyć całą ścieżkę, uzgodnić priorytety i zaplanować kolejne wydania produktu.",
+    "topics": [
+      "Ścieżka użytkownika",
+      "Mapowanie historyjek",
+      "MVP i planowanie wydań"
+    ],
+    "official": "https://helion.pl/ksiazki/mapowanie-historyjek-uzytkownika-przepis-na-produkt-idealny-jeff-patton,maphiv.htm",
+    "editionSource": "https://www.bn.org.pl/download/document/1621335820.pdf",
+    "stage": "Produkt i strategia",
+    "spine": "Mapowanie historyjek",
+    "shortAuthor": "Patton",
+    "aspect": 0.6996,
+    "palette": [
+      "#76365f",
+      "#fff8fc",
+      "#edb9dc"
+    ],
+    "editionNote": "Przekład Maksymiliana Gutowskiego. Rok wydania według Biblioteki Narodowej.",
+    "cover": {
+      "src": "https://static01.ebookpoint.pl/global/okladki/326x466/maphiv.jpg",
+      "source": "https://static01.ebookpoint.pl/global/okladki/326x466/maphiv.jpg",
+      "provider": "Helion",
+      "attribution": "https://helion.pl/ksiazki/mapowanie-historyjek-uzytkownika-przepis-na-produkt-idealny-jeff-patton,maphiv.htm",
+      "rightsUrl": "https://helion.pl/ksiazki/mapowanie-historyjek-uzytkownika-przepis-na-produkt-idealny-jeff-patton,maphiv.htm",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wydawcy.",
+      "alt": "Okładka książki „Mapowanie historyjek użytkownika”. Jeff Patton.",
+      "size": [
+        326,
+        466
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "czysty-agile",
+    "number": 3,
     "category": "Produkt i strategia",
     "title": "Czysty Agile",
     "subtitle": "Powrót do podstaw",
@@ -98,7 +146,7 @@
   },
   {
     "id": "sztuka-zarzadzania-projektami",
-    "number": 3,
+    "number": 4,
     "category": "Produkt i strategia",
     "title": "Sztuka zarządzania projektami",
     "subtitle": "",
@@ -146,7 +194,7 @@
   },
   {
     "id": "sztuka-wojny",
-    "number": 4,
+    "number": 5,
     "category": "Produkt i strategia",
     "title": "Sztuka wojny",
     "subtitle": "",
@@ -195,7 +243,7 @@
   },
   {
     "id": "javascript-programowanie-obiektowe",
-    "number": 5,
+    "number": 6,
     "category": "Technologia i AI",
     "title": "JavaScript. Programowanie obiektowe",
     "subtitle": "",
@@ -243,7 +291,7 @@
   },
   {
     "id": "sieci-komputerowe-kompendium",
-    "number": 6,
+    "number": 7,
     "category": "Technologia i AI",
     "title": "Sieci komputerowe. Kompendium",
     "subtitle": "",
@@ -291,7 +339,7 @@
   },
   {
     "id": "inzynieria-duzych-modeli-jezykowych",
-    "number": 7,
+    "number": 8,
     "category": "Technologia i AI",
     "title": "Inżynieria dużych modeli językowych",
     "subtitle": "Podręcznik projektowania, trenowania i wdrażania LLM",
@@ -340,7 +388,7 @@
   },
   {
     "id": "inzynieria-ai",
-    "number": 8,
+    "number": 9,
     "category": "Technologia i AI",
     "title": "Inżynieria AI",
     "subtitle": "Tworzenie aplikacji z wykorzystaniem modeli bazowych",
@@ -388,7 +436,7 @@
   },
   {
     "id": "quo-vaidis",
-    "number": 9,
+    "number": 10,
     "category": "Technologia i AI",
     "title": "Quo vAIdis",
     "subtitle": "",
@@ -436,7 +484,7 @@
   },
   {
     "id": "imperium-sztucznej-inteligencji",
-    "number": 10,
+    "number": 11,
     "category": "Reportaż i biografie",
     "title": "Imperium sztucznej inteligencji",
     "subtitle": "Sny i koszmary w OpenAI Sama Altmana",
@@ -484,7 +532,7 @@
   },
   {
     "id": "mindfck",
-    "number": 11,
+    "number": 12,
     "category": "Reportaż i biografie",
     "title": "Mindf*ck",
     "subtitle": "",
@@ -532,7 +580,7 @@
   },
   {
     "id": "pamiec-nieulotna",
-    "number": 12,
+    "number": 13,
     "category": "Reportaż i biografie",
     "title": "Pamięć nieulotna",
     "subtitle": "",
@@ -580,7 +628,7 @@
   },
   {
     "id": "steve-jobs",
-    "number": 13,
+    "number": 14,
     "category": "Reportaż i biografie",
     "title": "Steve Jobs",
     "subtitle": "",
@@ -628,7 +676,7 @@
   },
   {
     "id": "zrodlo",
-    "number": 14,
+    "number": 15,
     "category": "Literatura",
     "title": "Źródło",
     "subtitle": "",
@@ -676,7 +724,7 @@
   },
   {
     "id": "solaris",
-    "number": 15,
+    "number": 16,
     "category": "Literatura",
     "title": "Solaris",
     "subtitle": "",
@@ -724,7 +772,7 @@
   },
   {
     "id": "ubik",
-    "number": 16,
+    "number": 17,
     "category": "Literatura",
     "title": "Ubik",
     "subtitle": "",
@@ -772,7 +820,7 @@
   },
   {
     "id": "rok-1984",
-    "number": 17,
+    "number": 18,
     "category": "Literatura",
     "title": "Rok 1984",
     "subtitle": "",
@@ -820,7 +868,7 @@
   },
   {
     "id": "nowy-wspanialy-swiat",
-    "number": 18,
+    "number": 19,
     "category": "Literatura",
     "title": "Nowy wspaniały świat",
     "subtitle": "",
