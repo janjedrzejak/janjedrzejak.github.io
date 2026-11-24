@@ -2,10 +2,11 @@
 
 ## Build and publish
 
-GitHub Actions renders the root HTML sources into `_site/`, validates local links and SEO, then publishes that directory to GitHub Pages. Do not upload the root sources directly.
+GitHub Actions builds the portfolio and its [3D bookshelf](books/README.md) into `_site/`, validates local links and SEO, then publishes that directory to GitHub Pages. Use Node.js 24 for the bookshelf build.
 
 ```sh
 python -m pip install -r scripts/requirements.txt
+npm ci --prefix books
 python scripts/build_site.py
 python scripts/validate_site.py
 ```
@@ -16,7 +17,7 @@ See [SEO.md](SEO.md) for implementation details, validation scope and measuremen
 
 ## Responsive regression preview
 
-Build `_site/` first, then run `npm ci` and `npm run dev`. Vite is a development-only preview; GitHub Pages still publishes the Python build without a Node dependency. The preview-only `/__qa?width=390&height=844&path=/pl/` route embeds the built page in a same-origin viewport. It is not included in the published site. Rebuild after source changes.
+Build `_site/` first, then run `npm ci` and `npm run dev` from the repository root. The preview-only `/__qa?width=390&height=844&path=/pl/` route embeds the built page in a same-origin viewport. It is not included in the published site. Rebuild after source changes.
 
 Check 320, 390 and 430 CSS-pixel widths, both languages, and menu, cookie settings and chat open/close cycles at the footer. Compare `document.scrollingElement.scrollHeight` with `.site-footer.getBoundingClientRect().bottom + window.scrollY` (within 2 px), and check horizontal overflow and link visibility. Use `.site-footer`, since the cookie modal also contains a `footer`. Iframe testing covers responsive layout; test touch gestures and software-keyboard behavior separately on real mobile browsers.
 

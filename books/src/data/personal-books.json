@@ -1,0 +1,869 @@
+[
+  {
+    "id": "profesjonalny-wlasciciel-produktu",
+    "number": 1,
+    "category": "Produkt i strategia",
+    "title": "Profesjonalny właściciel produktu",
+    "subtitle": "Jak Scrum zwiększa przewagę konkurencyjną",
+    "authors": [
+      "Don McGreal",
+      "Ralph Jocham"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie polskie, druk",
+    "year": 2019,
+    "isbn": "9788375413717",
+    "publisher": "APN Promise",
+    "description": "Perspektywa właściciela produktu łączy pracę z Product Backlogiem z odpowiedzialnością za wartość i kierunek produktu. Autorzy pokazują, jak przekłada się to na decyzje podejmowane w Scrumie.",
+    "topics": [
+      "Wartość produktu",
+      "Product Backlog",
+      "Odpowiedzialność za produkt"
+    ],
+    "official": "https://www.ateneum.net.pl/pozycja.php?id=320378",
+    "editionSource": "https://www.ateneum.net.pl/pozycja.php?id=320378",
+    "stage": "Produkt i strategia",
+    "spine": "Właściciel produktu",
+    "shortAuthor": "McGreal · Jocham",
+    "aspect": 0.7386,
+    "palette": [
+      "#202a3c",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://www.ateneum.pl/phttw/320378_large.jpg",
+      "source": "https://www.ateneum.pl/phttw/320378_large.jpg",
+      "provider": "Ateneum / APN Promise",
+      "attribution": "https://www.ateneum.net.pl/pozycja.php?id=320378",
+      "rightsUrl": "https://www.ateneum.net.pl/pozycja.php?id=320378",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Profesjonalny właściciel produktu”. Don McGreal, Ralph Jocham.",
+      "size": [
+        500,
+        677
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "czysty-agile",
+    "number": 2,
+    "category": "Produkt i strategia",
+    "title": "Czysty Agile",
+    "subtitle": "Powrót do podstaw",
+    "authors": [
+      "Robert C. Martin"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie polskie, druk",
+    "year": 2020,
+    "isbn": "9788328363045",
+    "publisher": "Helion",
+    "description": "Robert C. Martin wraca do początków Agile i opisuje praktyki pomagające zespołom tworzyć działające oprogramowanie w krótkich cyklach.",
+    "topics": [
+      "Agile",
+      "Praktyki zespołowe",
+      "Informacja zwrotna"
+    ],
+    "official": "https://helion.pl/ksiazki/czysty-agile-powrot-do-podstaw-robert-c-martin,czyagi.htm",
+    "editionSource": "https://helion.pl/ksiazki/czysty-agile-powrot-do-podstaw-robert-c-martin,czyagi.htm",
+    "stage": "Produkt i strategia",
+    "spine": "Czysty Agile",
+    "shortAuthor": "Martin",
+    "aspect": 0.6996,
+    "palette": [
+      "#222b43",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://static01.ebookpoint.pl/global/okladki/326x466/czyagi.jpg",
+      "source": "https://static01.ebookpoint.pl/global/okladki/326x466/czyagi.jpg",
+      "provider": "Helion",
+      "attribution": "https://helion.pl/ksiazki/czysty-agile-powrot-do-podstaw-robert-c-martin,czyagi.htm",
+      "rightsUrl": "https://helion.pl/ksiazki/czysty-agile-powrot-do-podstaw-robert-c-martin,czyagi.htm",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Czysty Agile”. Robert C. Martin.",
+      "size": [
+        326,
+        466
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "sztuka-zarzadzania-projektami",
+    "number": 3,
+    "category": "Produkt i strategia",
+    "title": "Sztuka zarządzania projektami",
+    "subtitle": "",
+    "authors": [
+      "Scott Berkun"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie polskie, druk",
+    "year": 2006,
+    "isbn": "9788324600953",
+    "publisher": "Helion",
+    "description": "Zarządzanie projektem od strony codziennych decyzji. Berkun omawia, jak planować, rozpoznawać ryzyka i uzgadniać priorytety w zespole.",
+    "topics": [
+      "Planowanie",
+      "Decyzje i ryzyko",
+      "Prowadzenie zespołu"
+    ],
+    "official": "https://helion.pl/ksiazki/sztuka-zarzadzania-projektami-scott-berkun,artzap.htm",
+    "editionSource": "https://helion.pl/ksiazki/sztuka-zarzadzania-projektami-scott-berkun,artzap.htm",
+    "stage": "Produkt i strategia",
+    "spine": "Zarządzanie projektami",
+    "shortAuthor": "Berkun",
+    "aspect": 0.6996,
+    "palette": [
+      "#3a262a",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "ISBN przeliczony do formatu ISBN-13 z numeru ISBN-10 wydawcy.",
+    "cover": {
+      "src": "https://static01.ebookpoint.pl/global/okladki/326x466/artzap.jpg",
+      "source": "https://static01.ebookpoint.pl/global/okladki/326x466/artzap.jpg",
+      "provider": "Helion",
+      "attribution": "https://helion.pl/ksiazki/sztuka-zarzadzania-projektami-scott-berkun,artzap.htm",
+      "rightsUrl": "https://helion.pl/ksiazki/sztuka-zarzadzania-projektami-scott-berkun,artzap.htm",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Sztuka zarządzania projektami”. Scott Berkun.",
+      "size": [
+        326,
+        466
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "sztuka-wojny",
+    "number": 4,
+    "category": "Produkt i strategia",
+    "title": "Sztuka wojny",
+    "subtitle": "",
+    "authors": [
+      "Sun Tzu",
+      "Sun Pin"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie IV, twarda oprawa",
+    "year": 2024,
+    "isbn": "9788328911147",
+    "publisher": "Onepress",
+    "description": "Dwa klasyczne chińskie traktaty o strategii. Wydanie zawiera przekład i komentarze Ralpha D. Sawyera.",
+    "topics": [
+      "Strategia",
+      "Przygotowanie",
+      "Ocena sytuacji"
+    ],
+    "official": "https://onepress.pl/ksiazki/sztuka-wojny-wydanie-iv-twarda-oprawa-sun-tzu-sun-pin-ralph-d-sawyer,art3t2.htm",
+    "editionSource": "https://onepress.pl/ksiazki/sztuka-wojny-wydanie-iv-twarda-oprawa-sun-tzu-sun-pin-ralph-d-sawyer,art3t2.htm",
+    "stage": "Produkt i strategia",
+    "spine": "Sztuka wojny",
+    "shortAuthor": "Sun Tzu · Sun Pin",
+    "aspect": 0.6996,
+    "palette": [
+      "#542c24",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "W tej edycji są oba traktaty, Sun Tzu i Sun Pina.",
+    "cover": {
+      "src": "https://static01.ebookpoint.pl/global/okladki/326x466/art3t2.jpg",
+      "source": "https://static01.ebookpoint.pl/global/okladki/326x466/art3t2.jpg",
+      "provider": "Onepress",
+      "attribution": "https://onepress.pl/ksiazki/sztuka-wojny-wydanie-iv-twarda-oprawa-sun-tzu-sun-pin-ralph-d-sawyer,art3t2.htm",
+      "rightsUrl": "https://onepress.pl/ksiazki/sztuka-wojny-wydanie-iv-twarda-oprawa-sun-tzu-sun-pin-ralph-d-sawyer,art3t2.htm",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Sztuka wojny”. Sun Tzu, Sun Pin.",
+      "size": [
+        326,
+        466
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "javascript-programowanie-obiektowe",
+    "number": 5,
+    "category": "Technologia i AI",
+    "title": "JavaScript. Programowanie obiektowe",
+    "subtitle": "",
+    "authors": [
+      "Stoyan Stefanov"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie polskie, druk",
+    "year": 2010,
+    "isbn": "9788324622429",
+    "publisher": "Helion",
+    "description": "Wprowadzenie do obiektów, funkcji, prototypów i dziedziczenia w JavaScripcie. Wydanie pokazuje podstawy języka sprzed pojawienia się współczesnego ekosystemu modułów.",
+    "topics": [
+      "Obiekty i prototypy",
+      "Domknięcia",
+      "Wzorce projektowe"
+    ],
+    "official": "https://helion.pl/ksiazki/javascript-programowanie-obiektowe-stoyan-stefanov,jascob.htm",
+    "editionSource": "https://helion.pl/ksiazki/javascript-programowanie-obiektowe-stoyan-stefanov,jascob.htm",
+    "stage": "Technologia i AI",
+    "spine": "JavaScript. Obiekty",
+    "shortAuthor": "Stefanov",
+    "aspect": 0.6996,
+    "palette": [
+      "#21445c",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://static01.ebookpoint.pl/global/okladki/326x466/jascob.jpg",
+      "source": "https://static01.ebookpoint.pl/global/okladki/326x466/jascob.jpg",
+      "provider": "Helion",
+      "attribution": "https://helion.pl/ksiazki/javascript-programowanie-obiektowe-stoyan-stefanov,jascob.htm",
+      "rightsUrl": "https://helion.pl/ksiazki/javascript-programowanie-obiektowe-stoyan-stefanov,jascob.htm",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „JavaScript. Programowanie obiektowe”. Stoyan Stefanov.",
+      "size": [
+        326,
+        466
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "sieci-komputerowe-kompendium",
+    "number": 6,
+    "category": "Technologia i AI",
+    "title": "Sieci komputerowe. Kompendium",
+    "subtitle": "",
+    "authors": [
+      "Karol Krysiak"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie II, miękka oprawa",
+    "year": 2012,
+    "isbn": "9788324635405",
+    "publisher": "Helion",
+    "description": "Polski podręcznik o budowie sieci komputerowych. Od topologii i warstw komunikacji przechodzi do protokołów, usług oraz bezpieczeństwa.",
+    "topics": [
+      "Warstwy i topologie",
+      "TCP/IP",
+      "Usługi sieciowe"
+    ],
+    "official": "https://helion.pl/ksiazki/sieci-komputerowe-kompendium-wydanie-ii-karol-krysiak,adsi2v.htm",
+    "editionSource": "https://helion.pl/ksiazki/sieci-komputerowe-kompendium-wydanie-ii-karol-krysiak,adsi2v.htm",
+    "stage": "Technologia i AI",
+    "spine": "Sieci komputerowe",
+    "shortAuthor": "Krysiak",
+    "aspect": 0.6996,
+    "palette": [
+      "#344362",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://static01.ebookpoint.pl/global/okladki/326x466/adsi2v.jpg",
+      "source": "https://static01.ebookpoint.pl/global/okladki/326x466/adsi2v.jpg",
+      "provider": "Helion",
+      "attribution": "https://helion.pl/ksiazki/sieci-komputerowe-kompendium-wydanie-ii-karol-krysiak,adsi2v.htm",
+      "rightsUrl": "https://helion.pl/ksiazki/sieci-komputerowe-kompendium-wydanie-ii-karol-krysiak,adsi2v.htm",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Sieci komputerowe. Kompendium”. Karol Krysiak.",
+      "size": [
+        326,
+        466
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "inzynieria-duzych-modeli-jezykowych",
+    "number": 7,
+    "category": "Technologia i AI",
+    "title": "Inżynieria dużych modeli językowych",
+    "subtitle": "Podręcznik projektowania, trenowania i wdrażania LLM",
+    "authors": [
+      "Paul Iusztin",
+      "Maxime Labonne"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie polskie, druk",
+    "year": 2025,
+    "isbn": "9788328925304",
+    "publisher": "Helion",
+    "description": "Przewodnik przez cykl pracy nad systemem LLM. Pokazuje, jak przygotować dane i model, wybrać metodę dostrajania, ocenić wyniki i wdrożyć rozwiązanie.",
+    "topics": [
+      "Przygotowanie danych",
+      "Dostrajanie",
+      "Ewaluacja i wdrożenie"
+    ],
+    "official": "https://helion.pl/ksiazki/inzynieria-duzych-modeli-jezykowych-podrecznik-projektowania-trenowania-i-wdrazania-llm-paul-iusztin-maxime-labonne-julien-chaumond-for,indumo.htm",
+    "editionSource": "https://helion.pl/ksiazki/inzynieria-duzych-modeli-jezykowych-podrecznik-projektowania-trenowania-i-wdrazania-llm-paul-iusztin-maxime-labonne-julien-chaumond-for,indumo.htm",
+    "stage": "Technologia i AI",
+    "spine": "Inżynieria LLM",
+    "shortAuthor": "Iusztin · Labonne",
+    "aspect": 0.6996,
+    "palette": [
+      "#4b2839",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://static01.ebookpoint.pl/global/okladki/326x466/indumo.jpg",
+      "source": "https://static01.ebookpoint.pl/global/okladki/326x466/indumo.jpg",
+      "provider": "Helion",
+      "attribution": "https://helion.pl/ksiazki/inzynieria-duzych-modeli-jezykowych-podrecznik-projektowania-trenowania-i-wdrazania-llm-paul-iusztin-maxime-labonne-julien-chaumond-for,indumo.htm",
+      "rightsUrl": "https://helion.pl/ksiazki/inzynieria-duzych-modeli-jezykowych-podrecznik-projektowania-trenowania-i-wdrazania-llm-paul-iusztin-maxime-labonne-julien-chaumond-for,indumo.htm",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Inżynieria dużych modeli językowych”. Paul Iusztin, Maxime Labonne.",
+      "size": [
+        326,
+        466
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "inzynieria-ai",
+    "number": 8,
+    "category": "Technologia i AI",
+    "title": "Inżynieria AI",
+    "subtitle": "Tworzenie aplikacji z wykorzystaniem modeli bazowych",
+    "authors": [
+      "Chip Huyen"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie polskie, druk",
+    "year": 2025,
+    "isbn": "9788328926288",
+    "publisher": "Helion",
+    "description": "Chip Huyen porządkuje decyzje potrzebne do zbudowania aplikacji na modelach bazowych, od wyboru i oceny modelu po wydajność oraz koszt użycia.",
+    "topics": [
+      "Modele bazowe",
+      "Projektowanie ewaluacji",
+      "Wydajność aplikacji"
+    ],
+    "official": "https://helion.pl/ksiazki/inzynieria-ai-tworzenie-aplikacji-z-wykorzystaniem-modeli-bazowych-chip-huyen,inaitw.htm",
+    "editionSource": "https://helion.pl/ksiazki/inzynieria-ai-tworzenie-aplikacji-z-wykorzystaniem-modeli-bazowych-chip-huyen,inaitw.htm",
+    "stage": "Technologia i AI",
+    "spine": "Inżynieria AI",
+    "shortAuthor": "Huyen",
+    "aspect": 0.6996,
+    "palette": [
+      "#dcd6bd",
+      "#2a2b27",
+      "#67543a"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://static01.ebookpoint.pl/global/okladki/326x466/inaitw.jpg",
+      "source": "https://static01.ebookpoint.pl/global/okladki/326x466/inaitw.jpg",
+      "provider": "Helion",
+      "attribution": "https://helion.pl/ksiazki/inzynieria-ai-tworzenie-aplikacji-z-wykorzystaniem-modeli-bazowych-chip-huyen,inaitw.htm",
+      "rightsUrl": "https://helion.pl/ksiazki/inzynieria-ai-tworzenie-aplikacji-z-wykorzystaniem-modeli-bazowych-chip-huyen,inaitw.htm",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Inżynieria AI”. Chip Huyen.",
+      "size": [
+        326,
+        466
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "quo-vaidis",
+    "number": 9,
+    "category": "Technologia i AI",
+    "title": "Quo vAIdis",
+    "subtitle": "",
+    "authors": [
+      "Andrzej Dragan"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie I, oprawa miękka ze skrzydełkami",
+    "year": 2025,
+    "isbn": "9788383990088",
+    "publisher": "Wydawnictwo Otwarte",
+    "description": "Andrzej Dragan przygląda się temu, jak uczą się systemy sztucznej inteligencji i co potrafią modele językowe. Pyta też, na jakiej podstawie ich zachowanie można uznać za przejaw inteligencji.",
+    "topics": [
+      "Sztuczna inteligencja",
+      "Modele językowe",
+      "Natura inteligencji"
+    ],
+    "official": "https://wydawnictwootwarte.pl/reportaz-i-literatura-faktu/845-quo-vaidis.html",
+    "editionSource": "https://www.wydawnictwoakcent.pl/ksiazka/quo-vaidis/",
+    "stage": "Technologia i AI",
+    "spine": "Quo vAIdis",
+    "shortAuthor": "Dragan",
+    "aspect": 0.7257,
+    "palette": [
+      "#232323",
+      "#f0eee8",
+      "#b5b4af"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/quo-vaidis-264709/68db7c2bd9da3/07ef8335562dfa0494f56f67fdf327975b8a48c0.jpg",
+      "source": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/quo-vaidis-264709/68db7c2bd9da3/07ef8335562dfa0494f56f67fdf327975b8a48c0.jpg",
+      "provider": "Księgarnia Znak",
+      "attribution": "https://www.znak.com.pl/p/quo-vaidis-andrzej-dragan-264709",
+      "rightsUrl": "https://www.znak.com.pl/p/quo-vaidis-andrzej-dragan-264709",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu dystrybutora.",
+      "alt": "Okładka książki „Quo vAIdis”. Andrzej Dragan.",
+      "size": [
+        500,
+        689
+      ],
+      "difference": "Płaski front polskiego wydania podanego w katalogu. Kolory grzbietu na podstawie zdjęcia wydawcy.",
+      "alternative": "https://wydawnictwoakcent.pl/assets/covers/card/967ab8b5fd4dc824cb89.webp"
+    }
+  },
+  {
+    "id": "imperium-sztucznej-inteligencji",
+    "number": 10,
+    "category": "Reportaż i biografie",
+    "title": "Imperium sztucznej inteligencji",
+    "subtitle": "Sny i koszmary w OpenAI Sama Altmana",
+    "authors": [
+      "Karen Hao"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie polskie, druk",
+    "year": 2026,
+    "isbn": "9788383990385",
+    "publisher": "Szczeliny",
+    "description": "Reportaż o historii OpenAI i cenie szybkiego rozwoju generatywnej AI. Hao opisuje decyzje założycieli, pracę stojącą za modelami i wpływ tej branży na ludzi.",
+    "topics": [
+      "OpenAI",
+      "Praca i dane",
+      "Władza w branży AI"
+    ],
+    "official": "https://www.szczeliny.pl/publikacja/32/imperium-sztucznej-inteligencji.html",
+    "editionSource": "https://poradniak.pl/produkt/imperium-sztucznej-inteligencji-sny-i-koszmary-w-openai-sama-altmana/",
+    "stage": "Reportaż i biografie",
+    "spine": "Imperium AI",
+    "shortAuthor": "Hao",
+    "aspect": 0.6635,
+    "palette": [
+      "#282838",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://poradniak.pl/wp-content/uploads/2026/03/file_69bbe3c073bda.jpg",
+      "source": "https://poradniak.pl/wp-content/uploads/2026/03/file_69bbe3c073bda.jpg",
+      "provider": "Szczeliny / Poradnia K",
+      "attribution": "https://poradniak.pl/produkt/imperium-sztucznej-inteligencji-sny-i-koszmary-w-openai-sama-altmana/",
+      "rightsUrl": "https://poradniak.pl/produkt/imperium-sztucznej-inteligencji-sny-i-koszmary-w-openai-sama-altmana/",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Imperium sztucznej inteligencji”. Karen Hao.",
+      "size": [
+        1400,
+        2110
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/imperium-sztucznej-inteligencji-sny-i-koszmary-w-openai-sama-altmana-463817/69a9426d0dbb2/8f88a1f9085086d89a1ccdb3f77a98423d116a42.jpg"
+    }
+  },
+  {
+    "id": "mindfck",
+    "number": 11,
+    "category": "Reportaż i biografie",
+    "title": "Mindf*ck",
+    "subtitle": "",
+    "authors": [
+      "Christopher Wylie"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie polskie, druk",
+    "year": 2020,
+    "isbn": "9788366575271",
+    "publisher": "Insignis",
+    "description": "Relacja sygnalisty z Cambridge Analytica. Wylie opisuje wykorzystanie danych osobowych i profilowania w kampaniach politycznych.",
+    "topics": [
+      "Cambridge Analytica",
+      "Prywatność",
+      "Kampanie polityczne"
+    ],
+    "official": "https://www.insignis.pl/ksiazki/mindfck/",
+    "editionSource": "https://www.insignis.pl/ksiazki/mindfck/",
+    "stage": "Reportaż i biografie",
+    "spine": "Mindf*ck",
+    "shortAuthor": "Wylie",
+    "aspect": 0.6691,
+    "palette": [
+      "#7e2925",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://www.insignis.pl/wp-content/uploads/2020/09/ChW_MMindfuck_cover_PL_front-540x807.jpg",
+      "source": "https://www.insignis.pl/wp-content/uploads/2020/09/ChW_MMindfuck_cover_PL_front-540x807.jpg",
+      "provider": "Insignis",
+      "attribution": "https://www.insignis.pl/ksiazki/mindfck/",
+      "rightsUrl": "https://www.insignis.pl/ksiazki/mindfck/",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Mindf*ck”. Christopher Wylie.",
+      "size": [
+        540,
+        807
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "pamiec-nieulotna",
+    "number": 12,
+    "category": "Reportaż i biografie",
+    "title": "Pamięć nieulotna",
+    "subtitle": "",
+    "authors": [
+      "Edward Snowden"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie polskie, druk",
+    "year": 2019,
+    "isbn": "9788366360150",
+    "publisher": "Insignis",
+    "description": "Snowden opisuje drogę do amerykańskiego wywiadu, działanie systemów masowej inwigilacji i swoją decyzję o ujawnieniu dokumentów.",
+    "topics": [
+      "Inwigilacja",
+      "Prywatność",
+      "Sygnaliści"
+    ],
+    "official": "https://www.insignis.pl/ksiazki/pamiec-nieulotna/",
+    "editionSource": "https://www.insignis.pl/ksiazki/pamiec-nieulotna/",
+    "stage": "Reportaż i biografie",
+    "spine": "Pamięć nieulotna",
+    "shortAuthor": "Snowden",
+    "aspect": 0.6699,
+    "palette": [
+      "#293139",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://www.insignis.pl/wp-content/uploads/2019/08/ES_PN_cover_PL_front-686x1024.jpg",
+      "source": "https://www.insignis.pl/wp-content/uploads/2019/08/ES_PN_cover_PL_front-686x1024.jpg",
+      "provider": "Insignis",
+      "attribution": "https://www.insignis.pl/ksiazki/pamiec-nieulotna/",
+      "rightsUrl": "https://www.insignis.pl/ksiazki/pamiec-nieulotna/",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Pamięć nieulotna”. Edward Snowden.",
+      "size": [
+        686,
+        1024
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "steve-jobs",
+    "number": 13,
+    "category": "Reportaż i biografie",
+    "title": "Steve Jobs",
+    "subtitle": "",
+    "authors": [
+      "Walter Isaacson"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie polskie, twarda oprawa",
+    "year": 2011,
+    "isbn": "9788361428510",
+    "publisher": "Insignis",
+    "description": "Biografia współzałożyciela Apple. Isaacson śledzi jego drogę i decyzje produktowe na podstawie rozmów z Jobsem i jego otoczeniem.",
+    "topics": [
+      "Apple",
+      "Projektowanie produktów",
+      "Biografia"
+    ],
+    "official": "https://www.insignis.pl/ksiazki/Steve-Jobs--oprawa-twarda-/",
+    "editionSource": "https://www.insignis.pl/ksiazki/Steve-Jobs--oprawa-twarda-/",
+    "stage": "Reportaż i biografie",
+    "spine": "Steve Jobs",
+    "shortAuthor": "Isaacson",
+    "aspect": 0.6667,
+    "palette": [
+      "#d8d5c5",
+      "#2a2b27",
+      "#67543a"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://www.insignis.pl/wp-content/uploads/2016/01/Okladka_Steve_Jobs_oprawa_twarda.jpg",
+      "source": "https://www.insignis.pl/wp-content/uploads/2016/01/Okladka_Steve_Jobs_oprawa_twarda.jpg",
+      "provider": "Insignis",
+      "attribution": "https://www.insignis.pl/ksiazki/Steve-Jobs--oprawa-twarda-/",
+      "rightsUrl": "https://www.insignis.pl/ksiazki/Steve-Jobs--oprawa-twarda-/",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Steve Jobs”. Walter Isaacson.",
+      "size": [
+        640,
+        960
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "zrodlo",
+    "number": 14,
+    "category": "Literatura",
+    "title": "Źródło",
+    "subtitle": "",
+    "authors": [
+      "Ayn Rand"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie 2023, twarda oprawa",
+    "year": 2023,
+    "isbn": "9788382022124",
+    "publisher": "Zysk i S-ka",
+    "description": "Architekt Howard Roark próbuje pracować według własnych zasad. Konflikt między niezależnością twórcy a oczekiwaniami otoczenia nadaje powieści jej główny temat.",
+    "topics": [
+      "Architektura",
+      "Niezależność",
+      "Konformizm"
+    ],
+    "official": "https://sklep.zysk.com.pl/zrodlo-opr-twarda-wyd-2023.html",
+    "editionSource": "https://sklep.zysk.com.pl/zrodlo-opr-twarda-wyd-2023.html",
+    "stage": "Literatura",
+    "spine": "Źródło",
+    "shortAuthor": "Rand",
+    "aspect": 0.6477,
+    "palette": [
+      "#332d25",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://sklep.zysk.com.pl/media/products/7ed955e4fcfc2e0c90532750f8a961c3/images/thumbnail/big_978-83-8202-212-4.jpg?lm=1762371654",
+      "source": "https://sklep.zysk.com.pl/media/products/7ed955e4fcfc2e0c90532750f8a961c3/images/thumbnail/big_978-83-8202-212-4.jpg?lm=1762371654",
+      "provider": "Zysk i S-ka",
+      "attribution": "https://sklep.zysk.com.pl/zrodlo-opr-twarda-wyd-2023.html",
+      "rightsUrl": "https://sklep.zysk.com.pl/zrodlo-opr-twarda-wyd-2023.html",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Źródło”. Ayn Rand.",
+      "size": [
+        250,
+        386
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "solaris",
+    "number": 15,
+    "category": "Literatura",
+    "title": "Solaris",
+    "subtitle": "",
+    "authors": [
+      "Stanisław Lem"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie II w tej edycji",
+    "year": 2018,
+    "isbn": "9788308085882",
+    "publisher": "Wydawnictwo Literackie",
+    "description": "Na stacji badawczej nad niezwykłym oceanem Kris Kelvin próbuje zrozumieć to, co wymyka się ludzkim pojęciom. Kontakt z obcą formą życia splata się z pamięcią i żałobą.",
+    "topics": [
+      "Pierwszy kontakt",
+      "Granice poznania",
+      "Pamięć"
+    ],
+    "official": "https://www.wydawnictwoliterackie.pl/produkt/2302/solaris",
+    "editionSource": "https://www.wydawnictwoliterackie.pl/produkt/2302/solaris",
+    "stage": "Literatura",
+    "spine": "Solaris",
+    "shortAuthor": "Lem",
+    "aspect": 0.6354,
+    "palette": [
+      "#20404b",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://www.wydawnictwoliterackie.pl/storage/images/products/460x724/solaris_60588135b7fe8.jpg",
+      "source": "https://www.wydawnictwoliterackie.pl/storage/images/products/460x724/solaris_60588135b7fe8.jpg",
+      "provider": "Wydawnictwo Literackie",
+      "attribution": "https://www.wydawnictwoliterackie.pl/produkt/2302/solaris",
+      "rightsUrl": "https://www.wydawnictwoliterackie.pl/produkt/2302/solaris",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Solaris”. Stanisław Lem.",
+      "size": [
+        460,
+        724
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "ubik",
+    "number": 16,
+    "category": "Literatura",
+    "title": "Ubik",
+    "subtitle": "",
+    "authors": [
+      "Philip K. Dick"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie IV poprawione, dodruk 2025",
+    "year": 2025,
+    "isbn": "9788383380056",
+    "publisher": "Dom Wydawniczy REBIS",
+    "description": "Po tajemniczym wybuchu bohaterowie próbują ustalić, co jest rzeczywiste i dlaczego ich otoczenie zaczyna się cofać w czasie.",
+    "topics": [
+      "Natura rzeczywistości",
+      "Pamięć",
+      "Science fiction"
+    ],
+    "official": "https://www.rebis.com.pl/pl/products/ubik-10109.html",
+    "editionSource": "https://www.rebis.com.pl/pl/products/ubik-10109.html",
+    "stage": "Literatura",
+    "spine": "Ubik",
+    "shortAuthor": "Dick",
+    "aspect": 0.6664,
+    "palette": [
+      "#363241",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://www.rebis.com.pl/hpeciai/3a58fcef906064c442512db9ceadfb75/pol_pl_Ubik-10109_1_1.jpg",
+      "source": "https://www.rebis.com.pl/hpeciai/3a58fcef906064c442512db9ceadfb75/pol_pl_Ubik-10109_1_1.jpg",
+      "provider": "Dom Wydawniczy REBIS",
+      "attribution": "https://www.rebis.com.pl/pl/products/ubik-10109.html",
+      "rightsUrl": "https://www.rebis.com.pl/pl/products/ubik-10109.html",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Ubik”. Philip K. Dick.",
+      "size": [
+        885,
+        1328
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "rok-1984",
+    "number": 17,
+    "category": "Literatura",
+    "title": "Rok 1984",
+    "subtitle": "",
+    "authors": [
+      "George Orwell"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie z opracowaniem, miękka oprawa",
+    "year": 2025,
+    "isbn": "9788375179309",
+    "publisher": "GREG",
+    "description": "Winston Smith pracuje przy przepisywaniu archiwów państwa, które kontroluje język i pamięć obywateli. Próba zachowania niezależności ujawnia mechanizmy tej władzy.",
+    "topics": [
+      "Totalitaryzm",
+      "Język",
+      "Nadzór"
+    ],
+    "official": "https://www.greg.pl/lektury/8,1175_Rok-1984.html",
+    "editionSource": "https://www.greg.pl/lektury/8,1175_Rok-1984.html",
+    "stage": "Literatura",
+    "spine": "Rok 1984",
+    "shortAuthor": "Orwell",
+    "aspect": 0.6821,
+    "palette": [
+      "#5f251e",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://www.greg.pl/imgs/covers/500/Rok-1984_l84.jpg",
+      "source": "https://www.greg.pl/imgs/covers/500/Rok-1984_l84.jpg",
+      "provider": "GREG",
+      "attribution": "https://www.greg.pl/lektury/8,1175_Rok-1984.html",
+      "rightsUrl": "https://www.greg.pl/lektury/8,1175_Rok-1984.html",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Rok 1984”. George Orwell.",
+      "size": [
+        500,
+        733
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": ""
+    }
+  },
+  {
+    "id": "nowy-wspanialy-swiat",
+    "number": 18,
+    "category": "Literatura",
+    "title": "Nowy wspaniały świat",
+    "subtitle": "",
+    "authors": [
+      "Aldous Huxley"
+    ],
+    "credit": "Authors",
+    "edition": "Wydanie 12, miękka oprawa",
+    "year": 2019,
+    "isbn": "9788328708303",
+    "publisher": "Muza",
+    "description": "Republika świata Huxleya utrwala porządek społeczny poprzez warunkowanie, rozrywkę i kontrolę reprodukcji. Powieść pyta, jaką cenę ma tak rozumiana stabilność.",
+    "topics": [
+      "Warunkowanie społeczne",
+      "Komfort i wolność",
+      "Antyutopia"
+    ],
+    "official": "https://www.znak.com.pl/p/nowy-wspanialy-swiat-aldous-huxley-104052",
+    "editionSource": "https://platon.com.pl/prod/nowy-wspanialy-swiat-wyd-12-9788328708303",
+    "stage": "Literatura",
+    "spine": "Nowy wspaniały świat",
+    "shortAuthor": "Huxley",
+    "aspect": 0.6579,
+    "palette": [
+      "#35475d",
+      "#f5efe1",
+      "#d7c59d"
+    ],
+    "editionNote": "",
+    "cover": {
+      "src": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/nowy-wspanialy-swiat-104052/104052/d5ef9dcdea4f6b92efd1f3a1ebcd7b21.jpeg",
+      "source": "https://cdn.znak.com.pl/cdn-cgi/image/format=webp,quality=75/images/product/nowy-wspanialy-swiat-104052/104052/d5ef9dcdea4f6b92efd1f3a1ebcd7b21.jpeg",
+      "provider": "Muza / Znak",
+      "attribution": "https://www.znak.com.pl/p/nowy-wspanialy-swiat-aldous-huxley-104052",
+      "rightsUrl": "https://www.znak.com.pl/p/nowy-wspanialy-swiat-aldous-huxley-104052",
+      "usage": "Okładka wyświetlana bezpośrednio z serwisu wskazanego wydawcy lub dystrybutora.",
+      "alt": "Okładka książki „Nowy wspaniały świat”. Aldous Huxley.",
+      "size": [
+        1400,
+        2128
+      ],
+      "difference": "Okładka polskiego wydania podanego w katalogu.",
+      "alternative": "https://platon.com.pl/csAPIServer/content/ImageIdent/csPhotos|PhotoMed|255A7755-0EBD-4D0F-912E-FFD2A8194FDA|1/csPhotos_PhotoMed_255A7755-0EBD-4D0F-912E-FFD2A8194FDA_1.jpg"
+    }
+  }
+]

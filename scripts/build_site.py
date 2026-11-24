@@ -8,11 +8,17 @@ import json
 import math
 import re
 import shutil
+import subprocess
 from lxml import etree, html
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "_site"
 ORIGIN = "https://janjedrzejak.github.io"
+BOOKS = ROOT / "books"
+BOOKS_URLS = {
+    "books/index.html": ORIGIN + "/books/",
+    "books/catalog.html": ORIGIN + "/books/catalog.html",
+}
 PAGES = json.loads((ROOT / "scripts/seo-pages.json").read_text())
 HOME_PL = json.loads((ROOT / "scripts/home-pl.json").read_text())
 ARTICLES = [p for p in PAGES if p.startswith("blog-posts/")]
@@ -334,9 +340,11 @@ def build_page(path, language):
 
 
 def build():
+    subprocess.run(["npm", "run", "build"], cwd=BOOKS, check=True)
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir()
+    shutil.copytree(BOOKS / "dist", OUT / "books")
     for name in ("img", "cookie", "res", "downloads"):
         shutil.copytree(ROOT / name, OUT / name, ignore=shutil.ignore_patterns(".DS_Store"))
     for pattern in ("*.css", "*.js", "*.pdf", "robots.txt"):
@@ -367,8 +375,11 @@ def build():
         etree.SubElement(entry, "loc").text = url_for(path, language)
         if PAGES[path].get("modified"):
             etree.SubElement(entry, "lastmod").text = PAGES[path]["modified"]
+    for address in BOOKS_URLS.values():
+        entry = etree.SubElement(sitemap, "url")
+        etree.SubElement(entry, "loc").text = address
     (OUT / "sitemap.xml").write_bytes(etree.tostring(sitemap, pretty_print=True, encoding="UTF-8", xml_declaration=True))
-    print(f"Built {len(docs)} localized pages and 2 utility pages in {OUT}")
+    print(f"Built {len(docs)} localized pages, 2 utility pages and the bookshelf in {OUT}")
 
 
 if __name__ == "__main__":

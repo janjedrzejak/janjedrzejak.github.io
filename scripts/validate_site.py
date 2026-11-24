@@ -6,7 +6,7 @@ from collections import Counter
 import json
 import hashlib
 from lxml import etree, html
-from build_site import OUT, ORIGIN, PAGES, ARTICLES, url_for
+from build_site import OUT, ORIGIN, PAGES, ARTICLES, BOOKS_URLS, url_for
 
 
 def validate():
@@ -51,6 +51,13 @@ def validate():
 
         if path in ("404.html", "ksiazka-nfc.html"):
             check("noindex" in " ".join(doc.xpath('//meta[@name="robots"]/@content')), f"{path}: utility page must remain noindex")
+            continue
+        if path in BOOKS_URLS:
+            canonical = BOOKS_URLS[path]
+            check(doc.get("lang") == "pl", f"{path}: wrong bookshelf language")
+            check(doc.xpath('//link[@rel="canonical"]/@href') == [canonical], f"{path}: wrong canonical")
+            check(bool(doc.xpath('//script[@type="module" and @src]')), f"{path}: missing bookshelf entry module")
+            expected_urls.add(canonical)
             continue
         language = "pl" if path.startswith("pl/") else "en"
         source = path.removeprefix("pl/")

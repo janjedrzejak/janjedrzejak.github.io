@@ -42,7 +42,15 @@ jobs:
           python-version: '3.12'
       - name: Install static rendering dependency
         run: python -m pip install -r scripts/requirements.txt
-      - name: Build localized pages
+      - name: Set up Node for the bookshelf
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: books/package-lock.json
+      - name: Install bookshelf dependencies
+        run: npm ci --prefix books
+      - name: Build localized pages and bookshelf
         run: python scripts/build_site.py
       - name: Validate SEO and local links
         run: python scripts/validate_site.py
